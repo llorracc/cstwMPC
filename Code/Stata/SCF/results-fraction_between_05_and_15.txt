@@ -1,0 +1,117 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Economics\JEDC project\BSinKS-private\cstCode\Latest\Code\Stata\SCF\results-fraction
+> _between_05_and_15.txt
+  log type:  text
+ opened on:   2 Apr 2013, 20:52:05
+
+. * Summary results: "Mean" measures the fraction of households whose wealth level is between 0.5*av
+> erage and 1.5*average
+. * SCF1992
+. sum dum [weight=WGT] /* mean of dum is fraction of households whose wealth level is between 0.5*me
+> an and 1.5*mean*/
+(analytic weights assumed)
+
+    Variable |     Obs      Weight        Mean   Std. Dev.       Min        Max
+-------------+-----------------------------------------------------------------
+         dum |    8519   214256616     .242895   .4288573          0          1
+
+. log close
+      name:  <unnamed>
+       log:  C:\Economics\JEDC project\BSinKS-private\cstCode\Latest\Code\Stata\SCF\results-fraction
+> _between_05_and_15.txt
+  log type:  text
+ closed on:   2 Apr 2013, 20:52:05
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Economics\JEDC project\BSinKS-private\cstCode\Latest\Code\Stata\SCF\results-fraction
+> _between_05_and_15.txt
+  log type:  text
+ opened on:   2 Apr 2013, 20:52:13
+
+. * SCF1995
+. sum dum [weight=WGT] /* mean of dum is fraction of households whose wealth level is between 0.5*me
+> an and 1.5*mean*/
+(analytic weights assumed)
+
+    Variable |     Obs      Weight        Mean   Std. Dev.       Min        Max
+-------------+-----------------------------------------------------------------
+         dum |   14421   334039820    .2335177   .4230834          0          1
+
+. log close
+      name:  <unnamed>
+       log:  C:\Economics\JEDC project\BSinKS-private\cstCode\Latest\Code\Stata\SCF\results-fraction
+> _between_05_and_15.txt
+  log type:  text
+ closed on:   2 Apr 2013, 20:52:13
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Economics\JEDC project\BSinKS-private\cstCode\Latest\Code\Stata\SCF\results-fraction
+> _between_05_and_15.txt
+  log type:  text
+ opened on:   2 Apr 2013, 20:52:21
+
+. * SCF1998
+. sum dum [weight=WGT] /* mean of dum is fraction of households whose wealth level is between 0.5*me
+> an and 1.5*mean*/
+(analytic weights assumed)
+
+    Variable |     Obs      Weight        Mean   Std. Dev.       Min        Max
+-------------+-----------------------------------------------------------------
+         dum |   14811   355463836    .2016982   .4012816          0          1
+
+. log close
+      name:  <unnamed>
+       log:  C:\Economics\JEDC project\BSinKS-private\cstCode\Latest\Code\Stata\SCF\results-fraction
+> _between_05_and_15.txt
+  log type:  text
+ closed on:   2 Apr 2013, 20:52:21
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Economics\JEDC project\BSinKS-private\cstCode\Latest\Code\Stata\SCF\results-fraction
+> _between_05_and_15.txt
+  log type:  text
+ opened on:   2 Apr 2013, 20:52:27
+
+. * SCF2001
+. sum dum [weight=WGT] /* mean of dum is fraction of households whose wealth level is between 0.5*me
+> an and 1.5*mean*/
+(analytic weights assumed)
+
+    Variable |     Obs      Weight        Mean   Std. Dev.       Min        Max
+-------------+-----------------------------------------------------------------
+         dum |   15452   364325543    .2066547   .4049187          0          1
+
+. log close
+      name:  <unnamed>
+       log:  C:\Economics\JEDC project\BSinKS-private\cstCode\Latest\Code\Stata\SCF\results-fraction
+> _between_05_and_15.txt
+  log type:  text
+ closed on:   2 Apr 2013, 20:52:27
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Economics\JEDC project\BSinKS-private\cstCode\Latest\Code\Stata\SCF\results-fraction
+> _between_05_and_15.txt
+  log type:  text
+ opened on:   2 Apr 2013, 20:53:05
+
+. * SCF2004
+. sum dum [weight=WGT] /* mean of dum is fraction of households whose wealth level is between 0.5*me
+> an and 1.5*mean*/
+(analytic weights assumed)
+
+    Variable |     Obs      Weight        Mean   Std. Dev.       Min        Max
+-------------+-----------------------------------------------------------------
+         dum |   15691   381697770    .1947051   .3959861          0          1
+
+. log close
+      name:  <unnamed>
+       log:  C:\Economics\JEDC project\BSinKS-private\cstCode\Latest\Code\Stata\SCF\results-fraction
+> _between_05_and_15.txt
+  log type:  text
+ closed on:   2 Apr 2013, 20:53:05
+----------------------------------------------------------------------------------------------------

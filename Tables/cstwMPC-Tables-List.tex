@@ -1,0 +1,51 @@
+\begin{sidewaystable}
+\caption{Empirical Estimates of the Marginal Propensity to Consume (MPC) out of Transitory Income}
+\label{table:mpcLit}
+\begin{minipage}{\textwidth}
+\input \import{/Volumes/Data/Work/BufferStock/Macro/cstwMPC/Latest/}{Tables/mpcLit.tex}
+\tablenotessize{Notes: $^{\star}$: The horizon for which consumption response is calculated is 3 months or 1 year.
+The papers which estimate consumption response over the horizon of 3 months typically suggest that the response
+thereafter is only modest, so that the implied cumulative MPC over the full year is not much higher than over the first three months.
+$^{\ddagger}$:~elasticity.
+
+\citet{brodaParker:stimulus2008} report the five-month cumulative MPC of 0.0836--0.1724 for the consumption goods in their dataset. However, the Homescan/NCP data they use only covers a subset of total PCE, in particular grocery and items bought in supercenters and warehouse clubs.
+We do not include the studies of the 2001 tax rebates, because our interpretation of that event is that it reflected a permanent tax cut that was not perceived by many households until the tax rebate checks were received.  While several studies have examined this episode, e.g., \citet{shapiroSlemrod:AER03}, \citet{jpsTax}, \citet{aslCredit} and \citet{misraSurico:heteroResponses}, in the absence of evidence about the extent to which the rebates were perceived as news about a permanent versus a transitory tax cut, any value of the MPC between zero and one could be justified as a plausible interpretation of the implication of a reasonable version of economic theory (that accounts for delays in perception of the kind that undoubtedly occur).}
+\end{minipage}
+\end{sidewaystable}
+\begin{table}
+\caption{Parameter Values and Steady State}
+\label{table:ParamsAll}
+\begin{minipage}{\textwidth}
+\input \import{/Volumes/Data/Work/BufferStock/Macro/cstwMPC/Latest/Tables/}{ParamsAll}
+\tablenotessize{Notes: The models are calibrated at the quarterly frequency, and the steady state values are calculated on a quarterly basis.}
+\end{minipage}
+\end{table}
+\begin{sidewaystable}
+\caption{Average (Aggregate) Marginal Propensity to Consume in Annual Terms}
+\label{table:MPCall}
+\begin{minipage}{\textwidth}
+\input \import{/Volumes/Data/Work/BufferStock/Macro/cstwMPC/Latest/Tables/}{MPCall}
+\tablenotessize{Notes: Annual MPC is calculated by $1-(1-$\text{quarterly MPC}$)^{4}$. ${}^\ddagger$: Discount factors are uniformly distributed over the interval $[\grave{\Discount}-\nabla,\grave{\Discount}+\nabla]$.
+%$^{\ddagger}:$ $\grave{\Discount}=
+%\input ../Code/Mathematica/Results/Beta.tex
+%$.
+%$^{\star}:$ $(\grave{\Discount}, \nabla)=(
+%\input ../Code/Mathematica/Results/Betamiddle.tex
+%,
+%\input ../Code/Mathematica/Results/nabla.tex
+%)$, which implies $\{\grave{\Discount}-\nabla, \grave{\Discount}+\nabla\}=\{
+%\input ../Code/Mathematica/Results/BetaLow.tex
+%,
+%\input ../Code/Mathematica/Results/BetaHigh.tex
+%\}$.
+}
+\end{minipage}
+\end{sidewaystable}
+\begin{table}
+\caption{Proportion of Wealth Held by Percentile (in Percent)}
+\label{table:LiqFinPlsRetAssetDist}
+\begin{minipage}{\textwidth}
+\input \import{/Volumes/Data/Work/BufferStock/Macro/cstwMPC/Latest/Tables/}{LiqFinPlsRetAssetDist_2}
+\tablenotessize{Notes: The data source is the 2004 Survey of Consumer Finances.}
+\end{minipage}
+\end{table}

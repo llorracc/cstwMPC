@@ -1,0 +1,294 @@
+
+
+\begin{center}
+
+
+
+\begin{tabular}{ld{5}d{3}d{3}d{7}d{3}d{8}}
+
+
+
+\toprule
+
+&   \multicolumn{4}{c}{\text{Krusell--Smith (KS)}}  &                    \multicolumn{2}{c}{Friedman/Buffer Stock (FBS)}       \\
+&   \multicolumn{4}{c}{\text{Aggregate Process}}  &     \multicolumn{2}{c}{Aggregate Process}   \\
+\cmidrule(r){2-5} \cmidrule(r){6-7}
+
+Model  & \multicolumn{1}{c}{\text{KS-JEDC}} & \multicolumn{1}{c}{\text{$\Discount$-Point}} & \multicolumn{1}{c}{\text{$\Discount$-Dist}} & \multicolumn{1}{c}{\text{$\Discount$-Dist}}  & \multicolumn{1}{c}{\text{$\Discount$-Dist}} & \multicolumn{1}{c}{\text{$\Discount$-Dist}} \\
+
+ & \multicolumn{1}{c}{\text{Our Solution}} & & &  &  & \\
+
+Wealth Measure  & & \multicolumn{1}{c}{Net } &   \multicolumn{1}{c}{Net}         &    \multicolumn{1}{c}{Liquid Financial}  &  \multicolumn{1}{c}{Net} &  \multicolumn{1}{c}{Liquid Financial} \\
+
+&  & \multicolumn{1}{c}{Worth } &   \multicolumn{1}{c}{Worth}         &    \multicolumn{1}{c}{and Retirement}  & \multicolumn{1}{c}{Worth} &  \multicolumn{1}{c}{and Retirement} \\
+
+
+
+&  & \multicolumn{1}{c}{} &   \multicolumn{1}{c}{}         &    \multicolumn{1}{c}{Assets}  &  \multicolumn{1}{c}{} &  \multicolumn{1}{c}{Assets} \\   \midrule
+
+
+
+
+\multicolumn{1}{l}{Overall average} &
+0.05
+&
+0.09
+&
+0.19
+&
+0.39
+
+&
+0.18
+&
+0.38
+\\ \midrule
+\multicolumn{1}{l}{By wealth/permanent income ratio} & & & & &
+\\
+\multicolumn{1}{l}{\ Top 1\%} &
+0.04
+&
+0.06
+&
+0.05
+&
+0.12
+&
+0.06
+&
+0.13
+\\
+\multicolumn{1}{l}{\ Top 10\%} &
+0.04
+&
+0.06
+&
+0.06
+&
+0.13
+&
+0.06
+&
+0.13
+\\
+\multicolumn{1}{l}{\ Top 20\%} &
+0.04
+&
+0.06
+&
+0.06
+&
+0.14
+&
+0.06
+&
+0.13
+\\
+\multicolumn{1}{l}{\ Top 40\%} &
+0.04
+&
+0.06
+&
+0.07
+&
+0.18
+&
+0.06
+&
+0.16
+\\
+\multicolumn{1}{l}{\ Top 50\%} &
+0.05
+&
+0.06
+&
+0.09
+&
+0.22
+&
+0.07
+&
+0.20
+\\
+\multicolumn{1}{l}{\ Top 60\%} &
+0.04
+&
+0.07
+&
+0.09
+&
+0.25
+&
+0.08
+&
+0.21
+\\
+\multicolumn{1}{l}{\ Bottom 50\%} &
+0.05
+&
+0.12
+&
+0.28
+&
+0.53
+&
+0.28
+&
+0.53
+\\ \midrule
+\multicolumn{1}{l}{By income} & & & & &
+\\
+\multicolumn{1}{l}{\ Top 1\%} &
+0.05
+&
+0.08
+&
+0.13
+&
+0.22
+&
+0.15
+&
+0.33
+\\
+\multicolumn{1}{l}{\ Top 10\%} &
+0.05
+&
+0.08
+&
+0.14
+&
+0.27
+&
+0.15
+&
+0.33
+\\
+\multicolumn{1}{l}{\ Top 20\%} &
+0.05
+&
+0.09
+&
+0.14
+&
+0.29
+&
+0.16
+&
+0.34
+\\
+\multicolumn{1}{l}{\ Top 40\%} &
+0.05
+&
+0.10
+&
+0.16
+&
+0.32
+&
+0.17
+&
+0.35
+\\
+\multicolumn{1}{l}{\ Top 50\%} &
+0.05
+&
+0.10
+&
+0.17
+&
+0.33
+&
+0.18
+&
+0.37
+\\
+\multicolumn{1}{l}{\ Top 60\%} &
+0.05
+&
+0.10
+&
+0.16
+&
+0.34
+&
+0.18
+&
+0.36
+\\
+\multicolumn{1}{l}{\ Bottom 50\%} &
+0.05
+&
+0.08
+&
+0.21
+&
+0.45
+&
+0.18
+&
+0.39
+\\ \midrule
+\multicolumn{1}{l}{By employment status} & & & & &
+\\
+\multicolumn{1}{l}{\ Employed} &
+0.05
+&
+0.08
+&
+0.16
+&
+0.35
+&
+0.16
+&
+0.35
+\\
+\multicolumn{1}{l}{\ Unemployed}  &
+0.06
+&
+0.20
+&
+0.44
+&
+0.74
+&
+0.35
+&
+0.67
+\\ \midrule
+
+
+\multicolumn{1}{l}{Time preference parameters${}^\ddagger$} &	 & 	 & 	  &	  &		   &	\\
+
+\multicolumn{1}{l}{$\grave{\Discount}$} & &
+
+
+
+\input ../Code/Mathematica/Results/Beta.tex &
+
+\input ../Code/Mathematica/Results/BetamiddleWithAggShocks.tex &
+
+\input ../Code/Mathematica/Results/BetamiddleWithAggShocksLiqFinPlsRet.tex &
+
+\input ../Code/Mathematica/Results/Betamiddle.tex &
+
+\input ../Code/Mathematica/Results/BetamiddleLiqFinPlsRet.tex \\
+
+\multicolumn{1}{l}{$\nabla$} & &
+
+       &
+
+\input ../Code/Mathematica/Results/NablaWithAggShocks.tex &
+
+\input ../Code/Mathematica/Results/NablaWithAggShocksLiqFinPlsRet.tex &
+
+\input ../Code/Mathematica/Results/Nabla.tex &
+
+\input ../Code/Mathematica/Results/NablaLiqFinPlsRet.tex
+
+\\ \bottomrule
+
+\end{tabular}
+
+\end{center}				

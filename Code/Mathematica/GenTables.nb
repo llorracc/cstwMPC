@@ -1,0 +1,57 @@
+(* Generate tables *)
+(* This file generates tables in the paper. We can run this file either independently or in DoAll.nb. *)
+
+Print["==========================================================================="];
+Print["Generate tables "];
+ClearAll["Global`*"];
+
+SetDirectory[NotebookDirectory[]];
+ResultsDir = Directory[] <> "/Results"; 
+
+
+(* produce tables for "cstKS" paper and save the tables in folder "cstKS\Latest\Tables" *)
+SetDirectory[ResultsDir];
+<<GenWDistcstKS.m;
+
+SetDirectory[ResultsDir];
+<<GenWDist_cstKSLarge.m;
+
+SetDirectory[ResultsDir];
+<<GenWDist_cstKSFull.m
+
+SetDirectory[ResultsDir];
+<<GenAggStatscstKS.m;
+
+SetDirectory[ResultsDir];
+<<GenMGComparison.m;
+
+
+(* produce tables for "cstMPC" paper and save the tables in folder "cstMPC\Latest\Tables" *)
+SetDirectory[ResultsDir]; 
+<<GenMPC.m;
+
+SetDirectory[ResultsDir]; 
+<<GenMPCallRobustnessCheck.m; 
+
+SetDirectory[ResultsDir]; 
+<<GenMPC_scenarios.m;
+
+SetDirectory[ResultsDir]; 
+<<GenMPCall_LCM.m; 
+
+(* produce other tables including for slides *)
+SetDirectory[ResultsDir];
+<<GenWDistslides.m;
+
+SetDirectory[ResultsDir];
+<<GenMPCslides.m;
+
+SetDirectory[ResultsDir];
+(*
+<<GenMPCslidesLiqFin.m;
+*)
+<<GenMPCslidesLiqFinPlsRet.m
+
+SetDirectory[ResultsDir]; 
+<<GenAggStatsPlausibleAggShocks.m;
+

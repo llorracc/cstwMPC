@@ -1,0 +1,56 @@
+\begin{center}
+
+\begin{tabular}{ld{2}d{2}}
+\toprule
+ & \multicolumn{1}{c}{Permanent} & \multicolumn{1}{c}{Transitory} \\
+Authors & \multicolumn{1}{c}{$\sigma _{\pshk }^{2}$} & \multicolumn{1}{c}{$\sigma _{\tshk }^{2}$} \\ \midrule
+Individual data &  &  \\
+\ \ \text{\citet{macurdy:timeseries}}$^{\ddagger}$  & $0.013$    & $0.031      $ \\
+\ \ \text{\citet{topel_seniority}}            & $0.013$       & $0.017      $ \\
+\ \ \text{\citet{topel92}}            & $0.017$       & $0.013      $ \\
+\ \ \text{\citet{meghir&pistaferri}}$^{\diamond}$ & $0.031$       & $0.032      $ \\
+\ \ \text{\cite{nv:risk}}$^{\P}$ & $0.005$       & $0.015$ \\
+\ \ \text{\citet{Maloney:2007vd}}$^{\star}$ & \multicolumn{1}{c}{$\sim0.01$}    & \multicolumn{1}{c}{$\sim0.1$}  \\
+\ \ \text{\citet{jensen&shore}}$^{\diamond}$& $0.054$       & $0.171      $ \\
+\ \ \text{\citet{guvenen}}            & $0.015$       & $0.061      $ \\
+\ \ \text{\citet{Heathcote:2010tw}}$^{\ast}$       & \multicolumn{1}{c}{$0.01$--$0.03$}   & \multicolumn{1}{c}{$0.05$--$0.1$} \\
+\ \ \text{\citet{HryshkoRIP}}$^{\diamond}$   & $0.038$       & $0.118      $ \\
+\ \ \text{\citet{lmpWagerisk}}       & $0.011$       & \multicolumn{1}{c}{--} \\
+\ \ \text{\cite{Sabelhaus:2010ba}}$^{\triangle}$       & $0.03$       & \multicolumn{1}{c}{0.08} \\
+%\ \ \text{\citet{mgCovariance}}$^{\star}$  & $0.001$    & $0.180      $ \\
+\ \ \text{\citet{guvenen:coutercyclicalIncomeRisk}}$^{\circ}$  & \multicolumn{1}{c}{$\sim0.05$}    & \multicolumn{1}{c}{$\sim0.125$} \\
+\ \ \text{\citet{Karahan:2012gm}}$^{\bullet}$      & \multicolumn{1}{c}{$\sim0.013$} & \multicolumn{1}{c}{$\sim0.09$} \\
+\ \ \text{\citet{blundellEtAl_LaborDynNorway}}$^{\clubsuit}$      & \multicolumn{1}{c}{$\sim0.015$} & \multicolumn{1}{c}{$\sim0.025$} \\
+\midrule
+Household data &  &  \\
+\ \ \text{\citet{carroll:brookings}}     & $0.016$       & $0.027      $ \\
+\ \ \text{\citet{carroll&samwick:nature}}       & $0.022$       & $0.044      $ \\
+\ \ \text{\citet{sty:consumption}}       & $0.017$       & $0.063      $ \\
+\ \ \text{\citet{sty:cyclical}}          & \multicolumn{1}{c}{$0.008$--$0.026$} & $0.316      $ \\
+\ \ \text{\citet{blundellEtAl:partialIns}}$^{\diamond}$      & \multicolumn{1}{c}{$0.010$--$0.030$} & \multicolumn{1}{c}{$0.029$--$0.055$} \\
+%\ \ \text{\citet{Gorodnichenko:2010tp}}$^{\triangleleft}$      & \multicolumn{1}{c}{$\sim0.1$} & \multicolumn{1}{c}{$\sim0.2$} \\
+\ \ \text{\citet{red_xSectionFacts}}$^{\triangleleft}$      & \multicolumn{1}{c}{$0.02$--$0.05$} & \multicolumn{1}{c}{$0.02$--$0.1$} \\
+\ \ \text{\citet{Blundell:2013tm}}$^{\triangleright}$      & \multicolumn{1}{c}{$\sim0.005$} & \\
+\ \ \text{\citet{dhprvInequality}}$^{\S}$      & \multicolumn{1}{c}{$0.007$--$0.010$} & \multicolumn{1}{c}{$0.15$--$0.20$}\\
+
+\midrule
+Implied by \text{KS-JEDC}           & $
+\input ../Code/Mathematica/Results/VarPermKS.tex
+$ &
+$
+\input ../Code/Mathematica/Results/VarTranKS.tex
+$ \\
+%Implied by \text{\citet{castaneda}} & $
+%\input ../Code/Mathematica/Results/VarPermCas.tex
+%$ &
+%$
+%\input ../Code/Mathematica/Results/VarTranCas.tex
+%$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% Main coeff in each paper is reported. If time varying coeffs are reported, the range is reported instead.
+% Restricted the AR1 coeff to 1 (random walk): Meghir and Pistaferri (2004); Low et al (2005); Jensen and Shore (2008) (slightly modified); Hrshko (2009), Carroll (1992, 1997); Blundell et al (2008)
+% Assume AR1: Topel (1990); Topel and Ward (1992); Guvenen; Stresleten (2004a, 2004b) did not but (main) AR1 coeff is not statistically different from 1.
+% For KS and Castaneda, drop samples if annual income is below 20 percent of the 7-year average.

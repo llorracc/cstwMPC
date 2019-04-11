@@ -1,0 +1,1 @@
+PlotDistributionByType.do plots the distribution of MPCs by (impatience) type

@@ -1,0 +1,29 @@
+(* Generate tables *)
+(* This file generates tables in the cstMPCxc (cstMPC cross country) paper. This file is a subset of DoAllEurope.nb but we can run this file independently. *)
+
+SetDirectory[NotebookDirectory[]];
+ResultsDir = Directory[] <> "/ResultsEurope"; 
+
+Print["==========================================================================="];
+Print["Generate tables "];
+ClearAll["Global`*"];
+
+SetDirectory[NotebookDirectory[]];
+ResultsEuropeDir = Directory[] <> "/ResultsEurope"; 
+
+SetDirectory[ResultsEuropeDir];
+<<GenWealthDistSim.m;     (* gen wealth dist table (simulated) *)
+
+SetDirectory[ResultsEuropeDir];
+<<GenMPCallxc.m;             (* gen MPC table for the net worth case *)
+
+SetDirectory[ResultsEuropeDir];
+<<GenMPCallLiqFinPlsRetxc.m; (* gen MPC table for the liq fin + ret assets case *)
+
+SetDirectory[ResultsEuropeDir];
+<<GenMPCAltParamsxc.m; (* gen MPC table across alt params *)
+
+SetDirectory[ResultsEuropeDir];
+<<GenMPCAltParamsxc_slides.m; (* gen MPC table across alt params *)
+
+

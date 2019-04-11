@@ -1,0 +1,35 @@
+\begin{center}
+\begin{tabular}{lcd{4}l}
+\toprule
+Description             & Parameter  & \multicolumn{1}{c}{Value}  & Source \\ \midrule
+\multicolumn{4}{l}{Representative agent model}\\
+Time discount factor                  & $\beta $     & 0.99 &  JEDC (2010)\\
+Coef of relative risk aversion & $\CRRA $     & 1  & JEDC (2010) \\
+Capital share                         & $\kapShare $ & 0.36 & JEDC (2010)\\
+Depreciation rate                     & $\delta $    & 0.025 & JEDC (2010)\\
+Time worked per employee              & $\labor$    & \multicolumn{1}{c}{\text{1/0.9}} & JEDC (2010)\\
+\multicolumn{4}{l}{Steady state} \\
+Capital/(quarterly) output ratio   & $\KLev/\YLev$      & 10.26 & JEDC (2010)\\
+Effective interest rate& $\rfree-\delta $ &  0.01 & JEDC (2010) \\
+Wage rate              & $\Wage$            &  2.37 & JEDC (2010) \\ \midrule
+\multicolumn{4}{l}{Heterogenous agents models}\\
+Unempl insurance payment       & $\mu $   & 0.15 & JEDC (2010) \\
+
+Probability of death    & $\PDies$ & 0.00625& Yields 40-year working life \\\midrule
+\multicolumn{4}{l}{FBS income shocks} \\
+Variance of log $\theta_{t,i}$ & $\sigma _{\theta }^{2}$ & \multicolumn{1}{c}{$0.010\times4$} & $\text{\citet{carroll:brookings},}$ \\
+ &  &  &  \\
+Variance of log $\pshk_{t,i}$ & $\sigma _{\pshk}^{2}$ & \multicolumn{1}{c}{$0.010\times4/11$} & $\text{\citet{carroll:brookings},}$ \\
+ &  &  & DeBacker et al.\ (2013), \\
+ &  &  & \cite{cstKS} \\
+     Unemployment rate              & $\mho$      & 0.07 & Mean in JEDC (2010)\\
+    Variance of log $\TShk_{t}$ & $\sigma^{2}_{\TShk}$ & 0.00001 & \text{Authors' calculations} \\
+    Variance of log $\PShk_{t}$ & $\sigma^{2}_{\PShk}$ & 0.00004 & \text{Authors' calculations} \\ \midrule
+ \multicolumn{4}{l}{KS income shocks} \\
+Aggregate shock to productivity & $\bigtriangleup ^{\ptyLev}$      & 0.01 & \text{\citet{ksHetero}}\\
+Unemployment (good state) & $u^{g}$                          & 0.04 & \text{\citet{ksHetero}} \\
+Unemployment (bad state) & $u^{b}$                          & 0.10 & \text{\citet{ksHetero}} \\
+\multicolumn{2}{l}{\text{Aggregate transition probability}}& 0.125 & \text{\citet{ksHetero}} \\
+ \bottomrule
+\end{tabular}
+\end{center}

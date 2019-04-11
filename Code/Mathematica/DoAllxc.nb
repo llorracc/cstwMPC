@@ -1,0 +1,1175 @@
+(* DoAllxc.nb *)
+(* This file estimates\beta and diff across European economies (in cstMPCxc project) *)
+(* Data on i) net worth and ii) liq fin pls ret assets are used  *)
+
+
+ClearAll["Global`*"];
+
+
+Print["cstMPC across European economies, using net worth data "]
+
+(* Models without aggregate shock *)
+Print["==========================================================================="];
+Print["Models without aggregate shock"];
+
+ClearAll["Global`*"];
+SetDirectory[NotebookDirectory[]];
+NoAggShockDir    = Directory[] <> "/NoAggShock";    (* Directory where files without aggregate shock are saved *)
+WithAggShocksDir = Directory[] <> "/WithAggShocks"; (* Directory where files with aggregate shocks + file for PF rep agent are saved *)
+SetDirectory[NoAggShockDir]; 
+
+
+TimeStartEurope = SessionTime[];  
+
+
+(* ********************** *)
+(* All countries *)
+Country = AllBaseline; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockAllBaseline.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockAllBaseline.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffAllBaseline.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleAllBaseline.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffAllBaseline.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleAllBaseline.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffAllBaseline.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleAllBaseline.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+ (* low psi case *)
+Country = AllLowPsi; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockAllLowPsi.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockAllLowPsi.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffAllLowPsi.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleAllLowPsi.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffAllLowPsi.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleAllLowPsi.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffAllLowPsi.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleAllLowPsi.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+ (* high theta case *)
+Country = AllHighTheta; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockAllHighTheta.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockAllHighTheta.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffAllHighTheta.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleAllHighTheta.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffAllHighTheta.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleAllHighTheta.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffAllHighTheta.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleAllHighTheta.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+ (* very high theta case *)
+Country = AllVeryHighTheta; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockAllVeryHighTheta.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockAllVeryHighTheta.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffAllVeryHighTheta.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleAllVeryHighTheta.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffAllVeryHighTheta.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleAllVeryHighTheta.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffAllVeryHighTheta.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleAllVeryHighTheta.txt", \[Beta]middleSolution, "Table"];
+
+
+
+(* ********************** *)
+(* Austria *)
+Country = AT; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockAT.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockAT.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffAT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleAT.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffAT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleAT.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffAT.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleAT.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Belgium *)
+Country = BE; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockBE.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockBE.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffBE.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleBE.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffBE.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleBE.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffBE.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleBE.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Cyprus *)
+Country = CY; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockCY.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockCY.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffCY.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleCY.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffCY.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleCY.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffCY.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleCY.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Germany *)
+Country = DE; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockDE.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockDE.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffDE.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleDE.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffDE.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleDE.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffDE.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleDE.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Spain *)
+Country = ES; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockES.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockES.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffES.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleES.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffES.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleES.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffES.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleES.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Finland *)
+Country = FI; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockFI.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockFI.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffFI.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleFI.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffFI.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleFI.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffFI.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleFI.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* France *)
+Country = FR; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockFR.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockFR.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffFR.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleFR.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffFR.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleFR.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffFR.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleFR.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Greece *)
+Country = GR; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockGR.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockGR.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffGR.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleGR.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffGR.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleGR.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffGR.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleGR.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Italy *)
+Country = IT; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockIT.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockIT.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffIT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleIT.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffIT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleIT.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffIT.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleIT.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Luxembourg *)
+Country = LU; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockLU.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockLU.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLU.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLU.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLU.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLU.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLU.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLU.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Malta *)
+Country = MT; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockMT.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockMT.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffMT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleMT.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffMT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleMT.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffMT.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleMT.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Netherland *)
+Country = NL; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockNL.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockNL.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffNL.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleNL.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffNL.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleNL.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffNL.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleNL.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Portugal *)
+Country = PT; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockPT.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockPT.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffPT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddlePT.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffPT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddlePT.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffPT.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddlePT.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Portugal Slovenia *)
+Country = SI; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockSI.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockSI.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffSI.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleSI.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffSI.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleSI.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffSI.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleSI.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Portugal Slovakia *)
+Country = SK; 
+<<FindBetaDistSevenEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenNoAggShockSK.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenNoAggShockSK.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffSK.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleSK.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffSK.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleSK.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffSK.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleSK.txt", \[Beta]middleSolution, "Table"];
+
+Print[" Time spent to estimate params across Euroepan economies:  ", (SessionTime[]-TimeStartEurope)/60];
+
+
+
+(* Models with aggregate PERMANENT shock *)
+Print["==========================================================================="];
+Print["Models with aggregate permanent shocks"];
+ClearAll["Global`*"];
+SetDirectory[NotebookDirectory[]];
+WithAggPermShocksDir = Directory[] <> "/WithAggPermShocks"; (* Directory where files with PERMANENT aggregate shocks + file for PF rep agent are saved *)
+SetDirectory[WithAggPermShocksDir]; 
+
+
+TimeStartEurope = SessionTime[]; 
+
+Print["============================================================="];
+Print["Run \[Beta]-Dist model with time pref factors approximated by seven points"];
+
+Print["=============================================="]; 
+(* All countries *)
+Country = AllBaseline; 
+Print["Country: All countries"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockAllBaseline.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksAllBaseline.txt",             MPCListWithAggShock, "Table"];
+
+
+Print["=============================================="]; 
+(* All countries *)
+Country = AllLowPsi; 
+Print["Country: All (low psi)"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockAllLowPsi.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksAllLowPsi.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* All countries *)
+Country = AllHighTheta; 
+Print["Country: All (high theta)"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockAllHighTheta.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksAllHighTheta.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* All countries *)
+Country = AllVeryHighTheta; 
+Print["Country: All (very high theta)"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockAllVeryHighTheta.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksAllVeryHighTheta.txt",             MPCListWithAggShock, "Table"];
+
+
+
+Print["=============================================="]; 
+(* Austria *)
+Country = AT; 
+Print["Country: Austria"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockAT.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksAT.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Belgium *)
+Country = BE; 
+Print["Country: Belgium"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockBE.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksBE.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Cyprus *)
+Country = CY; 
+Print["Country: Cyprus"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockCY.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksCY.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Germany *)
+Country = DE; 
+Print["Country: Germany"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockDE.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksDE.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Spain *)
+Country = ES; 
+Print["Country: Spain"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockES.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksES.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Finland *)
+Country = FI; 
+Print["Country: Finland"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockFI.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksFI.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* France *)
+Country = FR; 
+Print["Country: France"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockFR.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksFR.txt",             MPCListWithAggShock, "Table"];
+
+
+Print["=============================================="]; 
+(* Greece *)
+Country = GR; 
+Print["Country: Greece"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockGR.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksGR.txt",             MPCListWithAggShock, "Table"];
+
+
+Print["=============================================="]; 
+(* Italy *)
+Country = IT; 
+Print["Country: Italy"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockIT.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksIT.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Luxembourg *)
+Country = LU; 
+Print["Country: Luxembourg"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockLU.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksLU.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Malta *)
+Country = MT; 
+Print["Country: Malta"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockMT.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksMT.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Netherland *)
+Country = NL; 
+Print["Country: Netherland"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockNL.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksNL.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Portugal *)
+Country = PT; 
+Print["Country: Portugal"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockPT.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksPT.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Slovenia *)
+Country = SI; 
+Print["Country: Slovenia"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockSI.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksSI.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Slovakia *)
+Country = SK; 
+Print["Country: Slovakia"]; 
+
+<<SolveAndSimDistSevenEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenWithAggPermShockSK.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenWithAggPermShocksSK.txt",             MPCListWithAggShock, "Table"];
+
+
+Print[" Time spent to run \[Beta]-Dist model across Euroepan economies (minutes):  ", (SessionTime[]-TimeStartEurope)/60];
+
+
+
+
+
+
+
+Print["==========================================================================="];
+Print["==========================================================================="];
+
+
+Print["cstMPC across European economies, using data on liq fin and retirement assets "]
+
+(* Models without aggregate shock *)
+Print["==========================================================================="];
+Print["Models without aggregate shock"];
+
+ClearAll["Global`*"];
+SetDirectory[NotebookDirectory[]];
+NoAggShockDir    = Directory[] <> "/NoAggShock";    (* Directory where files without aggregate shock are saved *)
+WithAggShocksDir = Directory[] <> "/WithAggShocks"; (* Directory where files with aggregate shocks + file for PF rep agent are saved *)
+SetDirectory[NoAggShockDir]; 
+
+TimeStartEuropeLiqFinPlsRet = SessionTime[];  
+
+(* ********************** *)
+(* All countries *)
+Country = AllBaseline; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockAllBaseline.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockAllBaseline.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetAllBaseline.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetAllBaseline.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetAllBaseline.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetAllBaseline.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetAllBaseline.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetAllBaseline.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Austria *)
+Country = AT; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockAT.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockAT.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetAT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetAT.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetAT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetAT.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetAT.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetAT.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Belgium *)
+Country = BE; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockBE.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockBE.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetBE.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetBE.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetBE.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetBE.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetBE.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetBE.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Cyprus *)
+Country = CY; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockCY.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockCY.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetCY.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetCY.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetCY.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetCY.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetCY.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetCY.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Germany *)
+Country = DE; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockDE.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockDE.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetDE.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetDE.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetDE.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetDE.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetDE.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetDE.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Spain *)
+Country = ES; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockES.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockES.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetES.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetES.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetES.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetES.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetES.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetES.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Finland *)
+Country = FI; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockFI.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockFI.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetFI.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetFI.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetFI.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetFI.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetFI.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetFI.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* France *)
+Country = FR; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockFR.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockFR.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetFR.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetFR.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetFR.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetFR.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetFR.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetFR.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Greece *)
+Country = GR; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockGR.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockGR.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetGR.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetGR.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetGR.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetGR.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetGR.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetGR.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Italy *)
+Country = IT; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockIT.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockIT.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetIT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetIT.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetIT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetIT.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetIT.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetIT.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Luxembourg *)
+Country = LU; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockLU.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockLU.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetLU.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetLU.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetLU.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetLU.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetLU.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetLU.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Malta *)
+Country = MT; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockMT.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockMT.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetMT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetMT.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetMT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetMT.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetMT.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetMT.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Netherland *)
+Country = NL; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockNL.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockNL.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetNL.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetNL.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetNL.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetNL.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetNL.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetNL.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Portugal *)
+Country = PT; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockPT.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockPT.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetPT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetPT.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetPT.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetPT.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetPT.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetPT.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Portugal Slovenia *)
+Country = SI; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockSI.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockSI.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetSI.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetSI.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetSI.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetSI.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetSI.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetSI.txt", \[Beta]middleSolution, "Table"];
+
+(* ********************** *)
+(* Portugal Slovakia *)
+Country = SK; 
+<<FindBetaDistSevenLiqFinPlsRetEuropeCommon.m; (* Run \[Beta]-Dist model with time pref factors approximated by seven points and estimate params *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetNoAggShockSK.txt", kLevListDistSevenNoAggShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCDistSevenLiqFinPlsRetNoAggShockSK.txt", AggMPCMeanAnnual, "Table"];
+
+(*
+Export[ParentDirectory[] <> "/WithAggShocks/diffLiqFinPlsRetSK.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggShocks/BetamiddleLiqFinPlsRetSK.txt", \[Beta]middleSolution, "Table"];
+*)
+Export[ParentDirectory[] <> "/WithAggPermShocks/diffLiqFinPlsRetSK.txt", diff, "Table"];
+Export[ParentDirectory[] <> "/WithAggPermShocks/BetamiddleLiqFinPlsRetSK.txt", \[Beta]middleSolution, "Table"];
+
+Export[ParentDirectory[] <> "/ResultsEurope/diffLiqFinPlsRetSK.txt",       diff, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/BetamiddleLiqFinPlsRetSK.txt", \[Beta]middleSolution, "Table"];
+
+
+Print[" Time spent to run \[Beta]-Dist model (using liq fin and retirement assets) across Euroepan economies (minutes):  ", (SessionTime[]-TimeStartEuropeLiqFinPlsRet)/60];
+
+
+
+
+(* Models with aggregate PERMANENT shock *)
+Print["==========================================================================="];
+Print["Models with aggregate permanent shocks"];
+ClearAll["Global`*"];
+SetDirectory[NotebookDirectory[]];
+WithAggPermShocksDir = Directory[] <> "/WithAggPermShocks"; (* Directory where files with PERMANENT aggregate shocks + file for PF rep agent are saved *)
+SetDirectory[WithAggPermShocksDir]; 
+
+TimeStartEurope = SessionTime[]; 
+
+Print["============================================================="];
+Print["Run \[Beta]-Dist model with time pref factors approximated by seven points"];
+
+Print["=============================================="]; 
+(* All countries *)
+Country = AllBaseline; 
+Print["Country: All countries"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockAllBaseline.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksAllBaseline.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Austria *)
+Country = AT; 
+Print["Country: Austria"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockAT.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksAT.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Belgium *)
+Country = BE; 
+Print["Country: Belgium"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockBE.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksBE.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Cyprus *)
+Country = CY; 
+Print["Country: Cyprus"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockCY.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksCY.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Germany *)
+Country = DE; 
+Print["Country: Germany"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockDE.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksDE.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Spain *)
+Country = ES; 
+Print["Country: Spain"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockES.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksES.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Finland *)
+Country = FI; 
+Print["Country: Finland"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockFI.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksFI.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* France *)
+Country = FR; 
+Print["Country: France"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockFR.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksFR.txt",             MPCListWithAggShock, "Table"];
+
+
+Print["=============================================="]; 
+(* Greece *)
+Country = GR; 
+Print["Country: Greece"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockGR.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksGR.txt",             MPCListWithAggShock, "Table"];
+
+
+Print["=============================================="]; 
+(* Italy *)
+Country = IT; 
+Print["Country: Italy"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockIT.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksIT.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Luxembourg *)
+Country = LU; 
+Print["Country: Luxembourg"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockLU.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksLU.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Malta *)
+Country = MT; 
+Print["Country: Malta"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockMT.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksMT.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Netherland *)
+Country = NL; 
+Print["Country: Netherland"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockNL.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksNL.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Portugal *)
+Country = PT; 
+Print["Country: Portugal"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockPT.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksPT.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Slovenia *)
+Country = SI; 
+Print["Country: Slovenia"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockSI.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksSI.txt",             MPCListWithAggShock, "Table"];
+
+Print["=============================================="]; 
+(* Slovakia *)
+Country = SK; 
+Print["Country: Slovakia"]; 
+
+<<SolveAndSimDistSevenLiqFinPlsRetEuropeCommon.m;  (* Run \[Beta]-Dist model with time pref factors approximated by seven points *)
+
+(* export data *)
+Export[ParentDirectory[] <> "/ResultsEurope/kLevListDistSevenLiqFinPlsRetWithAggPermShockSK.txt", kLevListDistSevenWithAggPermShock, "Table"];
+Export[ParentDirectory[] <> "/ResultsEurope/MPCListDistSevenLiqFinPlsRetWithAggPermShocksSK.txt",             MPCListWithAggShock, "Table"];
+
+
+Print[" Time spent to run \[Beta]-Dist model across Euroepan economies (minutes):  ", (SessionTime[]-TimeStartEurope)/60];
+
+
+
+
+(* Generate tables *)
+Print["==========================================================================="];
+Print["Generate tables "];
+ClearAll["Global`*"];
+
+SetDirectory[NotebookDirectory[]];
+ResultsEuropeDir = Directory[] <> "/ResultsEurope"; 
+
+SetDirectory[ResultsEuropeDir];
+<<GenWealthDistSim.m;     (* gen wealth dist table (simulated) *)
+
+SetDirectory[ResultsEuropeDir];
+<<GenMPCallxc.m;             (* gen MPC table for the net worth case *)
+
+SetDirectory[ResultsEuropeDir];
+<<GenMPCallLiqFinPlsRetxc.m; (* gen MPC table for the liq fin + ret assets case *)
+
+SetDirectory[ResultsEuropeDir];
+<<GenMPCAltParamsxc.m; (* gen MPC table across alt params *)
+
+SetDirectory[ResultsEuropeDir];
+<<GenMPCAltParamsxc_slides.m; (* gen MPC table across alt params *)

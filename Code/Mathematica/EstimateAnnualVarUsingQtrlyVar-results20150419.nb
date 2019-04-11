@@ -1,0 +1,532 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     19466,        522]
+NotebookOptionsPosition[     18271,        480]
+NotebookOutlinePosition[     18617,        495]
+CellTagsIndexPosition[     18574,        492]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"EstimateAnnualVarUsingQtrlyVar", ".", "m"}], " ", "*)"}], "\n", 
+  RowBox[{"(*", " ", "\n", 
+   RowBox[{
+   "This", " ", "file", " ", "verifies", " ", "footnote", " ", "2", " ", "in",
+     " ", "Economics", " ", "Letter", " ", "version", " ", "of", " ", "cstKS",
+     " ", "paper", " ", "\n", "by", " ", "running", " ", "Monte", " ", 
+    "Carlo", " ", "simulations", " ", "to", " ", "show", " ", "\n", "ratio", 
+    " ", "of", " ", "annual", " ", "variance", " ", "of", " ", "perm", " ", 
+    "shocks", " ", "to", " ", "quarterly", " ", "variance", " ", "is", " ", 
+    RowBox[{"11", "/", "4"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"=", "2.75"}], ")"}]}], "\n", "*)"}], "\n", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"\n", 
+            RowBox[{"This", " ", 
+             RowBox[{"file", " ", "\n", "\n", "--"}], " ", "calculates", " ", 
+             "variance", " ", "of", " ", "perm", " ", "shocks", " ", "in", 
+             " ", "two", " ", 
+             RowBox[{"ways", ":", "\n", "\n", " ", "i"}]}], ")"}], " ", 
+           "calc", " ", "annual", " ", "perm", " ", "income", " ", "using", 
+           " ", "quarterly", " ", "perm", " ", "income"}], ",", " ", 
+          RowBox[{
+          "and", " ", "\n", "    ", "estimate", " ", "the", " ", "variance", 
+           " ", "of", " ", "annul", " ", "perm", " ", "shocks", " ", 
+           RowBox[{"(", 
+            RowBox[{"annual", " ", "variance"}], ")"}], " ", "\n", "\n", " ", 
+           "ii"}]}], ")"}], " ", "estimate", " ", "the", " ", "variance", " ",
+         "of", " ", "four", " ", "quarter", " ", "perm", " ", "shocks", " ", 
+        "y", 
+        RowBox[{"(", 
+         RowBox[{"q4", ",", " ", 
+          RowBox[{"year", " ", "t"}]}], ")"}], " ", "over", " ", "y", 
+        RowBox[{"(", 
+         RowBox[{"q4", ",", " ", 
+          RowBox[{
+           RowBox[{"year", " ", "t"}], "-", "1"}]}], ")"}], " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"four", " ", "quarter", " ", "variance"}], ")"}], " ", "\n",
+          "\n", "\n", "--"}], " ", "reports", " ", "\n", "\n", " ", "i"}], 
+       ")"}], "  ", "ratio", " ", "of", " ", "annual", " ", "variance", " ", 
+      "to", " ", "quarterly", " ", "variance", "\n", "\n", " ", "ii"}], ")"}],
+     " ", "ratio", " ", "of", " ", "four", " ", "quarter", " ", "variance", 
+    " ", "to", " ", "quarterly", " ", "variance"}], "\n", "*)"}]}]], "Code"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"set", " ", "up", " ", "func"}], " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"DiscreteApproxToMeanOneLogNormal", "[", 
+     RowBox[{"StdDev_", ",", " ", "NumOfPoints_"}], "]"}], " ", ":=", " ", 
+    RowBox[{"Block", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", " ", "\n", 
+      RowBox[{
+       RowBox[{"LevelAdjustingParameter", " ", "=", " ", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"(", 
+           RowBox[{"1", "/", "2"}], ")"}]}], " ", 
+         RowBox[{
+          RowBox[{"(", "StdDev", ")"}], "^", "2"}]}]}], ";", "\n", "\n", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+         RowBox[{
+         "This", " ", "parameter", " ", "takes", " ", "on", " ", "the", " ", 
+          "value", " ", "necessary", " ", "to", " ", "make", " ", "the", " ", 
+          "mean", " ", "in", " ", "levels"}], " ", "=", " ", "1"}], " ", 
+        "*)"}], "\n", "  ", 
+       RowBox[{"ListOfEdgePoints", " ", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Quantile", "[", 
+           RowBox[{
+            RowBox[{"LogNormalDistribution", "[", 
+             RowBox[{"LevelAdjustingParameter", ",", " ", "StdDev"}], "]"}], 
+            ",", 
+            RowBox[{"(", 
+             RowBox[{"i", "/", "NumOfPoints"}], ")"}]}], "]"}], ",", " ", 
+          "\n", "                         ", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", " ", 
+            RowBox[{"NumOfPoints", " ", "-", " ", "1"}]}], "}"}]}], "]"}]}], 
+       ";", "\n", "  ", 
+       RowBox[{"ListOfEdgePoints", " ", "=", " ", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "0", "}"}], ",", " ", "ListOfEdgePoints", ",", " ", 
+           RowBox[{"{", "Infinity", "}"}]}], "}"}], "]"}]}], ";", "\n", "  ", 
+       RowBox[{"ProbOfMeanPoints", " ", "=", " ", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"CDF", "[", 
+            RowBox[{
+             RowBox[{"LogNormalDistribution", "[", 
+              RowBox[{"LevelAdjustingParameter", ",", " ", "StdDev"}], "]"}], 
+             ",", 
+             RowBox[{"ListOfEdgePoints", "[", 
+              RowBox[{"[", "i", "]"}], "]"}]}], "]"}], " ", "\n", 
+           "                         ", "-", " ", 
+           RowBox[{"CDF", "[", 
+            RowBox[{
+             RowBox[{"LogNormalDistribution", "[", 
+              RowBox[{"LevelAdjustingParameter", ",", "StdDev"}], "]"}], ",", 
+             " ", 
+             RowBox[{"ListOfEdgePoints", "[", 
+              RowBox[{"[", 
+               RowBox[{"i", " ", "-", " ", "1"}], "]"}], "]"}]}], "]"}]}], 
+          ",", "\n", "                          ", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", " ", "2", ",", " ", 
+            RowBox[{"Length", "[", "ListOfEdgePoints", "]"}]}], "}"}]}], 
+         "]"}]}], ";", "\n", "  ", 
+       RowBox[{"ListOfMeanPoints", " ", "=", " ", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"NIntegrate", "[", 
+            RowBox[{
+             RowBox[{"z", " ", 
+              RowBox[{"PDF", "[", 
+               RowBox[{
+                RowBox[{"LogNormalDistribution", "[", 
+                 RowBox[{"LevelAdjustingParameter", ",", " ", "StdDev"}], 
+                 "]"}], ",", " ", "z"}], "]"}]}], ",", "\n", 
+             "                          ", 
+             RowBox[{"{", 
+              RowBox[{"z", ",", " ", 
+               RowBox[{"ListOfEdgePoints", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", " ", "-", " ", "1"}], "]"}], "]"}], ",", " ", 
+               RowBox[{"ListOfEdgePoints", "[", 
+                RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}], ",", " ", 
+           "\n", "                         ", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", " ", "2", ",", 
+             RowBox[{"Length", "[", "ListOfEdgePoints", "]"}]}], "}"}]}], 
+          "]"}], "/", "ProbOfMeanPoints"}]}], ";", "\n", "  ", 
+       RowBox[{"Return", "[", 
+        RowBox[{"{", 
+         RowBox[{"ListOfMeanPoints", ",", " ", "ProbOfMeanPoints"}], "}"}], 
+        "]"}]}]}], "]"}]}], ";", " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"End", " ", "of", " ", "Block"}], " ", "*)"}]}]}]], "Code"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"set", " ", "up", " ", "params"}], " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Sigma]Psi", "         ", "=", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"0.01", "/", "4"}], ")"}], "^", "0.5"}]}], ";", " ", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+     "Quarterly", " ", "standard", " ", "deviation", " ", "of", " ", 
+      "lognormal", " ", "distribution", " ", "of", " ", "permanent", " ", 
+      "shocks"}], " ", "*)"}], "\n", 
+    RowBox[{"NumOfPsiShockPoints", " ", "=", " ", "1000"}], ";", "         ", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+     "Number", " ", "of", " ", "points", " ", "in", " ", "the", " ", 
+      "discrete", " ", "approximation", " ", "to", " ", "lognormal", " ", 
+      "distribution"}], " ", "*)"}], "\n", 
+    "                                    ", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+     "Picked", " ", "a", " ", "large", " ", "number", " ", "to", " ", 
+      "minimize", " ", "error", " ", "resulting", " ", "from", " ", 
+      "approximation"}], " ", "*)"}], "\n", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"PsiVec", ",", " ", "PsiVecProb"}], "}"}], " ", "=", 
+     RowBox[{"DiscreteApproxToMeanOneLogNormal", "[", 
+      RowBox[{"\[Sigma]Psi", ",", " ", "NumOfPsiShockPoints"}], "]"}]}], 
+    ";"}], " ", "\n", " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"calc", " ", "PsiVec", " ", 
+     RowBox[{"(", 
+      RowBox[{"vector", " ", "of", " ", "perm", " ", "shocks"}], ")"}]}], " ",
+     "*)"}]}]}]], "Code"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"set", " ", "up", " ", "routine"}], " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{"EstimateVars", " ", ":=", " ", 
+    RowBox[{"Block", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\n", "\n", 
+      RowBox[{
+       RowBox[{"TimeS", " ", "=", " ", 
+        RowBox[{"SessionTime", "[", "]"}]}], ";", " ", "\n", "\n", 
+       RowBox[{"(*", " ", 
+        RowBox[{"set", " ", "up", " ", "lists"}], " ", "*)"}], "\n", 
+       RowBox[{"QtrPsiList", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"PsiVec", "[", 
+           RowBox[{"[", 
+            RowBox[{"RandomInteger", "[", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "NumOfPsiShockPoints"}], "}"}], "]"}], "]"}], 
+           "]"}], ",", 
+          RowBox[{"{", "NumOfPeriods", "}"}]}], "]"}]}], ";", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "list", " ", "of", " ", "quaterly", " ", "perm", " ", "shocks"}], " ",
+         "*)"}], "\n", 
+       RowBox[{"QtrPList", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"{", "NumOfPeriods", "}"}]}], "]"}]}], ";", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "list", " ", "of", " ", "quarterly", " ", "perm", " ", "inc"}], " ", 
+        "*)"}], "\n", "\n", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"t", "=", "2"}], ",", " ", 
+         RowBox[{"t", "<=", "NumOfPeriods"}], ",", "\n", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"QtrPList", "[", 
+            RowBox[{"[", "t", "]"}], "]"}], "=", 
+           RowBox[{
+            RowBox[{"QtrPList", "[", 
+             RowBox[{"[", 
+              RowBox[{"t", "-", "1"}], "]"}], "]"}], " ", 
+            RowBox[{"QtrPsiList", "[", 
+             RowBox[{"[", "t", "]"}], "]"}]}]}], ";", " ", "\n", 
+          RowBox[{"t", "=", 
+           RowBox[{"t", "+", "1"}]}]}]}], "]"}], ";", "\n", "\n", "\n", 
+       RowBox[{"AnnualPList", " ", "=", " ", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Mean", "[", 
+           RowBox[{"Take", "[", 
+            RowBox[{"QtrPList", ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"4", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"i", "-", "1"}], ")"}]}], "+", "1"}], ",", 
+               RowBox[{"4", "*", "i"}]}], "}"}]}], "]"}], "]"}], ",", "\n", 
+          "                   ", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", 
+            RowBox[{"NumOfPeriods", "/", "4"}]}], "}"}]}], "]"}]}], ";", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "list", " ", "of", " ", "annual", " ", "perm", " ", "income"}], " ", 
+        "*)"}], "\n", 
+       RowBox[{"LogAnnualPList", "=", 
+        RowBox[{"Log", "[", "AnnualPList", "]"}]}], ";", "\n", 
+       RowBox[{"dLogAnnualPList", "=", " ", 
+        RowBox[{
+         RowBox[{"Take", "[", 
+          RowBox[{"LogAnnualPList", ",", 
+           RowBox[{"{", 
+            RowBox[{"2", ",", 
+             RowBox[{"Length", "[", "LogAnnualPList", "]"}]}], "}"}]}], "]"}],
+          "\n", "                ", "-", 
+         RowBox[{"Take", "[", 
+          RowBox[{"LogAnnualPList", ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", 
+             RowBox[{
+              RowBox[{"Length", "[", "LogAnnualPList", "]"}], "-", "1"}]}], 
+            "}"}]}], "]"}]}]}], ";", "\n", 
+       RowBox[{"AnnualVar", " ", "=", " ", 
+        RowBox[{"Variance", "[", "dLogAnnualPList", "]"}]}], ";", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"variance", " ", "of", " ", "annul", " ", "income"}], " ", 
+        "*)"}], "\n", "\n", 
+       RowBox[{"QtrVar", "=", 
+        RowBox[{"Variance", "[", 
+         RowBox[{"Log", "[", "PsiVec", "]"}], "]"}]}], ";", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"varinace", " ", "of", " ", "quarterly", " ", "income"}], " ",
+         "*)"}], "\n", "\n", 
+       RowBox[{
+       "Print", "[", 
+        "\"\<Ratio of annual variance of perm shocks to quarterly variance of \
+perm shocks \>\"", "]"}], ";", "\n", 
+       RowBox[{"Print", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Round", "[", 
+           RowBox[{"100", " ", 
+            RowBox[{"AnnualVar", "/", "QtrVar"}]}], "]"}], "/", "100"}], "//",
+          "N"}], "]"}], ";", "\n", "\n", 
+       RowBox[{"LogQtrPList", "=", 
+        RowBox[{"Log", "[", "QtrPList", "]"}]}], ";", "\n", 
+       RowBox[{"dFourQtrLogQtrPList", " ", "=", "  ", 
+        RowBox[{
+         RowBox[{"Take", "[", 
+          RowBox[{"LogQtrPList", ",", 
+           RowBox[{"{", 
+            RowBox[{"5", ",", 
+             RowBox[{"Length", "[", "LogAnnualPList", "]"}]}], "}"}]}], "]"}],
+          "\n", "                     ", "-", " ", 
+         RowBox[{"Take", "[", 
+          RowBox[{"LogQtrPList", ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", 
+             RowBox[{
+              RowBox[{"Length", "[", "LogAnnualPList", "]"}], "-", "4"}]}], 
+            "}"}]}], "]"}]}]}], ";", "\n", 
+       RowBox[{"FourQtrVar", "=", 
+        RowBox[{"Variance", "[", "dFourQtrLogQtrPList", "]"}]}], ";", " ", 
+       "\n", "\n", 
+       RowBox[{
+       "Print", "[", 
+        "\"\<Ratio of four quarter variance of perm shocks to quarterly \
+variance of perm shocks\>\"", "]"}], ";", "\n", 
+       RowBox[{"Print", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Round", "[", 
+           RowBox[{"100", " ", 
+            RowBox[{"FourQtrVar", "/", "QtrVar"}]}], "]"}], "/", "100"}], "//",
+          "N"}], "]"}], ";", " ", "\n", "\n", 
+       RowBox[{"Print", "[", 
+        RowBox[{"\"\< Time spent (seconds):  \>\"", ",", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"SessionTime", "[", "]"}], "-", "TimeS"}], ")"}]}], 
+        "]"}]}]}], "\n", "\n", "]"}]}], ";", " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"End", " ", "block"}], " ", "*)"}], "\n", "\n"}]}]], "Code"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "Print", "[", "\"\<============================================\>\"", "]"}],
+   ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"NumOfPeriods", " ", "=", " ", "100000"}], ";"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{"Print", "[", "\"\<Number of periods to simulate:\>\"", "]"}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Print", "[", "NumOfPeriods", "]"}], ";"}], "\n", 
+ RowBox[{"EstimateVars", ";", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"estimate", " ", "vars"}], " ", "*)"}], "\n"}]}], "Code"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"============================================\"\>"], "Print",
+ CellChangeTimes->{3.6384372211816015`*^9}],
+
+Cell[BoxData["\<\"Number of periods to simulate:\"\>"], "Print",
+ CellChangeTimes->{3.6384372211816015`*^9}],
+
+Cell[BoxData["100000"], "Print",
+ CellChangeTimes->{3.6384372211816015`*^9}],
+
+Cell[BoxData["\<\"Ratio of annual variance of perm shocks to quarterly \
+variance of perm shocks \"\>"], "Print",
+ CellChangeTimes->{3.6384373110845594`*^9}],
+
+Cell[BoxData["2.71`"], "Print",
+ CellChangeTimes->{3.63843731111576*^9}],
+
+Cell[BoxData["\<\"Ratio of four quarter variance of perm shocks to quarterly \
+variance of perm shocks\"\>"], "Print",
+ CellChangeTimes->{3.638437313705364*^9}],
+
+Cell[BoxData["3.92`"], "Print",
+ CellChangeTimes->{3.6384373137365646`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" Time spent (seconds):  \"\>", "\[InvisibleSpace]", 
+   "92.5393625`9.116841501168706"}],
+  SequenceForm[" Time spent (seconds):  ", 92.5393625`9.116841501168706],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.638437313767764*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "Print", "[", "\"\<============================================\>\"", "]"}],
+   ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"NumOfPeriods", " ", "=", " ", "5000000"}], ";"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{"Print", "[", "\"\<Number of periods to simulate:\>\"", "]"}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Print", "[", "NumOfPeriods", "]"}], ";"}], "\n", 
+ RowBox[{"EstimateVars", ";", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"estimate", " ", "vars"}], " ", "*)"}], "\n", "\n", 
+  "\n"}]}], "Code"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"============================================\"\>"], "Print",
+ CellChangeTimes->{3.6384373137833643`*^9}],
+
+Cell[BoxData["\<\"Number of periods to simulate:\"\>"], "Print",
+ CellChangeTimes->{3.6384373137989645`*^9}],
+
+Cell[BoxData["5000000"], "Print",
+ CellChangeTimes->{3.6384373137989645`*^9}],
+
+Cell[BoxData["\<\"Ratio of annual variance of perm shocks to quarterly \
+variance of perm shocks \"\>"], "Print",
+ CellChangeTimes->{3.6384373516602306`*^9}],
+
+Cell[BoxData["2.75`"], "Print",
+ CellChangeTimes->{3.6384373516602306`*^9}],
+
+Cell[BoxData["\<\"Ratio of four quarter variance of perm shocks to quarterly \
+variance of perm shocks\"\>"], "Print",
+ CellChangeTimes->{3.6384374745260468`*^9}],
+
+Cell[BoxData["3.99`"], "Print",
+ CellChangeTimes->{3.638437474760047*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" Time spent (seconds):  \"\>", "\[InvisibleSpace]", 
+   "160.9922828`9.35732005636258"}],
+  SequenceForm[" Time spent (seconds):  ", 160.9922828`9.35732005636258],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.638437475040848*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1063, 564},
+WindowMargins->{{100, Automatic}, {21, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 2565, 54, 489, "Code"],
+Cell[3125, 76, 4288, 102, 319, "Code"],
+Cell[7416, 180, 1528, 37, 147, "Code"],
+Cell[8947, 219, 5952, 150, 774, "Code"],
+Cell[CellGroupData[{
+Cell[14924, 373, 525, 15, 147, "Code"],
+Cell[CellGroupData[{
+Cell[15474, 392, 122, 1, 23, "Print"],
+Cell[15599, 395, 108, 1, 23, "Print"],
+Cell[15710, 398, 76, 1, 23, "Print"],
+Cell[15789, 401, 157, 2, 23, "Print"],
+Cell[15949, 405, 72, 1, 23, "Print"],
+Cell[16024, 408, 160, 2, 23, "Print"],
+Cell[16187, 412, 75, 1, 23, "Print"],
+Cell[16265, 415, 284, 6, 23, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16598, 427, 541, 16, 185, "Code"],
+Cell[CellGroupData[{
+Cell[17164, 447, 122, 1, 23, "Print"],
+Cell[17289, 450, 108, 1, 23, "Print"],
+Cell[17400, 453, 77, 1, 23, "Print"],
+Cell[17480, 456, 157, 2, 23, "Print"],
+Cell[17640, 460, 75, 1, 23, "Print"],
+Cell[17718, 463, 162, 2, 23, "Print"],
+Cell[17883, 467, 73, 1, 23, "Print"],
+Cell[17959, 470, 284, 6, 23, "Print"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

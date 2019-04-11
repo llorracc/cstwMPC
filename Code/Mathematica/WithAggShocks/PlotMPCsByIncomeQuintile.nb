@@ -1,0 +1,107 @@
+SetDirectory[NotebookDirectory[]];
+
+ResultsDir = 
+  ParentDirectory[] <> 
+   "/Results";(*Directory where tex Tables are stored*)
+SetDirectory[ResultsDir];
+
+MPCListPointWithAggShock = 
+  Import["MPCListPointWithAggShock.txt", "List"];
+MPCListPointWithAggShockQ = 1 - (1 - MPCListPointWithAggShock)^(1/4);
+MPCListPointWithAggShockTop50ByW = 
+  Round[100 (1 - (1 - (2 MPCListPointWithAggShockQ[[1]] - 
+             MPCListPointWithAggShockQ[[7]]))^4)]/100 // N;
+MPCListPointWithAggShockTop50ByInc = 
+  Round[100 (1 - (1 - (2 MPCListPointWithAggShockQ[[1]] - 
+             MPCListPointWithAggShockQ[[13]]))^4)]/100 // N;
+MPCListPointWithAggShockTop2040ByW = 
+  Round[100 (1 - (1 - (40 MPCListPointWithAggShockQ[[5]] - 
+              20 MPCListPointWithAggShockQ[[4]])/20)^4)]/100 // N;
+MPCListPointWithAggShockTop4060ByW = 
+  Round[100 (1 - (1 - (60 MPCListPointWithAggShockQ[[6]] - 
+              40 MPCListPointWithAggShockQ[[5]])/20)^4)]/100 // N;
+MPCListPointWithAggShockTop6080ByW = 
+  Round[100 (1 - (1 - (100 MPCListPointWithAggShockQ[[1]] - 
+              60 MPCListPointWithAggShockQ[[6]] - 
+              20 MPCListPointWithAggShockQ[[16]])/20)^4)]/100 // N;
+MPCListPointWithAggShockTop2040ByInc = 
+  Round[100 (1 - (1 - (40 MPCListPointWithAggShockQ[[11]] - 
+              20 MPCListPointWithAggShockQ[[10]])/20)^4)]/100 // N;
+MPCListPointWithAggShockTop4060ByInc = 
+  Round[100 (1 - (1 - (60 MPCListPointWithAggShockQ[[12]] - 
+              40 MPCListPointWithAggShockQ[[11]])/20)^4)]/100 // N;
+MPCListPointWithAggShockTop6080ByInc = 
+  Round[100 (1 - (1 - (100 MPCListPointWithAggShockQ[[1]] - 
+              60 MPCListPointWithAggShockQ[[12]] - 
+              20 MPCListPointWithAggShockQ[[17]])/20)^4)]/100 // N;
+MPCListPointWithAggShock = 
+  Round[100 MPCListPointWithAggShock]/100 // N;
+MPCListPointWithAggShockBottom20ByW = MPCListPointWithAggShock[[16]];
+MPCListPointWithAggShockBottom20ByInc = MPCListPointWithAggShock[[17]];
+
+MPCListDistSevenWithAggShock = 
+  Import["MPCListDistSevenWithAggShock.txt", "List"];
+MPCListDistSevenWithAggShockQ = 
+  1 - (1 - MPCListDistSevenWithAggShock)^(1/4);
+MPCListDistSevenWithAggShockTop50ByW = 
+  Round[100 (1 - (1 - (2 MPCListDistSevenWithAggShockQ[[1]] - 
+             MPCListDistSevenWithAggShockQ[[7]]))^4)]/100 // N;
+MPCListDistSevenWithAggShockTop50ByInc = 
+  Round[100 (1 - (1 - (2 MPCListDistSevenWithAggShockQ[[1]] - 
+             MPCListDistSevenWithAggShockQ[[13]]))^4)]/100 // N;
+MPCListDistSevenWithAggShockTop2040ByW = 
+  Round[100 (1 - (1 - (40 MPCListDistSevenWithAggShockQ[[5]] - 
+              20 MPCListDistSevenWithAggShockQ[[4]])/20)^4)]/100 // N;
+MPCListDistSevenWithAggShockTop4060ByW = 
+  Round[100 (1 - (1 - (60 MPCListDistSevenWithAggShockQ[[6]] - 
+              40 MPCListDistSevenWithAggShockQ[[5]])/20)^4)]/100 // N;
+MPCListDistSevenWithAggShockTop6080ByW = 
+  Round[100 (1 - (1 - (100 MPCListDistSevenWithAggShockQ[[1]] - 
+              60 MPCListDistSevenWithAggShockQ[[6]] - 
+              20 MPCListDistSevenWithAggShockQ[[16]])/20)^4)]/100 // N;
+MPCListDistSevenWithAggShockTop2040ByInc = 
+  Round[100 (1 - (1 - (40 MPCListDistSevenWithAggShockQ[[11]] - 
+              20 MPCListDistSevenWithAggShockQ[[10]])/20)^4)]/100 // N;
+MPCListDistSevenWithAggShockTop4060ByInc = 
+  Round[100 (1 - (1 - (60 MPCListDistSevenWithAggShockQ[[12]] - 
+              40 MPCListDistSevenWithAggShockQ[[11]])/20)^4)]/100 // N;
+MPCListDistSevenWithAggShockTop6080ByInc = 
+  Round[100 (1 - (1 - (100 MPCListDistSevenWithAggShockQ[[1]] - 
+              60 MPCListDistSevenWithAggShockQ[[12]] - 
+              20 MPCListDistSevenWithAggShockQ[[17]])/20)^4)]/100 // N;
+MPCListDistSevenWithAggShock = 
+  Round[100 MPCListDistSevenWithAggShock]/100 // N;
+MPCListDistSevenWithAggShockBottom20ByW = 
+  MPCListDistSevenWithAggShock[[16]];
+MPCListDistSevenWithAggShockBottom20ByInc = 
+  MPCListDistSevenWithAggShock[[17]];
+
+SetDirectory[NotebookDirectory[]];
+
+MPCsByIncomeQuintileAggShocksPlot = 
+  BarChart[Transpose[{{MPCListPointWithAggShock[[10]], 
+      MPCListPointWithAggShockTop2040ByInc, 
+      MPCListPointWithAggShockTop4060ByInc, 
+      MPCListPointWithAggShockTop6080ByInc, 
+      MPCListPointWithAggShockBottom20ByInc}, \
+{MPCListDistSevenWithAggShock[[10]], 
+      MPCListDistSevenWithAggShockTop2040ByInc, 
+      MPCListDistSevenWithAggShockTop4060ByInc, 
+      MPCListDistSevenWithAggShockTop6080ByInc, 
+      MPCListDistSevenWithAggShockBottom20ByInc}}], 
+   PlotRange -> {Automatic, {0, 0.5}}, 
+   ChartLabels -> {Placed[{"Top 20%", "Top 20-40%", "Top 40-60%", "Top 60-80%", "Bottom 20%"}, Above], 
+     Placed[{"\[Beta]-Point", "\[Beta]-Dist"}, Top]}
+   ];
+
+MPCsByIncomeQuintileAggShocksPlot
+
+Export[ParentDirectory[ParentDirectory[ParentDirectory[]]] <> 
+   "/figures/MPCsByIncomeQuintileAggShocksPlot.EPS", 
+  MPCsByIncomeQuintileAggShocksPlot, "EPS"];
+Export[ParentDirectory[ParentDirectory[ParentDirectory[]]] <> 
+   "/figures/MPCsByIncomeQuintileAggShocksPlot.PNG", 
+  MPCsByIncomeQuintileAggShocksPlot, "PNG"];
+Export[ParentDirectory[ParentDirectory[ParentDirectory[]]] <> 
+   "/figures/MPCsByIncomeQuintileAggShocksPlot.pdf", 
+  MPCsByIncomeQuintileAggShocksPlot, "pdf"];

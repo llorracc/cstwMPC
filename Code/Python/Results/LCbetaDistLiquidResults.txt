@@ -1,0 +1,25 @@
+Estimate is beta=0.966216612922, nabla=0.0350197287709
+Average MPC for all consumers is 0.501
+Average MPC in the top 1% of W/Y is 0.076
+Average MPC in the top 10% of W/Y is 0.069
+Average MPC in the top 20% of W/Y is 0.080
+Average MPC in the top 40% of W/Y is 0.177
+Average MPC in the top 50% of W/Y is 0.232
+Average MPC in the top 60% of W/Y is 0.286
+Average MPC in the bottom 50% of W/Y is 0.771
+Average MPC in the top 1% of y is 0.370
+Average MPC in the top 10% of y is 0.402
+Average MPC in the top 20% of y is 0.418
+Average MPC in the top 40% of y is 0.441
+Average MPC in the top 50% of y is 0.450
+Average MPC in the top 60% of y is 0.460
+Average MPC in the bottom 50% of y is 0.552
+Average MPC for the employed is 0.439
+Average MPC for the unemployed is 0.567
+Average MPC for the retired is 0.661
+Of the population with the 1/3 highest MPCs...
+54.279% are in the bottom wealth quintile,
+28.029% are in the second wealth quintile,
+12.988% are in the third wealth quintile,
+4.279% are in the fourth wealth quintile,
+and 0.425% are in the top wealth quintile.

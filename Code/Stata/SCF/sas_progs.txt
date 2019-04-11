@@ -1,0 +1,805 @@
+SAS program to calculate financial assets 
+
+taken from:
+http://www.federalreserve.gov/econresdata/scf/files/bulletin.macro.txt
+
+***************************************************************************;
+*   assets, debts, networth, and related varaibles;
+
+***************************************************************************;
+*   financial assets and related variables;
+    
+*   checking accounts other than money market;
+    CHECKING=MAX(0,X3506)*(X3507=5)+MAX(0,X3510)*(X3511=5)
+      +MAX(0,X3514)*(X3515=5)+MAX(0,X3518)*(X3519=5)
+      +MAX(0,X3522)*(X3523=5)+MAX(0,X3526)*(X3527=5)
+      +MAX(0,X3529)*(X3527=5);
+*   have any checking account: 1=yes, 0=no;
+    HCHECK=(((X3507=5)+(X3511=5)+(X3515=5)+(X3519=5)
+      +(X3523=5)+(X3527=5)+(X3527=5))>0);
+*   have no checking account: 1=no checking, 0=have checking;
+*   NOTE: NOCHK=0 may include instances where R has a money market
+    account that is used for checking;
+    NOCHK=(X3501=5);
+*   people w/o checking accounts: ever had an account?: 1=yes, 5=no;
+    EHCHKG=X3502;
+*   people w/o checking accounts: why have no account?:
+    1=don*t write enough checks to make it worthwhile,
+    2=minimum balance is too high, 3=do not like dealing with banks,
+    4=service charges are too high, 5=no bank has convenient hours
+    or location, 12=checkbook has been/could be lost/stolen,
+    13=haven*t gotten around to it, 14=R has alternative source of
+    checking services (MMA, MIA, etc) (does not include individuals
+    who write checks for R), 15=R not allowed to have account (e.g.,
+    asset test for welfare), 20=R does not need/want a checking
+    account (NEC), 21=credit problems, bankruptcy, R does not meet
+    depository*s qualifications for having an account, 95=don*t have
+    (enough) money, -1=can*t manage/balance a checking account,
+    -7=other, 0=inapplicable. (R has a checking account: X3501=1);
+*   NOTE: codeframe varies over the survey years, so beware of
+    constructing overly specific comparisons of the distribution of
+    households over these categories over time;
+    WHYNOCKG=X3503;
+
+    %IF (&YEAR<=1992) %THEN %DO;
+      DONTWRIT=(WHYNOCKG=1);
+      MINBAL=(WHYNOCKG=2);
+      DONTLIKE=(WHYNOCKG=3);
+      SVCCHG=(WHYNOCKG=4);
+      NOMONEY=(WHYNOCKG=95); 
+      CANTMANG=(WHYNOCKG=96); 
+      CREDIT=.; 
+      DONTWANT=.; 
+      OTHER=(WHYNOCKG NOT IN(0 1 2 3 4 95 96 21 20));
+    %END;
+    %ELSE %DO;
+      DONTWRIT=(WHYNOCKG=1);
+      MINBAL=(WHYNOCKG=2);
+      DONTLIKE=(WHYNOCKG=3);
+      SVCCHG=(WHYNOCKG=4);
+      CANTMANG=(WHYNOCKG=-1); 
+      NOMONEY=(WHYNOCKG=95); 
+      CREDIT=(WHYNOCKG=21); 
+      DONTWANT=(WHYNOCKG=20); 
+      OTHER=(WHYNOCKG NOT IN (0 1 2 3 4 -1 95 21 20));
+    %END;
+    
+*   reason choose main checking institution - codeframe is similar
+    across years, just more codes in later years;
+    * code 50 added in 2010;
+    CKLOCATION=(X3530=3);	
+  	CKLOWFEEBAL=(X3530=7);
+  	CKMANYSVCS=(X3530=6);	
+   	CKRECOMFRND=(X3530=1);
+   	CKPERSONAL=(X3530=11);
+   	CKCONNECTN=(X3530=35);
+   	CKLONGTIME=(X3530=14);
+   	CKSAFETY=(X3530=8);	
+   	CKCONVPAYRL=(X3530=9);
+   	CKOTHCHOOSE=(X3530 NOT IN(0 3 7 6 1 11 35 14 8 9));
+
+*   savings accounts;
+    %IF (&YEAR LE 2001) %THEN %DO;
+      SAVING=MAX(0,X3804)+MAX(0,X3807)+MAX(0,X3810)+MAX(0,X3813)
+        +MAX(0,X3816)+MAX(0,X3818);
+    %END;
+    %ELSE %DO;
+      SAVING=MAX(0,X3730*(X3732 NOT IN (4 30)))
+        +MAX(0,X3736*(X3738 NOT IN (4 30)))
+        +MAX(0,X3742*(X3744 NOT IN (4 30)))+MAX(0,X3748*(X3750 NOT IN (4 30)))
+        +MAX(0,X3754*(X3756 NOT IN (4 30)))+MAX(0,X3760*(X3762 NOT IN (4 30)))
+        +MAX(0,X3765);
+    %END;
+*   have savings account: 1=yes, 0=no;
+    HSAVING=(SAVING>0);
+  
+*   money market deposit accounts;
+*   NOTE: includes money market accounts used for checking and other
+    money market account held at commercial banks, savings and
+    loans, savings banks, and credit unions;
+    %IF (&YEAR LE 2001) %THEN %DO;
+      MMDA=MAX(0,X3506)*((X3507=1)*(11<=X9113<=13))
+        +MAX(0,X3510)*((X3511=1)*(11<=X9114<=13))
+        +MAX(0,X3514)*((X3515=1)*(11<=X9115<=13))
+        +MAX(0,X3518)*((X3519=1)*(11<=X9116<=13))
+        +MAX(0,X3522)*((X3523=1)*(11<=X9117<=13))
+        +MAX(0,X3526)*((X3527=1)*(11<=X9118<=13))
+        +MAX(0,X3529)*((X3527=1)*(11<=X9118<=13))
+        +MAX(0,X3706)*(11<=X9131<=13)+MAX(0,X3711)*(11<=X9132<=13)
+        +MAX(0,X3716)*(11<=X9133<=13)+MAX(0,X3718)*(11<=X9133<=13);
+    %END;
+    %ELSE %DO;
+      MMDA=MAX(0,X3506)*((X3507=1)*(11<=X9113<=13))
+        +MAX(0,X3510)*((X3511=1)*(11<=X9114<=13))
+        +MAX(0,X3514)*((X3515=1)*(11<=X9115<=13))
+        +MAX(0,X3518)*((X3519=1)*(11<=X9116<=13))
+        +MAX(0,X3522)*((X3523=1)*(11<=X9117<=13))
+        +MAX(0,X3526)*((X3527=1)*(11<=X9118<=13))
+        +MAX(0,X3529)*((X3527=1)*(11<=X9118<=13))
+        +MAX(0,X3730*(X3732 IN (4 30))*(X9259>=11 & X9259<=13))
+        +MAX(0,X3736*(X3738 IN (4 30))*(X9260>=11 & X9260<=13))
+        +MAX(0,X3742*(X3744 IN (4 30))*(X9261>=11 & X9261<=13))
+        +MAX(0,X3748*(X3750 IN (4 30))*(X9262>=11 & X9262<=13))
+        +MAX(0,X3754*(X3756 IN (4 30))*(X9263>=11 & X9263<=13))
+        +MAX(0,X3760*(X3762 IN (4 30))*(X9264>=11 & X9264<=13))
+        +MAX(0,X3765*(X3762 IN (4 30))*(X9264>=11 & X9264<=13));
+    %END;
+*   money market mutual funds;
+*   NOTE: includes money market accounts used for checking and other
+    money market account held at institutions other than commercial
+    banks, savings and loans, savings banks, and credit unions;
+    %IF (&YEAR LE 2001) %THEN %DO;
+      MMMF=MAX(0,X3506)*(X3507=1)*(X9113<11|X9113>13)
+        +MAX(0,X3510)*(X3511=1)*(X9114<11|X9114>13)
+        +MAX(0,X3514)*(X3515=1)*(X9115<11|X9115>13)
+        +MAX(0,X3518)*(X3519=1)*(X9116<11|X9116>13)
+        +MAX(0,X3522)*(X3523=1)*(X9117<11|X9117>13)
+        +MAX(0,X3526)*(X3527=1)*(X9118<11|X9118>13)
+        +MAX(0,X3529)*(X3527=1)*(X9118<11|X9118>13)
+        +MAX(0,X3706)*(X9131<11|X9131>13)+MAX(0,X3711)*(X9132<11|X9132>13)
+        +MAX(0,X3716)*(X9133<11|X9133>13)+MAX(0,X3718)*(X9133<11|X9133>13);
+    %END;
+    %ELSE %DO;
+      MMMF=MAX(0,X3506)*(X3507=1)*(X9113<11|X9113>13)
+        +MAX(0,X3510)*(X3511=1)*(X9114<11|X9114>13)
+        +MAX(0,X3514)*(X3515=1)*(X9115<11|X9115>13)
+        +MAX(0,X3518)*(X3519=1)*(X9116<11|X9116>13)
+        +MAX(0,X3522)*(X3523=1)*(X9117<11|X9117>13)
+        +MAX(0,X3526)*(X3527=1)*(X9118<11|X9118>13)
+        +MAX(0,X3529)*(X3527=1)*(X9118<11|X9118>13)
+        +MAX(0,X3730*(X3732 IN (4 30))*(X9259<11|X9259>13))
+        +MAX(0,X3736*(X3738 IN (4 30))*(X9260<11|X9260>13))
+        +MAX(0,X3742*(X3744 IN (4 30))*(X9261<11|X9261>13))
+        +MAX(0,X3748*(X3750 IN (4 30))*(X9262<11|X9262>13))
+        +MAX(0,X3754*(X3756 IN (4 30))*(X9263<11|X9263>13))
+        +MAX(0,X3760*(X3762 IN (4 30))*(X9264<11|X9264>13))
+        +MAX(0,X3765*(X3762 IN (4 30))*(X9264<11|X9264>13));
+    %END;
+*   all types of money market accounts;
+    MMA=MMDA+MMMF;
+*   have any type of money market account: 1=yes, 0=no;
+    HMMA=(MMA>0);
+    
+*   call accounts at brokerages;
+    CALL=MAX(0,X3930);
+*   have call account: 1=yes, 0=no;
+    HCALL=(CALL>0);
+    
+*   all types of transactions accounts (liquid assets);
+    LIQ=CHECKING+SAVING+MMA+CALL;
+*   have any types of transactions accounts: 1=yes, 0=no;
+*   here include even accounts with zero reported balances;
+    %IF (&YEAR GE 2004) %THEN %DO;
+      HLIQ=(LIQ>0 | X3501=1 | X3727=1 | X3929=1);
+    %END;
+    %ELSE %DO;
+      HLIQ=(LIQ>0 | X3501=1 | X3701=1 | X3801=1 | X3929=1);
+    %END;  
+*   include accounts with zero balances (for tabling program);  
+    LIQ=MAX(HLIQ,LIQ);
+
+*   certificates of deposit;
+    CDS=MAX(0,X3721);
+*   have CDs: 1=yes, 0=no;
+    HCDS=(CDS>0);
+    
+*   mutual funds;
+*   stock mutual funds;
+    STMUTF=(X3821=1)*MAX(0,X3822);
+*   tax-free bond mutual funds;
+    TFBMUTF=(X3823=1)*MAX(0,X3824);
+*   government bond mutual funds;
+    GBMUTF=(X3825=1)*MAX(0,X3826);
+*   other bond mutual funds;
+    OBMUTF=(X3827=1)*MAX(0,X3828);
+*   combination and other mutual funds;
+    COMUTF=(X3829=1)*MAX(0,X3830);
+    %IF (&YEAR GE 2004) %THEN %DO;
+*     other mutual funds;
+      OMUTF=(X7785=1)*MAX(0,X7787);
+    %END;
+*   total directly-held mutual funds, excluding MMMFs;
+    NMMF=STMUTF+TFBMUTF+GBMUTF+OBMUTF+COMUTF;
+    %IF (&YEAR GE 2004) %THEN %DO;
+      NMMF=NMMF+OMUTF;
+    %END;
+*   have any mutual funds excluding MMMFs: 1=yes, 0=no;
+    HNMMF=(NMMF>0);
+    
+*   stocks;
+    STOCKS=MAX(0,X3915);
+*   have stocks: 1=yes, 0=no;
+    HSTOCKS=(STOCKS>0);
+*   number different companies in which hold stock;
+    NSTOCKS=X3914;
+*   Wilshire index of stock prices;
+    %IF (&YEAR GE 1998) %THEN %DO;
+      WILSH=X33001;
+    %END;
+    %ELSE %DO;
+      WILSH=.B;
+    %END;
+
+*   bonds, not including bond funds or savings bonds;
+*   tax-exempt bonds (state and local bonds);
+    NOTXBND=X3910;
+*   mortgage-backed bonds;
+    MORTBND=X3906;
+*   US government and government agency bonds and bills;
+    GOVTBND=X3908;
+*   corporate and foreign bonds;
+    %IF (&YEAR GE 1992) %THEN %DO;
+      OBND=X7634+X7633;
+    %END;
+    %ELSE %DO;
+      OBND=X3912;
+    %END;
+*   total bonds, not including bond funds or savings bonds;
+    BOND=NOTXBND+MORTBND+GOVTBND+OBND;
+*   have bonds: 1=yes, 0=no;
+    HBOND=(BOND>0);
+    
+*   quasi-liquid retirement accounts (IRAs and thrift-type accounts);
+*   individual retirement accounts/Keoghs;
+    %IF (&YEAR GE 2004) %THEN %DO;
+      IRAKH=SUM(0,X6551,X6559,X6567,X6552,X6560,X6568,X6553,X6561,
+        X6569,X6554,X6562,X6570);
+    %END;
+    %ELSE %DO;
+      IRAKH=MAX(0,X3610)+MAX(0,X3620)+MAX(0,X3630);
+    %END;
+    %IF (&YEAR LT 2004) %THEN %DO;
+*     account-type pension plans (included if type is 401k, 403b,
+      thrift, savings, SRA, or if participant has option to borrow or
+      withdraw);
+*     PENEQ counts thrift amounts invested in stock;
+      ARRAY PTYPE{*} X4216 X4316 X4416 X4816 X4916 X5016;
+      ARRAY PAMT{*} X4226 X4326 X4426 X4826 X4926 X5026;
+      ARRAY PBOR{*} X4227 X4327 X4427 X4827 X4927 X5027;
+      ARRAY PWIT{*} X4231 X4331 X4431 X4831 X4931 X5031;
+      ARRAY PALL{*} X4234 X4334 X4434 X4834 X4934 X5034;
+      THRIFT = 0; PENEQ =0 ;
+      RTHRIFT=0; STHRIFT=0;
+      REQ=0; SEQ=0;
+      DO I=1 TO DIM(PTYPE);
+        HOLD=MAX(0,PAMT{I})*(PTYPE{I} IN (1 2 7 11 12 18) | 
+          PBOR{I}=1|PWIT{I}=1);
+        IF (I<=3) THEN RTHRIFT=RTHRIFT+HOLD;
+        ELSE STHRIFT=STHRIFT+HOLD;
+        THRIFT=THRIFT+HOLD;
+        PENEQ =PENEQ+HOLD*((PALL{I}=1)+.5*(PALL{I}=3));
+        IF (PTYPE{I}<=.Z) THEN PUT &ID= PTYPE{I}=;
+        IF (PAMT{I}<=.Z) THEN PUT &ID= PAMT{I}=;
+        IF (PBOR{I}<=.Z) THEN PUT &ID= PBOR{I}=;
+        IF (PWIT{I}<=.Z) THEN PUT &ID= PWIT{I}=;
+        IF (PALL{I}<=.Z) THEN PUT &ID= PALL{I}=;
+        IF (I<=3) THEN REQ=PENEQ;
+        ELSE SEQ=PENEQ-REQ;
+      END;
+*     allocate the pension mopups;
+*     where possible, use information for first three pensions to infer
+      characteristics of this amount;
+*     where not possible to infer whether R can borrow/make withdrawals,
+      assume this is possible;
+*     where not possible to determine investment direction, assume half
+      in stocks;
+      PMOP=.;
+      IF (X4436>0) THEN DO;
+        IF (PTYPE{1} IN (1 2 7 11 12 18)|PTYPE{2} IN (1 2 7 11 12 18)|
+           PTYPE{3} IN (1 2 7 11 12 18)| PWIT{1}=1|PWIT{2}=1|PWIT{3}=1|
+           PBOR{1}=1|PBOR{2}=1|PBOR{3}=1) 
+          THEN PMOP=X4436;
+        ELSE IF (PTYPE{1}^=0 & PTYPE{2}^=0 & PTYPE{3}^=0 & PWIT{1}^=0 &
+          PWIT{2}^=0 & PWIT{3}^=0) THEN PMOP=0;
+        ELSE PMOP=X4436;
+        THRIFT=THRIFT+PMOP;
+        IF (REQ>0) THEN PENEQ=PENEQ+PMOP*(REQ/RTHRIFT);
+        ELSE PENEQ=PENEQ+PMOP/2;
+      END;
+      PMOP=.;
+      IF (X5036>0) THEN DO;
+        IF (PTYPE{4} IN (1 2 7 11 12 18)|PTYPE{5} IN (1 2 7 11 12 18)|
+           PTYPE{6} IN (1 2 7 11 12 18)| PWIT{4}=1|PWIT{5}=1|PWIT{6}=1| 
+           PBOR{4}=1|PBOR{5}=1|PBOR{6}=1)
+          THEN PMOP=X5036;
+        ELSE IF (PTYPE{4}^=0 & PTYPE{5}^=0 & PTYPE{6}^=0 & PWIT{4}^=0 &
+          PWIT{5}^=0 & PWIT{6}^=0) THEN PMOP=0;
+        ELSE PMOP=X5036;
+        THRIFT=THRIFT+PMOP;
+        IF (SEQ>0) THEN PENEQ=PENEQ+PMOP*(SEQ/STHRIFT);
+        ELSE PENEQ=PENEQ+PMOP/2;
+      END;
+      DROP HOLD PMOP;
+    %END;
+    %ELSE %IF (&YEAR GE 2004 & &YEAR LT 2010) %THEN %DO;
+*     account-type pension plans (included if type is 401k, 403b,
+      thrift, savings, SRA, or if participant has option to borrow or
+      withdraw);
+*     PENEQ counts thrift amounts invested in stock;
+      ARRAY PTYPE1{*} X11000 X11100 X11200 X11300 X11400 X11500;
+      ARRAY PTYPE2{*} X11001 X11101 X11201 X11301 X11401 X11501;
+      ARRAY PAMT{*} X11032 X11132 X11232 X11332 X11432 X11532;
+      ARRAY PBOR{*} X11025 X11125 X11225 X11325 X11425 X11525;
+      ARRAY PWIT{*} X11031 X11131 X11231 X11331 X11431 X11531;
+      ARRAY PALL{*} X11036 X11136 X11236 X11336 X11436 X11536;
+      ARRAY PPCT{*} X11037 X11137 X11237 X11337 X11437 X11537;
+      THRIFT = 0; PENEQ =0 ;
+      RTHRIFT=0; STHRIFT=0;
+      REQ=0; SEQ=0;
+      DO I=1 TO DIM(PTYPE1);
+        HOLD=MAX(0,PAMT{I})*(PTYPE1{I} IN (5 6 10 21)|
+          PTYPE2{I} IN (2 3 4 6 20 21 22 26)|PBOR{I}=1|PWIT{I}=1);
+        IF (I<=3) THEN RTHRIFT=RTHRIFT+HOLD;
+        ELSE STHRIFT=STHRIFT+HOLD;
+        THRIFT=THRIFT+HOLD;
+        PENEQ=PENEQ+HOLD*((PALL{I}=1)+(PALL{I}=3)*(MAX(0,PPCT{I})/10000));
+        IF (I<=3) THEN REQ=PENEQ;
+        ELSE SEQ=PENEQ-REQ;
+      END;
+*     allocate the pension mopups;
+*     where possible, use information for first three pensions to infer
+      characteristics of this amount;
+*     where not possible to infer whether R can borrow/make withdrawals,
+      assume this is possible;
+*     where not possible to determine investment direction, assume half
+      in stocks;
+      HOLD=.; PMOP=.;
+      IF (X11259>0) THEN DO;
+        IF (PTYPE1{1} IN (5 6 10 21)|PTYPE1{2} IN (5 6 10 21)|
+          PTYPE1{3} IN (5 6 10 21)| PTYPE2{1} IN (2 3 4 6 20 21 22 26) |
+          PTYPE2{2} IN (2 3 4 6 20 21 22 26) | 
+          PTYPE2{3} IN (2 3 4 6 20 21 22 26) | 
+          PWIT{1}=1|PWIT{2}=1|PWIT{3}=1|PBOR{1}=1|PBOR{2}=1|PBOR{3}=1)
+          THEN PMOP=X11259;
+        ELSE IF (PTYPE1{1}^=0 & PTYPE1{2}^=0 & PTYPE1{3}^=0 & PWIT{1}^=0 &
+          PWIT{2}^=0 & PWIT{3}^=0) THEN PMOP=0;
+        ELSE PMOP=X11259;
+        THRIFT=THRIFT+PMOP;
+        IF (REQ>0) THEN PENEQ=PENEQ+PMOP*(REQ/RTHRIFT);
+        ELSE PENEQ=PENEQ+PMOP/2;
+      END;
+      IF (X11559>0) THEN DO;
+        IF (PTYPE1{4} IN (5 6 10 21)|PTYPE1{5} IN (5 6 10 21) | 
+          PTYPE1{6} IN (5 6 10 21)| PTYPE2{4} IN (2 3 4 6 20 21 22 26) | 
+          PTYPE2{5} IN (2 3 4 6 20 21 22 26) | 
+          PTYPE2{6} IN (2 3 4 6 20 21 22 26) | 
+          PWIT{4}=1|PWIT{5}=1|PWIT{6}=1|PBOR{4}=1|PBOR{5}=1|PBOR{6}=1)
+          THEN PMOP=X11559;
+        ELSE IF (PTYPE1{4}^=0 & PTYPE1{5}^=0 & PTYPE1{6}^=0 & PWIT{4}^=0 &
+          PWIT{5}^=0 & PWIT{6}^=0) THEN PMOP=0;
+        ELSE PMOP=X11559;
+        THRIFT=THRIFT+PMOP;
+        IF (SEQ>0) THEN PENEQ=PENEQ+PMOP*(SEQ/STHRIFT);
+        ELSE PENEQ=PENEQ+PMOP/2;
+      END;
+      DROP HOLD PMOP RTHRIFT STHRIFT REQ SEQ;
+    %END;
+    %ELSE %IF (&YEAR GE 2010) %THEN %DO;
+*     account-type pension plans (included if type is 401k, 403b,
+      thrift, savings, SRA, or if participant has option to borrow or
+      withdraw);
+*     PENEQ counts thrift amounts invested in stock;
+      ARRAY PTYPE1{*} X11000 X11100 X11300 X11400;
+      ARRAY PTYPE2{*} X11001 X11101 X11301 X11401;
+      ARRAY PAMT{*} X11032 X11132 X11332 X11432;
+      ARRAY PBOR{*} X11025 X11125 X11325 X11425;
+      ARRAY PWIT{*} X11031 X11131 X11331 X11431;
+      ARRAY PALL{*} X11036 X11136 X11336 X11436;
+      ARRAY PPCT{*} X11037 X11137 X11337 X11437;
+      THRIFT = 0; PENEQ =0 ;
+      RTHRIFT=0; STHRIFT=0;
+      REQ=0; SEQ=0;
+      DO I=1 TO DIM(PTYPE1);
+        HOLD=MAX(0,PAMT{I})*(PTYPE1{I} IN (1)|
+          PTYPE2{I} IN (2 3 4 6 20 21 22 26)|PBOR{I}=1|PWIT{I}=1);
+        IF (I<=2) THEN RTHRIFT=RTHRIFT+HOLD;
+        ELSE STHRIFT=STHRIFT+HOLD;
+        THRIFT=THRIFT+HOLD;
+        PENEQ=PENEQ+HOLD*((PALL{I}=1)+(PALL{I} IN(3 30))*(MAX(0,PPCT{I})/10000));
+        IF (I<=2) THEN REQ=PENEQ;
+        ELSE SEQ=PENEQ-REQ;
+      END;
+*     allocate the pension mopups;
+*     where possible, use information for first three pensions to infer
+      characteristics of this amount;
+*     where not possible to infer whether R can borrow/make withdrawals,
+      assume this is possible;
+*     where not possible to determine investment direction, assume half
+      in stocks;
+      HOLD=.; PMOP=.;
+      IF (X11259>0) THEN DO;
+        IF (PTYPE1{1} IN (1)|PTYPE1{2} IN (1)|
+          PTYPE2{1} IN (2 3 4 6 20 21 22 26) |
+          PTYPE2{2} IN (2 3 4 6 20 21 22 26) |  
+          PWIT{1}=1|PWIT{2}=1|PBOR{1}=1|PBOR{2}=1)
+          THEN PMOP=X11259;
+        ELSE IF (PTYPE1{1}^=0 & PTYPE1{2}^=0 & PWIT{1}^=0 &
+          PWIT{2}^=0 ) THEN PMOP=0;
+        ELSE PMOP=X11259;
+        THRIFT=THRIFT+PMOP;
+        IF (REQ>0) THEN PENEQ=PENEQ+PMOP*(REQ/RTHRIFT);
+        ELSE PENEQ=PENEQ+PMOP/2;
+      END;
+      IF (X11559>0) THEN DO;
+        IF (PTYPE1{3} IN (1)|PTYPE1{4} IN (1) | 
+          PTYPE2{3} IN (2 3 4 6 20 21 22 26) | 
+          PTYPE2{4} IN (2 3 4 6 20 21 22 26) |  
+          PWIT{3}=1|PWIT{4}=1|PBOR{3}=1|PBOR{4}=1)
+          THEN PMOP=X11559;
+        ELSE IF (PTYPE1{3}^=0 & PTYPE1{4}^=0 & PWIT{3}^=0 &
+          PWIT{4}^=0 ) THEN PMOP=0;
+        ELSE PMOP=X11559;
+        THRIFT=THRIFT+PMOP;
+        IF (SEQ>0) THEN PENEQ=PENEQ+PMOP*(SEQ/STHRIFT);
+        ELSE PENEQ=PENEQ+PMOP/2;
+      END;
+      DROP HOLD PMOP RTHRIFT STHRIFT REQ SEQ;
+    %END;
+*   future pensions (accumulated in an account for the R/S); 
+    %IF (&YEAR GE 2010) %THEN %DO;
+      FUTPEN=MAX(0,X5604)+MAX(0,X5612)+MAX(0,X5620)+MAX(0,X5628); 
+    %END;
+    %ELSE %DO;
+    FUTPEN=MAX(0,X5604)+MAX(0,X5612)+MAX(0,X5620)+MAX(0,X5628)+
+      MAX(0,X5636)+MAX(0,X5644); 
+    %END;
+*   NOTE: there is very little evidence that pensions with currently
+    received benefits recorded in the SCFs before 2001 were any type
+    of 401k or related account from which the R was making
+    withdrawals:  the questions added in 2001 allow one to distinguish
+    such account, and there are 55 of them in that year:
+    create a second version of RETQLIQ to include this information;
+    %IF (&YEAR GE 2004 AND &YEAR LE 2007) %THEN %DO;
+      CURRPEN=X6462+X6467+X6472+X6477+X6482+X6487+X6957;
+*     total quasi-liquid: sum of IRAs, thrift accounts, and future pensions; 
+*     this version includes currently received benefits;
+      RETQLIQ=IRAKH+THRIFT+FUTPEN+CURRPEN;
+*     have quasi-liquid assets: 1=yes, 0=no;
+      HRETQLIQ=(RETQLIQ>0);
+    %END;
+    %ELSE %IF (&YEAR GE 2010) %THEN %DO;
+      CURRPEN=X6462+X6467+X6472+X6477+X6957;
+*     total quasi-liquid: sum of IRAs, thrift accounts, and future pensions; 
+*     this version includes currently received benefits;
+      RETQLIQ=IRAKH+THRIFT+FUTPEN+CURRPEN;
+*     have quasi-liquid assets: 1=yes, 0=no;
+      HRETQLIQ=(RETQLIQ>0);
+    %END;
+    %ELSE %IF (&YEAR EQ 2001) %THEN %DO;
+      CURRPEN=X6462+X6467+X6472+X6477+X6482+X6487;
+*     total quasi-liquid: sum of IRAs, thrift accounts, and future pensions; 
+*     this version includes currently received benefits;
+      RETQLIQ=IRAKH+THRIFT+FUTPEN+CURRPEN;
+*     have quasi-liquid assets: 1=yes, 0=no;
+      HRETQLIQ=(RETQLIQ>0);
+    %END;
+    %ELSE %DO;
+      CURRPEN=0;
+*     total quasi-liquid: sum of IRAs, thrift accounts, and future pensions; 
+*     assuming that account type plans with currently received
+      benefits are negligible;
+      RETQLIQ=IRAKH+THRIFT+FUTPEN;
+*     have quasi-liquid assets: 1=yes, 0=no;
+      HRETQLIQ=(RETQLIQ>0);
+    %END;
+*   other pension characteristics:
+    ANYPEN: 1=either head or spouse/partner has any type of
+    pension, 0=otherwise,
+    DBPLANCJ: 1=either head or spouse/partner has a defined benefit
+    pension on a current job, 0=otherwise,
+    DBPLANT: 1=either head or spouse/partner has DB plan on current
+    job or some type of pension from a past job to be received in
+    the future, 0=otherwise,
+    DCPLANCJ: 1=either head or spouse/partner has any type of
+    account-based plan on a current job, 0=otherwise
+    BPLANCJ: 1=either head or spouse/partner has both types of pension
+    plan on a current job
+    NOTE: For DCPLANCJ and DBPLANCJ checking for plans from the
+    current job from which R or S/P is currently receiving benefits -
+    prior to 2001 do not know if these are account or income plans, so
+    assume all current job currently receiving pension plans are defined benefit;
+    ANYPEN=(X4135=1|X4735=1|X5313=1|X5601=1); 
+    %IF (&YEAR GE 2010) %THEN %DO;
+      DBPLANCJ=((X11000=5 & X11001^=30)|X11001=1 |
+        (X11100=5 & X11101^=30)|X11101=1|
+        (X11300=5 & X11301^=30)|X11301=1|(X11400=5 & X11401^=30)|X11401=1|
+        (X5316=1 & X6461=5) 
+        | (X5324=1 & X6466=5) | (X5332=1 & X6471=5) | (X5416=1 & X6476=5)) ;
+      DCPLANCJ=(X11032>0|X11132>0|X11332>0|X11432>0|
+        X11032=-1|X11132=-1|X11332=-1|X11432=-1|
+        (X5316=1 & X6461=1) | (X5324=1 & X6466=1)| 
+        (X5332=1 & X6471=1) | (X5416=1 & X6476=1));
+    %END;
+    %ELSE %IF (&YEAR GE 2004) %THEN %DO;
+      DBPLANCJ=((X11000=4 & X11001^=30)|X11001=1 |
+        (X11100=4 & X11101^=30)|X11101=1|(X11200=4 & X11201^=30)|X11201=1|
+        (X11300=4 & X11301^=30)|X11301=1|(X11400=4 & X11401^=30)|X11401=1|
+        (X11500=4 & X11501^=30)|X11501=1 | (X5316=1 & X6461=5) 
+        | (X5324=1 & X6466=5) | (X5332=1 & X6471=5) | (X5416=1 & X6476=5)
+        | (X5424=1 & X6481=5) | (X5432=1 & X6486=5)) ;
+      DCPLANCJ=(X11032>0|X11132>0|X11232>0|X11332>0|X11432>0|
+        X11532>0|X11032=-1|X11132=-1|X11232=-1|X11332=-1|X11432=-1|
+        X11532=-1 | (X5316=1 & X6461=1) | (X5324=1 & X6466=1) 
+        | (X5332=1 & X6471=1) | (X5416=1 & X6476=1) 
+        | (X5424=1 & X6481=1) | (X5432=1 & X6486=1));
+    %END;
+    %ELSE %IF (&YEAR EQ 2001) %THEN %DO;
+      DBPLANCJ=(X4203=1|X4303=1|X4403=1|X4803=1|X4903=1|X5003=1 
+        | (X5316=1 & X6461=5) | (X5324=1 & X6466=5) 
+        | (X5332=1 & X6471=5) | (X5416=1 & X6476=5)
+        | (X5424=1 & X6481=5) | (X5432=1 & X6486=5));
+      DCPLANCJ=((X4203 IN (2 3))|(X4303 IN (2 3))|(X4403 IN (2 3))
+        |(X4803 IN (2 3))|(X4903 IN (2 3))|(X5003 IN (2 3))
+        | (X5316=1 & X6461=1) | (X5324=1 & X6466=1) 
+        | (X5332=1 & X6471=1) | (X5416=1 & X6476=1) 
+        | (X5424=1 & X6481=1) | (X5432=1 & X6486=1));
+    %END;
+    %ELSE %DO;
+      DBPLANCJ=(X4203=1|X4303=1|X4403=1|X4803=1|X4903=1|X5003=1
+        |X5316=1|X5324=1|X5332=1|X5416=1|X5424=1|X5432=1);
+      DCPLANCJ=((X4203 IN (2 3))|(X4303 IN (2 3))|(X4403 IN (2 3))
+        |(X4803 IN (2 3))|(X4903 IN (2 3))|(X5003 IN (2 3)));
+    %END;
+*     NOTE! some plans captured by the X5314>0 conditions may
+      not be DB plans;
+    %IF (&YEAR GE 2010) %THEN %DO;
+      DBPLANT=(DBPLANCJ=1|(X6461=5|X6466=5|X6471=5|X6476=5)
+        |(X5603 IN (1 3)|X5611 IN (1 3)|X5619 IN (1 3)|
+        X5627 IN (1 3)));
+    %END;
+    %ELSE %IF (&YEAR GE 2001) %THEN %DO;
+      DBPLANT=(DBPLANCJ=1|(X6461=5|X6466=5|X6471=5|X6476=5|X6481=5|
+        X6486=5)|(X5603 IN (1 3)|X5611 IN (1 3)|X5619 IN (1 3)|
+        X5627 IN (1 3)|X5635 IN (1 3)|X5643 IN (1 3)));
+    %END;
+    %ELSE %DO;
+      DBPLANT =(DBPLANCJ=1|(X5314>0)|(X5603 IN (1 3)|X5611 IN (1 3)|
+        X5619 IN (1 3)|X5627 IN (1 3)|X5635 IN (1 3)|X5643 IN (1 3)));
+    %END;
+    BPLANCJ =(DBPLANCJ=1 & DCPLANCJ=1); 
+    
+*   savings bonds;
+    SAVBND=X3902;
+*   have savings bonds: 1=yes, 0=no;
+    HSAVBND=(SAVBND>0);
+    
+*   cash value of whole life insurance;
+    CASHLI=MAX(0,X4006);
+*   have cash value LI: 1=yes, 0=no;
+    HCASHLI=(CASHLI>0);
+    
+*   other managed assets (trusts, annuities and managed investment
+    accounts in which HH has equity interest);
+    %IF (&YEAR GE 2004) %THEN %DO;
+      ANNUIT=MAX(0,X6577);
+      TRUSTS=MAX(0,X6587);
+      OTHMA=ANNUIT+TRUSTS;
+    %END;
+    %ELSE %IF (&YEAR GE 1998 AND &YEAR LE 2001) %THEN %DO;
+      ANNUIT=MAX(0,X6820);
+      TRUSTS=MAX(0,X6835);
+      OTHMA=ANNUIT+TRUSTS;
+    %END;
+    %ELSE %DO;
+      OTHMA=MAX(0,X3942);
+      ANNUIT=((X3935=1)/MAX(1,((X3934=1)+(X3935=1)+(X3936=1)+(X3937=1))))*MAX(0,X3942);
+      TRUSTS=OTHMA-ANNUIT;
+    %END;
+*   have other managed assets: 1=yes, 0=no;
+    HOTHMA=(OTHMA>0);
+    
+*   other financial assets: includes loans from the household to
+    someone else, future proceeds, royalties, futures, non-public
+    stock, deferred compensation, oil/gas/mineral invest., cash
+    n.e.c.;
+*   NOTE: because of the collapsing of categories in the public
+    version of the dataset, both codes 71 (oil/gas/mineral leases or
+    investments) and 72 (futures contracts, stock options) are
+    combined in code 71: thus, the sum will be treated as a
+    nonfinancial asset.
+    Additionally, codes 77 (future lottery/prize receipts) and 79
+    (other obligations to R, tax credits) are combined in code 77;
+    %IF (&PUBLIC EQ NO) %THEN %DO;
+      OTHFIN=X4018+X4022*(X4020 IN (61,62,63,64,65,66,67,72,73,74,77,79
+        80,81,82,83,84))+
+        X4026*(X4024 IN (61,62,63,64,65,66,67,72,73,74,77,79,80,81,82,83,84))+
+        X4030*(X4028 IN (61,62,63,64,65,66,67,72,73,74,77,79,80,81,82,83,84));
+    %END;
+    %ELSE %DO;
+      OTHFIN=X4018+X4022*(X4020 IN (61,62,63,64,65,66,71,72,73,74,77,
+        80,81,-7))+
+        X4026*(X4024 IN (61,62,63,64,65,66,71,72,73,74,77,80,81,-7))+
+        X4030*(X4028 IN (61,62,63,64,65,66,71,72,73,74,77 80,81,-7));
+    %END;
+*   have other financial assets: 1=yes, 0=no;
+    HOTHFIN=(OTHFIN>0);
+    
+*   financial assets invested in stock:
+    1. directly-held stock 
+    2. stock mutual funds: full value if described as stock mutual fund,
+       1/2 value of combination mutual funds
+    3. IRAs/Keoghs invested in stock: 
+       full value if mostly invested in stock, 
+       1/2 value if split between stocks/bonds or stocks/money market,
+       1/3 value if split between stocks/bonds/money market
+    4. other managed assets w/equity interest (annuities, trusts, MIAs):
+       full value if mostly invested in stock,
+       1/2 value if split between stocks/MFs & bonds/CDs, or
+    	 "mixed/diversified,"
+       1/3 value if "other"
+    5. thrift-type retirement accounts invested in stock
+       full value if mostly invested in stock
+       1/2 value if split between stocks and interest earning assets
+    6. savings accounts classified as 529 or other accounts that may
+       be invested in stocks;
+    %IF (&YEAR GE 2010) %THEN %DO;
+      EQUITY=STOCKS+STMUTF+.5*COMUTF+OMUTF+
+        (X6551+X6552+X6553+X6554)*((X6555=1)+(X6555 IN(3 30))*(MAX(0,X6556)/10000))+
+        (X6559+X6560+X6561+X6562)*((X6563=1)+(X6563 IN(3 30))*(MAX(0,X6564)/10000))+
+        (X6567+X6568+X6569+X6570)*((X6571=1)+(X6571 IN(3 30))*(MAX(0,X6572)/10000))+
+        ANNUIT*((X6581=1)+(X6581 IN(3 30))*(MAX(0,X6582)/10000))+
+        TRUSTS*((X6591=1)+(X6591 IN(3 30))*(MAX(0,X6592)/10000))+PENEQ+
+        (X6461=1)*X6462*((X6933=1)+(X6933 IN(3 30))*(MAX(0,X6934)/10000))+
+        (X6466=1)*X6467*((X6937=1)+(X6937 IN(3 30))*(MAX(0,X6938)/10000))+
+        (X6471=1)*X6472*((X6941=1)+(X6941 IN(3 30))*(MAX(0,X6942)/10000))+
+        (X6476=1)*X6477*((X6945=1)+(X6945 IN(3 30))*(MAX(0,X6946)/10000))+
+        X5604*((X6962=1)+(X6962 IN(3 30))*(MAX(0,X6963)/10000))+
+        X5612*((X6968=1)+(X6968 IN(3 30))*(MAX(0,X6969)/10000))+
+        X5620*((X6974=1)+(X6974 IN(3 30))*(MAX(0,X6975)/10000))+
+        X5628*((X6980=1)+(X6980 IN(3 30))*(MAX(0,X6981)/10000))+
+        X3730*((X7074=1)+(X7074 IN(3 30))*(MAX(0,X7075)/10000))+
+        X3736*((X7077=1)+(X7077 IN(3 30))*(MAX(0,X7078)/10000))+
+        X3742*((X7080=1)+(X7080 IN(3 30))*(MAX(0,X7081)/10000))+
+        X3748*((X7083=1)+(X7083 IN(3 30))*(MAX(0,X7084)/10000))+
+        X3754*((X7086=1)+(X7086 IN(3 30))*(MAX(0,X7087)/10000))+
+        X3760*((X7089=1)+(X7089 IN(3 30))*(MAX(0,X7090)/10000));
+
+    %END;
+    %ELSE %IF (&YEAR GE 2007) %THEN %DO;
+      EQUITY=STOCKS+STMUTF+.5*COMUTF+OMUTF+
+        (X6551+X6552+X6553+X6554)*((X6555=1)+(X6555=3)*X6556/10000)+
+        (X6559+X6560+X6561+X6562)*((X6563=1)+(X6563=3)*X6564/10000)+
+        (X6567+X6568+X6569+X6570)*((X6571=1)+(X6571=3)*X6572/10000)+
+        ANNUIT*((X6581=1)+(X6581=3)*X6582/10000)+
+        TRUSTS*((X6591=1)+(X6591=3)*X6592/10000)+PENEQ+
+        (X6461=1)*X6462*((X6933=1)+(X6933=3)*X6934/10000)+
+        (X6466=1)*X6467*((X6937=1)+(X6937=3)*X6938/10000)+
+        (X6471=1)*X6472*((X6941=1)+(X6941=3)*X6942/10000)+
+        (X6476=1)*X6477*((X6945=1)+(X6945=3)*X6946/10000)+
+        (X6481=1)*X6482*((X6949=1)+(X6949=3)*X6950/10000)+
+        (X6486=1)*X6487*((X6953=1)+(X6953=3)*X6954/10000)+
+        X5604*((X6962=1)+(X6962=3)*X6963/10000)+
+        X5612*((X6968=1)+(X6968=3)*X6969/10000)+
+        X5620*((X6974=1)+(X6974=3)*X6975/10000)+
+        X5628*((X6980=1)+(X6980=3)*X6981/10000)+
+        X5636*((X6986=1)+(X6986=3)*X6987/10000)+
+        X5644*((X6992=1)+(X6992=3)*X6993/10000)+
+        X3730*((X7074=1)+(X7074 IN(3))*(MAX(0,X7075)/10000))+
+        X3736*((X7077=1)+(X7077 IN(3))*(MAX(0,X7078)/10000))+
+        X3742*((X7080=1)+(X7080 IN(3))*(MAX(0,X7081)/10000))+
+        X3748*((X7083=1)+(X7083 IN(3))*(MAX(0,X7084)/10000))+
+        X3754*((X7086=1)+(X7086 IN(3))*(MAX(0,X7087)/10000))+
+        X3760*((X7089=1)+(X7089 IN(3))*(MAX(0,X7090)/10000));
+    %END;
+    %ELSE %IF (&YEAR EQ 2004) %THEN %DO;
+      EQUITY=STOCKS+STMUTF+.5*COMUTF+OMUTF+
+        (X6551+X6552+X6553+X6554)*((X6555=1)+(X6555=3)*X6556/10000)+
+        (X6559+X6560+X6561+X6562)*((X6563=1)+(X6563=3)*X6564/10000)+
+        (X6567+X6568+X6569+X6570)*((X6571=1)+(X6571=3)*X6572/10000)+
+        ANNUIT*((X6581=1)+(X6581=3)*X6582/10000)+
+        TRUSTS*((X6591=1)+(X6591=3)*X6592/10000)+PENEQ+
+        (X6461=1)*X6462*((X6933=1)+(X6933=3)*X6934/10000)+
+        (X6466=1)*X6467*((X6937=1)+(X6937=3)*X6938/10000)+
+        (X6471=1)*X6472*((X6941=1)+(X6941=3)*X6942/10000)+
+        (X6476=1)*X6477*((X6945=1)+(X6945=3)*X6946/10000)+
+        (X6481=1)*X6482*((X6949=1)+(X6949=3)*X6950/10000)+
+        (X6486=1)*X6487*((X6953=1)+(X6953=3)*X6954/10000)+
+        X5604*((X6962=1)+(X6962=3)*X6963/10000)+
+        X5612*((X6968=1)+(X6968=3)*X6969/10000)+
+        X5620*((X6974=1)+(X6974=3)*X6975/10000)+
+        X5628*((X6980=1)+(X6980=3)*X6981/10000)+
+        X5636*((X6986=1)+(X6986=3)*X6987/10000)+
+        X5644*((X6992=1)+(X6992=3)*X6993/10000);
+    %END;
+    %ELSE %IF (&YEAR EQ 2001) %THEN %DO;
+      EQUITY=STOCKS+STMUTF+.5*COMUTF+
+        IRAKH*((X3631=2) +.5*(X3631=5|X3631=6)+.3*(X3631=4))+
+        ANNUIT*((X6826=1)+.5*(X6826=5|X6826=6)+.3*(X6826=-7))+
+        TRUSTS*((X6841=1)+.5*(X6841=5|X6841=6)+.3*(X6841=-7))+
+        PENEQ+X6462*((X6463=1)+.5*(X6463=3))+X6467*((X6468=1)+.5*(X6468=3))
+        +X6472*((X6473=1)+.5*(X6473=3))+X6477*((X6478=1)+.5*(X6478=3))
+        +X6482*((X6483=1)+.5*(X6483=3))+X6487*((X6488=1)+.5*(X6488=3))
+        +X5604*((X6491=1)+.5*(X6491=3))+X5612*((X6492=1)+.5*(X6492=3))
+        +X5620*((X6493=1)+.5*(X6493=3))+X5628*((X6494=1)+.5*(X6494=3))
+        +X5636*((X6495=1)+.5*(X6495=3))+X5644*((X6496=1)+.5*(X6496=3));
+    %END;
+    %ELSE %IF (&YEAR EQ 1998) %THEN %DO;
+      EQUITY=STOCKS+STMUTF+.5*COMUTF+
+        IRAKH*((X3631=2) +.5*(X3631=5|X3631=6)+.3*(X3631=4))+
+        ANNUIT*((X6826=1)+.5*(X6826=5|X6826=6)+.3*(X6826=-7))+
+        TRUSTS*((X6841=1)+.5*(X6841=5|X6841=6)+.3*(X6841=-7))+
+        PENEQ;
+    %END;
+    %ELSE %DO;
+      EQUITY=STOCKS+STMUTF+.5*COMUTF+
+        IRAKH*((X3631=2)+.5*(X3631=5|X3631=6)+.3*(X3631=4))+
+        OTHMA*((X3947=1)+.5*(X3947=5|X3947=6)+.3*(X3947=4|X3947=-7))+
+        PENEQ;
+    %END;
+*   have stock equity: 1=yes, 0=no;
+    HEQUITY=(EQUITY>0);
+*   equity in directly held stocks, stock mutual funds, and
+    combination mutual funds;
+    DEQ=STOCKS+STMUTF+.5*COMUTF;
+*   equity in quasi-liquid retirement assets;
+    %IF (&YEAR LE 1998) %THEN %DO;
+      RETEQ=IRAKH*((X3631=2)+.5*(X3631 IN (5 6))+.3*(X3631=4))+PENEQ; 
+    %END;
+    %ELSE %IF (&YEAR EQ 2001) %THEN %DO;
+      RETEQ=IRAKH*((X3631=2)+.5*(X3631 IN (5 6))+.3*(X3631=4))+PENEQ
+      +X6462*((X6463=1)+.5*(X6463=3))+X6467*((X6468=1)+.5*(X6468=3))
+      +X6472*((X6473=1)+.5*(X6473=3))+X6477*((X6478=1)+.5*(X6478=3))
+      +X6482*((X6483=1)+.5*(X6483=3))+X6487*((X6488=1)+.5*(X6488=3)); 
+    %END;
+    %ELSE %IF (&YEAR GE 2010) %THEN %DO;
+      RETEQ=(SUM(0,X6551,X6552,X6553,X6554)*((X6555=1)
+        +(X6555 IN(3 30))*(MAX(0,X6556)/10000))+
+        SUM(0,X6559,X6560,X6561,X6562)*((X6563=1)
+        +(X6563 IN(3 30))*(MAX(0,X6564)/10000))+
+        SUM(0,X6567,X6568,X6569,X6570)*((X6571=1)
+        +(X6571 IN(3 30))*(MAX(0,X6572)/10000)))+
+        PENEQ+(X6461=1)*X6462*((X6933=1)+(X6933 IN(3 30))*(MAX(0,X6934)/10000))+
+        (X6466=1)*X6467*((X6937=1)+(X6937 IN(3 30))*(MAX(0,X6938)/10000))+
+        (X6471=1)*X6472*((X6941=1)+(X6941 IN(3 30))*(MAX(0,X6942)/10000))+
+        (X6476=1)*X6477*((X6945=1)+(X6945 IN(3 30))*(MAX(0,X6946)/10000))+
+        X5604*((X6962=1)+(X6962 IN(3 30))*(MAX(0,X6963)/10000))+
+        X5612*((X6968=1)+(X6968 IN(3 30))*(MAX(0,X6969)/10000))+
+        X5620*((X6974=1)+(X6974 IN(3 30))*(MAX(0,X6975)/10000))+
+        X5628*((X6980=1)+(X6980 IN(3 30))*(MAX(0,X6981)/10000));
+    %END;
+    %ELSE %DO;
+      RETEQ=(SUM(0,X6551,X6552,X6553,X6554)*((X6555=1)+(X6555=3)*X6556/10000)+
+        SUM(0,X6559,X6560,X6561,X6562)*((X6563=1)+(X6563=3)*X6564/10000)+
+        SUM(0,X6567,X6568,X6569,X6570)*((X6571=1)+(X6571=3)*X6572/10000))+
+        PENEQ+(X6461=1)*X6462*((X6933=1)+(X6933=3)*X6934/10000)+
+        (X6466=1)*X6467*((X6937=1)+(X6937=3)*X6938/10000)+
+        (X6471=1)*X6472*((X6941=1)+(X6941=3)*X6942/10000)+
+        (X6476=1)*X6477*((X6945=1)+(X6945=3)*X6946/10000)+
+        (X6481=1)*X6482*((X6949=1)+(X6949=3)*X6950/10000)+
+        (X6486=1)*X6487*((X6953=1)+(X6953=3)*X6954/10000)+
+        X5604*((X6962=1)+(X6962=3)*X6963/10000)+
+        X5612*((X6968=1)+(X6968=3)*X6969/10000)+
+        X5620*((X6974=1)+(X6974=3)*X6975/10000)+
+        X5628*((X6980=1)+(X6980=3)*X6981/10000)+
+        X5636*((X6986=1)+(X6986=3)*X6987/10000)+
+        X5644*((X6992=1)+(X6992=3)*X6993/10000);
+    %END;
+*   ratio of equity to normal income;
+    EQUITINC=.;
+    %IF (&YEAR GE 1995) %THEN %DO;
+      EQUITINC=EQUITY/MAX(100,NORMINC);
+    %END;
+    
+*   brokerage account info;
+*   have a brokerage account;
+    HBROK=(X3923=1);
+*   traded in the past year;
+    HTRAD=(X3928>0);
+*   number of trades per year; 
+    %IF (&YEAR GE 1995) %THEN %DO;
+      IF (X7193 NOT IN (0 -1 1 2 3 4 5 6 8 11 12 18 25)) THEN PUT
+        "WARNING: UNRECOGNIZED FREQUENCY FOR X7193! " &ID= X7193=;
+      PTRAD=((X7193=1)*250+(X7193=2)*52+(X7193=3)*26+(X7193=4)*12
+       +(X7193=5)*4+(X7193=6)+(X7193=8)+(X7193=11)*2 +
+        (X7193=12)*6+(X7193=18)*8*250+(X7193=25)/2);
+      NTRAD=PTRAD*MAX(0,X3928); 
+    %END;
+    %ELSE %DO;
+      NTRAD=MAX(0,X3928); 
+    %END;
+    
+*   total financial assets;
+    FIN=LIQ+CDS+NMMF+STOCKS+BOND+RETQLIQ+SAVBND+CASHLI+OTHMA+OTHFIN;
+*   have any financial assets: 1=yes, 0=no;
+    HFIN=(FIN>0);
+

@@ -1,0 +1,16 @@
+\documentclass[handout]{beamer}
+\usepackage{moreverb} % Needed to handle comments
+\usepackage{verbatim}
+\usepackage{ifthen} % Conditionals
+\usepackage{bm} % BoldMath
+\usepackage[econtex]{optional}
+
+\mode<handout>{
+  \usepackage{pgfpages}
+  \setbeamercolor{background canvas}{bg=black!5}
+  \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=2.5mm]
+}
+
+\input ./HeteroMacro-Slides-body.tex
+
+\end{document}

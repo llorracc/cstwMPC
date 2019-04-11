@@ -1,0 +1,37 @@
+\begin{center}
+
+\begin{tabular}{lll}
+
+\toprule
+ & \multicolumn{1}{l}{$\sigma _{\pshk }^{2}$} & \multicolumn{1}{l}{$\sigma _{\tshk }^{2}$} \\
+
+Our parameters                           & $0.016$       & $0.010      $ \\ \midrule
+\text{\citet{carroll:brookings}}     & $0.016$       & $0.010      $ \\
+\text{\citet{sty:cyclical}}          & $0.008$--$0.026$ & $0.316      $ \\
+\text{\citet{meghir&pistaferri}}$^{\star}$ & $0.031$ & $0.032      $ \\
+\text{\citet{lmpWagerisk}}          & $0.011$       & $-          $ \\
+\text{\citet{bppInequality}}$^{\star}$   & $0.010$--$0.030$ & $0.029$--$0.055$ \\
+\text{\citet{dhprvInequality}}      & \multicolumn{1}{c}{$0.007$--$0.010$} & \multicolumn{1}{c}{$0.15$--$0.20$}\\
+ \midrule
+Implied by \text{KS-JEDC} & $
+\input ../Code/Mathematica/Results/VarPermKS.tex
+$  &
+$
+\input ../Code/Mathematica/Results/VarTranKS.tex
+$ \\
+Implied by Castaneda et al.\ (2003)       &
+$
+\input ../Code/Mathematica/Results/VarPermCas.tex
+$ &
+$
+\input ../Code/Mathematica/Results/VarTranCas.tex
+$ \\ \bottomrule
+
+\end{tabular}
+
+\end{center}
+
+% Main coeff in each paper is reported. If time varying coeffs are reported, the range is reported instead.
+% Restricted the AR1 coeff to 1 (random walk): Meghir and Pistaferri (2004); Low et al (2005); Jensen and Shore (2008) (slightly modified); Hrshko (2009), Carroll (1992, 1997); Blundell et al (2008)
+% Assume AR1: Topel (1990); Topel and Ward (1992); Guvenen; Stresleten (2004a, 2004b) did not but (main) AR1 coeff is not statistically different from 1.
+% For KS and Castaneda, drop samples if annual income is below 20 percent of the 7-year average.

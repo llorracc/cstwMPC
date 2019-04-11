@@ -1,0 +1,63 @@
+# Custom for CDC papers
+*.bibkey
+*.dep
+
+# economics.bib will be nonexistent on local machine, but should exist and be of zero size on remote
+# This requires it to exist but be empty on first commit, and ignored thereafter 
+economics.bib
+*.tmp
+
+
+# Items below from https://gist.github.com/paulcbetts/2802523
+*.doc  diff=astextplain
+*.DOC	diff=astextplain
+*.docx	diff=astextplain
+*.DOCX	diff=astextplain
+*.dot	diff=astextplain
+*.DOT	diff=astextplain
+*.pdf	diff=astextplain
+*.PDF	diff=astextplain
+*.rtf	diff=astextplain
+*.RTF	diff=astextplain
+
+
+*.jpg binary
+*.png binary
+*.gif binary
+
+*.cs -text diff=csharp 
+*.vb -text
+*.c -text
+*.cpp -text
+*.cxx -text
+*.h -text
+*.hxx -text
+*.py -text
+*.rb -text
+*.java -text
+*.html -text
+*.htm -text
+*.css -text
+*.scss -text
+*.sass -text
+*.less -text
+*.js -text
+*.lisp -text
+*.clj -text
+*.sql -text
+*.php -text
+*.lua -text
+*.m -text
+*.asm -text
+*.erl -text
+*.fs -text
+*.fsx -text
+*.hs -text
+# Custom for ShareLaTeX; allows configuration of ShareLaTeX without configuring other installations
+latexmkrc
+
+#
+_region_.*
+# Ignore .py and .ipynb files so that people can use a jupyter notebook without being notified of changes every time they quit
+*.ipynb
+*.py

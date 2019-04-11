@@ -1,0 +1,7 @@
+% Common code needed in cstKS and cstwMPC
+
+\provideboolean{iSubOn}
+%\setboolean{iSubOn}{true}
+\setboolean{iSubOn}{false}
+\providecommand{\iSub}{\ifthenelse{\boolean{iSubOn}}{,i}{}}
+\providecommand{\ifiSub}{\ifthenelse{\boolean{iSubOn}}}

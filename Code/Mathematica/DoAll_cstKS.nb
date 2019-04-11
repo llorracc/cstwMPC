@@ -1,0 +1,151 @@
+(* DoAll_cstKS.nb *)
+(* 
+ This file runs the files for cstKS project 
+ (both longer working paper version available at https://www.ecb.europa.eu/pub/pdf/scpwps/ecbwp1633.pdf
+  and Economics Letters version)
+*)
+(* Net worth data are used unless otherwise noted *)
+
+ClearAll["Global`*"];
+
+
+(* Run Monte Carlo sim to calculate ratio of annual variance to quarterly variance *)
+Print["==========================================================================="];
+SetDirectory[NotebookDirectory[]];
+Print["Run Monte Carlo sims to calculate ratio of annual variance to quarterly variance etc"];
+<<EstimateAnnualVarUsingQtrlyVar.m; 
+ (* 
+ This file verifies footnote 2 in Economics Letter version of cstKS paper 
+ by running Monte Carlo simulations to show 
+ ratio of annual variance of perm shocks to quarterly variance is 11/4 (=2.75)
+ *)
+
+
+(* Models without aggregate shock *)
+Print["==========================================================================="];
+Print["==========================================================================="];
+Print["Models without aggregate shock"];
+
+SetDirectory[NotebookDirectory[]];
+WithAggShocksDir = Directory[] <> "/WithAggShocks"; (* Directory where files with aggregate shocks + file for PF rep agent are saved *)
+SetDirectory[WithAggShocksDir]; 
+<<SolveAndSimPF.m;              (* Run PF rep agent and partial eq PF models *)
+
+ClearAll["Global`*"];
+SetDirectory[NotebookDirectory[]];
+NoAggShockDir    = Directory[] <> "/NoAggShock";    (* Directory where files without aggregate shock are saved *)
+WithAggShocksDir = Directory[] <> "/WithAggShocks"; (* Directory where files with aggregate shocks + file for PF rep agent are saved *)
+SetDirectory[NoAggShockDir]; 
+<<FindBeta.m;                    (* Run model with point (unique) time pref factor and estimate \[Beta] *)
+
+
+ClearAll["Global`*"];
+SetDirectory[NotebookDirectory[]];
+NoAggShockDir    = Directory[] <> "/NoAggShock";    (* Directory where files without aggregate shock are saved *)
+WithAggShocksDir = Directory[] <> "/WithAggShocks"; (* Directory where files with aggregate shocks + file for PF rep agent are saved *)
+SetDirectory[NoAggShockDir]; 
+<<SolveAndSimKSNoAggShock.m;     (* Run KS-JEDC model without aggregate shock *)
+
+
+ClearAll["Global`*"];
+SetDirectory[NotebookDirectory[]];
+NoAggShockDir    = Directory[] <> "/NoAggShock";    (* Directory where files without aggregate shock are saved *)
+SetDirectory[NoAggShockDir]; 
+<<EstimateMoffittGottschalkProcess.m; 
+
+
+(* alt vars for KS point model *)
+(* Models without aggregate shock *)
+Print["============================================================="];
+Print["Alt params"];
+Print["Models without aggregate shock"];
+
+ClearAll["Global`*"];
+SetDirectory[NotebookDirectory[]];
+NoAggShockDir    = Directory[] <> "/NoAggShock";    (* Directory where files without aggregate shock are saved *)
+WithAggShocksDir = Directory[] <> "/WithAggShocks"; (* Directory where files with aggregate shocks + file for PF rep agent are saved *)
+SetDirectory[NoAggShockDir]; 
+
+Print["High variance of tran shocks"];
+<<FindBetaHighTran.m;                    (* Run model with point (unique) time pref factor and estimate \[Beta] *)
+
+Print["High variance of perm shocks"];
+<<FindBetaHighPerm.m;                    (* Run model with point (unique) time pref factor and estimate \[Beta] *)
+
+
+
+(* Models with aggregate shocks *)
+Print["==========================================================================="];
+Print["==========================================================================="];
+Print["Models with aggregate shocks"];
+ClearAll["Global`*"];
+SetDirectory[NotebookDirectory[]];
+WithAggShocksDir = Directory[] <> "/WithAggShocks"; (* Directory where files with aggregate shocks + file for PF rep agent are saved *)
+SetDirectory[WithAggShocksDir]; 
+<<SolveAndSimKS.m;             (* Run rep agent and KS-JEDC model. Rep agent model is run as a first step. *)
+Print[" Figure fCrossSectionVar "]
+<<PlotfCrossSectionVar.m;      (* Plot fCrossSectionVar *)  
+fCrossSectionVar
+
+<<SolveAndSimKSHetero.m;       (* Run rep agent and KS-Hetero model. Rep agent model is run as a first step. *)
+<<SolveAndSimPoint.m;          (* Run \[Beta]-Point model *)
+Print[" Figure of consumption function"];
+CFuncPointPlotALL 
+
+CFuncPointAndHistNetWorthPlot
+
+
+
+<<SolveAndSimKS_experiments.m; (* Run an experiment using KS-JEDC model *)
+Print[" Figure of interst rate"]; 
+RPlot      
+Print[" Figure of consumption growth"]; 
+dlAggCtPlot 
+
+
+(* Models with alt params *)
+Print["============================================================="];
+Print["Alt params"];
+Print["Models with aggregate shocks"];
+ClearAll["Global`*"];
+SetDirectory[NotebookDirectory[]];
+WithAggShocksDir = Directory[] <> "/WithAggShocks"; (* Directory where files with aggregate shocks + file for PF rep agent are saved *)
+SetDirectory[WithAggShocksDir]; 
+
+Print["High variance of tran shocks"];
+<<SolveAndSimPointHighTran.m;          (* Run \[Beta]-Point model *)
+
+Print["High variance of perm shocks"];
+<<SolveAndSimPointHighPerm.m;          (* Run \[Beta]-Point model *)
+
+
+
+
+(* Generate tables *)
+(* This file generates tables in the paper. *)
+
+Print["==========================================================================="];
+Print["Generate tables "];
+ClearAll["Global`*"];
+
+SetDirectory[NotebookDirectory[]];
+ResultsDir = Directory[] <> "/Results"; 
+
+
+(* produce tables for "cstKS" paper and save the tables in folder "cstKS\Latest\Tables" *)
+SetDirectory[ResultsDir];
+<<GenWDistcstKS.m;
+
+SetDirectory[ResultsDir];
+<<GenWDist_cstKSLarge.m;
+
+SetDirectory[ResultsDir];
+<<GenWDist_cstKSFull.m
+
+SetDirectory[ResultsDir];
+<<GenAggStatscstKS.m;
+
+
+(* copy figures *)
+SetDirectory[NotebookDirectory[]];
+<<CopyFigures_cstKS.m;
