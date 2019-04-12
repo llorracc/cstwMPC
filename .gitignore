@@ -32,7 +32,6 @@ economics.bib
 *.cxx -text
 *.h -text
 *.hxx -text
-*.py -text
 *.rb -text
 *.java -text
 *.html -text
@@ -60,4 +59,4 @@ latexmkrc
 _region_.*
 # Ignore .py and .ipynb files so that people can use a jupyter notebook without being notified of changes every time they quit
 *.ipynb
-*.py
+
