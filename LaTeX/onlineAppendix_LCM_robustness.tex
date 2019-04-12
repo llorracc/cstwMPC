@@ -1,5 +1,5 @@
 \RequirePackage[dep]{snapshot}
-\documentclass[11pt,a4paper,pdftex]{article}\usepackage[pdftex]{graphicx}\usepackage{epstopdf} \usepackage[pdftex]{hyperref}
+\documentclass{econtex}\usepackage[pdftex]{graphicx}\usepackage{epstopdf} \usepackage[pdftex]{hyperref}
 \usepackage{moreverb}
 %\usepackage{fourier} \usepackage[scaled=0.87]{berasans} \usepackage[scaled=0.87]{beramono}
 
@@ -10,8 +10,7 @@
 
 \usepackage[marginparwidth=0in,left=1.65in,right=1.65in,top=1.65in,bottom=1.65in]{geometry}
 
-\usepackage[mathcal]{eucal}
-\usepackage[usenames]{color}
+%\usepackage[mathcal]{eucal}
 \usepackage{threeparttable}
 %\usepackage[nolists]{endfloat}
 
@@ -147,7 +146,7 @@
             \newcommand{\EVarr}{\sigma_{\Risky}^{2}} % Variance of level return on risky asset (when returns norm dist)
             \newcommand{\expend}{\ensuremath{\xi}}
             \newcommand{\xpend}{\ensuremath{\xi}}
-            \newcommand{\Ex}{\ensuremath{\mathbb{E}}} % Expectations
+%            \newcommand{\Ex}{\ensuremath{\mathbb{E}}} % Expectations
             \newcommand{\FFunc}{\ensuremath{\mathrm{F}}}
             \newcommand{\fFunc}{\ensuremath{\mathrm{f}}}
             \newcommand{\FDist}{\ensuremath{\mathcal{F}}}
@@ -637,9 +636,9 @@
 \setlength{\defbaselineskip}{\baselineskip}
 \newcommand{\setlinespacing}[1]%
            {\setlength{\baselineskip}{#1 \defbaselineskip}}
-\newcommand{\doublespacing}{\setlength{\baselineskip}%
-                           {2.0 \defbaselineskip}}
-\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+%                           {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
 \newcommand{\lllskip}{1.0}
 
 
@@ -783,7 +782,7 @@ To better fit the empirical distribution of wealth, we again estimate the \Disco
 \caption{Distribution of Net Worth (Lorenz Curve), Life Cycle Model}
 \label{fig:LorenzLifeCycle}
 \begin{center}
-\includegraphics[scale=0.75]{../Figures/LifeCycleLorenzPlot.pdf}
+\includegraphics[scale=0.75]{../Figures/LifeCycleLorenzPlot}
 \end{center}
 \end{figure}
 
@@ -846,7 +845,7 @@ $\nabla$   &  & 0.0391 & 0.0606 &  & 0.0483 & 0.0717 &  & 0.0494 & 0.0748 \\
 \begin{figure}
 \caption{Distribution of MPC's Across Households, Life Cycle Model}
 \begin{center}
-\includegraphics[scale=0.75]{../Figures/MPCdistributionLifeCyclePlot.pdf}
+\includegraphics[scale=0.75]{../Figures/MPCdistributionLifeCyclePlot}
 \end{center}
 \end{figure}
 
@@ -861,7 +860,7 @@ Figure \ref{fig:MPCbyAge} presents the aggregate marginal propensity to consume 
 \caption{Aggregate Marginal Propensity to Consume by Age}
 \label{fig:MPCbyAge}
 \begin{center}
-\includegraphics[scale=0.75]{../Figures/MPCbyAgeFigure.pdf}
+\includegraphics[scale=0.75]{../Figures/MPCbyAgeFigure}
 \end{center}
 \end{figure}
 

@@ -16,7 +16,7 @@
 \newlength{\defbaselineskip}
 \setlength{\defbaselineskip}{\baselineskip}
 \newcommand{\setlinespacing}[1]%
-           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+{\setlength{\baselineskip}{#1 \defbaselineskip}}
 \newcommand{\oneandhalfspacing}{\setlength{\baselineskip}{1.5 \defbaselineskip}}
 
 \definecolor{jirkasblue}{rgb}{0.2,0.2,0.7}
@@ -31,7 +31,7 @@
 
 
 \hypersetup{colorlinks=true,
-            pdfauthor={Christopher D. Carroll <ccarroll@jhu.edu>, Jiri Slacalek<jiri.slacalek@gmail.com>, Kiichi Tokuoka <kiichi.tokuoka@mof.go.jp>, Matthew White <mnwecon@udel.edu>},
+  pdfauthor={Christopher D. Carroll <ccarroll@jhu.edu>, Jiri Slacalek<jiri.slacalek@gmail.com>, Kiichi Tokuoka <kiichi.tokuoka@mof.go.jp>, Matthew White <mnwecon@udel.edu>},
             pdftitle={The Distribution of Wealth and the Marginal Propensity to Consume},
             pdfsubject={Consumption Dynamics; Wealth Inequality; Marginal Propensity to Consume},
             pdfkeywords={MPC, inequality, heterogeneity, consumption, dynamics, microfoundations},
@@ -71,17 +71,18 @@ The Distribution of Wealth and the Marginal Propensity to Consume
 
 \begin{small}
 \parbox{\textwidth}{
-\begin{center}
+  \begin{center}
 \begin{tabbing}
 \texttt{Archive:~} \= \= \url{http://econ.jhu.edu/people/ccarroll/papers/cstwMPC.pdf} \kill \\  % This line establishes the locations of the tabs, but is not printed because of the \kill directive
-\texttt{~~~~PDF:~} \> \> \url{http://econ.jhu.edu/people/ccarroll/papers/cstwMPC.pdf} \\
-\texttt{~Slides:~} \> \> \url{http://econ.jhu.edu/people/ccarroll/papers/cstwMPC-Slides.pdf} \\
-\texttt{~~~~Web:~} \> \> \url{http://econ.jhu.edu/people/ccarroll/papers/cstwMPC/} \\
-\texttt{~BibTeX:~} \> \> \url{http://econ.jhu.edu/people/ccarroll/papers/cstwMPC.bib} \\
-\texttt{Archive:~} \> \> \url{http://econ.jhu.edu/people/ccarroll/papers/cstwMPC.zip} 
-\\\texttt{~~~~~~~~~} \> \> {\it (Complete replication archive; online appendix is in LaTeX directory)}
+\texttt{~~~~~PDF:~} \> \> \url{http://econ.jhu.edu/people/ccarroll/papers/cstwMPC.pdf} \\
+\texttt{~~Slides:~} \> \> \url{http://econ.jhu.edu/people/ccarroll/papers/cstwMPC-Slides.pdf} \\
+\texttt{~~~~~Web:~} \> \> \url{http://econ.jhu.edu/people/ccarroll/papers/cstwMPC/} \\
+\texttt{Appendix:~} \> \> \url{http://econ.jhu.edu/people/ccarroll/papers/cstwMPC/onlineAppendix.html} \\
+%\texttt{~~BibTeX:~} \> \> \url{http://econ.jhu.edu/people/ccarroll/papers/cstwMPC.bib} \\
+\texttt{~~~~Repo:~} \> \> \url{https://github.com/econ-ark/REMARK/tree/master/REMARKs/cstwMPC}\\
+\texttt{~~~~~~~~~~} \> \>  \texttt{do\_all.py} in repo replicates all computational results of paper
 \end{tabbing}
-\end{center}
+  \end{center}
 }
 \end{small}
 
@@ -763,20 +764,20 @@ However, the wealth heterogeneity in the $\Discount$-Point model essentially jus
 
 \begin{comment}
 
-Comparison of the relevant values in Table~\ref{table:ParamsAll} makes clear that the  aggregate shocks are in terms of variance 100 times smaller than the idiosyncratic shocks. Consequently, it is no surprise that the key quantitative results of our analysis so far generalize to the framework which includes realistically calibrated aggregate uncertainty. In particular, the two rightmost columns of Table~\ref{table:MPCall} with the MPC breakdowns from the $\Discount$-Dist models with aggregate shocks closely mirror columns~2~and~3, in which these shocks are shut down.
-For example, in the net worth case, the aggregate MPC for the model calibrated to the distribution of the net worth is $
-\input ../Code/Mathematica/Results/MPCDistSevenWithAggPermShocks.tex
-$, while that for the liquid financial and retirement assets case remains much higher at
-$
-\input ../Code/Mathematica/Results/MPCDistSevenWithAggPermShocksLiqFinPlsRet.tex
-$.
+  Comparison of the relevant values in Table~\ref{table:ParamsAll} makes clear that the  aggregate shocks are in terms of variance 100 times smaller than the idiosyncratic shocks. Consequently, it is no surprise that the key quantitative results of our analysis so far generalize to the framework which includes realistically calibrated aggregate uncertainty. In particular, the two rightmost columns of Table~\ref{table:MPCall} with the MPC breakdowns from the $\Discount$-Dist models with aggregate shocks closely mirror columns~2~and~3, in which these shocks are shut down.
+  For example, in the net worth case, the aggregate MPC for the model calibrated to the distribution of the net worth is $
+  \input ../Code/Mathematica/Results/MPCDistSevenWithAggPermShocks.tex
+  $, while that for the liquid financial and retirement assets case remains much higher at
+  $
+  \input ../Code/Mathematica/Results/MPCDistSevenWithAggPermShocksLiqFinPlsRet.tex
+  $.
 
-%\footnote{As in the net worth case, parameter value are estimated with aggregate shocks turned off
-%($(\grave{\Discount}, \nabla)=(
-%\input ../Code/Mathematica/Results/BetamiddleLiqFinPlsRet.tex
-%,
-%\input ../Code/Mathematica/Results/NablaLiqFinPlsRet.tex
-%)$).}
+  % \footnote{As in the net worth case, parameter value are estimated with aggregate shocks turned off
+  % ($(\grave{\Discount}, \nabla)=(
+  % \input ../Code/Mathematica/Results/BetamiddleLiqFinPlsRet.tex
+  % ,
+  % \input ../Code/Mathematica/Results/NablaLiqFinPlsRet.tex
+  % )$).}
 
 \end{comment}
 
@@ -816,7 +817,7 @@ We follow other papers (in particular \citet{castaneda}) in matching
 these statistics.\footnote{\citet{castaneda} targeted various wealth and income
   distribution statistics, including net worth held by the top $1$, $5$, $10$, $20$,
   $40$, $60$, $80$ percent, and the Gini coefficient.}
-  % The footnote listed all the (wealth) statistics Castaneda matched. Note that they are matching various income statistics as well.
+% The footnote listed all the (wealth) statistics Castaneda matched. Note that they are matching various income statistics as well.
 
 Our specific approach is to replace the assumption that all households have the same time
 preference factor with an assumption that, for some dispersion $\nabla$, time
@@ -827,14 +828,14 @@ $\nabla$ for which the model best matches the fraction of net worth held by the 
 the aggregate capital-to-output ratio from the perfect foresight
 model. Specifically, defining $w_{i}$ and $\omega _{i}$ as the proportion of total aggregate net worth held by the top $i$ percent in our model and in the data, respectively, we solve the following minimization problem:
 \begin{equation}
-\{\grave{\Discount}, \nabla\}= \underset{\{{\Discount}, \nabla\}}{\text{argmin} }\Big(\sum_\text{$i=20$, $40$, $60$, $80$}
-\big(w_{i}({\Discount}, \nabla)-\omega _{i}\big)^{2}\Big)^{1/2} \label{eq:MinimizationProb}
+  \{\grave{\Discount}, \nabla\}= \underset{\{{\Discount}, \nabla\}}{\text{argmin} }\Big(\sum_\text{$i=20$, $40$, $60$, $80$}
+  \big(w_{i}({\Discount}, \nabla)-\omega _{i}\big)^{2}\Big)^{1/2} \label{eq:MinimizationProb}
 \end{equation}
 subject to the constraint that the aggregate wealth (net worth)-to-output ratio in the model matches the aggregate
 capital-to-output ratio from the perfect foresight model ($\KLev_{PF}/\YLev_{PF}$):\footnote{In estimating these parameter values, we approximate the uniform distribution with the following seven points (each with the mass of $1/7$): $\{\grave{\Discount}-3\nabla/3.5$, $\grave{\Discount}-2\nabla/3.5$, $\grave{\Discount}-\nabla/3.5$, $\grave{\Discount}$, $\grave{\Discount}+\nabla/3.5$, $\grave{\Discount}+2\nabla/3.5$, $\grave{\Discount}+3\nabla/3.5\}$. Increasing the number of points further does not notably change the results below. When solving the problem \eqref{eq:MinimizationProb}--\eqref{eq:pfConstraint} for the FBS specification we shut down the aggregate shocks (practically, this does not affect the estimates given their small size).
-\label{foot:uniApprox}}
+  \label{foot:uniApprox}}
 \begin{eqnarray}
-\KLev/\YLev & = & \KLev_{PF}/\YLev_{PF}.  \label{eq:pfConstraint}
+  \KLev/\YLev & = & \KLev_{PF}/\YLev_{PF}.  \label{eq:pfConstraint}
 \end{eqnarray}
 The solution to this problem is $\{\grave{\Discount}, \nabla\}=\{
 \input ../Code/Mathematica/Results/Betamiddle.tex
@@ -846,20 +847,20 @@ The introduction of even such a relatively modest amount of time
 preference heterogeneity sharply improves the model's fit to the targeted
 proportions of wealth holdings, bringing it reasonably in line with the data (Figure~\ref{CumWLevSCFCastanedaAndDistSevenNoAggShockPlot}).%
 \footnote{The Lorenz distance falls from almost 40 for the $\Discount$-Dist model to just above 2 for the $\Discount$-Dist model; see Table~\ref{table:MPCall}.}
- The
+The
 ability of the model to match the targeted moments does not, of
 course, constitute a formal test, except in the loose sense that a
 model with such strong structure might have been unable to get nearly
 so close to four target wealth points with only one free
 parameter.\footnote{Because the constraint \eqref{eq:pfConstraint} effectively pins down the discount factor $\grave{\Discount}$
-estimated in the minimization problem \eqref{eq:MinimizationProb},
-   only the dispersion $\nabla$ works to match the four wealth target points.} But the model also sharply improves the fit to locations in
+  estimated in the minimization problem \eqref{eq:MinimizationProb},
+  only the dispersion $\nabla$ works to match the four wealth target points.} But the model also sharply improves the fit to locations in
 the wealth distribution that were not explicitly targeted; for
 example, the net worth shares of the top 10 percent and the top 1
 percent are also shown in the figure, and the model performs
 reasonably well in matching them.%
 \footnote{%
-We have examined the results for alternative calibrations of $\CRRA$ (section~\ref{sec:Sensitivity}); unsurprisingly, for larger calibrations of $\CRRA$, $\nabla$ is larger.  For example, for $\CRRA=2$, $\nabla$ is a bit more than twice as large.  However, implications for the MPC are roughly similar.
+  We have examined the results for alternative calibrations of $\CRRA$ (section~\ref{sec:Sensitivity}); unsurprisingly, for larger calibrations of $\CRRA$, $\nabla$ is larger.  For example, for $\CRRA=2$, $\nabla$ is a bit more than twice as large.  However, implications for the MPC are roughly similar.
 }
 
 Of course, \citet{ksHeteroPort,ksHetero} were well aware that their baseline model
@@ -889,11 +890,11 @@ introduced finite horizons in order to yield an ergodic distribution
 of permanent income, it would be peculiar to layer on top of the
 stochastic death probability a stochastic probability of changing
 one's time preference factor within the lifetime.\footnote{Krusell and Smith
-motivated their differing time preference factors as reflecting
-different preferences of alternating generations of a dynasty, but
-with our finite horizons assumption we have eliminated the dynastic
-interpretation of the model.}${}^,$\footnote{\cite{kruegerMitmanPerri:handbookMacro} use our specification of preference heterogeneity to investigate the dynamics of their model economy during the Great Recession.}
- Third, our results below show that the Krusell and Smith
+  motivated their differing time preference factors as reflecting
+  different preferences of alternating generations of a dynasty, but
+  with our finite horizons assumption we have eliminated the dynastic
+  interpretation of the model.}${}^,$\footnote{\cite{kruegerMitmanPerri:handbookMacro} use our specification of preference heterogeneity to investigate the dynamics of their model economy during the Great Recession.}
+Third, our results below show that the Krusell and Smith
 specification of discount rate heterogeneity implies a substantially lower aggregate MPC than our $\Discount$-Dist model.  Having said all of this, the common
 point across the two papers is that a key requirement to make the
 model fit the wealth data is a form of heterogeneity that leads different
@@ -928,15 +929,17 @@ horizontal axis being cash on hand normalized by the level of
 (quarterly) permanent income. Because the households with less normalized cash have higher MPCs, the average MPC is higher when a larger fraction of households has less (normalized) cash on hand.
 
 \begin{figure}
-\caption{Empirical Wealth Distribution and Consumption Functions of the
-$\Discount$-Point and $\Discount$-Dist Models}
-\label{CFuncDistSevenPointPermAndHistNetWorthPlotFedQuarterly}
-\CDCFig{CFuncDistSevenPointPermAndHistNetWorthPlotFedQuarterly}
-\footnotesize Notes: The solid curve shows the consumption function
-for $\Discount$-Point model, and the dashed curves show the consumption functions
-for the most patient and the least patient consumers for
-$\Discount$-Dist model (under the FBS aggregate process). The histogram shows the empirical distribution of
-net worth ($\mRat_{t}$) in the \emph{Survey of Consumer Finances} of 2004.
+    \caption{Empirical Wealth Distribution and Consumption Functions of the
+      $\Discount$-Point and $\Discount$-Dist Models}
+    \label{CFuncDistSevenPointPermAndHistNetWorthPlotFedQuarterly}
+  \begin{center}
+    \includegraphics{./Figures/CFuncDistSevenPointPermAndHistNetWorthPlotFedQuarterly}
+  \end{center}
+    \footnotesize Notes: The solid curve shows the consumption function
+    for $\Discount$-Point model, and the dashed curves show the consumption functions
+    for the most patient and the least patient consumers for
+    $\Discount$-Dist model (under the FBS aggregate process). The histogram shows the empirical distribution of
+    net worth ($\mRat_{t}$) in the \emph{Survey of Consumer Finances} of 2004.
 \end{figure}
 
 There are many more households with little wealth in our $\Discount$-Point model than in the KS-JEDC model, as illustrated by comparison of the dash-dotted and the long-dashing lines in Figure~\ref{CumWLevSCFCastanedaAndDistSevenNoAggShockPlot}. The greater concentration of wealth at the bottom in the $\Discount$-Point model, which mirrors the data (see the histogram in Figure~\ref{CFuncDistSevenPointPermAndHistNetWorthPlotFedQuarterly}), should produce a higher average MPC, given the concave consumption function.
@@ -945,10 +948,12 @@ Indeed, the average MPC out of the transitory income (`stimulus check') in our $
 \footnote{The MPCs calculated in Table~\ref{table:MPCall} are `theoretical', i.e., based on the slope of the consumption function. Alternatively, we have also calculated the following `discrete' MPCs based on an increase in spending over the next four quarters after the household received an unexpected \$ 1,000 extra in income. The implied MPCs for such calculation are slightly lower than the ones we report, e.g., for the aggregate MPC in the perpetual youth $\Discount$-Dist model we get a value of \input ../Code/Mathematica/Results/MPCAltDistSevenWithAggPermShocks.tex (instead of \input ../Code/Mathematica/Results/MPCDistSevenWithAggPermShocks.tex reported in column~6 of Table~\ref{table:MPCall}).}
 
 \begin{figure}
-\caption{Consumption Functions of  $\Discount$-Dist and KS-Hetero Models and the Distribution of Cash on Hand}
-\label{CFuncKSHeteroAndDistSevenAndHistDataKSHeteroPlot}
-\CDCFig{CFuncKSHeteroAndDistSevenAndHistDataKSHeteroPlot}
-{\footnotesize Notes: The dashed curve and the solid curve show the consumption functions for the most impatient consumers in $\Discount$-Dist model and the KS-Hetero model under the KS aggregate process, respectively. The consumption functions are for employed consumers in the good aggregate state. The pink (light grey) and blue (dark grey) histograms show the distributions of cash on hand for the most impatient consumers generated by $\Discount$-Dist model and the KS-Hetero model, respectively.}
+  \caption{Consumption Functions of  $\Discount$-Dist and KS-Hetero Models and the Distribution of Cash on Hand}
+  \label{CFuncKSHeteroAndDistSevenAndHistDataKSHeteroPlot}
+  \begin{center}
+    \includegraphics{./Figures/CFuncKSHeteroAndDistSevenAndHistDataKSHeteroPlot}
+  \end{center}
+    {\footnotesize Notes: The dashed curve and the solid curve show the consumption functions for the most impatient consumers in $\Discount$-Dist model and the KS-Hetero model under the KS aggregate process, respectively. The consumption functions are for employed consumers in the good aggregate state. The pink (light grey) and blue (dark grey) histograms show the distributions of cash on hand for the most impatient consumers generated by $\Discount$-Dist model and the KS-Hetero model, respectively.}
 \end{figure}
 
 Column~3 reports that the Krusell--Smith model with heterogeneous discount rates, `KS-Hetero' has very different implications about marginal propensities than $\Discount$-Dist model.  While both models match the empirical wealth distribution, the KS-Hetero model generates a much lower aggregate MPC: 0.09. Figure~\ref{CFuncKSHeteroAndDistSevenAndHistDataKSHeteroPlot} shows the reason for this discrepancy: in the KS-Hetero model, a large fraction of even the most impatient households stay in the region where the consumption function is flat and the MPC is low (see the solid line and the blue (dark grey) histogram). In addition, the heterogeneity in MPCs across wealth--income ratios is substantially lower than in the $\Discount$-Dist model: In the KS-Hetero model households in the bottom 20 \%\ have MPCs of around 0.2, while in the $\Discount$-Dist model almost 0.5.
@@ -958,37 +963,37 @@ To further understand the role of various components of the $\Discount$-Dist mod
 
 
 % \begin{sidewaystable}
-% \input ../Tables/MPCall
+%   \input ../Tables/MPCall
 % \end{sidewaystable}
 
 \begin{sidewaystable}
-\caption{Average (Aggregate) Marginal Propensity to Consume in Annual Terms}
-\label{table:MPCall}
-\begin{minipage}{\textwidth}
-\input ../Tables/MPCall_LCM
-{\footnotesize Notes: Annual MPC is calculated by $1-(1-$\text{quarterly MPC}$)^{4}$.  ``Liquid Assets'' refers to liquid financial plus retirement assets. ${}^\ddagger$: Discount factors are uniformly distributed over the interval $[\grave{\Discount}-\nabla,\grave{\Discount}+\nabla]$.  ${}^\star$: The Lorenz distance is defined as: $\underset{\{{\beta}, \nabla\}}{\min} \Big(\sum_{i=20, 40, 60, 80}\big(w_{i}({\beta},\nabla)-\omega_{i}\big)^{2}\Big)^{1/2}$ where $w_{i}$ and $\omega_{i}$ are the proportions of total aggregate net worth held by the top $i$ percent in the model and in the data, respectively.  }
-\end{minipage}
+  \caption{Average (Aggregate) Marginal Propensity to Consume in Annual Terms}
+  \label{table:MPCall}
+  \begin{minipage}{\textwidth}
+    \input ../Tables/MPCall_LCM
+    {\footnotesize Notes: Annual MPC is calculated by $1-(1-$\text{quarterly MPC}$)^{4}$.  ``Liquid Assets'' refers to liquid financial plus retirement assets. ${}^\ddagger$: Discount factors are uniformly distributed over the interval $[\grave{\Discount}-\nabla,\grave{\Discount}+\nabla]$.  ${}^\star$: The Lorenz distance is defined as: $\underset{\{{\beta}, \nabla\}}{\min} \Big(\sum_{i=20, 40, 60, 80}\big(w_{i}({\beta},\nabla)-\omega_{i}\big)^{2}\Big)^{1/2}$ where $w_{i}$ and $\omega_{i}$ are the proportions of total aggregate net worth held by the top $i$ percent in the model and in the data, respectively.  }
+  \end{minipage}
 \end{sidewaystable}
 
-%Old version with \text breaks TeX4HT: {\footnotesize Notes: Annual MPC is calculated by $1-(1-$\text{quarterly MPC}$)^{4}$. ``Liquid Assets'' refers to liquid financial plus retirement assets. ${}^\ddagger$: Discount factors are uniformly distributed over the interval $[\grave{\Discount}-\nabla,\grave{\Discount}+\nabla]$. ${}^\star$: The Lorenz distance is defined as: $\underset{\{{\beta}, \nabla\}}{\min}\Big(\sum_\text{$i=20$, $40$, $60$, $80$} \big(w_{i}({\beta},\nabla)-\omega_{i}\big)^{2}\Big)^{1/2}$, where $w_{i}$ and $\omega_{i}$ are the proportions of total aggregate net worth held by the top $i$ percent in the model and in the data, respectively.}
+% Old version with \text breaks TeX4HT: {\footnotesize Notes: Annual MPC is calculated by $1-(1-$\text{quarterly MPC}$)^{4}$. ``Liquid Assets'' refers to liquid financial plus retirement assets. ${}^\ddagger$: Discount factors are uniformly distributed over the interval $[\grave{\Discount}-\nabla,\grave{\Discount}+\nabla]$. ${}^\star$: The Lorenz distance is defined as: $\underset{\{{\beta}, \nabla\}}{\min}\Big(\sum_\text{$i=20$, $40$, $60$, $80$} \big(w_{i}({\beta},\nabla)-\omega_{i}\big)^{2}\Big)^{1/2}$, where $w_{i}$ and $\omega_{i}$ are the proportions of total aggregate net worth held by the top $i$ percent in the model and in the data, respectively.}
 
 % Excised because Tex4Ht balks on blank lines in figs and tables
-%$^{\ddagger}:$ $\grave{\Discount}=
-%\input ../Code/Mathematica/Results/Beta.tex
-%$.
-%$^{\star}:$ $(\grave{\Discount}, \nabla)=(
-%\input ../Code/Mathematica/Results/Betamiddle.tex
-%,
-%\input ../Code/Mathematica/Results/nabla.tex
-%)$, which implies $\{\grave{\Discount}-\nabla, \grave{\Discount}+\nabla\}=\{
-%\input ../Code/Mathematica/Results/BetaLow.tex
-%,
-%\input ../Code/Mathematica/Results/BetaHigh.tex
-%\}$.
+% $^{\ddagger}:$ $\grave{\Discount}=
+% \input ../Code/Mathematica/Results/Beta.tex
+% $.
+% $^{\star}:$ $(\grave{\Discount}, \nabla)=(
+% \input ../Code/Mathematica/Results/Betamiddle.tex
+% ,
+% \input ../Code/Mathematica/Results/nabla.tex
+% )$, which implies $\{\grave{\Discount}-\nabla, \grave{\Discount}+\nabla\}=\{
+% \input ../Code/Mathematica/Results/BetaLow.tex
+% ,
+% \input ../Code/Mathematica/Results/BetaHigh.tex
+% \}$.
 
 
 The MPCs are unevenly distributed across households with different wealth--permanent income ratios, ranging from 0.06 for the fifth (wealth--permanent income ratio) quintile to 0.48 for the first quintile, reflecting both the strong nonlinearity of the consumption function (in Figure~\ref{CFuncDistSevenPointPermAndHistNetWorthPlotFedQuarterly}) and preference type ``sorting'' as more patient households have a lower MPC at every wealth ratio and thus have a higher target ratio. Such heterogeneity in the MPC has previously been estimated in several empirical papers (at least to the extent that data are informative about differences in propensities across households).\footnote{%
-See  \citet{bppInequality}, \citet{brodaParker:stimulus2008}, \citet{leth-petersen:liquidity}, \citet{jappelliPistaferri_FPMPC}, \citet{jpsTax}, \citet{aslCredit} and  \citet{bps:familyLaborS}}
+  See  \citet{bppInequality}, \citet{brodaParker:stimulus2008}, \citet{leth-petersen:liquidity}, \citet{jappelliPistaferri_FPMPC}, \citet{jpsTax}, \citet{aslCredit} and  \citet{bps:familyLaborS}}
 
 The income gradient of the MPC (bottom panel of Table~\ref{table:MPCall}) is much shallower than for the wealth ratio-- only households in the bottom income quintile have considerably higher MPCs (0.35 with KS aggregate shocks) than the rest (around 0.20).  This occurs because low income can result from either low transitory or permanent shocks; the former tends to increase the MPC while the latter decreases it.  In the $\Discount$-Point model, where almost all households are well insured, the income-MPC gradient is nearly flat, with a slight inverted U-shape.  In the $\Discount$-Dist model, about 75\% of households are more impatient than in $\Discount$-Point, and many have a fairly low target wealth ratio; bound by the credit constraint $\wEndRat_t \geq 0$, these households' wealth-to-income ratios are thus more sensitive to low transitory shocks than low permanent shocks, and thus low income is associated with a higher MPC on average.\footnote{The income-MPC gradient in the $\Discount$-Dist columns is the \textit{average} across the seven $\Discount$-types.  Though it is flat (or inverted U-shaped) for the more patient types, it is much steeper for less patient types.  Note that the gradient is steeper with KS shocks than with FBS shocks, because the former has a greater proportion of less patient households.}
 
@@ -1005,9 +1010,9 @@ aggregate fluctuations associated with business cycles and with the
 calibration of Table~\ref{table:ParamsAll}, in which variance of
 aggregate shocks is roughly two orders of magnitude smaller than
 variance of idiosyncratic shocks.\footnote{Of course, if one consequence of
-business cycles is to increase the magnitude of idiosyncratic shocks,
-as suggested for example by \cite{mcKayPapp:wageRiskOverBC}, \cite{gosCyclical} and \cite{Blundell:2013tm}, the costs of business cycles could be much larger than in traditional calculations that
-examine only the consequences of aggregate shocks.}
+  business cycles is to increase the magnitude of idiosyncratic shocks,
+  as suggested for example by \cite{mcKayPapp:wageRiskOverBC}, \cite{gosCyclical} and \cite{Blundell:2013tm}, the costs of business cycles could be much larger than in traditional calculations that
+  examine only the consequences of aggregate shocks.}
 
 
 \subsection{Matching Liquid Assets}
@@ -1037,34 +1042,36 @@ purposes of extracting predictions about the MPC out of stimulus
 checks, to focus on matching the distribution of liquid financial and retirement assets across households. The inclusion of retirement assets is arguable, %\footnote{Results for more restrictive definitions of liquid assets are available upon request from the authors.}
 but a case for inclusion can be made because in the U.S.\ retirement assets such as IRA's and 401(k)'s can be liquidated under a fairly clear rule (e.g., a penalty of $10$ percent of the balance liquidated).
 
-%\begin{table}
-%\caption{Proportion of Wealth Held by Percentile (in Percent)}
-%\label{table:LiqFinPlsRetAssetDist}
-%\begin{minipage}{\textwidth}
-%\input ../Tables/LiqFinPlsRetAssetDist_2
-%\tablenotessize{Notes: The data source is the 2004 Survey of Consumer Finances.}
-%\end{minipage}
-%\end{table}
+% \begin{table}
+%   \caption{Proportion of Wealth Held by Percentile (in Percent)}
+%   \label{table:LiqFinPlsRetAssetDist}
+%   \begin{minipage}{\textwidth}
+%     \input ../Tables/LiqFinPlsRetAssetDist_2
+%     \tablenotessize{Notes: The data source is the 2004 Survey of Consumer Finances.}
+%   \end{minipage}
+% \end{table}
 
 
 \begin{figure}
-\caption{Empirical Distribution of Liquid Financial
-Assets${}+{}$Retirement Assets and Consumption Functions of
- $\Discount$-Dist Model}
-\label{CFuncDistSevenAndHistNetWorthLiqFinPlsRetPlot}
-\CDCFig{CFuncDistSevenAndHistNetWorthLiqFinPlsRetPlot}
-\footnotesize Notes: The dashed curves show the consumption functions
-for the most patient and the least patient consumers for
-$\Discount$-Dist model under the KS aggregate process. The consumption functions are for employed consumers in the good aggregate state. The blue (dark grey) and pink (light grey)
-histograms show the empirical distributions of net worth and liquid
-financial and retirement assets, respectively, in the \emph{Survey of
-Consumer Finances} of 2004.
+  \caption{Empirical Distribution of Liquid Financial
+    Assets${}+{}$Retirement Assets and Consumption Functions of
+    $\Discount$-Dist Model}
+  \label{CFuncDistSevenAndHistNetWorthLiqFinPlsRetPlot}
+  \begin{center}
+    \includegraphics{./Figures/CFuncDistSevenAndHistNetWorthLiqFinPlsRetPlot}
+  \end{center}
+  \footnotesize Notes: The dashed curves show the consumption functions
+  for the most patient and the least patient consumers for
+  $\Discount$-Dist model under the KS aggregate process. The consumption functions are for employed consumers in the good aggregate state. The blue (dark grey) and pink (light grey)
+  histograms show the empirical distributions of net worth and liquid
+  financial and retirement assets, respectively, in the \emph{Survey of
+    Consumer Finances} of 2004.
 \end{figure}
 
 When we ask the model to estimate the time preference factors that
 allow it to best match the distribution of liquid financial and retirement assets (instead
 of net worth),\footnote{We define liquid financial and retirement assets as the sum of transaction accounts (deposits),
-CDs, bonds, stocks, mutual funds, and retirement assets.  We take the same approach as before: we match
+  CDs, bonds, stocks, mutual funds, and retirement assets.  We take the same approach as before: we match
   the fraction of liquid financial and retirement assets held by the top $20$, $40$, $60$,
   and $80$ percent of the population (in the SCF 2004), while at the
   same time matching the aggregate liquid financial and retirement assets-to-income ratio (which is 6.6 in the SCF 2004).}
@@ -1087,26 +1094,28 @@ Figure~\ref{CFuncDistSevenAndHistNetWorthLiqFinPlsRetPlot}) requires
 a wider distribution of the time preference factors, ranging between
 0.94 and 0.98, which produces even more
 households with little wealth.\footnote{The distribution of liquid financial and retirement assets is more concentrated close to zero than the distribution of net worth, e.g., the top 10 percent of households hold 75 percent of liquid assets and 70 percent of net worth.
-%The table also illustrates that both distributions did not change much over time.  It is well-known that in aggregate data from the Flow of Funds the ratio of net worth to annual income moves around quite a bit, between 4 and 6.5 in the past 40 years. However, note that these changes (i)  are in the flat region of the consumption function and, more important, (ii) are small relative to the cross-sectional dispersion in wealth.
+  % The table also illustrates that both distributions did not change much over time.  It is well-known that in aggregate data from the Flow of Funds the ratio of net worth to annual income moves around quite a bit, between 4 and 6.5 in the past 40 years. However, note that these changes (i)  are in the flat region of the consumption function and, more important, (ii) are small relative to the cross-sectional dispersion in wealth.
 }
 The estimated distribution of discount factors lies below that obtained by matching net worth and is considerably more dispersed because of substantially lower median and more unevenly distributed liquid financial and retirement assets (compared to net worth).\footnote{Our value of the survival probability $\PLives=1 -0.00625$ implies that 8 percent of households are older than 100 years. To keep the model consistent we keep them in the economy.  However, the results essentially do not change---under the FBS aggregate shocks, the aggregate MPC is
-$
-\input ../Code/Mathematica/Results/MPCDistSevenWithAggPermShocksLiqFinPlsRetDeathFrAge.tex $
-instead of
-$
-\input ../Code/Mathematica/Results/MPCDistSevenWithAggPermShocksLiqFinPlsRet.tex $---if we alternatively replace the 100-year-olds with newborns (assuming they do not anticipate being replaced). This is reasonable given the small number of such households and given that the consumption function is almost linear at high levels of wealth.
+  $
+  \input ../Code/Mathematica/Results/MPCDistSevenWithAggPermShocksLiqFinPlsRetDeathFrAge.tex $
+  instead of
+  $
+  \input ../Code/Mathematica/Results/MPCDistSevenWithAggPermShocksLiqFinPlsRet.tex $---if we alternatively replace the 100-year-olds with newborns (assuming they do not anticipate being replaced). This is reasonable given the small number of such households and given that the consumption function is almost linear at high levels of wealth.
 }
 
 \begin{figure}
-\caption{Distribution of MPCs Across Households}
-\label{MPCdist}
-\CDCFig{DistributionsMPCsDistSevenAndKSKSAggShocksPlot}
+  \begin{center}
+    \caption{Distribution of MPCs Across Households}
+    \label{MPCdist}
+    \includegraphics{./Figures/DistributionsMPCsDistSevenAndKSKSAggShocksPlot}
+  \end{center}
 \end{figure}
 
 Figure~\ref{MPCdist} shows the cumulative distribution functions of
 MPCs for the KS-JEDC model and the $\Discount$-Dist models (under the KS aggregate income shocks) estimated to match, first, the empirical distribution of net worth and, alternatively, of liquid
 financial and retirement assets.\footnote{We have also solved a version of the model
-that matches only ``very liquid assets'' (excluding retirement and other assets that might not be instantly accessible); as would be expected, that exercise produces an even higher average MPC.}  The figure illustrates that the MPCs for KS-JEDC model are concentrated tightly around 0.05, which sharply
+  that matches only ``very liquid assets'' (excluding retirement and other assets that might not be instantly accessible); as would be expected, that exercise produces an even higher average MPC.}  The figure illustrates that the MPCs for KS-JEDC model are concentrated tightly around 0.05, which sharply
 contrasts with the results for the $\Discount$-Dist models. Because
 the latter two models match the empirical wealth distribution, they
 imply that a substantial fraction of consumers have very little
@@ -1130,13 +1139,13 @@ For the model with FBS aggregate shocks, we consider large bad realizations of t
 \end{enumerate}
 
 \begin{sidewaystable}
-\caption{Marginal Propensity to Consume over the Business Cycle}
-\label{table:MPCscenarios}
-\begin{minipage}{\textwidth}
-\input ../Tables/MPC_scenarios
-\tablenotessize{Notes: Annual MPC is calculated by $1-(1-$\text{quarterly MPC}$)^{4}$. The scenarios
- are calculated for the $\Discount$-Dist models calibrated to the net worth distribution. For the KS aggregate shocks, the results are obtained by running the simulation over 1,000 periods, and the scenarios are defined as (i) `Recessions/Expansions': bad/good realization of the aggregate state, $1-\bigtriangleup ^{\ptyLev}$/$1+\bigtriangleup ^{\ptyLev}$; (ii) `Entering Recession': bad realization of the aggregate state directly preceded by a good one: $\ptyLev_{t}=1-\bigtriangleup ^{\ptyLev}$ for which $\ptyLev_{t-1}=1+\bigtriangleup ^{\ptyLev}$. The `baseline' KS results are reproduced from column~4 of Table~\ref{table:MPCall}. For the FBS aggregate shocks, the results are averages over 1,000 simulations, and the scenarios are defined as (i) `Large Bad Permanent Aggregate Shock': bottom 1 percent of the distribution in the permanent aggregate shock; (ii) `Large Bad Transitory Aggregate Shock': bottom 1 percent of the distribution in the transitory aggregate shock. The `baseline' FBS results are reproduced from column~6 of Table~\ref{table:MPCall}.}
-\end{minipage}
+  \caption{Marginal Propensity to Consume over the Business Cycle}
+  \label{table:MPCscenarios}
+  \begin{minipage}{\textwidth}
+    \input ../Tables/MPC_scenarios
+    \tablenotessize{Notes: Annual MPC is calculated by $1-(1-$\text{quarterly MPC}$)^{4}$. The scenarios
+      are calculated for the $\Discount$-Dist models calibrated to the net worth distribution. For the KS aggregate shocks, the results are obtained by running the simulation over 1,000 periods, and the scenarios are defined as (i) `Recessions/Expansions': bad/good realization of the aggregate state, $1-\bigtriangleup ^{\ptyLev}$/$1+\bigtriangleup ^{\ptyLev}$; (ii) `Entering Recession': bad realization of the aggregate state directly preceded by a good one: $\ptyLev_{t}=1-\bigtriangleup ^{\ptyLev}$ for which $\ptyLev_{t-1}=1+\bigtriangleup ^{\ptyLev}$. The `baseline' KS results are reproduced from column~4 of Table~\ref{table:MPCall}. For the FBS aggregate shocks, the results are averages over 1,000 simulations, and the scenarios are defined as (i) `Large Bad Permanent Aggregate Shock': bottom 1 percent of the distribution in the permanent aggregate shock; (ii) `Large Bad Transitory Aggregate Shock': bottom 1 percent of the distribution in the transitory aggregate shock. The `baseline' FBS results are reproduced from column~6 of Table~\ref{table:MPCall}.}
+  \end{minipage}
 \end{sidewaystable}
 
 In the KS setup, the aggregate MPC is countercyclical, ranging between 0.22 in expansions and 0.25 in recessions. The key reason for this business cycle variation lies in the fact that aggregate shocks are correlated with idiosyncratic shocks. The movements in the aggregate MPC are driven by the inadequately insured households at the bottom of the distributions of wealth and income. MPCs for rich and employed households essentially do not change over the business cycle. The scenario `Entering Recession' documents that the length of the recession matters, so that initially the MPCs remain close to the baseline values, and increase only slowly as the recession persists.
@@ -1147,52 +1156,52 @@ Of course, these results are obtained under the assumptions that the parameters 
 
 As Figure~\ref{CFuncDistSevenPointPermAndHistNetWorthPlotFedQuarterly} suggests, the aggregate MPC in our models is a result of an (inter-related) interaction between two objects:  The  distribution of wealth and the consumption function(s). During the Great Recession, the distribution of net worth shifted very substantially downward.  Specifically, \cite{brickerEtAl:SCF2010} document that over the 2007--2010 period median net worth fell 38.8 percent (in real terms).%
 \footnote{%
-The \emph{Survey of Consumer Finances} also documents that net worth decreased considerably relative to income; for example, the median net worth-to-income ratio declined from 8.5 in 2007 to 5.6 in 2010.
+  The \emph{Survey of Consumer Finances} also documents that net worth decreased considerably relative to income; for example, the median net worth-to-income ratio declined from 8.5 in 2007 to 5.6 in 2010.
 }
 \emph{Ceteris paribus,} these dynamics resulted an increase in the aggregate MPC, as the fraction of wealth-poor, high-MPC households rose substantially.
 
 It is also likely that the second object, the consumption function, changed as many of its determinants (such as the magnitude of income shocks%
 \footnote{%
-See, e.g., \cite{gosCyclical} and \cite{Blundell:2013tm}, and the literature on the `scarring' effect of deep recessions on workers' lifetime income profiles.\\
-\cite{cstMPCxc} document that an increase in the variance of transitory income shocks makes the consumption function steeper close to the origin.
+  See, e.g., \cite{gosCyclical} and \cite{Blundell:2013tm}, and the literature on the `scarring' effect of deep recessions on workers' lifetime income profiles.\\
+  \cite{cstMPCxc} document that an increase in the variance of transitory income shocks makes the consumption function steeper close to the origin.
 }) have not remained unaffected by the recession. And, of course, once parameters are allowed to vary, one needs to address the question about how households form expectations about these parameters. These factors make it quite complex to investigate adequately the numerous interactions potentially relevant for the dynamics of the MPC over the business cycle. Consequently, we leave the questions about the extent of cyclicality of the MPC in more complicated settings for future research.
 
 
 \subsection{Sensitivity Analysis}\label{sec:Sensitivity}
 
 \begin{figure}
-\caption{Sensitivity Analysis: Aggregate Marginal Propensity to Consume}
-\label{KappaSensitivity}
-\begin{center}
-\includegraphics[scale=0.9]{../Figures/KappaSensitivity}
-\end{center}
+  \caption{Sensitivity Analysis: Aggregate Marginal Propensity to Consume}
+  \label{KappaSensitivity}
+  \begin{center}
+    \includegraphics[scale=0.9]{./Figures/KappaSensitivity}
+  \end{center}
 \end{figure}
 
 \begin{figure}
-\caption{Sensitivity Analysis: Distance Between Simulated \& Actual Lorenz Curves
-}
-\label{FitSensitivity}
-\begin{center}
-\includegraphics[scale=0.9]{../Figures/FitSensitivity}
-\end{center}
+  \caption{Sensitivity Analysis: Distance Between Simulated \& Actual Lorenz Curves
+  }
+  \label{FitSensitivity}
+  \begin{center}
+    \includegraphics[scale=0.9]{./Figures/FitSensitivity}
+  \end{center}
 \end{figure}
 
 \begin{figure}
-\caption{Sensitivity Analysis: Center of Discount Factor Distribution
-}
-\label{BetaSensitivity}
-\begin{center}
-\includegraphics[scale=0.9]{../Figures/BetaSensitivity}
-\end{center}
+  \caption{Sensitivity Analysis: Center of Discount Factor Distribution
+  }
+  \label{BetaSensitivity}
+  \begin{center}
+    \includegraphics[scale=0.9]{./Figures/BetaSensitivity}
+  \end{center}
 \end{figure}
 
 \begin{figure}
-\caption{Sensitivity Analysis: Width of Discount Factor Distribution
-}
-\label{NablaSensitivity}
-\begin{center}
-\includegraphics[scale=0.9]{../Figures/NablaSensitivity}
-\end{center}
+  \caption{Sensitivity Analysis: Width of Discount Factor Distribution
+  }
+  \label{NablaSensitivity}
+  \begin{center}
+    \includegraphics[scale=0.9]{./Figures/NablaSensitivity}
+  \end{center}
 \end{figure}
 
 Because the literature does not agree on the precise values for some of our calibrated parameters, we want to understand the robustness of our results about the fit of the wealth distribution and about the MPC.
@@ -1214,38 +1223,38 @@ The economy consists of a continuum of expected utility maximizing households wi
 
 The FBS income process of section~\ref{sec:PlausibleAggModel} translates into the life cycle framework as follows. A household receives a permanent shock to income when transitioning into period $t$, denoted by $\pshk_t$ (along with the age--education-specific average growth factor $\overline{\pshk}_{es}$), as well as an after tax transitory shock $\tshk_t$.  The life cycle variant of the income process can be summarized by:
 \begin{eqnarray*}
-\yLev_t &=& \tshk_t \pLev_t = (1 - \tau)\theta_t \pLev_t,\\
-\pLev_t &=& \pshk_t \overline{\pshk}_{es} \pLev_{t-1}.
+  \yLev_t &=& \tshk_t \pLev_t = (1 - \tau)\theta_t \pLev_t,\\
+  \pLev_t &=& \pshk_t \overline{\pshk}_{es} \pLev_{t-1}.
 \end{eqnarray*}
 Households that have already lived for $s$ periods have permanent shocks drawn from a lognormal distribution with mean 1 and variance $\sigma^2_{\pshk s}$, and transitory shocks drawn from a lognormal distribution with mean $1/\erate$ and variance $\sigma^2_{\theta s}$ with probability $\erate = (1 - \urate)$ and a degenerate distribution at $\mu$ with probability $\urate$.  The prospect of unemployment (at rate $\urate$) is a completely transitory event: unemployment in period $t$ has no effect on the probability of unemployment in period $t + 1$.  The non-zero transitory shock when unemployed represents a welfare benefit funded by income taxes, as discussed below.  When transitioning from one period to the next, a household with education $e$ that has already lived for $s$ periods faces a $\PDies_{es}$ probability of death.  In the main specification, the assets of a household that dies are completely taxed by the government to fund activities outside the model.\footnote{As a further robustness check, we also estimate versions in which the assets of the newly deceased are distributed to a random household, with varying preferences for bequests. In an online appendix we show that under a wide range of parameters governing preferences over bequests, both the overall aggregate marginal propensity to consume and its decompositions by wealth and income are little changed from the original specification.
 }
 
 The household's permanent income level will be factored out from the problem, so that the only state variable that affects the choice of optimal consumption is normalized market resources $\mRat_t$.  After this normalization, the household's budget transition functions can be described by:
 \begin{eqnarray}
-\label{LifeCycleConstraint1}
-\aRat_t &=& \mRat_t - \cRat_t,\\
-\label{LifeCycleConstraint2}
-\kRat_{t+1} &=& \aRat_t/\pshk_{t+1},\\
-\label{LifeCycleConstraint3}
-\mRat_{t+1} &=& (\daleth +\rProd) \kRat_{t+1} + \tshk_{t+1},\\
-\label{LifeCycleConstraint4}
-\aRat_t &\geq& 0.
+  \label{LifeCycleConstraint1}
+  \aRat_t &=& \mRat_t - \cRat_t,\\
+  \label{LifeCycleConstraint2}
+  \kRat_{t+1} &=& \aRat_t/\pshk_{t+1},\\
+  \label{LifeCycleConstraint3}
+  \mRat_{t+1} &=& (\daleth +\rProd) \kRat_{t+1} + \tshk_{t+1},\\
+  \label{LifeCycleConstraint4}
+  \aRat_t &\geq& 0.
 \end{eqnarray}
 These transition constraints are identical to the perpetual youth model except that capital owned by surviving households does not grow with the inverse survival probability, and income is taxed at a marginal rate $\tau$ depending on the household's age and employment status.
 
 Starting from some terminal age $\overline{s}$ at which $\PDies_{e\overline{s}} = 1$, a household's problem can be solved by backward induction until $s = 0$.  At age $\overline{s}$, the household will consume all market resources, generating a consumption function of $\cLev_{e\overline{s}}(\mLev_t,\pLev_t) = \mLev_t = \mRat_t \pLev_t$ and a value function of $V_{e\overline{s}}(\mLev_t,\pLev_t) = \uFunc(\mLev_t) = \pLev_t^{1-\CRRA} \uFunc(\mRat_t)$.  At any earlier age, the value function is recursively defined by:
 \begin{equation}
-\label{eq:LifeCycleValue}
-V_{es}(\mLev_t,\pLev_t) = \max_{\cLev_t} \uFunc(\cLev_t) + \Discount \PLives_{es} \Ex_t \left[ V_{es+1}(\mLev_{t+1},\pLev_{t+1})\right] \text{ s.t. \eqref{LifeCycleConstraint1}--\eqref{LifeCycleConstraint4}}.
+  \label{eq:LifeCycleValue}
+  V_{es}(\mLev_t,\pLev_t) = \max_{\cLev_t} \uFunc(\cLev_t) + \Discount \PLives_{es} \Ex_t \left[ V_{es+1}(\mLev_{t+1},\pLev_{t+1})\right] \text{ s.t. \eqref{LifeCycleConstraint1}--\eqref{LifeCycleConstraint4}}.
 \end{equation}
 To eliminate the permanent income level as a state variable, further define the normalized consumption function as $\cFunc_{es}(\mRat_t) = \cLev_{es}(\mLev_t,\pLev_t)/\pLev_t$ and the normalized value function as $\vFunc_{es}(\mRat_t) = V_{es}(\mLev_t,\pLev_t)/\pLev_t^{1-\CRRA}$.  Dividing \eqref{eq:LifeCycleValue} by $\pLev_t^{1-\CRRA}$, the problem is reduced to a single state dimension and can be expressed as:
 \begin{eqnarray}\label{eq:LifeCycleValue1}
-\vFunc_{es}(\mRat_t) &=& \max_{\cRat_t} \uFunc(\cRat_t) + \Discount \PLives_{es} \Ex_t \left[\pshk_{t+1}^{1-\CRRA} \vFunc_{es+1}(\mRat_{t+1})\right] \text{ s.t. \eqref{LifeCycleConstraint1}--\eqref{LifeCycleConstraint4}},\\
-\cFunc_{es}(\mRat_t) &=& \arg\max_{\cRat_t} \uFunc(\cRat_t) + \Discount \PLives_{es} \Ex_t \left[\pshk_{t+1}^{1-\CRRA} \vFunc_{es+1}(\mRat_{t+1})\right] \text{ s.t. \eqref{LifeCycleConstraint1}--\eqref{LifeCycleConstraint4}}. \nonumber
+  \vFunc_{es}(\mRat_t) &=& \max_{\cRat_t} \uFunc(\cRat_t) + \Discount \PLives_{es} \Ex_t \left[\pshk_{t+1}^{1-\CRRA} \vFunc_{es+1}(\mRat_{t+1})\right] \text{ s.t. \eqref{LifeCycleConstraint1}--\eqref{LifeCycleConstraint4}},\\
+  \cFunc_{es}(\mRat_t) &=& \arg\max_{\cRat_t} \uFunc(\cRat_t) + \Discount \PLives_{es} \Ex_t \left[\pshk_{t+1}^{1-\CRRA} \vFunc_{es+1}(\mRat_{t+1})\right] \text{ s.t. \eqref{LifeCycleConstraint1}--\eqref{LifeCycleConstraint4}}. \nonumber
 \end{eqnarray}
 A standard envelope condition applies in this model, so that $\vFunc_{es}^{\prime}(\mRat_t) = \uFunc^{\prime}(\cFunc_{es}(\mRat_t))$, and the first order condition for the solution to \eqref{eq:LifeCycleValue1} is:
 \begin{equation}
-\cRat_t^{-\CRRA} = (\daleth +\rProd) \Discount \PLives \Ex_t \left[ (\pshk_{t+1} \cRat_{t+1})^{-\CRRA} \right].
+  \cRat_t^{-\CRRA} = (\daleth +\rProd) \Discount \PLives \Ex_t \left[ (\pshk_{t+1} \cRat_{t+1})^{-\CRRA} \right].
 \end{equation}
 In this way, the value function need not be tracked or recorded during the solution process, as the age-dependent consumption functions are sufficient.\footnote{In practice, we use the method of endogenous gridpoints, as originally described in \cite{carrollEGM}, to discretize the state space and approximate consumption functions at each age and education level.}
 
@@ -1257,8 +1266,8 @@ Unlike the perpetual youth model, the economy is now perpetually growing, with e
 
 As mentioned in section \ref{sec:LifeCycle}, households are subject to a tax rate of $\tau$ depending on their age and employment status.  Households are assumed to retire at age 65 (i.e.\ when $s = 164$), captured in the model with an expected permanent growth factor well below 1 at this age.\footnote{The drop in permanent income at retirement depends on the household's education: dropouts' income fall by 44\%, high school graduates by 56\%, and college graduates by 69\%.}  Income before retirement is earned through labor, while income after retirement is provided by a pay-as-you-go social security system funded by taxes on the employed.  The social security tax rate is calculated as the rate that balances outlays to retired households and tax revenues from the working population:
 \begin{equation*}
-\tau_{SS} = \frac{\sum_{e \in \{D,HS,C\}} \Big[ \theta_e \overline{\pLev}_{e0} \sum_{t = 164}^{384} \big( ((1 + \Gamma)(1+N))^{-t} \prod_{s=0}^t ( \overline{\pshk}_{es} \PLives_{es} ) \big) \Big]}
-{\sum_{e \in \{D,HS,C\}} \Big[ \theta_e \overline{\pLev}_{e0} \sum_{t = 0}^{163} \big( ((1 + \Gamma)(1+N) )^{-t} \prod_{s=0}^t ( \overline{\pshk}_{es} \PLives_{es} ) \big) \Big]}.
+  \tau_{SS} = \frac{\sum_{e \in \{D,HS,C\}} \Big[ \theta_e \overline{\pLev}_{e0} \sum_{t = 164}^{384} \big( ((1 + \Gamma)(1+N))^{-t} \prod_{s=0}^t ( \overline{\pshk}_{es} \PLives_{es} ) \big) \Big]}
+  {\sum_{e \in \{D,HS,C\}} \Big[ \theta_e \overline{\pLev}_{e0} \sum_{t = 0}^{163} \big( ((1 + \Gamma)(1+N) )^{-t} \prod_{s=0}^t ( \overline{\pshk}_{es} \PLives_{es} ) \big) \Big]}.
 \end{equation*}
 Here, $\theta_e$ is the proportion of each new generation with education level $e$, and $\overline{\pLev}_{e0}$ is the average permanent income of that education type when they enter the economy at age 24.  Note that neither permanent nor transitory shocks are relevant, as they average to unity across a cohort.  The tax to fund unemployment benefits is simply the product of the unemployment rate and the benefit replacement rate: $\tau_U = \urate \mu$.  Employed households pay a total income tax rate of $\tau = \tau_{SS} + \tau_U$, while unemployed and retired households have $\tau = 0$.
 
@@ -1269,51 +1278,55 @@ Calibrations of the distributional parameters are taken from related estimates i
 We assume that the population grows at a rate of 1\% annually, while total factor productivity grows at a 1.5\% annual rate; these approximately match long run rates in the United States.  Educational attainment rates are set to be fairly consistent with U.S. educational rates over the past twenty years, and average initial permanent (quarterly) income at age 24 for each educational group are roughly calibrated to recent data.\footnote{Precision here is unimportant: after several years of simulation, the initial permanent income differences between types matters much less than their income growth trajectories and idiosyncratic shocks.}  Each simulated household is given an initial lognormal shock to permanent income with standard deviation 0.4, approximately matching the total variance of income among young households in the SCF 2004 data.  Households begin with a very low wealth to permanent income ratio, drawn uniformly from $\{0.17,0.50,0.83\}$.  Other basic parameters are set to match the values used in the perpetual youth model.  A summary of the model parameters is provided in Table \ref{table:ParametersLifeCycle}.
 
 \begin{table}
-\caption{Parameter Values in the Life Cycle Model}
-\label{table:ParametersLifeCycle}
-\begin{center}
-\begin{tabular}{l c c}
-\toprule
-Description & Parameter & Value \\
-\midrule
-Coefficient of relative risk aversion & \CRRA & 1 \\
-Effective interest rate & $(\rProd - \delta)$ & 0.01 \\
-Population growth rate & $N$ & 0.0025 \\
-Technological growth rate & $\Gamma$ & 0.0037 \\
-Rate of high school dropouts & $\theta_D$ & 0.11 \\
-Rate of high school graduates & $\theta_{HS}$ & 0.55 \\
-Rate of college graduates & $\theta_C$ & 0.34 \\
-Average initial permanent income, dropout & $\overline{\pLev}_{D0}$ & 5000 \\
-Average initial permanent income, high school & $\overline{\pLev}_{HS0}$ & 7500 \\
-Average initial permanent income, college & $\overline{\pLev}_{C0}$ & 12000 \\
-Unemployment insurance payment & $\mu$ & 0.15 \\
-Unemployment rate & $\urate$ & 0.07 \\
-Labor income tax rate & $\tau$ & 0.0942 \\
-\bottomrule
-\end{tabular}
-\end{center}
+  \caption{Parameter Values in the Life Cycle Model}
+  \label{table:ParametersLifeCycle}
+  \begin{center}
+    \begin{tabular}{l c c}
+      \toprule
+      Description & Parameter & Value \\
+      \midrule
+      Coefficient of relative risk aversion & \CRRA & 1 \\
+      Effective interest rate & $(\rProd - \delta)$ & 0.01 \\
+      Population growth rate & $N$ & 0.0025 \\
+      Technological growth rate & $\Gamma$ & 0.0037 \\
+      Rate of high school dropouts & $\theta_D$ & 0.11 \\
+      Rate of high school graduates & $\theta_{HS}$ & 0.55 \\
+      Rate of college graduates & $\theta_C$ & 0.34 \\
+      Average initial permanent income, dropout & $\overline{\pLev}_{D0}$ & 5000 \\
+      Average initial permanent income, high school & $\overline{\pLev}_{HS0}$ & 7500 \\
+      Average initial permanent income, college & $\overline{\pLev}_{C0}$ & 12000 \\
+      Unemployment insurance payment & $\mu$ & 0.15 \\
+      Unemployment rate & $\urate$ & 0.07 \\
+      Labor income tax rate & $\tau$ & 0.0942 \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
 \end{table}
 
 \subsection{Aggregate Marginal Propensity to Consume}
 
 Following the same procedure as in the benchmark perpetual youth model, we first assume that all households have the same time preference factor $\grave{\Discount}$, as in the \Discount-Point model.  Seeking the value of $\grave{\Discount}$ at which the aggregate capital to income ratio  matches that of the perfect foresight version of the perpetual youth model ($\KLev/\YLev=10.26$), we find $\grave{\Discount} = 0.9936$.  As before, the simulated distribution of wealth in the \Discount-Point life cycle model matches the empirical distribution considerably better than the KS-JEDC model; indeed, the life cycle model has a somewhat better fit than the perpetual youth model, moving about two thirds of the way from the KS-JEDC's Lorenz curve to the empirical distribution, rather than one third.\footnote{The Lorenz distance declines from 16 for the \Discount-Point model to less than 1 for the \Discount-Dist model.}
-  The additional wealth heterogeneity arises through differences in households' expectations of the future that were suppressed in the perpetual youth model: income growth rates vary with both education and age (particularly the timing of retirement), while the increasing probability of death plays a key role in older households' target wealth-to-income ratio.
+The additional wealth heterogeneity arises through differences in households' expectations of the future that were suppressed in the perpetual youth model: income growth rates vary with both education and age (particularly the timing of retirement), while the increasing probability of death plays a key role in older households' target wealth-to-income ratio.
 
 To better fit the distribution of wealth, we again estimate the \Discount-Dist model by minimizing the distance between empirical and simulated shares of wealth, as in \eqref{eq:MinimizationProb}.\footnote{We implicitly assume that the distribution of discount factors is independent from education type.  More realistically, individuals with higher discount factors are more likely to remain in school longer.  As this would tend to make high income types retain even more assets for the future while low income types will save even less, we would need a narrower range of discount factors to match observed wealth inequality.  For this reason and for the sake of simplicity, we ignore this complicating factor.}   Estimation reveals that the optimal parameters are $\{\grave{\Discount},\nabla\} = \{0.9814, 0.0182\}$, a wider band of discount factors than in the perpetual youth model.  As the life cycle model introduces additional channels of heterogeneity that generate a concentrated distribution of wealth, one might reasonably expect that \textit{less} discount factor heterogeneity is needed to match the empirical Lorenz curve.
 
 \begin{figure}
-\caption{Aggregate Capital to Output Ratio by Homogeneous Discount Factor}
-\label{KYratioByBeta}
-\CDCFig{KYratioByBeta}
+  \caption{Aggregate Capital to Output Ratio by Homogeneous Discount Factor}
+  \label{KYratioByBeta}
+  \begin{center}
+    \includegraphics{./Figures/KYratioByBeta}
+  \end{center}
 \end{figure}
 
 Recall that in the perpetual youth model, consumers must be sufficiently impatient in order to have a target wealth-to-income ratio: The discount factor has to meet the `Growth-Impatience Condition' \eqref{eq:GIC}. When the GIC does not hold, households accumulate wealth without bound.\footnote{Even when the GIC fails, a finite K/Y ratio for the entire economy can exist because households are finitely lived-- they die long before acquiring infinite wealth.}  As $\Discount$ increases toward the boundary of the GIC, target wealth rapidly increases toward infinity, so that small differences in $\Discount$ translate into great wealth heterogeneity (shown in Figure \ref{KYratioByBeta}).\footnote{Figure \ref{KYratioByBeta} holds $\mathsf{R}$ fixed at its steady state of 1.01, so it should be interpreted as the $K/Y$ ratio in a small open economy or for a \textit{small subset} of agents with a particular discount factor.}  In the finite-horizon life-cycle model, however, no impatience condition is required---households face an increasing mortality rate and thus will target a finite wealth ratio \textit{in a finite number of periods}, no matter how patient they are. Consequently, average wealth is a much flatter function of $\Discount$ and thus the interval needed to match the SCF data is wider.
 
 \begin{figure}
-\caption{Distribution of Net Worth (Lorenz Curve)---Life Cycle Model}
-\label{LorenzLifecycle}
-\CDCFig{LorenzLifecycle}
-\footnotesize Notes: The solid curve shows the distribution of net worth in the 2004 \emph{Survey of Consumer Finances}.
+  \caption{Distribution of Net Worth (Lorenz Curve)---Life Cycle Model}
+  \label{LorenzLifecycle}
+  \begin{center}
+    \includegraphics{./Figures/LorenzLifecycle}
+  \end{center}
+   \footnotesize Notes: The solid curve shows the distribution of net worth in the 2004 \emph{Survey of Consumer Finances}.
 \end{figure}
 
 The \Discount-Dist model is able to match the empirical Lorenz curve extremely well for the bottom 85\% of the wealth distribution: the average difference between simulated and actual wealth shares at the levels of interest is less than 0.4\% (Figure~\ref{LorenzLifecycle}).  Indeed, the life cycle model matches the low asset holdings of the bottom half of the population significantly better than the perpetual youth model.
@@ -1321,39 +1334,21 @@ The \Discount-Dist model is able to match the empirical Lorenz curve extremely w
 However, the wealth share of the top 10\%\ in the life-cycle \Discount-Dist model is somewhat lower than in the data. In contrast, the perpetual youth model matches the Lorenz curve fairly well even in the top tail.  This also seems to be a result of the (lack of a) GIC: the lifecycle model does not have households with a very high target wealth ratio and thus cannot generate an extreme concentration of wealth in the top 1\%.  This is not a serious deficiency as the consumption function is roughly linear at higher levels of wealth and as we are concerned with the aggregate marginal propensity to consume and the MPC particularly among non-wealthy households.
 
 The right-hand panel of Table \ref{table:MPCall} shows that, across all households, the aggregate (annual) marginal propensity to consume in both the \Discount-Point (0.16) and \Discount-Dist (0.33) models is similar to the corresponding averages in the perpetual youth model.\footnote{When the annual marginal propensity to consume is calculated by simulating the change in consumption over four quarters resulting from an unexpected \$1000 payment to each household, we find an aggregate value of 0.28, substantially the same and confirming the corresponding exercise in the perpetual youth model.}$^{,}$\footnote{Without much comment, we also present estimates of the \Discount-Dist model when matching the empirical distribution of liquid financial and retirement assets rather than net worth, along with subpopulation average MPCs for these models.  In each case, the results of the life cycle model align very well with the earlier findings in the perpetual youth setting.}  Further, the relationship between wealth-to-permanent income and the MPC is nearly identical to the pattern in the perpetual youth case, with the MPC slowly rising with lower incomes among the wealthier half of the population, and spiking rapidly among the bottom half.  However, the gradient of income to MPC is much shallower in the life-cycle model, with the wealthiest 1\% of households' MPC only 20\% less than the poorest half, rather than 50\% less in the benchmark model.  This is likely due to confounding effects from life-cycle dynamics: income-poor households are made up of both the young (who have not had time to accumulate income growth) and the retired (whose cohorts began with lower initial permanent income and have experienced the large negative wage growth from retirement).\footnote{%
-While the ratio of wealth to permanent income is a very strong determinant of the MPC, the wide distribution of household incomes allows for even wealthy households to have high MPCs.  Confirming a similar exercise in the benchmark model, we again find that among the one third of households with the highest MPCs, 51\% are in the lowest wealth quintile, 32\% are in the second wealth quintile, and 14\% are in the middle wealth quintile.  Even in a life cycle model in which wealth is highly correlated with both age and the marginal propensity to consume, there is still a significant fraction of ``wealthy hand-to-mouth'' households as found in \cite{kaplanViolanteWeidner_wealthyH2M}.}
+  While the ratio of wealth to permanent income is a very strong determinant of the MPC, the wide distribution of household incomes allows for even wealthy households to have high MPCs.  Confirming a similar exercise in the benchmark model, we again find that among the one third of households with the highest MPCs, 51\% are in the lowest wealth quintile, 32\% are in the second wealth quintile, and 14\% are in the middle wealth quintile.  Even in a life cycle model in which wealth is highly correlated with both age and the marginal propensity to consume, there is still a significant fraction of ``wealthy hand-to-mouth'' households as found in \cite{kaplanViolanteWeidner_wealthyH2M}.}
 
 \begin{figure}
-\caption{Aggregate Marginal Propensity to Consume by Age}
-\label{fig:MPCbyAge}
-\begin{center}
-\CDCFig{MPCbyAge}
-\end{center}
+  \caption{Aggregate Marginal Propensity to Consume by Age}
+  \label{fig:MPCbyAge}
+  \begin{center}
+    \includegraphics{./Figures/MPCbyAge}
+  \end{center}
 \end{figure}
 
 Figure \ref{fig:MPCbyAge} presents the aggregate marginal propensity to consume by age for the entire population, as well as for the most patient and least patient types in the $\Discount$-Dist model.  After an initial drop as households build up a minimum buffer stock, the life cycle profile of the MPC takes an inverted U-shape for most $\Discount$ types: rising during the rapid income growth ages of 30--40 before falling as households anticipate their retirement and seek to retain assets to consume in old age.  Post retirement, the MPC steadily grows as agents experience an ever increasing mortality risk.  The most impatient households, with a quarterly discount factor of about $\beta = 0.9654$, have a significantly higher MPC throughout life as they disfavor saving---they begin saving for retirement less than ten years prior, and quickly deplete their assets if they live beyond age 75 (as evidenced by MPCs approaching 1 at these ages).  In contrast, the most patient households show an increasing marginal propensity to consume for their entire lives, though beginning from very low levels.
 
 \section{Conclusion}\label{sec:Conclusion}
 
-We have shown that a model with a realistic microeconomic income
-process and modest heterogeneity in time preference rates is able to
-match the observed degree of inequality in the wealth distribution.
-Because many households in our model accumulate very little wealth,
-the aggregate marginal propensity to consume out of transitory income
-implied by our model, roughly 0.2--0.4 depending on the measure of
-wealth we ask our model to target, is consistent with most of the large estimates of
-the MPC reported in empirical studies. Indeed, some of the
-dispersion in MPC estimates from the microeconomic literature (where
-estimates range up to 0.75 or higher) might be explainable by the
-model's implication that there is no such thing as ``the'' MPC---the
-aggregate response to a transitory income shock should depend on
-details of the recipients of that shock in ways that the existing
-literature may not have been sensitive to (or may not have been able
-to measure).  If some of the experiments reported in the literature
-reflected shocks that were concentrated in different regions of the
-wealth distribution than other experiments, considerable variation in
-empirical MPCs would be an expected consequence of the differences
-in the experiments.
+We have shown that a model with a realistic microeconomic income process and modest heterogeneity in time preference rates is able to match the observed degree of inequality in the wealth distribution.  Because many households in our model accumulate very little wealth, the aggregate marginal propensity to consume out of transitory income implied by our model, roughly 0.2--0.4 depending on the measure of wealth we ask our model to target, is consistent with most of the large estimates of the MPC reported in empirical studies. Indeed, some of the dispersion in MPC estimates from the microeconomic literature (where estimates range up to 0.75 or higher) might be explainable by the model's implication that there is no such thing as ``the'' MPC---the aggregate response to a transitory income shock should depend on details of the recipients of that shock in ways that the existing literature may not have been sensitive to (or may not have been able to measure).  If some of the experiments reported in the literature reflected shocks that were concentrated in different regions of the wealth distribution than other experiments, considerable variation in empirical MPCs would be an expected consequence of the differences in the experiments.
 
 Additionally, our work provides researchers with an easier framework
 for solving, estimating, and simulating economies with heterogeneous
