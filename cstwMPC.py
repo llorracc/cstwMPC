@@ -9,9 +9,9 @@
 #       format_version: '1.2'
 #       jupytext_version: 1.2.4
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3.7 econ-ark
 #     language: python
-#     name: python3
+#     name: econ-ark
 # ---
 
 # %% [markdown]
@@ -128,32 +128,6 @@ warnings.filterwarnings("ignore")
 # \rProd &=&\kapShare\ptyLev(\KLev/\labor\LLev)^{\kapShare-1}\\
 # \end{eqnarray}
 
-# %% [markdown]
-# ## Time Preference Heterogeneneity
-#
-# Our specific approach is to replace the assumption that all households have the same time
-# preference factor with an assumption that, for some dispersion $\nabla$, time
-# preference factors are distributed uniformly in the population between
-# $\grave{\Discount}-\nabla$ and $\grave{\Discount}+\nabla$ (for this reason, the model is referred to as the $\Discount$-Dist model).  Then,
-# using simulations, we search for the values of $\grave{\Discount}$ and
-# $\nabla$ for which the model best matches the fraction of net worth held by the top $20$, $40$, $60$, and $80$ percent of the population, while at the same time matching
-# the aggregate capital-to-output ratio from the perfect foresight
-# model. Specifically, defining $w_{i}$ and $\omega _{i}$ as the proportion of total aggregate net worth held by the top $i$ percent in our model and in the data, respectively, we solve the following minimization problem:
-#
-# $$  \{\grave{\Discount}, \nabla\}= \underset{\{{\Discount}, \nabla\}}{\text{argmin} }\Big(\sum_\text{i=20, 40, 60, 80}
-#   \big(w_{i}({\Discount}, \nabla)-\omega _{i}\big)^{2}\Big)^{1/2}$$
-#   subject to the constraint that the aggregate wealth (net worth)-to-output ratio in the model matches the aggregate
-# capital-to-output ratio from the perfect foresight model ($\KLev_{PF}/\YLev_{PF}$). When solving the problem for the FBS specification we shut down the aggregate shocks (practically, this does not affect the estimates given their small size).
-#  
-# $$\KLev / \YLev = \KLev_{PF} / \YLev_{PF}$$
-#
-# The solution to this problem is $\{\grave{\Discount}, \nabla\}=\{0.9867, 0.0067\}$
-# , so that the discount factors are evenly spread roughly between 0.98 and 0.99. We call the optimal value of the objective function the 'Lorenz distance' and use it as a measure of fit of the models.
-#
-# The introduction of even such a relatively modest amount of time
-# preference heterogeneity sharply improves the model's fit to the targeted
-# proportions of wealth holdings, bringing it reasonably in line with the data.
-
 # %%
 '''
 This will run the absolute minimum amount of work that actually produces
@@ -199,11 +173,65 @@ with heterogeneity, no aggregate shocks, perpetual youth model, matching net wor
 do_param_dist = False          # Do param-dist version if True, param-point if False
 do_lifecycle = False          # Use lifecycle model if True, perpetual youth if False
 do_agg_shocks = False         # Solve the FBS aggregate shocks version of the model
-do_liquid = True             # Matches liquid assets data when True, net worth data when False
+do_liquid = False            # Matches liquid assets data when True, net worth data when False
 
 
 os.chdir(path_to_models)
 exec(open('cstwMPC_MAIN.py').read())
+
+# %%
+# Get some tools for plotting simulated vs actual wealth distributions
+from HARK.utilities import getLorenzShares, getPercentiles
+
+# The cstwMPC model conveniently has data on the wealth distribution 
+# from the U.S. Survey of Consumer Finances
+from HARK.cstwMPC.SetupParamsCSTW import SCF_wealth, SCF_weights
+
+# Construct the Lorenz curves and plot them
+
+pctiles = np.linspace(0.001,0.999,15)
+SCF_Lorenz_points = getLorenzShares(SCF_wealth,weights=SCF_weights,percentiles=pctiles)
+
+sim_wealth = EstimationEconomy.aLvlNow[0]
+sim_Lorenz_points = getLorenzShares(sim_wealth,percentiles=pctiles)
+
+# Plot 
+plt.figure(figsize=(5,5))
+plt.title('Wealth Distribution')
+plt.plot(pctiles,SCF_Lorenz_points,'--k',label='SCF')
+plt.plot(pctiles,sim_Lorenz_points,'-b',label='Point Beta')
+plt.plot(pctiles,pctiles,'g-.',label='45 Degree')
+plt.xlabel('Percentile of net worth')
+plt.ylabel('Cumulative share of wealth')
+plt.legend(loc=2)
+plt.ylim([0,1])
+plt.show('wealth_distribution_1')
+
+# %% [markdown]
+# ## Time Preference Heterogeneneity
+#
+# Our specific approach is to replace the assumption that all households have the same time
+# preference factor with an assumption that, for some dispersion $\nabla$, time
+# preference factors are distributed uniformly in the population between
+# $\grave{\Discount}-\nabla$ and $\grave{\Discount}+\nabla$ (for this reason, the model is referred to as the $\Discount$-Dist model).  Then,
+# using simulations, we search for the values of $\grave{\Discount}$ and
+# $\nabla$ for which the model best matches the fraction of net worth held by the top $20$, $40$, $60$, and $80$ percent of the population, while at the same time matching
+# the aggregate capital-to-output ratio from the perfect foresight
+# model. Specifically, defining $w_{i}$ and $\omega _{i}$ as the proportion of total aggregate net worth held by the top $i$ percent in our model and in the data, respectively, we solve the following minimization problem:
+#
+# $$  \{\grave{\Discount}, \nabla\}= \underset{\{{\Discount}, \nabla\}}{\text{argmin} }\Big(\sum_\text{i=20, 40, 60, 80}
+#   \big(w_{i}({\Discount}, \nabla)-\omega _{i}\big)^{2}\Big)^{1/2}$$
+#   subject to the constraint that the aggregate wealth (net worth)-to-output ratio in the model matches the aggregate
+# capital-to-output ratio from the perfect foresight model ($\KLev_{PF}/\YLev_{PF}$). When solving the problem for the FBS specification we shut down the aggregate shocks (practically, this does not affect the estimates given their small size).
+#  
+# $$\KLev / \YLev = \KLev_{PF} / \YLev_{PF}$$
+#
+# The solution to this problem is $\{\grave{\Discount}, \nabla\}=\{0.9867, 0.0067\}$
+# , so that the discount factors are evenly spread roughly between 0.98 and 0.99. We call the optimal value of the objective function the 'Lorenz distance' and use it as a measure of fit of the models.
+#
+# The introduction of even such a relatively modest amount of time
+# preference heterogeneity sharply improves the model's fit to the targeted
+# proportions of wealth holdings, bringing it reasonably in line with the data.
 
 # %%
 '''
