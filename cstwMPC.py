@@ -9,9 +9,9 @@
 #       format_version: '1.2'
 #       jupytext_version: 1.2.4
 #   kernelspec:
-#     display_name: Python 3.7 econ-ark
+#     display_name: Python 3
 #     language: python
-#     name: econ-ark
+#     name: python3
 # ---
 
 # %% [markdown]
@@ -21,7 +21,7 @@
 # %% [markdown]
 # This notebook presents a selection of results from the paper [The Distribution of Wealth and the Marginal Propensity to Consume](http://econ.jhu.edu/people/ccarroll/papers/cstwMPC), using the [Econ-ARK/HARK](https://github.com/econ-ark/HARK) toolkit.  It sketches the steps that would need to be taken to solve the model using the [dolARK](https://github.com/EconForge/dolARK) modeling system.
 
-# %%
+# %% {"code_folding": [0]}
 # This cell does some standard python setup
 
 # Tools for navigating the filesystem
@@ -47,48 +47,43 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # %% [markdown]
-# ## Contribution
+# ## Abstract
 #
-# A principle problem in consumption economics is the development of a model
-# that fits the empirical distribution of the marginal propensity to consume (MPC) as
-# a function of wealth, given that the is high wealth inequality.
-#
-# Prior macroeconomic models that have assumed homogeneous agents have had the results
-# of low wealth inequality. Krusell and Smith (1998) were the first to explain inequality in wealth through heterogeneity of agent discount factors. They modeled each intergenerational dynasty as having a discount factor that varies over time as a Markov process. They found this increase wealth inequality.
-#
-# This work finds a greater fit to the empirical distribution of wealth can be attained by modeling heterogeneity in discount factors as stable across generations. The discount factor distribution is uniform, with the breadth of the distribution determined by one free paramater. Fitting this parameter with a simple estimation process results in a model which fits the empirics better than Krusell and Smith (1998).
+# In a model calibrated to match micro- and macroeconomic evidence on household income dynamics, this paper shows that a modest degree of heterogeneity in household preferences or beliefs is sufficient to match empirical measures of wealth inequality in the U.S. The hegerogeneity-augmented model's predictions are consistent with microeconomic evidence that suggests that the annual marginal propensity to consume (MPC) is much larger than the roughly 0.04 implied by commonly-used macroeconomic models (even ones including some heterogeneity).  The high MPC arises because many consumers hold little wealth despite having a strong precautionary motive.  The model also plausibly predicts that the aggregate MPC can differ greatly depending on how the shock is distributed across households (depending, e.g., on their wealth, or employment status).
 
 # %% [markdown]
 # ## Notation For the Core Model
 #
 # We define the following notation.
 #
-# | Parameter | Description | Code | Value |
-# | :---: | ---         | ---  | :---: |
-# | $\newcommand{\PLives}{\Lambda} \PLives$ | Probability of living | $\texttt{\PLives}$ | 0.99375
-# | $\newcommand{\Discount}{\beta}\Discount$ | Time Preference Factor | $\texttt{Discount}$ | 0.96 |
-# | $\newcommand{\CRRA}{\rho}\CRRA$ | Coeﬃcient of Relative Risk Aversion| $\texttt{CRRA}$ | 2 |
-#
-# | Exogenous Variable | Description | Code | Value |
+# | Exogenous Random Variable | Description | Code | Value |
 # | :---: | ---         | ---  | :---: |
 # | $\newcommand{\tshk}{\zeta}\tshk$ | Transitory Income | $\texttt{tshk}$ |  |
 # | $\newcommand{\pshk}{\psi}\pshk$ | Permanent Shock | $\texttt{pshk}$ |  |
-# | $\sigma_\tshk$ | Transitory Income Standard Deviation |  | 0.1  |
-# | $\sigma_\pshk$ | Permanent Shock Standard Deviation | | 0.1 |
 #
-# | Variable | Description | Code | Value |
+# | Parameter | Description | Code | Value |
 # | :---: | ---         | ---  | :---: |
-# | $\newcommand{\aRat}{a}\aRat$ | Assets | $\texttt{aRat}$ |  |
-# | $\newcommand{\mRat}{m}\mRat$ | Market resources | $\texttt{mRt}$ |  |
+# | $\newcommand{\PLives}{\Lambda} \PLives$ | Probability of living | $\texttt{PLives}$ | 0.99375
+# | $\newcommand{\Discount}{\beta}\Discount$ | Time Preference Factor | $\texttt{Discount}$ | 0.96 |
+# | $\newcommand{\CRRA}{\rho}\CRRA$ | Coeﬃcient of Relative Risk Aversion| $\texttt{CRRA}$ | 1 |
+# | $\sigma_\tshk$ | Transitory Income Standard Deviation | $\texttt{PermShkStd}$ | 0.1  |
+# | $\sigma_\pshk$ | Permanent Shock Standard Deviation |$\texttt{TranShkStd}$ | 0.1 |
+#
+#
+# | Variable | Description | Code | 
+# | :---: | ---         | ---  | 
+# | $\newcommand{\aRat}{a}\aRat$ | Assets | $\texttt{aRat}$ |  
+# | $\newcommand{\mRat}{m}\mRat$ | Market resources | $\texttt{mRt}$ |  
 # | $\newcommand{\KLev}{K}\KLev$ | Capital Aggregate | $\texttt{KLev}$
 # | $\newcommand{\kapShare}{\alpha}\kapShare$ | Capital share | $\texttt{kapShare}$
 # | $\newcommand{\LLev}{L}\LLev$ | Labor Aggregate | $\texttt{LLev}$
-# | $\newcommand{\labor}{\ell}\labor$ | Labor share | $\texttt{labor}$ |
-# | $\newcommand{\kRat}{k}\kRat$ | | $\texttt{kRAt}$ |  |
-# | $\newcommand{\pRat}{p}\pRat$ | Permanent Income | $\texttt{pRat}$ |  |
-# | $\newcommand{\rProd}{r}\rProd$ | | $\texttt{rProd}$ |  |
-# | $\newcommand{\yLev}{y} \yLev$ | Income | $\texttt{yLev}$ | 
-# | $\newcommand{\Wage}{W}\Wage$ | Aggregate Wage Rate | $\texttt{Wage}$ |  |
+# | $\newcommand{\labor}{\ell}\labor$ | Labor share | $\texttt{labor}$ 
+# | $\newcommand{\kRat}{k}\kRat$ | $K/P$| $\texttt{kRat}$ |  
+# | $\newcommand{\pRat}{p}\pRat$ | Permanent Income | |  
+# | $\mathbf{P}$ | | | 
+# | $\newcommand{\rProd}{r}\rProd$ | Interest rate | $\texttt{rProd}$ |  
+# | $\newcommand{\yLev}{y} \yLev$ | Income | $\texttt{yLev}$ 
+# | $\newcommand{\Wage}{W}\Wage$ | Aggregate Wage Rate | $\texttt{Wage}$ | 
 #
 # | Functions | Description | Code | Value |
 # | :---: | ---         | ---  | :---: |
@@ -107,16 +102,16 @@ warnings.filterwarnings("ignore")
 # The consumer has a standard Constant Relative Risk Aversion utility function $$u(c)=\frac{c^{1-\rho}}{1-\rho}$$
 
 # %% [markdown]
-# Idiosyncratic (household) income process is logarithmic Friedman:
+# The idiosyncratic (household) income process is logarithmic Friedman:
 # \begin{eqnarray*}
 # \yLev_{t+1}&=&\pRat_{t+1}\tshk_{t+1}\Wage\\
 # \pRat_{t+1}&=&\pRat_{t}\pshk_{t+1}
 # \end{eqnarray*}
 
 # %% [markdown]
-# Bellman form of the value function for households is:
+# The Bellman form of the value function for households is:
 #
-# \begin{eqnarray}
+# \begin{eqnarray*}
 # \valfn(\mRat_{t})&=&\underset{\cFunc_{t}}{\max } ~~ \uFunc(\cFunc_{t}(\mRat_t))+\Discount \PLives \Ex_{t}\left[ \pshk_{t+1}^{1-\CRRA}\valfn(\mRat_{t+1})
 # \right]   \\
 # \notag &\text{s.t.}&\\
@@ -126,7 +121,7 @@ warnings.filterwarnings("ignore")
 # \\
 # \mRat_{t+1} &=&(\daleth +\rProd_t)\kRat_{t+1}+\tshk_{t+1},\\
 # \rProd &=&\kapShare\ptyLev(\KLev/\labor\LLev)^{\kapShare-1}\\
-# \end{eqnarray}
+# \end{eqnarray*}
 
 # %%
 '''
@@ -148,6 +143,7 @@ path_to_models = os.path.join(my_path,'Code')
 
 # %%
 # For speed here, use the "tractable" version of the model
+# This is not the "right" model, but illustrates the key point
 '''
 This options file specifies parameter heterogeneity, making the choice in the paper:
 uniformly distributed discount factors.
@@ -199,7 +195,7 @@ sim_Lorenz_points = getLorenzShares(sim_wealth,percentiles=pctiles)
 plt.figure(figsize=(5,5))
 plt.title('Wealth Distribution')
 plt.plot(pctiles,SCF_Lorenz_points,'--k',label='SCF')
-plt.plot(pctiles,sim_Lorenz_points,'-b',label='Point Beta')
+plt.plot(pctiles,sim_Lorenz_points,'-b',label='Beta-Point')
 plt.plot(pctiles,pctiles,'g-.',label='45 Degree')
 plt.xlabel('Percentile of net worth')
 plt.ylabel('Cumulative share of wealth')
@@ -241,7 +237,20 @@ with heterogeneity, no aggregate shocks, perpetual youth model, matching net wor
 do_param_dist = True          # Do param-dist version if True, param-point if False
 do_lifecycle = False          # Use lifecycle model if True, perpetual youth if False
 do_agg_shocks = False         # Solve the FBS aggregate shocks version of the model
-do_liquid = False             # Matches liquid assets data when True, net worth data when False
-
+do_liquid = True              # Matches liquid assets data when True, net worth data when False
+do_tractable = True           # 
 os.chdir(path_to_models)
 exec(open('cstwMPC_MAIN.py').read())
+
+# %%
+# Plot 
+plt.figure(figsize=(5,5))
+plt.title('Wealth Distribution')
+plt.plot(pctiles,SCF_Lorenz_points,'--k',label='SCF')
+plt.plot(pctiles,sim_Lorenz_points,'-b',label='Beta-Dist')
+plt.plot(pctiles,pctiles,'g-.',label='45 Degree')
+plt.xlabel('Percentile of net worth')
+plt.ylabel('Cumulative share of wealth')
+plt.legend(loc=2)
+plt.ylim([0,1])
+plt.show('wealth_distribution_2')
