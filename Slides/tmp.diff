@@ -1,7 +1,0 @@
-109,111c109,110
-< %\end{verbatimwrite}\input {./HeteroMacro-Slides-body.tex} \end{document}
-< 
-< 
----
-> %\end{verbatimwrite}\input {./HeteroMacro-Slides-body.tex} 
-> \end{document}

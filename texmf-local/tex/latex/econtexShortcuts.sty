@@ -115,7 +115,7 @@
 \providecommand{\DivGro}{\ensuremath{\mathsf{G}}}
 \providecommand{\divGro}{\ensuremath{\mathsf{g}}}
 \providecommand{\Div}{\ensuremath{D}}
-\providecommand{\div}{\ensuremath{d}}
+% \providecommand{\div}{\ensuremath{d}} reserved for divide 
 \providecommand{\DLev}{\ensuremath{D}}
 \providecommand{\Dvdnd}{\ensuremath{\mathbf{D}}}
 \providecommand{\dvdnd}{\ensuremath{d}}
@@ -141,7 +141,7 @@
 \providecommand{\Evarr}{\ensuremath{\sigma_{\risky}^{2}}} % Variance of log return on risky asset
 \providecommand{\EVarr}{\sigma_{\Risky}^{2}} % Variance of level return on risky asset (when returns norm dist)
 \providecommand{\expend}{\ensuremath{\xi}}
-\providecommand{\Ex}{\ensuremath{\mathbb{E}}} % Expectations
+%\providecommand{\Ex}{\ensuremath{\mathbb{E}}} % Expectations operator defined in econtex.cls
 \providecommand{\FDist}{\ensuremath{\mathcal{F}}}
 \providecommand{\fDist}{\ensuremath{\mathcal{f}}}
 \providecommand{\FFunc}{\ensuremath{\mathrm{F}}}
@@ -166,7 +166,6 @@
 \providecommand{\hEnd}{\ensuremath{\mathfrak{h}}}
 \providecommand{\hFunc}{\ensuremath{\mathrm{h}}}
 \providecommand{\Hi}{\hat}
-\providecommand{\HLev}{\ensuremath{H}}
 \providecommand{\HLevBF}{\ensuremath{\mathbf{H}}}
 \providecommand{\hLevBF}{\ensuremath{\mathbf{h}}}
 \providecommand{\HLev}{\ensuremath{\pmb{H}}}
@@ -178,7 +177,7 @@
 \providecommand{\HRat}{\ensuremath{H}}
 \providecommand{\hRat}{\ensuremath{h}}
 \providecommand{\h}{\ensuremath{h}}
-\providecommand{\H}{\ensuremath{H}}
+%\providecommand{\H}{\ensuremath{H}}
 \providecommand{\iFunc}{\ensuremath{\mathrm{i}}}
 \providecommand{\IFunc}{\ensuremath{\mathrm{I}}}
 \providecommand{\ILev}{\ensuremath{I}}
@@ -264,7 +263,7 @@
 \providecommand{\mU}{{m}^{u}}
 %\providecommand{\m}{\ensuremath{m}}
 %\providecommand{\M}{\ensuremath{M}}
-\providecommand{\next}{2}  % via search-and-replace
+%\providecommand{\next}{2}  % via search-and-replace
 \providecommand{\Next}{t+1} % 
 \providecommand{\nFunc}{\ensuremath{\mathrm{n}}}
 \providecommand{\NLev}{\ensuremath{N}}
@@ -296,7 +295,7 @@
 \providecommand{\pDeadRate}{\ensuremath{\grave{\cancel{\mathsf{d}}}}}
 \providecommand{\pDead}{\ensuremath{\mathfrak{D}}}
 \providecommand{\pDieRate}{\ensuremath{\grave{\mathsf{d}}}}
-\providecommand{\pDies}{\ensuremath{\mathrm{d}}} % Continuous time death rate 
+\providecommand{\pDies}{\ensuremath{\mathsf{d}}} % Continuous time death rate 
 \providecommand{\PDies}{\ensuremath{\mathsf{D}}} % Discrete-time one-period death rate
 \providecommand{\PDV}{\ensuremath{\mathbb{P}}} % PDV
 \providecommand{\PGroAdj}{\ensuremath{\underline{\PGro}}}
@@ -396,7 +395,8 @@
 \providecommand{\seniority}{\ensuremath{\mathsf{x}}}
 \providecommand{\SeverancePayment}{\ensuremath{\mathcal{S}}}
 \providecommand{\SeveranceRatio}{\ensuremath{\varsigma}}
-\providecommand{\Severance}{\ensuremath{\varsigma}}
+%\providecommand{\Severance}{\ensuremath{\varsigma}}
+\providecommand{\Severance}{\kappa}
 \providecommand{\SE}{\SRat^{e}}
 \providecommand{\sE}{\sRat^{e}}
 \providecommand{\sFunc}{\ensuremath{\mathrm{s}}}
@@ -592,7 +592,7 @@
 \providecommand{\zAgg}{\ensuremath{\pmb{Z}}}
 \providecommand{\zFunc}{\mathrm{z}}
 \providecommand{\ZLevBF}{\ensuremath{\mathbf{Z}}}
-\providecommand{\zLevBF}{\ensuremath{\mathbf{z}}}
+%\providecommand{\zLevBF}{\ensuremath{\mathbf{z}}}
 \providecommand{\zLevBF}{\ensuremath{\pmb{z}}}
 \providecommand{\ZLev}{\ensuremath{Z}}
 \providecommand{\zLev}{\ensuremath{z}}
@@ -626,6 +626,5 @@
 \providecommand{\recm}{}
 \renewcommand{\recm}{\item[\phantom{$^{*}$}]}
 
-\providecommand{\Severance}{\kappa}
 \newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
 

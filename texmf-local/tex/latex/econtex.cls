@@ -32,7 +32,7 @@
 % \RequirePackage{rotating}
 \RequirePackage{snapshot} % Creates list of external files used by a LaTeX document
 \RequirePackage{ifthen}
-\RequirePackage{chngpage}
+\RequirePackage{changepage}
 
 % If unspecified whether pdf output (instead of dvi) is being used, determine that it SHOULD be
 \newif\ifdvi\dvitrue
@@ -106,12 +106,20 @@ amsmath,amssymb,amsfonts,amsthm
 ,threeparttable,dcolumn,multicol,multirow,booktabs % table environment extensions
 ,latexsym
 ,afterpage
-,endnotes
+,enotez
 ,moreverb
 ,hhline    % Allow double hlines
 ,tipa      % Define more characters, in particular the \textthorn character
 ,color
+,accents
+,appendix
 }
+
+\DeclareInstance{enotez-list}{superscriptednotes}{paragraph}
+  {
+    number = \textsuperscript{#1}
+  }
+% to get endnotes with superscripts, use \printendnotes[superscriptednotes]
 
 % \RequirePackage{econtex} % Removed 20170801 because won't work when invoked from nonroot paths
 % Contents of the file are pasted in below
