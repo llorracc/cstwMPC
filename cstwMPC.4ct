@@ -1,0 +1,41 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Introduction}}{4}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-20002}{QQ2-1-2}{Relation to the Literature}}{7}\relax 
+\doTocEntry\tocsubsection{2.1}{\csname a:TocLink\endcsname{1}{x1-30002.1}{QQ2-1-3}{Theory}}{7}\relax 
+\doTocEntry\tocsubsection{2.2}{\csname a:TocLink\endcsname{1}{x1-40002.2}{QQ2-1-4}{Empirics}}{9}\relax 
+\doTocEntry\toclot{1}{\csname a:TocLink\endcsname{1}{x1-40011}{}{\ignorespaces Empirical Estimates of the Marginal Propensity to Consume (MPC) out of Transitory Income}}{table}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-50003}{QQ2-1-6}{Modeling Wealth Heterogeneity: The Role of Shocks and Preferences}}{13}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-60003.1}{QQ2-1-7}{The `Friedman/Buffer Stock' Income Process}}{14}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-70003.2}{QQ2-1-8}{Homogeneous Impatience: The `$\ensuremath  {\beta }$-Point' Model}}{17}\relax 
+\doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-80003.3}{QQ2-1-9}{Calibration}}{20}\relax 
+\doTocEntry\toclot{2}{\csname a:TocLink\endcsname{1}{x1-80012}{}{\ignorespaces Parameter Values and Steady State of the Perpetual Youth Models}}{table}\relax 
+\doTocEntry\tocsubsection{3.4}{\csname a:TocLink\endcsname{1}{x1-90003.4}{QQ2-1-11}{Wealth Distribution in the `$\ensuremath  {\beta }$-Point' Model}}{24}\relax 
+\doTocEntry\toclof{1}{\csname a:TocLink\endcsname{1}{x1-90051}{}{\ignorespaces Distribution of Net Worth (Lorenz Curve)---Perpetual Youth Model}}{figure}\relax 
+\doTocEntry\tocsubsection{3.5}{\csname a:TocLink\endcsname{1}{x1-100003.5}{QQ2-1-13}{Heterogeneous Impatience: The `$\ensuremath  {\beta }$-Dist' Model}}{28}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-110004}{QQ2-1-14}{The MPC in the Perpetual Youth Model}}{31}\relax 
+\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-120004.1}{QQ2-1-15}{Matching Net Worth}}{32}\relax 
+\doTocEntry\toclof{2}{\csname a:TocLink\endcsname{1}{x1-120012}{}{\ignorespaces Empirical Wealth Distribution and Consumption Functions of the $\ensuremath  {\beta }$-Point and $\ensuremath  {\beta }$-Dist Models}}{figure}\relax 
+\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-120043}{}{\ignorespaces Consumption Functions of $\ensuremath  {\beta }$-Dist and KS-Hetero Models and the Distribution of Cash on Hand}}{figure}\relax 
+\doTocEntry\toclot{3}{\csname a:TocLink\endcsname{1}{x1-120063}{}{\ignorespaces Average (Aggregate) Marginal Propensity to Consume in Annual Terms}}{table}\relax 
+\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-130004.2}{QQ2-1-19}{Matching Liquid Assets}}{42}\relax 
+\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-130024}{}{\ignorespaces Empirical Distribution of Liquid Financial Assets${}+{}$Retirement Assets and Consumption Functions of $\ensuremath  {\beta }$-Dist Model}}{figure}\relax 
+\doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-130075}{}{\ignorespaces Distribution of MPCs Across Households}}{figure}\relax 
+\doTocEntry\tocsubsection{4.3}{\csname a:TocLink\endcsname{1}{x1-140004.3}{QQ2-1-22}{The MPC over the Business Cycle}}{48}\relax 
+\doTocEntry\toclot{4}{\csname a:TocLink\endcsname{1}{x1-140094}{}{\ignorespaces Marginal Propensity to Consume over the Business Cycle}}{table}\relax 
+\doTocEntry\tocsubsection{4.4}{\csname a:TocLink\endcsname{1}{x1-150004.4}{QQ2-1-24}{Sensitivity Analysis}}{53}\relax 
+\doTocEntry\toclof{6}{\csname a:TocLink\endcsname{1}{x1-150016}{}{\ignorespaces Sensitivity Analysis: Aggregate Marginal Propensity to Consume}}{figure}\relax 
+\doTocEntry\toclof{7}{\csname a:TocLink\endcsname{1}{x1-150027}{}{\ignorespaces Sensitivity Analysis: Distance Between Simulated \& Actual Lorenz Curves }}{figure}\relax 
+\doTocEntry\toclof{8}{\csname a:TocLink\endcsname{1}{x1-150038}{}{\ignorespaces Sensitivity Analysis: Center of Discount Factor Distribution }}{figure}\relax 
+\doTocEntry\toclof{9}{\csname a:TocLink\endcsname{1}{x1-150049}{}{\ignorespaces Sensitivity Analysis: Width of Discount Factor Distribution }}{figure}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-160005}{QQ2-1-29}{The MPC in a Life Cycle Model}}{66}\relax 
+\doTocEntry\tocsubsection{5.1}{\csname a:TocLink\endcsname{1}{x1-170005.1}{QQ2-1-30}{Life Cycle of a Household}}{66}\relax 
+\doTocEntry\tocsubsection{5.2}{\csname a:TocLink\endcsname{1}{x1-180005.2}{QQ2-1-31}{Macroeconomic Dynamics}}{69}\relax 
+\doTocEntry\tocsubsection{5.3}{\csname a:TocLink\endcsname{1}{x1-190005.3}{QQ2-1-32}{Calibration}}{71}\relax 
+\doTocEntry\toclot{5}{\csname a:TocLink\endcsname{1}{x1-190055}{}{\ignorespaces Parameter Values in the Life Cycle Model}}{table}\relax 
+\doTocEntry\tocsubsection{5.4}{\csname a:TocLink\endcsname{1}{x1-200005.4}{QQ2-1-34}{Aggregate Marginal Propensity to Consume}}{75}\relax 
+\doTocEntry\toclof{10}{\csname a:TocLink\endcsname{1}{x1-2000310}{}{\ignorespaces Aggregate Capital to Output Ratio by Homogeneous Discount Factor}}{figure}\relax 
+\doTocEntry\toclof{11}{\csname a:TocLink\endcsname{1}{x1-2000611}{}{\ignorespaces Distribution of Net Worth (Lorenz Curve)---Life Cycle Model}}{figure}\relax 
+\doTocEntry\toclof{12}{\csname a:TocLink\endcsname{1}{x1-2001012}{}{\ignorespaces Aggregate Marginal Propensity to Consume by Age}}{figure}\relax 
+\doTocEntry\tocsection{6}{\csname a:TocLink\endcsname{1}{x1-210006}{QQ2-1-38}{Conclusion}}{85}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-220006}{QQ2-1-39}{References}}{86}\relax 
+\par 

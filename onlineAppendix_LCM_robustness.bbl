@@ -1,0 +1,47 @@
+\providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+  \providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+\ifx\undefined\BySame
+\newcommand{\BySame}{\leavevmode\rule[.5ex]{3em}{.5pt}\ }
+\fi
+\begin{thebibliography}{}
+
+\harvarditem[Brown, Liebman, and Pollett]{Brown, Liebman, and
+  Pollett}{2002}{BrownLiebmanPollet}
+\textsc{Brown, Jeffrey, Jeffrey~B. Liebman,  {and} Joshua Pollett}  (2002):
+  ``Estimating Life Tables That Reflect Socioeconomic Differences in
+  Mortality,'' in \emph{The Distributional Aspects of Social Security and
+  Social Security Reform}, ed. by Martin Feldstein,  {and} Jeffrey~B. Liebman,
+  pp. 447--457. University of Chicago Press.
+
+\harvarditem[Cagetti]{Cagetti}{2003}{Cagetti}
+\textsc{Cagetti, Marco}  (2003): ``Wealth Accumulation Over the Life Cycle and
+  Precautionary Savings,'' \emph{Journal of Business and Economic Statistics},
+  21(3), 339--353.
+
+\harvarditem[Carroll]{Carroll}{2000}{WhyDoRichSave}
+\textsc{Carroll, Christopher~D.}  (2000): ``Why Do the Rich Save So Much?,'' in
+  \emph{Does Atlas Shrug? The Economic Consequences of Taxing the Rich}, ed. by
+  Joel~B. Slemrod. Harvard University Press.
+
+\harvarditem[Carroll]{Carroll}{2006}{EndogenousGridpoints}
+\textsc{\BySame{}}  (2006): ``The Method of Endogenous Gridpoints for Solving
+  Dynamic Stochastic Optimization Problems,'' \emph{Economics Letters}, 91,
+  213--320.
+
+\harvarditem[Sabelhaus and Song]{Sabelhaus and Song}{2010}{SabelhausSong}
+\textsc{Sabelhaus, John,  {and} Jae Song}  (2010): ``The Great Moderation in
+  Micro Labor Earnings,'' \emph{Journal of Monetary Economics}, 57(4),
+  391--403.
+
+\harvarditem[{Social Security Administration}]{{Social Security
+  Administration}}{2010}{SSLifeTables}
+\textsc{{Social Security Administration}}  (2010): ``Actuarial Life Table,''
+  available at \url{http://www.ssa.gov/oact/STATS/table4c6.html}.
+
+\harvarditem[Violante, Kaplan, and Weidner]{Violante, Kaplan, and
+  Weidner}{2014}{kaplanViolanteWeidner_wealthyH2M}
+\textsc{Violante, Gianluca, Greg Kaplan,  {and} Justin Weidner}  (2014): ``The
+  Wealthy Hand-to-Mouth,'' \emph{Brookings Papers on Economic Activity},
+  Spring, 77--138.
+
+\end{thebibliography}

@@ -1,0 +1,865 @@
+<!DOCTYPE html> 
+<html xml:lang='en' lang='en'> 
+<head><title></title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (http://www.tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link type='text/css' rel='stylesheet' href='onlineAppendix_LCM_robustness.css' /> 
+<meta content='onlineAppendix_LCM_robustness.tex' name='src' /> 
+</head><body>
+<div class='center'>
+<!-- l. 664 --><p class='noindent'>
+</p><!-- l. 664 --><p class='noindent'><span class='ecbx-1200'>The Distribution of Wealth and the Marginal Propensity to
+</span><span class='ecbx-1200'>Consume</span><br /><br />
+<span class='ecbx-2074'>Online Appendix</span><br />
+<span class='ecbx-2074'>Full Exposition of the Life Cycle Model</span>
+</p><!-- l. 664 --><p class='noindent'>November 19, 2020
+</p><!-- l. 664 --><p class='noindent'><span class='ecrm-0600'> </span>
+</p>
+</div>
+<!-- l. 668 --><p class='noindent'>
+                                                                             
+                                                                             
+</p>
+  <h3 class='sectionHead'><span class='titlemark'>1  </span> <a id='x1-10001'></a>Aggregate MPC in a Life Cycle Model</h3>
+<!-- l. 674 --><p class='noindent'>For ease of exposition and tractability of the aggregate shock processes, the models
+used in previous sections assume that households have inﬁnite horizons, with no
+diﬀerence between “old” and “young” agents. Our qualitative results hold even when
+households are instead assumed to live out a ﬁnite life cycle, with more realistic
+assumptions about changes in the income process and mortality as the household
+ages. This section discusses the assumptions used in an overlapping generations life
+cycle speciﬁcation, and presents analogous results corresponding to the analysis in
+section 4 of the paper by re-estimating the <span class='cmmi-12'>β</span>-Point and <span class='cmmi-12'>β</span>-Dist models. In this
+environment, wealth heterogeneity emerges not only from shocks to permanent
+and transitory income and diﬀerences in discount factors, but also through
+demographic diﬀerences in age and education, via diﬀerential mortality and income
+growth expectations. While these latter factors were abstracted into time
+preference heterogeneity in our benchmark model, here we model them
+explicitly to demonstrate the robustness of our results to the simplifying
+assumptions.
+</p><!-- l. 676 --><p class='noindent'>
+</p>
+  <h4 class='subsectionHead'><span class='titlemark'>1.1  </span> <a id='x1-20001.1'></a>Life Cycle of a Household</h4>
+<!-- l. 678 --><p class='noindent'>The economy consists of a continuum of expected utility maximizing households
+with a common CRRA utility function over consumption, <span class='cmr-12'>u(</span><span class='cmsy-10x-x-120'>∙</span><span class='cmr-12'>) = </span><span class='cmsy-10x-x-120'>∙</span><sup><span class='cmr-8'>1</span><span class='cmsy-8'>−</span><span class='cmmi-8'>ρ</span></sup><span class='cmmi-12'>∕</span><span class='cmr-12'>(1 </span><span class='cmsy-10x-x-120'>−</span><span class='cmmi-12'>ρ</span><span class='cmr-12'>)</span>; each
+household has a time discount factor <span class='cmmi-12'>β</span>. A household enters the economy at time <span class='cmmi-12'>t</span>
+aged 24 years, endowed with an education level <span class='cmmi-12'>e </span><span class='cmsy-10x-x-120'>∈{</span><span class='cmmi-12'>D,HS,C</span><span class='cmsy-10x-x-120'>} </span>(for dropout, high
+school and college, respectively), an initial permanent income level <img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness0x.svg' /><sub><span class='cmr-8'>0</span></sub>, and a stock of
+capital <img class='mathpalette' alt='kkk' src='onlineAppendix_LCM_robustness1x.svg' /><sub><span class='cmr-8'>0</span></sub>. Each quarter, the household receives (after tax) income, chooses
+how much of their market resources to consume and how much to save,
+and then transitions to the next quarter by facing shocks to mortality and
+income.
+</p><!-- l. 680 --><p class='indent'>  A household receives a permanent shock to income when transitioning into period
+<span class='cmmi-12'>t</span>, denoted by <span class='cmmi-12'>ψ</span><sub><span class='cmmi-8'>t</span></sub> (along with the age-education-speciﬁc average growth factor <span class='overline'><span class='cmmi-12'>ψ</span></span><sub><span class='cmmi-8'>es</span></sub>),
+as well as a transitory shock <span class='cmmi-12'>ξ</span><sub><span class='cmmi-8'>t</span></sub>. The income process can be summarized by:
+</p><div class='eqnarray'>
+  <center class='math-display'>
+<img class='math-display' alt='yyyt =   (1 − τ)ξtpppt,
+p        -- p
+ppt =   ψtψesppt−1.
+' src='onlineAppendix_LCM_robustness2x.svg' /></center>
+</div>Households that have already lived for <p><span class='cmmi-12'>s </span></p>periods have permanent shocks drawn from
+a lognormal distribution with mean 1 and variance <p><span class='cmmi-12'>σ</span></p><p><sub><span class='cmmi-8'>ψs</span></sub></p><p><sup><span class='cmr-8'>2</span></sup></p>, and transitory shocks
+drawn from a lognormal distribution with mean <p><span class='cmr-12'>1</span></p><p><span class='cmmi-12'>∕</span></p><p><img class='mathpalette' alt='/u' src='onlineAppendix_LCM_robustness3x.svg' /></p> and variance <p><span class='cmmi-12'>σ</span></p><p><sub><span class='cmmi-8'>ξs</span></sub></p><p><sup><span class='cmr-8'>2</span></sup></p> with
+probability <p><img class='mathpalette' alt='/u' src='onlineAppendix_LCM_robustness4x.svg' /></p><p><span class='cmr-12'>= (1 </span></p><p><span class='cmsy-10x-x-120'>− </span></p><p><span class='cmmi-12'>u</span></p><p><span class='cmr-12'>) </span></p>and a degenerate distribution at <p><span class='cmmi-12'>μ </span></p>with probability <p><span class='cmmi-12'>u</span></p>. The
+prospect of unemployment (at rate <p><span class='cmmi-12'>u</span></p>) is a completely transitory event:
+unemployment in period <p><span class='cmmi-12'>t </span></p>has no eﬀect on the probability of unemployment in
+period <p><span class='cmmi-12'>t </span></p><p><span class='cmr-12'>+ 1</span></p>. The non-zero transitory shock when unemployed represents a welfare
+beneﬁt funded by income taxes, as discussed below. When transitioning from one
+period to the next, a household with education <p><span class='cmmi-12'>e </span></p>that has already lived for <p><span class='cmmi-12'>s </span></p>periods
+faces a <p><span class='cmss-12'>D</span></p><p><sub><span class='cmmi-8'>es</span></sub></p> probability of death. In the main speciﬁcation, the assets of a household
+that dies are completely taxed by the government to fund activities outside the
+model.<p><span class='footnote-mark'><a href='onlineAppendix_LCM_robustness2.html#fn1x0'><sup class='textsuperscript'>1</sup></a></span></p><p><a id='x1-2002f1'></a></p>  
+<!-- l. 687 --><p class='indent'>The household’s permanent income level will be factored out from the problem, so
+that the only state variable that aﬀects the choice of optimal consumption is
+normalized market resources <span class='cmmi-12'>m</span><sub><span class='cmmi-8'>t</span></sub>. After this normalization, the household’s budget
+transition functions can be described by: </p><div class='eqnarray'>
+<center class='math-display'>
+<img class='math-display' alt='   at  =  mt  − ct,                                  (1)
+
+ kt+1  =  at∕ψt+1,                                   (2)
+mt+1   =  (ℸ +  r)kt+1 + (1 − τ)ξt+1,                 (3)
+
+   at  ≥  0.                                         (4)
+' src='onlineAppendix_LCM_robustness5x.svg' /><a id='x1-2003r1'></a><a id='x1-2003r2'></a><a id='x1-2003r3'></a><a id='x1-2003r4'></a></center>
+</div>These transition constraints are identical to the inﬁnite horizon model except that
+capital owned by surviving households does not grow with the inverse survival
+probability, and income is taxed at a marginal rate <p><span class='cmmi-12'>τ </span></p>depending on the household’s
+age and employment status.
+<!-- l. 700 --><p class='indent'>Starting from some terminal age <span class='overline'><span class='cmmi-12'>s</span></span> at which <span class='cmss-12'>D</span><sub><span class='cmmi-8'>e</span><span class='overline'><span class='cmmi-12'>s</span></span></sub> <span class='cmr-12'>= 1</span>, a household’s problem can be
+solved by backward induction until <span class='cmmi-12'>s </span><span class='cmr-12'>= 0</span>. At age <span class='overline'><span class='cmmi-12'>s</span></span>, the household will consume all
+                                                                             
+                                                                             
+market resources, generating a consumption function of <img class='mathpalette' alt='ccc' src='onlineAppendix_LCM_robustness6x.svg' /><sub><span class='cmmi-8'>e</span><span class='overline'><span class='cmmi-12'>s</span></span></sub><span class='cmr-12'>(</span><img class='mathpalette' alt='mmm' src='onlineAppendix_LCM_robustness7x.svg' /><sub><span class='cmmi-8'>t</span></sub><span class='cmmi-12'>,</span><img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness8x.svg' /><sub><span class='cmmi-8'>t</span></sub><span class='cmr-12'>) = </span><img class='mathpalette' alt='mmm' src='onlineAppendix_LCM_robustness9x.svg' /><sub><span class='cmmi-8'>t</span></sub> <span class='cmr-12'>= </span><span class='cmmi-12'>m</span><sub><span class='cmmi-8'>t</span></sub><img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness10x.svg' /><sub><span class='cmmi-8'>t</span></sub> and
+a value function of <span class='cmmi-12'>V</span> <sub><span class='cmmi-8'>e</span><span class='overline'><span class='cmmi-12'>s</span></span></sub><span class='cmr-12'>(</span><img class='mathpalette' alt='mmm' src='onlineAppendix_LCM_robustness11x.svg' /><sub><span class='cmmi-8'>t</span></sub><span class='cmmi-12'>,</span><img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness12x.svg' /><sub><span class='cmmi-8'>t</span></sub><span class='cmr-12'>) = u(</span><img class='mathpalette' alt='mmm' src='onlineAppendix_LCM_robustness13x.svg' /><sub><span class='cmmi-8'>t</span></sub><span class='cmr-12'>) = </span><img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness14x.svg' /><sub><span class='cmmi-8'>t</span></sub><sup><span class='cmr-8'>1</span><span class='cmsy-8'>−</span><span class='cmmi-8'>ρ</span></sup><span class='cmr-12'>u(</span><span class='cmmi-12'>m</span><sub>
+<span class='cmmi-8'>t</span></sub><span class='cmr-12'>)</span>. At any earlier age, the value
+function is recursively deﬁned by:
+</p>
+<table class='equation'><tr><td><a id='x1-2004r5'></a>
+<center class='math-display'>
+<img class='math-display' alt='Ves(mmmt, pppt) = macccxt u (ccct) + β//Des 𝔼t[Ves+1(mmmt+1,pppt+1)] s.t. (1)–(4).
+' src='onlineAppendix_LCM_robustness15x.svg' /></center></td><td class='equation-label'>(5)</td></tr></table>
+<!-- l. 704 --><p class='nopar'>
+To eliminate the permanent income level as a state variable, further deﬁne the
+normalized consumption function as <span class='cmr-12'>c</span><sub><span class='cmmi-8'>es</span></sub><span class='cmr-12'>(</span><span class='cmmi-12'>m</span><sub><span class='cmmi-8'>t</span></sub><span class='cmr-12'>) = </span><img class='mathpalette' alt='ccc' src='onlineAppendix_LCM_robustness16x.svg' /><sub><span class='cmmi-8'>es</span></sub><span class='cmr-12'>(</span><img class='mathpalette' alt='mmm' src='onlineAppendix_LCM_robustness17x.svg' /><sub><span class='cmmi-8'>t</span></sub><span class='cmmi-12'>,</span><img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness18x.svg' /><sub><span class='cmmi-8'>t</span></sub><span class='cmr-12'>)</span><span class='cmmi-12'>∕</span><img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness19x.svg' /><sub><span class='cmmi-8'>t</span></sub> and the normalized
+value function as <span class='cmr-12'>v</span><sub><span class='cmmi-8'>es</span></sub><span class='cmr-12'>(</span><span class='cmmi-12'>m</span><sub><span class='cmmi-8'>t</span></sub><span class='cmr-12'>) = </span><span class='cmmi-12'>V</span> <sub><span class='cmmi-8'>es</span></sub><span class='cmr-12'>(</span><img class='mathpalette' alt='mmm' src='onlineAppendix_LCM_robustness20x.svg' /><sub><span class='cmmi-8'>t</span></sub><span class='cmmi-12'>,</span><img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness21x.svg' /><sub><span class='cmmi-8'>t</span></sub><span class='cmr-12'>)</span><span class='cmmi-12'>∕</span><img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness22x.svg' /><sub><span class='cmmi-8'>t</span></sub><sup><span class='cmr-8'>1</span><span class='cmsy-8'>−</span><span class='cmmi-8'>ρ</span></sup>. Dividing (<a href='#x1-2004r5'>5<!-- tex4ht:ref: eq:LifeCycleValue  --></a>) by <img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness23x.svg' /><sub>
+<span class='cmmi-8'>t</span></sub><sup><span class='cmr-8'>1</span><span class='cmsy-8'>−</span><span class='cmmi-8'>ρ</span></sup>, the
+problem is reduced to a single state dimension and can be expressed as:
+</p><div class='eqnarray'>
+<center class='math-display'>
+<img class='math-display' alt='                                [  1−ρ           ]
+ves(mt)  =   macxt u (ct) + β//Des 𝔼t ψ t+1 ves+1 (mt+1 )  s.t. (1)–(4),     (6)
+                                    [ 1−ρ            ]
+ces(mt)  =   argmaxct  u(ct) + β//Des𝔼t ψt+1ves+1(mt+1 )  s.t. (1 )– (4 ).
+' src='onlineAppendix_LCM_robustness24x.svg' /><a id='x1-2005r6'></a></center>
+</div>A standard envelope condition applies in this model, so that <p><span class='cmr-12'>v</span></p><p><sub><span class='cmmi-8'>es</span></sub></p><p><span class='cmsy-10x-x-120'>′</span></p><p><span class='cmr-12'>(</span></p><p><span class='cmmi-12'>m</span></p><p><sub><span class='cmmi-8'>t</span></sub></p><p><span class='cmr-12'>) = u</span></p><p><span class='cmsy-10x-x-120'>′</span></p><p><span class='cmr-12'>(c</span></p><p><sub><span class='cmmi-8'>es</span></sub></p><p><span class='cmr-12'>(</span></p><p><span class='cmmi-12'>m</span></p><p><sub><span class='cmmi-8'>t</span></sub></p><p><span class='cmr-12'>))</span></p>,
+and the ﬁrst order condition for the solution to (<p><a href='#x1-2005r6'>6<!-- tex4ht:ref: eq:LifeCycleValue1  --></a></p>) is:
+<table class='equation'><tr><td><a id='x1-2006r7'></a>
+<center class='math-display'>
+<img class='math-display' alt='                   [            ]
+c−tρ = (ℸ + r )β//D 𝔼t (ψt+1ct+1)−ρ .
+' src='onlineAppendix_LCM_robustness25x.svg' /></center></td><td class='equation-label'>(7)</td></tr></table>
+<!-- l. 713 --><p class='nopar'>
+In this way, the value function need not be tracked or recorded during
+the solution process, as the age-dependent consumption functions are
+suﬃcient.<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness3.html#fn2x0'><sup class='textsuperscript'>2</sup></a></span><a id='x1-2007f2'></a>  
+</p>
+<h4 class='subsectionHead'><span class='titlemark'>1.2  </span> <a id='x1-30001.2'></a>Macroeconomic Dynamics</h4>
+<!-- l. 718 --><p class='noindent'>The analysis in section 4.3 of the paper demonstrated that while there is
+considerable variation in the marginal propensity to consume across income, wealth,
+and employment status, the MPC does not appreciably change depending on the
+structure of aggregate shocks to the economy nor to the current macroeconomic
+state. Moreover, for reasons previously discussed, it is fairly diﬃcult to account for
+macroeconomic state variables in an overlapping generations model. Rather than
+expend signiﬁcant energy on a feature that would yield little of interest,
+we do not model aggregate shocks in this section but instead focus on the
+eﬀects of idiosyncratic shocks and household-level dynamics. However, there
+are some additional macroeconomic features of the model that warrant
+discussion.
+</p><!-- l. 720 --><p class='indent'>Unlike the inﬁnite horizon perpetual youth model, the economy is now perpetually
+growing, with each new cohort larger than the last and ongoing technological
+progress. The expected permanent income growth for a household <span class='overline'><span class='cmmi-12'>ψ</span></span><sub><span class='cmmi-8'>es</span></sub> comprises the
+household’s own eﬀective labor supply growth plus technological growth. When
+aggregating wealth, the contribution of a household that has already lived for <span class='cmmi-12'>s</span>
+quarters is thus discounted by a factor of <span class='cmr-12'>(1 + Γ)</span><sup><span class='cmsy-8'>−</span><span class='cmmi-8'>s</span></sup> relative to the youngest cohort,
+where <span class='cmr-12'>Γ </span>is the technological growth rate. Moreover, older households were born
+into smaller cohorts relative to the newest generation, so our population
+weighting scheme scales their contribution by the population growth rate
+<span class='cmmi-12'>N</span>.
+</p><!-- l. 722 --><p class='indent'>As mentioned in section <a href='#x1-20001.1'>1.1<!-- tex4ht:ref: sec:LifeCycle  --></a>, households are subject to a tax rate of <span class='cmmi-12'>τ </span>depending on
+their age and employment status. Households are assumed to retire at age 65 (i.e. when
+<span class='cmmi-12'>s </span><span class='cmr-12'>= 164</span>), captured in the model with an expected permanent growth factor well below 1 at
+                                                                             
+                                                                             
+this age.<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness4.html#fn3x0'><sup class='textsuperscript'>3</sup></a></span><a id='x1-3001f3'></a>  
+Income before retirement is earned through labor, while income after retirement
+is provided by a pay-as-you-go social security system funded by taxes on
+the employed. The social security tax rate is calculated as the rate that
+balances outlays to retired households and tax revenues from the working
+population:
+</p>
+<table class='equation-star'><tr><td>
+<center class='math-display'>
+<img class='math-display' alt='      ∑              -- ∑                          ∏     --
+         e∈{D,HS,C}[𝜃epppe0   38t=4164(((1 + Γ )(1 + N ))−t ts=0(ψes//Des))]
+τSS = -∑-----------------∑163-------------------−t∏t--------------.
+         e∈{D,HS,C}[𝜃epppe0  t=0 (((1 + Γ )(1 + N ))   s=0(ψes//Des))]
+' src='onlineAppendix_LCM_robustness26x.svg' /></center></td></tr></table>
+<!-- l. 726 --><p class='nopar'>
+Here, <span class='cmmi-12'>𝜃</span><sub><span class='cmmi-8'>e</span></sub> is the proportion of each new generation with education level <span class='cmmi-12'>e</span>, and <span class='overline'><img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness27x.svg' /></span><sub><span class='cmmi-8'>e</span><span class='cmr-8'>0</span></sub>
+is the average permanent income of that education type when they enter
+the economy at age 24. Note that neither permanent nor transitory shocks
+are relevant, as they simply average to 1 across a cohort. The tax to fund
+unemployment beneﬁts is simply the product of the unemployment rate and the
+beneﬁt replacement rate: <span class='cmmi-12'>τ</span><sub><span class='cmmi-8'>U</span></sub> <span class='cmr-12'>= </span><span class='cmmi-12'>uμ</span>. Employed households pay a total income
+tax rate of <span class='cmmi-12'>τ </span><span class='cmr-12'>= </span><span class='cmmi-12'>τ</span><sub><span class='cmmi-8'>SS</span></sub> <span class='cmr-12'>+ </span><span class='cmmi-12'>τ</span><sub><span class='cmmi-8'>U</span></sub>, while unemployed and retired households have
+<span class='cmmi-12'>τ </span><span class='cmr-12'>= 0</span>.
+</p>
+<h4 class='subsectionHead'><span class='titlemark'>1.3  </span> <a id='x1-40001.3'></a>Simulation</h4>
+<!-- l. 731 --><p class='noindent'>When the economy is simulated, each household represents a population mass rather
+than an atomic agent. A household is simulated for the full course of life, with a
+predetermined set of permanent and transitory shocks to apply in each
+                                                                             
+                                                                             
+quarter.<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness5.html#fn4x0'><sup class='textsuperscript'>4</sup></a></span><a id='x1-4001f4'></a>  
+Mortality itself is not simulated, but instead accounted for through the population
+weight used for that mass during aggregation. That is, the relative population
+weight of a household with education type <span class='cmmi-12'>e </span>that has lived for <span class='cmmi-12'>t </span>periods is
+<span class='cmmi-12'>w </span><span class='cmr-12'>= </span><span class='cmmi-12'>𝜃</span><sub><span class='cmmi-8'>e</span></sub><span class='cmr-12'>(1 + </span><span class='cmmi-12'>N</span><span class='cmr-12'>)</span><sup><span class='cmsy-8'>−</span><span class='cmmi-8'>t</span></sup> <span class='cmex-10x-x-120'>∏</span><sub>
+<span class='cmmi-8'>s</span><span class='cmr-8'>=0</span></sub><sup><span class='cmmi-8'>t</span></sup><img class='mathpalette' alt='//D' src='onlineAppendix_LCM_robustness28x.svg' /><sub><span class='cmmi-8'>es</span></sub>. Every period of a simulated household’s life is included
+in the aggregation of total capital, so that the life history of one population mass is
+reinterpreted as the present state of a population mass from each preceding
+generation with positive probability of survival.
+</p><!-- l. 733 --><p class='indent'>Indexing the simulated households by <span class='cmmi-12'>i</span>, total capital in the economy is calculated
+as:
+</p>
+<table class='equation-star'><tr><td>
+<center class='math-display'>
+<img class='math-display' alt='               384                       t
+      ∑       ∑                       −t∏      --
+KKK  =     [𝜃ipppi0    (kit((1 + Γ )(1 + N ))    (ψisψis//Dis))].
+       i       t=0                       s=0
+' src='onlineAppendix_LCM_robustness29x.svg' /></center></td></tr></table>
+<!-- l. 736 --><p class='nopar'>
+Assuming that our simulated population size is suﬃciently large that the
+actual draws of <span class='cmmi-12'>ψ</span><sub><span class='cmmi-8'>is</span></sub> and <span class='cmmi-12'>ξ</span><sub><span class='cmmi-8'>is</span></sub> simply average to unity, the economy’s income
+can be approximated as the denominator of the social security tax rate
+<span class='cmmi-12'>τ</span><sub><span class='cmmi-8'>SS</span> </sub> :
+</p>
+<table class='equation-star'><tr><td>
+<center class='math-display'>
+<img class='math-display' alt='                    163                     t
+        ∑        -- ∑                    −t∏   --
+YYY ≈           [𝜃epppe0    (((1 + Γ )(1 + N ))     (ψes//Des))].
+     e∈{D,HS,C}      t=0                    s=0
+' src='onlineAppendix_LCM_robustness30x.svg' /></center></td></tr></table>
+<!-- l. 740 --><p class='nopar'>
+Given that we simulate 2000 households for 384 quarters for each education level
+(for a total of over 2.3 million population masses), the approximation is nearly
+perfect.<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness6.html#fn5x0'><sup class='textsuperscript'>5</sup></a></span><a id='x1-4002f5'></a>  
+</p>
+<h4 class='subsectionHead'><span class='titlemark'>1.4  </span> <a id='x1-50001.4'></a>Calibration</h4>
+<!-- l. 745 --><p class='noindent'>Calibrations of the distributional parameters are taken from related estimates in
+the literature. Average permanent income growth rates <span class='overline'><span class='cmmi-12'>ψ</span></span><sub><span class='cmmi-8'>es</span></sub> are calculated
+using the same trajectories as in <a href='#XCagetti'>Cagetti</a> (<a href='#XCagetti'>2003</a>) for those with less than
+a high school education, a high school degree, and four or more years of
+college. The permanent and transitory shock variances are approximated
+from the results of <a href='#XSabelhausSong'>Sabelhaus and Song</a> (<a href='#XSabelhausSong'>2010</a>), with extrapolation for ages
+55–64.<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness7.html#fn6x0'><sup class='textsuperscript'>6</sup></a></span><a id='x1-5001f6'></a>  
+Households are assumed to retire at age 65, withdrawing from the labor force and
+only receiving income from a pay-as-you-go social security system ﬁnanced
+by taxes on the working population. Baseline mortality rates at each age
+are taken from the Social Security Administration’s 2010 Actuarial Life
+Table,<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness8.html#fn7x0'><sup class='textsuperscript'>7</sup></a></span><a id='x1-5002f7'></a>  
+then adjusted by education level using estimates by <a href='#XBrownLiebmanPollet'>Brown,
+Liebman, and Pollett</a> (<a href='#XBrownLiebmanPollet'>2002</a>) and converted to quarterly
+probabilities;<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness9.html#fn8x0'><sup class='textsuperscript'>8</sup></a></span><a id='x1-5003f8'></a>  
+households die with certainty if they reach age 120. The unemployment beneﬁt <span class='cmmi-12'>μ </span>is
+set to 0.15 to match <a href='#XCagetti'>Cagetti</a> (<a href='#XCagetti'>2003</a>), while the unemployment probability is <span class='cmmi-12'>u </span><span class='cmr-12'>= 7%</span>,
+the average rate in the inﬁnite horizon model.
+                                                                             
+                                                                             
+</p><!-- l. 747 --><p class='indent'>We assume that the population grows at a rate of 1% annually, while total factor
+productivity grows at a 1.5% annual rate; these approximately match long run rates in
+the United States. Educational attainment rates are set to be fairly consistent with
+U.S. educational rates over the past twenty years, and average initial permanent
+(quarterly) income at age 24 for each educational group are roughly calibrated to recent
+data.<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness10.html#fn9x0'><sup class='textsuperscript'>9</sup></a></span><a id='x1-5004f9'></a>  
+Each simulated household is given an initial lognormal shock to permanent income
+with standard deviation 0.4, approximately matching the total variance of income
+among young households in the SCF 2004 data. Households begin with a very low
+wealth to permanent income ratio, drawn uniformly from <span class='cmsy-10x-x-120'>{</span><span class='cmr-12'>0</span><span class='cmmi-12'>.</span><span class='cmr-12'>17</span><span class='cmmi-12'>, </span><span class='cmr-12'>0</span><span class='cmmi-12'>.</span><span class='cmr-12'>50</span><span class='cmmi-12'>, </span><span class='cmr-12'>0</span><span class='cmmi-12'>.</span><span class='cmr-12'>83</span><span class='cmsy-10x-x-120'>}</span>.
+Other basic parameters are set to match the values used in the inﬁnite
+horizon model. A summary of the model parameters is provided in Table
+<a href='#x1-50051'>1<!-- tex4ht:ref: table:ParametersLifeCycle  --></a>.
+</p>
+<div class='table'>
+                                                                             
+                                                                             
+<!-- l. 750 --><p class='indent'><a id='x1-50051'></a></p><figure class='float'>
+                                                                             
+                                                                             
+<figcaption class='caption'><span class='id'>Table 1:</span><span class='content'>Parameter Values in Life Cycle Model</span></figcaption><!-- tex4ht:label?: x1-50051  -->
+<div class='center'>
+<!-- l. 752 --><p class='noindent'>
+</p>
+<div class='tabular'>
+ <table class='tabular' id='TBL-1' cellspacing='0' cellpadding='0'><colgroup id='TBL-1-1g'><col id='TBL-1-1' /><col id='TBL-1-2' /><col id='TBL-1-3' /></colgroup><tr id='TBL-1-1-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-1-1'> Description                                              </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-1-2'> Parameter  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-1-3'> Value  </td>
+</tr><tr id='TBL-1-2-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-2-1'> Coeﬀ of relative risk aversion                        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-2-2'>     <span class='cmmi-12'>ρ      </span></td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-2-3'>   2     </td>
+</tr><tr id='TBL-1-3-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-3-1'> Eﬀective interest rate                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-3-2'>  <span class='cmr-12'>(</span><span class='cmti-12'>r </span><span class='cmsy-10x-x-120'>− </span><span class='cmmi-12'>δ</span><span class='cmr-12'>)    </span></td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-3-3'>  0.01   </td>
+</tr><tr id='TBL-1-4-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-4-1'> Population growth rate                                </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-4-2'>    <span class='cmmi-12'>N      </span></td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-4-3'> 0.0025  </td>
+</tr><tr id='TBL-1-5-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-5-1'> Technological growth rate                            </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-5-2'>     <span class='cmr-12'>Γ       </span></td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-5-3'> 0.0037  </td>
+</tr><tr id='TBL-1-6-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-6-1'> Rate of high school dropouts                        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-6-2'>    <span class='cmmi-12'>𝜃</span><sub><span class='cmmi-8'>D</span></sub>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-6-3'>  0.11   </td>
+</tr><tr id='TBL-1-7-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-7-1'> Rate of high school graduates                       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-7-2'>    <span class='cmmi-12'>𝜃</span><sub><span class='cmmi-8'>HS</span></sub>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-7-3'>  0.55   </td>
+</tr><tr id='TBL-1-8-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-8-1'> Rate of college graduates                             </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-8-2'>    <span class='cmmi-12'>𝜃</span><sub><span class='cmmi-8'>C</span></sub>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-8-3'>  0.34   </td>
+</tr><tr id='TBL-1-9-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-9-1'> Average initial permanent income, dropout      </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-9-2'>    <span class='overline'><img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness31x.svg' /></span><sub><span class='cmmi-8'>D</span><span class='cmr-8'>0</span></sub>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-9-3'>  5000   </td>
+</tr><tr id='TBL-1-10-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-10-1'> Average initial permanent income, high school  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-10-2'>   <span class='overline'><img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness32x.svg' /></span><sub><span class='cmmi-8'>HS</span><span class='cmr-8'>0</span></sub>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-10-3'>  7500   </td>
+</tr><tr id='TBL-1-11-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-11-1'> Average initial permanent income, college        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-11-2'>    <span class='overline'><img class='mathpalette' alt='ppp' src='onlineAppendix_LCM_robustness33x.svg' /></span><sub><span class='cmmi-8'>D</span><span class='cmr-8'>0</span></sub>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-11-3'> 12000  </td>
+</tr><tr id='TBL-1-12-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-12-1'> Unemployment insurance payment                 </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-12-2'>     <span class='cmmi-12'>μ      </span></td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-12-3'>  0.15   </td>
+</tr><tr id='TBL-1-13-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-13-1'> Unemployment rate                                    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-13-2'>     <span class='cmmi-12'>u      </span></td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-13-3'>  0.07   </td>
+</tr><tr id='TBL-1-14-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-14-1'> Labor income tax rate                                 </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-14-2'>     <span class='cmmi-12'>τ       </span></td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-1-14-3'> 0.0942  </td>
+</tr></table></div></div>
+                                                                             
+                                                                             
+</figure>
+</div>
+<h4 class='subsectionHead'><span class='titlemark'>1.5  </span> <a id='x1-60001.5'></a>Aggregate Marginal Propensity to Consume</h4>
+<!-- l. 777 --><p class='noindent'>Following the same procedure as in the benchmark inﬁnite horizon model, we
+ﬁrst assume that all households have the same time preference factor <span class='accentgrave'><span class='cmmi-12'>β</span></span>
+as in the <span class='cmmi-12'>β</span>-Point model. Seeking the value of <span class='accentgrave'><span class='cmmi-12'>β</span></span> at which the aggregate
+capital to income ratio <img class='mathpalette' alt='K
+KK' src='onlineAppendix_LCM_robustness34x.svg' /><span class='cmmi-12'>∕</span><img class='mathpalette' alt='Y
+YY' src='onlineAppendix_LCM_robustness35x.svg' /> matches that of the perfect foresight version of
+the inﬁnite horizon model (10.26), we ﬁnd <span class='accentgrave'><span class='cmmi-12'>β</span> </span><span class='cmr-12'>= 0</span><span class='cmmi-12'>.</span><span class='cmr-12'>9911</span>. As in the inﬁnite
+horizon model, the simulated distribution of wealth in the <span class='cmmi-12'>β</span>-Point life cycle
+model matches the empirical distribution from the 2004 Survey of Consumer
+Finances considerably better than the KS-JEDC model; indeed, the life cycle
+model has a somewhat better ﬁt than the inﬁnite horizon model, moving
+over 40% of the way from the KS-JEDC’s Lorenz curve to the empirical
+distribution, rather than one third. The additional wealth heterogeneity
+arises through diﬀerences in households’ expectations of the future that were
+suppressed in the inﬁnite horizon model: income growth rates vary with both
+education and age (particularly the timing of retirement), while the increasing
+probability of death plays a key role in older households’ target wealth-to-income
+ratio.
+</p><!-- l. 779 --><p class='indent'>To better ﬁt the empirical distribution of wealth, we again estimate the <span class='cmmi-12'>β</span>-Dist
+model by assuming that each household has its own discount factor drawn from a
+uniform distribution, <span class='cmmi-12'>β </span><span class='cmsy-10x-x-120'>∈ </span><span class='cmr-12'>[</span><span class='accentgrave'><span class='cmmi-12'>β</span> </span><span class='cmsy-10x-x-120'>−∇</span><span class='cmmi-12'>,</span><span class='accentgrave'><span class='cmmi-12'>β</span> </span><span class='cmr-12'>+ </span><span class='cmsy-10x-x-120'>∇</span><span class='cmr-12'>]</span>, approximated by a ten point discrete
+distribution.<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness11.html#fn10x0'><sup class='textsuperscript'>10</sup></a></span><a id='x1-6001f10'></a>  
+As in section 4, the object of the estimation is to ﬁnd parameters <span class='accentgrave'><span class='cmmi-12'>β</span></span> and <span class='cmsy-10x-x-120'>∇ </span>that
+minimize the distance between empirical and simulated shares of wealth held by the
+richest 20%, 40%, 60%, and 80%, subject to the constraint that the simulated <img class='mathpalette' alt='KKK' src='onlineAppendix_LCM_robustness36x.svg' /><span class='cmmi-12'>∕</span><img class='mathpalette' alt='YYY' src='onlineAppendix_LCM_robustness37x.svg' />
+ratio equals the target ratio of 10.26, as in the <span class='cmmi-12'>β</span>-Point model. Estimation reveals
+that the optimal parameters are <span class='cmsy-10x-x-120'>{</span><span class='accentgrave'><span class='cmmi-12'>β</span></span><span class='cmmi-12'>,</span><span class='cmsy-10x-x-120'>∇} </span><span class='cmr-12'>= </span><span class='cmsy-10x-x-120'>{</span><span class='cmr-12'>0</span><span class='cmmi-12'>.</span><span class='cmr-12'>9775</span><span class='cmmi-12'>, </span><span class='cmr-12'>0</span><span class='cmmi-12'>.</span><span class='cmr-12'>0391</span><span class='cmsy-10x-x-120'>}</span>, quite similar to
+the inﬁnite horizon estimates of <span class='cmsy-10x-x-120'>{</span><span class='cmr-12'>0</span><span class='cmmi-12'>.</span><span class='cmr-12'>9751</span><span class='cmmi-12'>, </span><span class='cmr-12'>0</span><span class='cmmi-12'>.</span><span class='cmr-12'>0238</span><span class='cmsy-10x-x-120'>} </span>in the inﬁnite horizon
+model with Krusell–Smith macroeconomic shocks. Figure <a href='#x1-60021'>1<!-- tex4ht:ref: fig:LorenzLifeCycle  --></a> presents the
+empirical Lorenz curve based on SCF 2004 data alongside the simulated
+curves for the <span class='cmmi-12'>β</span>-point and <span class='cmmi-12'>β</span>-dist models (and the original KS-JEDC wealth
+distribution).
+</p>
+<figure class='figure'> 
+
+                                                                             
+                                                                             
+<a id='x1-60021'></a>
+                                                                             
+                                                                             
+<figcaption class='caption'><span class='id'>Figure 1:</span><span class='content'>Distribution of Net Worth (Lorenz Curve), Life Cycle Model</span></figcaption><!-- tex4ht:label?: x1-60021  -->
+<div class='center'>
+<!-- l. 784 --><p class='noindent'>
+</p><!-- l. 785 --><p class='noindent'><img height='90' src='../Figures/LifeCycleLorenzPlot.png' alt='PIC' width='90' /></p></div>
+                                                                             
+                                                                             
+</figure>
+<!-- l. 789 --><p class='indent'>The <span class='cmmi-12'>β</span>-Dist model is able to match the empirical Lorenz curve extremely well for
+the bottom 85% of the wealth distribution: the average diﬀerence between simulated
+and actual wealth shares at the levels of interest is less than 0.4%. Indeed, the life
+cycle model is able to match the extremely low asset holdings of the bottom half of
+the population signiﬁcantly better than the inﬁnite horizon model. However, the
+simulated share of wealth held by the very richest individuals is somewhat lower
+than the SCF data show; in contrast, the inﬁnite horizon <span class='cmmi-12'>β</span>-Dist model is able to
+match the Lorenz curve fairly well even in the top 10%. We surmise that this is due
+to diﬀerences in the distribution of income at the upper tail between the
+models. While about 8% of households in the inﬁnite horizon model have
+working lives that exceed 100 years, allowing some of these households to
+attain extremely high permanent incomes through a series of fortuitous
+shocks,<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness12.html#fn11x0'><sup class='textsuperscript'>11</sup></a></span><a id='x1-6003f11'></a>  
+individuals in the overlapping generations / ﬁnite horizon model retire with
+certainty after 41 working years, receiving a large negative shock to permanent
+income and experiencing no income shocks thereafter. Without the ability to
+generate extremely high income households, even the richest do not accumulate
+enough assets to match the top end of the empirical Lorenz curve. As the simulated
+distribution matches fairly well and we are concerned with the aggregate marginal
+propensity to consume, particularly among non-wealthy households, this is not a
+serious deﬁciency.
+</p>
+<div class='table'>
+                                                                             
+                                                                             
+<!-- l. 793 --><p class='indent'><a id='x1-60042'></a></p><figure class='float'>
+                                                                             
+                                                                             
+<figcaption class='caption'><span class='id'>Table 2:</span><span class='content'>Average  (Aggregate)  Marginal  Propensity  to  Consume  in  Annual
+Terms, Finite Horizon Life Cycle</span></figcaption><!-- tex4ht:label?: x1-60042  -->
+<div class='minipage'><div class='center'>
+<!-- l. 796 --><p class='noindent'>
+</p>
+<div class='tabular'>
+ <table class='tabular' id='TBL-2' cellspacing='0' cellpadding='0'><colgroup id='TBL-2-1g'><col id='TBL-2-1' /><col id='TBL-2-2' /><col id='TBL-2-3' /><col id='TBL-2-4' /><col id='TBL-2-5' /><col id='TBL-2-6' /><col id='TBL-2-7' /><col id='TBL-2-8' /><col id='TBL-2-9' /><col id='TBL-2-10' /></colgroup><tr id='TBL-2-1-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-1-1'> Speciﬁcation                              </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-1-2' colspan='3'>     <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Bequests fully taxed,</div>     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-1-5' colspan='3'>     <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Bequests distributed,</div>     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-1-8' colspan='3'>     <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Bequests distributed,</div>
+</td></tr><tr id='TBL-2-2-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-2-1'>                               </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-2-2' colspan='3'>      <div class='multicolumn' style='white-space:nowrap; text-align:center;'>no bequest motive</div>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-2-5' colspan='3'>      <div class='multicolumn' style='white-space:nowrap; text-align:center;'>no bequest motive</div>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-2-8' colspan='3'>     <div class='multicolumn' style='white-space:nowrap; text-align:center;'>with bequest motive</div>
+</td></tr><tr id='TBL-2-3-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-3-1'>                                     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-3-2' colspan='3'></td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-4-5' colspan='3'></td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-5-8' colspan='3'></td></tr><tr id='TBL-2-6-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-6-1'> Model                                       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-6-2'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span class='cmmi-12'>β</span>-Point</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-6-3'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span class='cmmi-12'>β</span>-Dist</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-6-4'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span class='cmmi-12'>β</span>-Dist</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-6-5'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span class='cmmi-12'>β</span>-Point</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-6-6'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span class='cmmi-12'>β</span>-Dist</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-6-7'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span class='cmmi-12'>β</span>-Dist</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-6-8'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span class='cmmi-12'>β</span>-Point</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-6-9'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span class='cmmi-12'>β</span>-Dist</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-6-10'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span class='cmmi-12'>β</span>-Dist</div>
+</td></tr><tr id='TBL-2-8-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-8-1'> Wealth Measure</td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-8-2'>   <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Net</div>   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-8-3'>  <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Net</div>  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-8-4'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Liquid</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-8-5'>   <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Net</div>   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-8-6'>  <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Net</div>  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-8-7'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Liquid</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-8-8'>   <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Net</div>   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-8-9'>  <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Net</div>  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-8-10'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Liquid</div>
+</td></tr><tr id='TBL-2-9-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-9-1'>                               </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-9-2'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Worth </div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-9-3'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Worth</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-9-4'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Assets</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-9-5'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Worth</div>  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-9-6'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Worth</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-9-7'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Assets</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-9-8'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Worth</div>  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-9-9'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Worth</div> </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-9-10'> <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Assets</div>
+</td></tr><tr id='TBL-2-10-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-10-1'> Overall average                           </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-10-2'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-10-3'>  0.29   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-10-4'>  0.44   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-10-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-10-6'>  0.28   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-10-7'>  0.43   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-10-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-10-9'>  0.28   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-10-10'>  0.43   </td>
+</tr><tr id='TBL-2-11-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-11-1'> By wealth/permanent income ratio  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-11-2'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-11-3'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-11-4'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-11-5'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-11-6'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-11-7'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-11-8'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-11-9'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-11-10'>       </td>
+</tr><tr id='TBL-2-12-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-12-1'>  Top 1%                                    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-12-2'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-12-3'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-12-4'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-12-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-12-6'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-12-7'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-12-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-12-9'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-12-10'>  0.07   </td>
+</tr><tr id='TBL-2-13-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-13-1'>  Top 10%                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-13-2'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-13-3'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-13-4'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-13-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-13-6'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-13-7'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-13-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-13-9'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-13-10'>  0.07   </td>
+</tr><tr id='TBL-2-14-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-14-1'>  Top 20%                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-14-2'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-14-3'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-14-4'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-14-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-14-6'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-14-7'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-14-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-14-9'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-14-10'>  0.08   </td>
+</tr><tr id='TBL-2-15-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-15-1'>  Top 30%                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-15-2'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-15-3'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-15-4'>  0.08   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-15-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-15-6'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-15-7'>  0.09   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-15-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-15-9'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-15-10'>  0.10   </td>
+</tr><tr id='TBL-2-16-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-16-1'>  Top 40%                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-16-2'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-16-3'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-16-4'>  0.12   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-16-5'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-16-6'>  0.08   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-16-7'>  0.13   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-16-8'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-16-9'>  0.08   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-16-10'>  0.14   </td>
+</tr><tr id='TBL-2-17-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-17-1'>  Top 50%                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-17-2'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-17-3'>  0.08   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-17-4'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-17-5'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-17-6'>  0.10   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-17-7'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-17-8'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-17-9'>  0.10   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-17-10'>  0.18   </td>
+</tr><tr id='TBL-2-18-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-18-1'>  Top 60%                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-18-2'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-18-3'>  0.10   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-18-4'>  0.22   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-18-5'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-18-6'>  0.12   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-18-7'>  0.23   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-18-8'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-18-9'>  0.12   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-18-10'>  0.23   </td>
+</tr><tr id='TBL-2-19-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-19-1'>  Bottom 50%                              </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-19-2'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-19-3'>  0.50   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-19-4'>  0.71   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-19-5'>  0.10    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-19-6'>  0.47   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-19-7'>  0.68   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-19-8'>  0.10    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-19-9'>  0.46   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-19-10'>  0.67   </td>
+</tr><tr id='TBL-2-20-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-20-1'> By income                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-20-2'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-20-3'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-20-4'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-20-5'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-20-6'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-20-7'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-20-8'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-20-9'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-20-10'>       </td>
+</tr><tr id='TBL-2-21-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-21-1'>  Top 1%                                    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-21-2'>  0.07    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-21-3'>  0.24   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-21-4'>  0.38   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-21-5'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-21-6'>  0.29   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-21-7'>  0.42   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-21-8'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-21-9'>  0.29   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-21-10'>  0.42   </td>
+</tr><tr id='TBL-2-22-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-22-1'>  Top 10%                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-22-2'>  0.07    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-22-3'>  0.26   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-22-4'>  0.39   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-22-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-22-6'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-22-7'>  0.43   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-22-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-22-9'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-22-10'>  0.43   </td>
+</tr><tr id='TBL-2-23-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-23-1'>  Top 20%                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-23-2'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-23-3'>  0.26   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-23-4'>  0.40   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-23-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-23-6'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-23-7'>  0.43   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-23-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-23-9'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-23-10'>  0.44   </td>
+</tr><tr id='TBL-2-24-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-24-1'>  Top 30%                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-24-2'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-24-3'>  0.27   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-24-4'>  0.40   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-24-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-24-6'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-24-7'>  0.43   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-24-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-24-9'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-24-10'>  0.44   </td>
+</tr><tr id='TBL-2-25-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-25-1'>  Top 40%                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-25-2'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-25-3'>  0.27   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-25-4'>  0.41   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-25-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-25-6'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-25-7'>  0.43   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-25-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-25-9'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-25-10'>  0.44   </td>
+</tr><tr id='TBL-2-26-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-26-1'>  Top 50%                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-26-2'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-26-3'>  0.27   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-26-4'>  0.41   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-26-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-26-6'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-26-7'>  0.44   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-26-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-26-9'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-26-10'>  0.44   </td>
+</tr><tr id='TBL-2-27-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-27-1'>  Top 60%                                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-27-2'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-27-3'>  0.27   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-27-4'>  0.41   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-27-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-27-6'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-27-7'>  0.44   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-27-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-27-9'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-27-10'>  0.44   </td>
+</tr><tr id='TBL-2-28-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-28-1'>  Bottom 50%                              </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-28-2'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-28-3'>  0.31   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-28-4'>  0.47   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-28-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-28-6'>  0.27   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-28-7'>  0.43   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-28-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-28-9'>  0.26   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-28-10'>  0.42   </td>
+</tr><tr id='TBL-2-29-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-29-1'> By employment status                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-29-2'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-29-3'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-29-4'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-29-5'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-29-6'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-29-7'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-29-8'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-29-9'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-29-10'>       </td>
+</tr><tr id='TBL-2-30-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-30-1'>  Employed                                 </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-30-2'>  0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-30-3'>  0.29   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-30-4'>  0.43   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-30-5'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-30-6'>  0.28   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-30-7'>  0.42   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-30-8'>  0.09    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-30-9'>  0.27   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-30-10'>  0.42   </td>
+</tr><tr id='TBL-2-31-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-31-1'>  Unemployed                              </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-31-2'>  0.10    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-31-3'>  0.39   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-31-4'>  0.57   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-31-5'>  0.11    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-31-6'>  0.39   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-31-7'>  0.57   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-31-8'>  0.12    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-31-9'>  0.40   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-31-10'>  0.58   </td>
+
+</tr><tr id='TBL-2-32-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-32-1'> Time preference parameters           </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-32-2'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-32-3'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-32-4'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-32-5'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-32-6'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-32-7'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-32-8'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-32-9'>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-32-10'>       </td>
+</tr><tr id='TBL-2-33-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-33-1'> <span class='accentgrave'><span class='cmmi-12'>β</span></span>                                       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-33-2'> 0.9911  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-33-3'> 0.9775  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-33-4'> 0.9576  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-33-5'> 0.9899  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-33-6'> 0.9709  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-33-7'> 0.9491  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-33-8'> 0.9898  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-33-9'> 0.9701  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-33-10'> 0.9468  </td>
+</tr><tr id='TBL-2-34-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-2-34-1'> <span class='cmsy-10x-x-120'>∇                   </span></td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-34-2'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-34-3'> 0.0391  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-34-4'> 0.0606  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-34-5'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-34-6'> 0.0483  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-34-7'> 0.0717  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-34-8'>        </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-34-9'> 0.0494  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-2-34-10'> 0.0748  </td>
+</tr></table>
+</div></div>
+<!-- l. 840 --><p class='noindent'><span class='ecrm-1000'>Notes: “Liquid Assets” refers to liquid ﬁnancial plus retirement assets, as in the text.</span>
+<br class='newline' /><span class='ecrm-1000'>The “with bequest motive” speciﬁcation uses bequest parameters of </span><span class='cmmi-10'>α </span><span class='cmr-10'>= 1</span><span class='ecrm-1000'>, </span><span class='cmmi-10'>ν </span><span class='cmr-10'>= </span><span class='cmmi-10'>ρ</span><span class='ecrm-1000'>, and
+</span><span class='cmmi-10'>γ </span><span class='cmr-10'>= 0</span><span class='ecrm-1000'>.</span>
+</p></div>
+                                                                             
+                                                                             
+</figure>
+</div>
+<figure class='figure'> 
+
+                                                                             
+                                                                             
+<a id='x1-60052'></a>
+                                                                             
+                                                                             
+<figcaption class='caption'><span class='id'>Figure 2:</span><span class='content'>Distribution of MPC’s Across Households, Life Cycle Model</span></figcaption><!-- tex4ht:label?: x1-60052  -->
+<div class='center'>
+<!-- l. 847 --><p class='noindent'>
+</p><!-- l. 848 --><p class='noindent'><img height='90' src='../Figures/MPCdistributionLifeCyclePlot.png' alt='PIC' width='90' /></p></div>
+                                                                             
+                                                                             
+</figure>
+<!-- l. 852 --><p class='indent'>Across all households, the aggregate (annual) marginal propensity
+to consume in both the <span class='cmmi-12'>β</span>-Point (0.08) and <span class='cmmi-12'>β</span>-Dist (0.29) models is
+extremely similar to the corresponding averages in the inﬁnite horizon
+model.<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness13.html#fn12x0'><sup class='textsuperscript'>12</sup></a></span><a id='x1-6006f12'></a>   Table <a href='#x1-60042'>2<!-- tex4ht:ref: table:MPCallLifeCycle  --></a> presents average
+MPCs for subpopulations.<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness14.html#fn13x0'><sup class='textsuperscript'>13</sup></a></span><a id='x1-6007f13'></a>  
+The relationship between wealth-to-permanent income and the MPC is nearly
+identical to the pattern in the inﬁnite horizon case, with the MPC slowly rising
+with lower incomes among the wealthier half of the population, and spiking
+rapidly among the bottom half. However, the gradient of income to MPC
+is much shallower in the ﬁnite horizon model, with the wealthiest 1% of
+households’ MPC only 20% less than the poorest half, rather than 50% less in the
+benchmark model. This is likely due to confounding eﬀects from life cycle
+dynamics: income poor households in the overlapping generations model
+are made up of both the young (who have not had time to accumulate
+income growth) and the retired (whose cohorts began with lower initial
+permanent income and have experienced the large negative wage growth from
+retirement).
+</p><!-- l. 855 --><p class='indent'>While the ratio of wealth to permanent income is a very strong determinant of the
+marginal propensity to consume in our model, the wide distribution of household
+incomes allows for even wealthy households to have high MPCs. Conﬁrming a
+similar exercise in the benchmark model, we again ﬁnd that among the one third of
+households with the highest MPCs, 50% are in the lowest wealth quintile, 32% are in
+the second wealth quintile, and 15% are in the middle wealth quintile. Even in a
+life cycle model in which wealth is highly correlated with both age and
+the marginal propensity to consume, there is still a signiﬁcant fraction of
+“wealthy hand-to-mouth” households as found in <a href='#XkaplanViolanteWeidner_wealthyH2M'>Violante, Kaplan, and
+Weidner</a> (<a href='#XkaplanViolanteWeidner_wealthyH2M'>2014</a>).
+</p><!-- l. 857 --><p class='indent'>Figure <a href='#x1-60083'>3<!-- tex4ht:ref: fig:MPCbyAge  --></a> presents the aggregate marginal propensity to consume by age for the
+entire population, as well as for the most patient and least patient types in
+the <span class='cmmi-12'>β</span>-Dist model. After an initial drop as households build up a minimum
+buﬀer stock, the life cycle proﬁle of the MPC takes an inverted U-shape for
+most <span class='cmmi-12'>β </span>types: rising during the rapid income growth ages of 30–50 before
+falling as households anticipate their retirement and seek to retain assets to
+                                                                             
+                                                                             
+consume in old age. Post retirement, the MPC steadily grows as agents
+experience an ever increasing mortality risk. The most impatient households,
+with a quarterly discount factor of about <span class='cmmi-12'>β </span><span class='cmr-12'>= 0</span><span class='cmmi-12'>.</span><span class='cmr-12'>9384</span>, have a signiﬁcantly
+higher MPC throughout life as they disfavor saving—they begin saving
+for retirement less than ten years prior, and quickly deplete their assets if
+they live beyond age 75 (as evidenced by MPCs approaching 1 at these
+ages). In contrast, the most patient households show an increasing marginal
+propensity to consume for their entire lives, though beginning from very low
+levels.
+</p>
+<figure class='figure'> 
+
+                                                                             
+                                                                             
+<a id='x1-60083'></a>
+                                                                             
+                                                                             
+<figcaption class='caption'><span class='id'>Figure 3:</span><span class='content'>Aggregate Marginal Propensity to Consume by Age</span></figcaption><!-- tex4ht:label?: x1-60083  -->
+<div class='center'>
+<!-- l. 862 --><p class='noindent'>
+</p><!-- l. 863 --><p class='noindent'><img height='90' src='../Figures/MPCbyAgeFigure.png' alt='PIC' width='90' /></p></div>
+                                                                             
+                                                                             
+</figure>
+<h4 class='subsectionHead'><span class='titlemark'>1.6  </span> <a id='x1-70001.6'></a>Distribution of Bequests</h4>
+<!-- l. 869 --><p class='noindent'>The assumption that the assets of the newly deceased are fully taxed away can be
+relaxed without disturbing our main results. In the following analyses, we instead
+assume that these estates are distributed randomly among the population as
+bequests to other households. Under a wide range of parameters governing
+preferences over bequests, both the overall aggregate marginal propensity to
+consume and its decompositions by wealth and income are little changed from the
+original speciﬁcation.
+</p><!-- l. 871 --><p class='indent'>When a household dies at the beginning of time <span class='cmmi-12'>t</span>, it receives a one time utility
+ﬂow<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness15.html#fn14x0'><sup class='textsuperscript'>14</sup></a></span><a id='x1-7001f14'></a>  
+of:
+</p>
+<table class='equation-star'><tr><td>
+<center class='math-display'>
+<img class='math-display' alt='  1− ρ         (kt +-γ)1−ν
+ppp t  &#x60;u(kt) = α   1 − ν   .
+' src='onlineAppendix_LCM_robustness38x.svg' /></center></td></tr></table>
+<!-- l. 874 --><p class='nopar'>
+This form combines the approaches of <a href='#XCagetti'>Cagetti</a> (<a href='#XCagetti'>2003</a>) and <a href='#XWhyDoRichSave'>Carroll</a> (<a href='#XWhyDoRichSave'>2000</a>) for
+maximum ﬂexibility: the factor <span class='cmmi-12'>α </span>controls the absolute magnitude of the bequest
+motive,<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness16.html#fn15x0'><sup class='textsuperscript'>15</sup></a></span><a id='x1-7002f15'></a>  
+the shifter <span class='cmmi-12'>γ </span>allows the bequest motive to be completely inactive for lower wealth
+households, and the curvature parameter <span class='cmmi-12'>ν </span>determines the extent to which
+bequests are a luxury good (through the ratio <span class='cmmi-12'>ρ∕ν</span>). More complete discussion
+of the parametrization can be found in the respective sources. With the
+bequest motive, the household’s consumption Euler equation can be updated
+to:
+</p>
+                                                                             
+                                                                             
+<table class='equation-star'><tr><td>
+<center class='math-display'>
+<img class='math-display' alt=' −ρ                 [         − ρ]               −ν
+ct =  (ℸ + r)β(//D 𝔼t  (ψt+1ct+1 )   + D α(kt+1 + γ)  ) s.t. (1)–(4).
+' src='onlineAppendix_LCM_robustness39x.svg' /></center></td></tr></table>
+<!-- l. 878 --><p class='nopar'>
+The household’s problem can be solved by backward induction as before.
+</p><!-- l. 881 --><p class='indent'>As before, the model economy is simulated using a large number of population
+masses, with each period of a household’s life interpreted as the current state of a
+similar household born in an earlier cohort. Population masses do not “die” during
+the simulation—they are not discontinued subject to a mortality shock—but
+rather merely dwindle in population weight as the probability of death
+accumulates (i.e. the mass represents a smaller collection of similar households).
+Each age of each simulated mass is assigned a random mass-age (weighting
+by population mass size) as the beneﬁciary of bequests given at the end
+of that period. If mass <span class='cmmi-12'>i </span>at age <span class='cmmi-12'>s </span>is assigned to bequest to mass <span class='cmmi-12'>j </span>at age
+<span class='cmmi-12'>n</span>, then the ratio of the bequest to mass <span class='cmmi-12'>j</span>’s permanent income at age <span class='cmmi-12'>n</span>
+is:
+</p>
+<table class='equation'><tr><td><a id='x1-7003r8'></a>
+<center class='math-display'>
+<img class='math-display' alt='           ∏
+      𝜃ipppi0   st=0 (//Ditψit)                 s−n
+bis = -p---∏n----------((1 + N )(1 + Γ ))  kis.
+      𝜃jppj0   t=0 (//Djtψjt)
+' src='onlineAppendix_LCM_robustness40x.svg' /></center></td><td class='equation-label'>(8)</td></tr></table>
+<!-- l. 884 --><p class='nopar'>
+A household might receive multiple bequests at a single age (not uncommon at
+earlier ages, when population weights are relatively high), or receive none at all.
+Bequests are received as a second transitory shock to income, but households do not
+anticipate this possibility and thus do not account for it in their maximization
+problem.
+                                                                             
+                                                                             
+</p><!-- l. 887 --><p class='indent'>As our procedure simulates all population masses simultaneously, the bequest that
+should be received by a household might be unknown when that age is reached, as it
+is coming from a population mass at a later age that has not yet been simulated. To
+ensure a consistent economy in which the bequests received equal the bequests
+actually given, we take an iterative approach and estimate the model several
+times, updating bequests between estimations. To estimate the extended
+model, we ﬁrst set all bequests received to zero and then use the following
+procedure:<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness17.html#fn16x0'><sup class='textsuperscript'>16</sup></a></span><a id='x1-7004f16'></a>  
+  </p><ol class='enumerate1'>
+  <li class='enumerate' id='x1-7006x1'>Estimate the model assuming the current set of bequests.
+  </li>
+  <li class='enumerate' id='x1-7008x2'>Using the simulated values of <span class='cmmi-12'>k</span><sub><span class='cmmi-8'>is</span></sub> at the estimated parameters, update the
+  bequests given by each mass-age using (<a href='#x1-7003r8'>8<!-- tex4ht:ref: eq:Bequest  --></a>), then sum bequests received
+  by each mass-age.
+  </li>
+  <li class='enumerate' id='x1-7010x3'>Simulate  the  model  at  the  estimated  parameters  and  current  set  of
+  bequests. Return to step 1 if bequests have not converged to consistent
+  levels.
+  </li>
+  <li class='enumerate' id='x1-7012x4'>If  the  new  parameter  estimates  are  suﬃciently  close  to  the  previous
+  estimates (if any), stop; else return to step 1.</li></ol>
+<!-- l. 898 --><p class='indent'>We estimate the model at several sets of bequest motive
+parameters,<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness18.html#fn17x0'><sup class='textsuperscript'>17</sup></a></span><a id='x1-7013f17'></a>  
+matching simulated to empirical distributions of both net worth and liquid ﬁnancial
+plus retirement assets; the results are reported in additional columns of Table <a href='#x1-60042'>2<!-- tex4ht:ref: table:MPCallLifeCycle  --></a>.
+First, we estimate a speciﬁcation in which wealth is distributed to survivors, but
+households attain no utility from providing these bequests: <span class='cmmi-12'>α </span>is set to zero,
+suppressing the bequest motive. Next, we set <span class='cmmi-12'>α </span><span class='cmr-12'>= 1</span>, <span class='cmmi-12'>ν </span><span class='cmr-12'>= </span><span class='cmmi-12'>ρ</span>, and <span class='cmmi-12'>γ </span><span class='cmr-12'>= 0 </span>as simple
+choices for a standard bequest motive. Finally, we test “extreme” alternatives by
+                                                                             
+                                                                             
+turning the scale of the bequest motive very high (<span class='cmmi-12'>α </span><span class='cmr-12'>= 9</span>, <span class='cmmi-12'>ν </span><span class='cmr-12'>= </span><span class='cmmi-12'>ρ</span>, <span class='cmmi-12'>γ </span><span class='cmr-12'>= 0</span>) and by
+specifying bequests as a strong luxury good (<span class='cmmi-12'>α </span><span class='cmr-12'>= 1</span>, <span class='cmmi-12'>ν </span><span class='cmr-12'>= </span><span class='cmmi-12'>ρ∕</span><span class='cmr-12'>2</span>, <span class='cmmi-12'>γ </span><span class='cmr-12'>= 4</span>); results of these
+alternatives are not presented due to space considerations, but are available by
+request.
+</p><!-- l. 901 --><p class='indent'>As seen in the latter columns of Table <a href='#x1-60042'>2<!-- tex4ht:ref: table:MPCallLifeCycle  --></a>, the distribution of the marginal
+propensity to consume in the simulated population is substantially similar whether
+the assets of the dead are taxed or distributed as bequests, or whether households
+receive any utility beneﬁt from bequeathed wealth, with only small diﬀerences.
+Notably, the presence of bequests pushes the estimation to ﬁnd both a lower
+median discount factor <span class='accentgrave'><span class='cmmi-12'>β</span></span> (0.9775 vs. 0.9709 in the case of net worth) and a
+wider interval <span class='cmsy-10x-x-120'>∇ </span>(0.0391 vs. 0.0483). The bottom half of households in the
+SCF 2004 data hold a very small share of wealth, but in the simulated
+economy even the poorest households will occasionally receive a substantial
+bequest. This tends to boost the share of wealth held by the poorest 20% and
+40% above the empirical value, requiring the range of <span class='cmmi-12'>β </span>to reach lower for
+the most impatient households to hold suﬃciently low assets to oﬀset this
+eﬀect.
+</p><!-- l. 903 --><p class='indent'>The variation in average MPC by income is considerably smaller in the presence of
+bequests, and is almost perfectly ﬂat in some cases. If a household has received a
+non-trivial bequest in recent periods, it is less apt to have its consumption habits
+aﬀected by transitory shocks to income. More strongly, the random distribution
+mechanism for bequests greatly weakens the link between income and assets, as
+income poor households are equally likely to receive large bequests (and when
+they do, the bequest will be larger relative to their permanent income). As
+the household’s consumption problem is homothetic in permanent income,
+this weakened relationship reduces the predictive power of income on the
+MPC.
+</p><!-- l. 905 --><p class='indent'>We report the results of only the “simple” parameters of the bequest motive in
+Table <a href='#x1-60042'>2<!-- tex4ht:ref: table:MPCallLifeCycle  --></a>, omitting the more extreme variants. Just as the distribution of the marginal
+propensity to consume varies little between the “no bequest motive” and “with
+bequest motive” speciﬁcations, there is essentially no diﬀerence in the MPC as the
+parameters are shifted about; estimates of the range of discount factors are barely
+aﬀected. In short, our key point—that the inclusion of an income process with
+both permanent and transitory shocks allows a dynamic model to better
+match microeconomic evidence on the aggregate marginal propensity to
+consume—relies on neither the inﬁnite horizon assumptions,the speciﬁcation of
+macroeconomic shocks, nor on the particular treatment of bequests. With a
+realistic income process and suﬃcient discount factor heterogeneity to match
+the empirical distribution of wealth, our results are robust to structural
+assumptions.
+</p>
+                                                                             
+                                                                             
+<h3 class='sectionHead'><span class='titlemark'>2  </span> <a id='x1-80002'></a>Diﬀerences Between <span class='cmmi-12'>β</span>-Dist and KS-Hetero Models</h3>
+<!-- l. 911 --><p class='noindent'>This section clariﬁes the channels underlying the diﬀerences in MPCs between our
+preferred model (<span class='cmmi-12'>β</span>-Dist) and the KS-Hetero model: While in our model the
+aggregate MPC is quite high, 0.21 (when calibrated to the net worth distribution),
+in the KS-Hetero model the aggregate MPC is only 0.09.
+</p><!-- l. 913 --><p class='indent'>We address two points:
+  </p><ol class='enumerate1'>
+  <li class='enumerate' id='x1-8002x1'>We analyze in more detail how sensitive the aggregate MPC is to shutting
+  down the permanent (<span class='cmmi-12'>ψ</span>) and transitory (<span class='cmmi-12'>𝜃</span>) income shocks.
+  </li>
+  <li class='enumerate' id='x1-8004x2'>We investigate the assumption of the uniform distribution we impose
+  on the discount factor <span class='cmmi-12'>β</span>, and quantify to what extent the assumption
+  drives the results relative to allowing for the permanent–transitory (FBS)
+  income process.</li></ol>
+<!-- l. 919 --><p class='indent'>To address these points, we estimated additional speciﬁcations, which are
+summarized in Table <a href='#x1-100023'>3<!-- tex4ht:ref: tAltSpec  --></a>. Speciﬁcations 1–8 turn oﬀ the permanent and transitory
+income shocks, and the borrowing constraint; speciﬁcations 9–12 assume that <span class='cmmi-12'>β </span>is
+log-normally distributed (rather than uniformly).
+</p><!-- l. 921 --><p class='indent'>To preview our results, we ﬁnd that turning oﬀ transitory shocks does not
+noticeably aﬀect the MPC. Turning oﬀ the permanent shocks <span class='ecti-1200'>and </span>allowing for
+borrowing reduces the aggregate MPC from 0.21 to 0.14, each of these two
+items contributing roughly the same to the decline, compared with the
+KS-Hetero value of 0.09. Finally, assuming a log-normal distribution for <span class='cmmi-12'>β </span>does
+not aﬀect the results on MPC much (compared to the baseline, uniform
+distribution).
+
+</p><!-- l. 924 --><p class='noindent'>
+</p>
+<h4 class='subsectionHead'><span class='titlemark'>2.1  </span> <a id='x1-90002.1'></a>The FBS Income Process—A Summary </h4>
+<!-- l. 925 --><p class='noindent'>The FBS household income process <img class='mathpalette' alt='y
+yy' src='onlineAppendix_LCM_robustness41x.svg' /> includes the permanent component <span class='cmmi-12'>ψ </span>and the
+transitory shock <span class='cmmi-12'>ξ</span><sub><span class='cmmi-8'>t</span></sub>: </p><div class='eqnarray'>
+<center class='math-display'>
+<img class='math-display' alt='yyyt  =  ptξtWt.
+                                                                             
+                                                                             
+' src='onlineAppendix_LCM_robustness42x.svg' /><a id='x1-9001r9'></a></center>
+</div>The permanent component follows a geometric random walk: <div class='eqnarray'>
+<center class='math-display'>
+<img class='math-display' alt='pt  =  pt−1ψt,                            (9)
+' src='onlineAppendix_LCM_robustness43x.svg' /><a id='x1-9002r9'></a></center>
+</div>where <p><span class='cmmi-12'>ψ </span></p>denotes the white noise permanent shock to income. The transitory
+component is: <div class='eqnarray'>
+<center class='math-display'>
+<img class='math-display' alt='ξt  =  μ  with probability ℧t,                          (10)
+    =  (1 − τ )ℓ𝜃 with probability 1 − ℧ ,             (11)
+             t   t                      t
+' src='onlineAppendix_LCM_robustness44x.svg' /><a id='x1-9003r10'></a><a id='x1-9003r11'></a></center>
+</div>where <p><span class='cmmi-12'>μ &gt; </span></p><p><span class='cmr-12'>0 </span></p>is the unemployment insurance payment when unemployed, <p><span class='cmmi-12'>τ</span></p><p><sub><span class='cmmi-8'>t</span></sub></p> is the
+rate of tax collected to pay unemployment beneﬁts, <p><span class='cmmi-12'>ℓ </span></p>is time worked per employee
+and <p><span class='cmmi-12'>𝜃</span></p><p><sub><span class='cmmi-8'>t</span></sub></p> is white noise.
+
+<!-- l. 944 --><p class='noindent'>
+</p>
+<h4 class='subsectionHead'><span class='titlemark'>2.2  </span> <a id='x1-100002.2'></a>Alternative Speciﬁcations—Table 1 </h4>
+<!-- l. 946 --><p class='noindent'>Table <a href='#x1-100023'>3<!-- tex4ht:ref: tAltSpec  --></a> considers the implications of switching oﬀ the permanent component <span class='cmmi-12'>ψ</span>, the
+transitory component <span class='cmmi-12'>𝜃 </span>and of the borrowing constraint:
+</p>
+                                                                             
+                                                                             
+<center class='math-display'>
+<img class='math-display' alt='a ≥  0.
+ t  ' src='onlineAppendix_LCM_robustness45x.svg' /></center>
+Speciﬁcations 4 and 8 turn oﬀ both permanent and transitory income shocks, but
+keep the unemployment shock <p><span class='lasy-10x-x-120'>℧</span></p><p><sub><span class='cmmi-8'>t</span></sub></p> on; this replicates the idiosyncratic income
+process used in the KS-Hetero model (other than the dependence of <p><span class='lasy-10x-x-120'>℧</span></p><p><sub><span class='cmmi-8'>t</span></sub></p> on the
+macroeconomic state).
+  <ul class='itemize1'>
+  <li class='itemize'>Speciﬁcation 1 is the baseline FBS <span class='cmmi-12'>β</span>-Dist model reproduced from column
+  6 of Table 3 in the paper, with the aggregate MPC of 0.21.
+  </li>
+  <li class='itemize'>Speciﬁcation 2 conﬁrms the referee’s point that the MPC has very little
+  sensitivity to shutting down the transitory shock <span class='cmmi-12'>𝜃</span>.
+  </li>
+  <li class='itemize'>Under  speciﬁcation  3,  when  the  permanent  shock  is  turned  oﬀ,  the
+  aggregate MPC declines to 0.18. The ﬁt of the model worsens, as the
+  Lorenz distance roughly doubles (compared to the baseline).
+  <!-- l. 958 --><p class='noindent'>When transitory and in particular permanent shocks are turned oﬀ the
+  width of the band for the discount rate <span class='cmsy-10x-x-120'>∇ </span>is smaller. When risk is higher
+  (particularly permanent risk), households want to hold more wealth, so
+  we need to stretch to lower discount factors to get them to hold very
+  little wealth and match the data. Extra risk has little eﬀect on the wealth
+  holdings of the patient, so the top end of band for <span class='cmmi-12'>β </span>does not move.
+  </p></li>
+  <li class='itemize'>Speciﬁcation 4 turns oﬀ both permanent (<span class='cmmi-12'>ψ</span>) and transitory (<span class='cmmi-12'>𝜃</span>) shocks.
+  The implications are similar to those of speciﬁcation 3.
+  </li>
+  <li class='itemize'>Speciﬁcation 5 assumes the baseline FBS income process but allows for
+  borrowing by easing the constraint <span class='cmmi-12'>a</span><sub><span class='cmmi-8'>t</span></sub> <span class='cmsy-10x-x-120'>≥ </span><span class='cmr-12'>0 </span>to <span class='cmmi-12'>a</span><sub><span class='cmmi-8'>t</span></sub> <span class='cmsy-10x-x-120'>≥ −</span><span class='cmr-12'>2</span>. Assets are thus
+  allowed to be negative as long as they do not decline below <span class='cmsy-10x-x-120'>−</span><span class='cmr-12'>2 </span>times
+  quarterly permanent income, which is the same extent as in the KS-Hetero
+  model. This results in a decline of aggregate MPC from 0.21 to 0.18. The
+  width <span class='cmsy-10x-x-120'>∇ </span>reduces somewhat and the ﬁt of the model improves.
+  </li>
+  <li class='itemize'>Speciﬁcations 6, 7 and 8 investigate <span class='ecti-1200'>the interactions between borrowing
+  </span><span class='ecti-1200'>and income risk</span>. If households can borrow, they need to be a bit more
+  patient on the whole to ﬁt the aggregate capital–income target, so they
+  are operating a bit higher on their consumption function, where MPC is
+                                                                             
+                                                                             
+  lower (speciﬁcation 5). In the presence of permanent income risk, a good
+  fraction of them are still on the highly curved portion of the consumption
+  function (which is larger when there is lots of risk), so the MPC is only
+  somewhat lowered. Conversely, when borrowing is not allowed and there is
+  no permanent income risk (speciﬁcations 3–4), the consumption function
+  ﬂattens out quickly, but matching the distribution of wealth means some
+  agents are operating very close to the constraint, so even transitory risk is
+  induces precautionary behavior and the MPC again stays relatively high.
+  When <span class='ecti-1200'>borrowing is allowed and there is no permanent risk </span>(speciﬁcations
+  7 and 8), the consumption function becomes ﬂat very quickly and agents
+  are operating above the curved portion, resulting in an appreciably lower
+  MPC.
+  <!-- l. 964 --><p class='noindent'>The  MPC  in  speciﬁcation  6  (borrowing  and  no  transitory  risk)  is
+  essentially the same as in speciﬁcation 5 (borrowing and transitory risk).</p></li></ul>
+<!-- l. 967 --><p class='indent'>Speciﬁcation 8 is closest to the KS-Hetero model both in its structure (simple
+idiosyncratic income process and with borrowing) and its estimate of the aggregate
+MPC (0.14 vs 0.09). The remaining diﬀerences between speciﬁcation 8 and
+KS-Hetero are the speciﬁcation of aggregate shocks and the nature of <span class='cmmi-12'>β</span>
+heterogeneity. As Table 3 in our paper shows that the MPC is similar under the FBS
+or KS aggregate process (0.21 vs 0.23), we believe the residual diﬀerence in MPCs is
+mostly or entirely accounted for by the vastly diﬀerent assumptions about the
+distribution of <span class='cmmi-12'>β</span>. Note that the lowest, middle, and highest discrete values of <span class='cmmi-12'>β </span>in
+speciﬁcation 8 <span class='cmr-12'>(0</span><span class='cmmi-12'>.</span><span class='cmr-12'>9869</span><span class='cmmi-12'>, </span><span class='cmr-12'>0</span><span class='cmmi-12'>.</span><span class='cmr-12'>9901</span><span class='cmmi-12'>, </span><span class='cmr-12'>0</span><span class='cmmi-12'>.</span><span class='cmr-12'>9933) </span>are <span class='ecti-1200'>very </span>close to the three KS <span class='cmmi-12'>β </span>values
+<span class='cmr-12'>(0</span><span class='cmmi-12'>.</span><span class='cmr-12'>9858</span><span class='cmmi-12'>, </span><span class='cmr-12'>0</span><span class='cmmi-12'>.</span><span class='cmr-12'>9894</span><span class='cmmi-12'>, </span><span class='cmr-12'>0</span><span class='cmmi-12'>.</span><span class='cmr-12'>9930)</span>. However, in speciﬁcation 8 about 29% (or 2/7) of simulated
+agents have an intermediate <span class='cmmi-12'>β </span>between the lowest and central types; the
+corresponding percentiles of <span class='cmmi-12'>β </span>in the KS-Hetero model (as well as the 4% below
+that) all have <span class='cmmi-12'>β </span><span class='cmr-12'>= 0</span><span class='cmmi-12'>.</span><span class='cmr-12'>9894</span>. As the average MPC is convex in <span class='cmmi-12'>β</span>, this relative
+dispersion of the central mass results in an increased MPC in speciﬁcation 8 relative
+to KS-Hetero.
+</p><!-- l. 969 --><p class='indent'>To further explore how the structure of <span class='cmmi-12'>β </span>heterogeneity aﬀects the aggregate MPC,
+speciﬁcations 9–12 assume that <span class='cmmi-12'>β </span>has a <span class='ecti-1200'>truncated log-normal </span>distribution (rather than
+uniform).<span class='footnote-mark'><a href='onlineAppendix_LCM_robustness19.html#fn18x0'><sup class='textsuperscript'>18</sup></a></span><a id='x1-10001f18'></a>  
+Qualitatively, having a log-normal distribution of <span class='cmmi-12'>β </span>generates roughly the same
+estimated results as a uniform distribution, but with a slightly lower MPC. The
+log-normal distribution is more centrally concentrated than the uniform
+distribution, but not as concentrated as the 10–80–10 assumption in KS-Hetero;
+thus the average MPC is lower than in the uniform speciﬁcations but still
+higher than KS-Hetero. For speciﬁcations 9–11, the log-normal model has a
+somewhat lower ﬁt in terms of the Lorenz distance than corresponding the
+uniform models (speciﬁcations 1–3), while speciﬁcation 12 (which allows for
+                                                                             
+                                                                             
+borrowing) implies an even better ﬁt than the respective uniform speciﬁcation
+(5).
+</p><!-- l. 971 --><p class='indent'>To summarize, turning oﬀ the permanent shocks and allowing for borrowing
+reduces the aggregate MPC from 0.21 to 0.18 each. Both features together reduce
+the aggregate MPC from 0.21 to 0.14 (compared with the KS-Hetero value of 0.09).
+Likewise, assuming log-normal <span class='cmmi-12'>β </span>also reduces the aggregate MPC by about 0.02.
+In contrast, turning oﬀ transitory shocks does not noticeably aﬀect the
+MPC.
+</p>
+<div class='table'>
+                                                                             
+                                                                             
+<!-- l. 3 --><p class='indent'><a id='x1-100023'></a></p><figure class='float'>
+                                                                             
+                                                                             
+<figcaption class='caption'><span class='id'>Table 3:</span><span class='content'>Marginal Propensity to Consume, Alternative Speciﬁcations </span></figcaption><!-- tex4ht:label?: x1-100023  -->
+<div class='tabular'>
+ <table class='tabular' id='TBL-3' cellspacing='0' cellpadding='0'><colgroup id='TBL-3-1g'><col id='TBL-3-1' /><col id='TBL-3-2' /><col id='TBL-3-3' /><col id='TBL-3-4' /><col id='TBL-3-5' /><col id='TBL-3-6' /><col id='TBL-3-7' /><col id='TBL-3-8' /><col id='TBL-3-9' /><col id='TBL-3-10' /><col id='TBL-3-11' /><col id='TBL-3-12' /><col id='TBL-3-13' /></colgroup><tr id='TBL-3-1-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-1-1'>                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-1-2'> Baseline  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-1-3' colspan='3'></td>          <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Alternative Income Shocks &amp; Borrowing Constraint</div>           <td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-1-10' colspan='3'></td>     <div class='multicolumn' style='white-space:nowrap; text-align:center;'>Alternative Distribution of <span class='cmmi-12'>β</span></div>
+</tr><tr id='TBL-3-2-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-2-1' colspan='2'>                                   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-2-3' colspan='3'></td><span class='cmidrule'><!--  enable post-processing of cmidrule --></span></tr><tr id='TBL-3-3-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-3-1' colspan='3'></td>                                                                          <td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-3-10' colspan='3'></td><span class='cmidrule'><!--  enable post-processing of cmidrule --></span>
+</tr><tr id='TBL-3-4-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-4-1'> Speciﬁcation           </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-4-2'>   (1)     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-4-3'>  (2)    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-4-4'>  (3)    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-4-5'>  (4)    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-4-6'>  (5)    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-4-7'>  (6)    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-4-8'>  (7)    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-4-9'>  (8)    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-4-10'>  (9)    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-4-11'>  (10)   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-4-12'>  (11)   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-4-13'>  (12)   </td>
+</tr><tr id='TBL-3-5-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-5-1'> Perm shocks <span class='cmmi-12'>ψ</span>?       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-5-2'>    Y      </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-5-3'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-5-4'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-5-5'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-5-6'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-5-7'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-5-8'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-5-9'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-5-10'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-5-11'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-5-12'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-5-13'>   Y     </td>
+</tr><tr id='TBL-3-6-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-6-1'> Trans shocks <span class='cmmi-12'>𝜃</span>?       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-6-2'>    Y      </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-6-3'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-6-4'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-6-5'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-6-6'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-6-7'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-6-8'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-6-9'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-6-10'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-6-11'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-6-12'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-6-13'>   Y     </td></tr><tr id='TBL-3-7-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-7-1'> Borrowing <span class='cmmi-12'>a</span><sub>
+<span class='cmmi-8'>t</span></sub> <span class='cmsy-10x-x-120'>≥−</span><span class='cmr-12'>2</span>?  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-7-2'>    N      </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-7-3'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-7-4'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-7-5'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-7-6'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-7-7'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-7-8'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-7-9'>   Y     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-7-10'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-7-11'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-7-12'>   N     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-7-13'>   Y     </td>
+</tr><tr id='TBL-3-8-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-8-1'> <span class='cmmi-12'>β </span>Distribution<sup><span class='cmsy-8'>†</span></sup>     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-8-2'>    U      </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-8-3'>   U     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-8-4'>   U     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-8-5'>   U     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-8-6'>   U     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-8-7'>   U     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-8-8'>   U     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-8-9'>   U     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-8-10'>   L     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-8-11'>   L     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-8-12'>   L     </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-8-13'>   L     </td>
+</tr><tr id='TBL-3-9-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-9-1'> Overall Average       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-9-2'>   0.21    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-9-3'>  0.21   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-9-4'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-9-5'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-9-6'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-9-7'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-9-8'>  0.14   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-9-9'>  0.14   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-9-10'>  0.19   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-9-11'>  0.19   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-9-12'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-9-13'>  0.16   </td>
+</tr><tr id='TBL-3-10-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-10-1' colspan='3'></td> <div class='multicolumn' style='white-space:nowrap; text-align:left;'>By wealth–permanent income ratio </div>
+</tr><tr id='TBL-3-11-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-11-1'> Top 1%                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-11-2'>   0.06    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-11-3'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-11-4'>  0.05   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-11-5'>  0.05   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-11-6'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-11-7'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-11-8'>  0.05   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-11-9'>  0.05   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-11-10'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-11-11'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-11-12'>  0.05   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-11-13'>  0.06   </td>
+</tr><tr id='TBL-3-12-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-12-1'> Top 10%                </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-12-2'>   0.06    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-12-3'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-12-4'>  0.05   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-12-5'>  0.05   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-12-6'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-12-7'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-12-8'>  0.05   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-12-9'>  0.05   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-12-10'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-12-11'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-12-12'>  0.05   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-12-13'>  0.06   </td>
+</tr><tr id='TBL-3-13-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-13-1'> Top 20%                </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-13-2'>   0.06    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-13-3'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-13-4'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-13-5'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-13-6'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-13-7'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-13-8'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-13-9'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-13-10'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-13-11'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-13-12'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-13-13'>  0.07   </td>
+</tr><tr id='TBL-3-14-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-14-1'> Top 20–40%            </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-14-2'>   0.08    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-14-3'>  0.08   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-14-4'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-14-5'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-14-6'>  0.08   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-14-7'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-14-8'>  0.07   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-14-9'>  0.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-14-10'>  0.08   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-14-11'>  0.08   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-14-12'>  0.08   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-14-13'>  0.08   </td>
+</tr><tr id='TBL-3-15-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-15-1'> Top 40–60%            </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-15-2'>   0.15    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-15-3'>  0.14   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-15-4'>  0.13   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-15-5'>  0.13   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-15-6'>  0.11   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-15-7'>  0.11   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-15-8'>  0.11   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-15-9'>  0.10   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-15-10'>  0.13   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-15-11'>  0.12   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-15-12'>  0.12   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-15-13'>  0.11   </td>
+</tr><tr id='TBL-3-16-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-16-1'> Top 60–80%            </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-16-2'>   0.27    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-16-3'>  0.28   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-16-4'>  0.21   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-16-5'>  0.22   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-16-6'>  0.21   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-16-7'>  0.22   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-16-8'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-16-9'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-16-10'>  0.23   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-16-11'>  0.23   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-16-12'>  0.20   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-16-13'>  0.19   </td>
+</tr><tr id='TBL-3-17-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-17-1'> Bottom 20%           </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-17-2'>   0.50    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-17-3'>  0.49   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-17-4'>  0.43   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-17-5'>  0.42   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-17-6'>  0.41   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-17-7'>  0.40   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-17-8'>  0.33   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-17-9'>  0.32   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-17-10'>  0.47   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-17-11'>  0.46   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-17-12'>  0.41   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-17-13'>  0.38   </td>
+</tr><tr id='TBL-3-18-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-18-1' colspan='3'></td> <div class='multicolumn' style='white-space:nowrap; text-align:left;'>By income </div>
+</tr><tr id='TBL-3-19-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-19-1'> Top 1%                  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-19-2'>   0.19    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-19-3'>  0.19   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-19-4'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-19-5'>  0.20   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-19-6'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-19-7'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-19-8'>  0.13   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-19-9'>  0.15   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-19-10'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-19-11'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-19-12'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-19-13'>  0.15   </td>
+</tr><tr id='TBL-3-20-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-20-1'> Top 10%                </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-20-2'>   0.19    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-20-3'>  0.20   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-20-4'>  0.15   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-20-5'>  0.19   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-20-6'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-20-7'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-20-8'>  0.13   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-20-9'>  0.14   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-20-10'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-20-11'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-20-12'>  0.15   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-20-13'>  0.15   </td>
+</tr><tr id='TBL-3-21-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-21-1'> Top 20%                </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-21-2'>   0.20    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-21-3'>  0.20   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-21-4'>  0.15   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-21-5'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-21-6'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-21-7'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-21-8'>  0.12   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-21-9'>  0.14   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-21-10'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-21-11'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-21-12'>  0.14   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-21-13'>  0.15   </td>
+</tr><tr id='TBL-3-22-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-22-1'> Top 20–40%            </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-22-2'>   0.22    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-22-3'>  0.23   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-22-4'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-22-5'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-22-6'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-22-7'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-22-8'>  0.13   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-22-9'>  0.14   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-22-10'>  0.20   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-22-11'>  0.22   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-22-12'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-22-13'>  0.16   </td>
+</tr><tr id='TBL-3-23-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-23-1'> Top 40–60%            </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-23-2'>   0.22    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-23-3'>  0.20   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-23-4'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-23-5'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-23-6'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-23-7'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-23-8'>  0.14   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-23-9'>  0.14   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-23-10'>  0.20   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-23-11'>  0.19   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-23-12'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-23-13'>  0.17   </td>
+</tr><tr id='TBL-3-24-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-24-1'> Top 60–80%            </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-24-2'>   0.19    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-24-3'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-24-4'>  0.19   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-24-5'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-24-6'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-24-7'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-24-8'>  0.15   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-24-9'>  0.13   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-24-10'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-24-11'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-24-12'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-24-13'>  0.15   </td>
+</tr><tr id='TBL-3-25-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-25-1'> Bottom 20%           </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-25-2'>   0.23    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-25-3'>  0.23   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-25-4'>  0.22   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-25-5'>  0.20   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-25-6'>  0.20   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-25-7'>  0.20   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-25-8'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-25-9'>  0.16   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-25-10'>  0.21   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-25-11'>  0.21   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-25-12'>  0.21   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-25-13'>  0.18   </td>
+</tr><tr id='TBL-3-26-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-26-1' colspan='3'></td> <div class='multicolumn' style='white-space:nowrap; text-align:left;'>By employment status </div>
+</tr><tr id='TBL-3-27-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-27-1'> Employed               </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-27-2'>   0.20    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-27-3'>  0.20   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-27-4'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-27-5'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-27-6'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-27-7'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-27-8'>  0.14   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-27-9'>  0.13   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-27-10'>  0.19   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-27-11'>  0.18   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-27-12'>  0.17   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-27-13'>  0.16   </td>
+</tr><tr id='TBL-3-28-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-28-1'> Unemployed            </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-28-2'>   0.33    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-28-3'>  0.34   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-28-4'>  0.29   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-28-5'>  0.29   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-28-6'>  0.27   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-28-7'>  0.27   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-28-8'>  0.22   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-28-9'>  0.23   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-28-10'>  0.30   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-28-11'>  0.31   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-28-12'>  0.27   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-28-13'>  0.24   </td>
+
+</tr><tr id='TBL-3-29-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-29-1' colspan='3'></td> <div class='multicolumn' style='white-space:nowrap; text-align:left;'>Estimated parameters<sup><span class='cmsy-8'>‡</span></sup> </div>
+</tr><tr id='TBL-3-30-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-30-1'> <span class='accentgrave'><span class='cmmi-12'>β</span></span>                      </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-30-2'>  0.9866   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-30-3'> 0.9869  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-30-4'> 0.9894  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-30-5'> 0.9897  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-30-6'> 0.9874  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-30-7'> 0.9877  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-30-8'> 0.9898  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-30-9'> 0.9901  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-30-10'> 0.9869  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-30-11'> 0.9873  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-30-12'> 0.9895  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-30-13'> 0.9877  </td>
+</tr><tr id='TBL-3-31-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-31-1'> <span class='cmsy-10x-x-120'>∇           </span></td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-31-2'>  0.0088   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-31-3'> 0.0083  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-31-4'> 0.0048  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-31-5'> 0.0043  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-31-6'> 0.0077  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-31-7'> 0.0073  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-31-8'> 0.0040  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-31-9'> 0.0037  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-31-10'> 0.0048  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-31-11'> 0.0046  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-31-12'> 0.0027  </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-31-13'> 0.0043  </td>
+</tr><tr id='TBL-3-32-' style='vertical-align:baseline;'><td class='td11' style='white-space:nowrap; text-align:left;' id='TBL-3-32-1'> Lorenz distance<sup><span class='cmmi-8'>⋆</span></sup>       </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-32-2'>   1.46    </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-32-3'>  1.34   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-32-4'>  2.93   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-32-5'>  2.59   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-32-6'>  0.88   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-32-7'>  1.19   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-32-8'>  1.36   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-32-9'>  1.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-32-10'>  2.06   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-32-11'>  1.79   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-32-12'>  3.47   </td><td class='td11' style='white-space:nowrap; text-align:center;' id='TBL-3-32-13'>  0.67   </td>
+
+</tr></table>
+</div><br class='newline' /><span class='ecrm-1000'>Notes: Annual MPC is calculated by </span><span class='cmr-10'>1 </span><span class='cmsy-10'>− </span><span class='cmr-10'>(1</span><span class='cmsy-10'>−</span><span class='ecrm-1000'>quarterly MPC</span><span class='cmr-10'>)</span><sup><span class='cmr-7'>4</span></sup><span class='ecrm-1000'>. The speciﬁcation of “Borrowing”
+</span><span class='ecrm-1000'>assumes alternatively: (i) No—</span><span class='cmmi-10'>a</span><sub><span class='cmmi-7'>t</span></sub> <span class='cmsy-10'>≥ </span><span class='cmr-10'>0</span><span class='ecrm-1000'>, (ii) Yes—</span><span class='cmmi-10'>a</span><sub><span class='cmmi-7'>t</span></sub> <span class='cmsy-10'>≥−</span><span class='cmr-10'>2</span><span class='ecrm-1000'>.</span> <sup><span class='cmsy-7'>†</span></sup><span class='ecrm-1000'>: U denotes a uniform distribution of </span><span class='cmmi-10'>β</span><span class='ecrm-1000'>,
+</span><span class='ecrm-1000'>and L denotes a (truncated) log-normal distribution.</span> <sup><span class='cmsy-7'>‡</span></sup><span class='ecrm-1000'>: Discount factors are uniformly distributed
+</span><span class='ecrm-1000'>over the interval </span><span class='cmr-10'>[</span><span class='accentgrave'><span class='cmmi-10'>β</span> </span><span class='cmsy-10'>−∇</span><span class='cmmi-10'>,</span><span class='accentgrave'><span class='cmmi-10'>β</span> </span><span class='cmr-10'>+ </span><span class='cmsy-10'>∇</span><span class='cmr-10'>]</span><span class='ecrm-1000'>. For the log-normal-</span><span class='cmmi-10'>β </span><span class='ecrm-1000'>speciﬁcation, the “center” </span><span class='accentgrave'><span class='cmmi-10'>β</span> </span><span class='ecrm-1000'>is the mean of
+</span><span class='ecrm-1000'>the distribution, while the “spread” </span><span class='cmsy-10'>∇ </span><span class='ecrm-1000'>is the log standard deviation.</span> <sup><span class='cmmi-7'>⋆</span></sup><span class='ecrm-1000'>: The Lorenz distance is
+</span><span class='ecrm-1000'>deﬁned as: </span><img class='' alt='m{βi,n∇}' src='onlineAppendix_LCM_robustness46x.svg' /><span class='bbig'><img class='left' src='onlineAppendix_LCM_robustness47x.svg' alt='(' align='middle' /></span><span class='cmex-10'>∑</span>
+   <sub><span class='cmmi-10'>i </span><span class='cmr-10'>= 20</span><span class='ecrm-1000'>, </span><span class='cmr-10'>40</span><span class='ecrm-1000'>, </span><span class='cmr-10'>60</span><span class='ecrm-1000'>, </span><span class='cmr-10'>80</span></sub><span class='big'><img class='left' src='onlineAppendix_LCM_robustness48x.svg' alt='(' align='middle' /></span><span class='cmmi-10'>w</span><sub><span class='cmmi-7'>i</span></sub><span class='cmr-10'>(</span><span class='cmmi-10'>β,</span><span class='cmsy-10'>∇</span><span class='cmr-10'>) </span><span class='cmsy-10'>−</span><span class='cmmi-10'>ω</span><sub><span class='cmmi-7'>i</span></sub><span class='big'><img class='left' src='onlineAppendix_LCM_robustness49x.svg' alt=')' align='middle' /></span><sup><span class='cmr-7'>2</span></sup><span class='bbig'><img class='left' src='onlineAppendix_LCM_robustness50x.svg' alt=')' align='middle' /></span><sup><span class='cmr-7'>1</span><span class='cmmi-7'>∕</span><span class='cmr-7'>2</span></sup><span class='ecrm-1000'>, where </span><span class='cmmi-10'>w</span><sub><span class='cmmi-7'>i</span></sub> <span class='ecrm-1000'>and </span><span class='cmmi-10'>ω</span><sub><span class='cmmi-7'>i</span></sub> <span class='ecrm-1000'>are the proportions
+</span><span class='ecrm-1000'>of total aggregate net worth held by the top </span><span class='cmmi-10'>i </span><span class='ecrm-1000'>percent in the model and in the data,
+</span><span class='ecrm-1000'>respectively.</span>
+                                                                             
+                                                                             
+</figure>
+</div>
+<h3 class='likesectionHead'><a id='x1-110002.2'></a><span class='ecrm-1095'>References</span></h3>
+<!-- l. 6 --><p class='noindent'>
+</p><div class='thebibliography'>
+<p class='bibitem'><span class='biblabel'>
+<a id='XBrownLiebmanPollet'></a><span class='bibsp'><span class='ecrm-1095'>   </span></span></span><span class='eccc1095-'><span class='small-caps'>Brown,  </span><span class='small-caps'>Jeffrey,  </span><span class='small-caps'>Jeffrey</span> <span class='small-caps'>B.  </span><span class='small-caps'>Liebman,  </span><span class='small-caps'>and  </span><span class='small-caps'>Joshua  </span><span class='small-caps'>Pollett</span>  </span><span class='ecrm-1095'>(2002):
+</span><span class='ecrm-1095'>“Estimating Life Tables That Reﬂect Socioeconomic Diﬀerences in Mortality,” in
+</span><span class='ecti-1095'>The Distributional Aspects of Social Security and Social Security Reform</span><span class='ecrm-1095'>, ed. by
+</span><span class='ecrm-1095'>Martin  Feldstein,  and  Jeﬀrey B.  Liebman,  pp.  447–457.  University  of  Chicago
+</span><span class='ecrm-1095'>Press.</span>
+</p>
+<p class='bibitem'><span class='biblabel'>
+<a id='XCagetti'></a><span class='bibsp'><span class='ecrm-1095'>   </span></span></span><span class='eccc1095-'><span class='small-caps'>Cagetti,  </span><span class='small-caps'>Marco</span>  </span><span class='ecrm-1095'>(2003):  “Wealth  Accumulation  Over  the  Life  Cycle  and
+</span><span class='ecrm-1095'>Precautionary  Savings,”  </span><span class='ecti-1095'>Journal  of  Business  and  Economic  Statistics</span><span class='ecrm-1095'>,  21(3),
+</span><span class='ecrm-1095'>339–353.</span>
+</p>
+<p class='bibitem'><span class='biblabel'>
+<a id='XWhyDoRichSave'></a><span class='bibsp'><span class='ecrm-1095'>   </span></span></span><span class='eccc1095-'><span class='small-caps'>Carroll, </span><span class='small-caps'>Christopher</span> <span class='small-caps'>D.</span> </span><span class='ecrm-1095'>(2000): “Why Do the Rich Save So Much?,”  in
+</span><span class='ecti-1095'>Does Atlas Shrug? The Economic Consequences of Taxing the Rich</span><span class='ecrm-1095'>, ed. by Joel B.
+</span><span class='ecrm-1095'>Slemrod. Harvard University Press.</span>
+</p>
+<p class='bibitem'><span class='biblabel'>
+<a id='XEndogenousGridpoints'></a><span class='bibsp'><span class='ecrm-1095'>   </span></span></span>__________<span class='eccc1095-'>  </span><span class='ecrm-1095'>(2006): “The Method of Endogenous Gridpoints for Solving Dynamic
+</span><span class='ecrm-1095'>Stochastic Optimization Problems,” </span><span class='ecti-1095'>Economics Letters</span><span class='ecrm-1095'>, 91, 213–320.</span>
+</p>
+<p class='bibitem'><span class='biblabel'>
+<a id='XSabelhausSong'></a><span class='bibsp'><span class='ecrm-1095'>   </span></span></span><span class='eccc1095-'><span class='small-caps'>Sabelhaus, </span><span class='small-caps'>John, </span><span class='small-caps'>and </span><span class='small-caps'>Jae </span><span class='small-caps'>Song</span> </span><span class='ecrm-1095'>(2010): “The Great Moderation in Micro
+</span><span class='ecrm-1095'>Labor Earnings,” </span><span class='ecti-1095'>Journal of Monetary Economics</span><span class='ecrm-1095'>, 57(4), 391–403.</span>
+</p>
+<p class='bibitem'><span class='biblabel'>
+<a id='XSSLifeTables'></a><span class='bibsp'><span class='ecrm-1095'>   </span></span></span><span class='eccc1095-'><span class='small-caps'>Social </span><span class='small-caps'>Security </span><span class='small-caps'>Administration</span> </span><span class='ecrm-1095'>(2010): “Actuarial Life Table,” available at</span>
+<a class='url' href='http://www.ssa.gov/oact/STATS/table4c6.html'><span class='ectt-1095'>http://www.ssa.gov/oact/STATS/table4c6.html</span></a><span class='ecrm-1095'>.</span>
+</p>
+<p class='bibitem'><span class='biblabel'>
+<a id='XkaplanViolanteWeidner_wealthyH2M'></a><span class='bibsp'><span class='ecrm-1095'>   </span></span></span><span class='eccc1095-'><span class='small-caps'>Violante, </span><span class='small-caps'>Gianluca, </span><span class='small-caps'>Greg </span><span class='small-caps'>Kaplan, </span><span class='small-caps'>and </span><span class='small-caps'>Justin </span><span class='small-caps'>Weidner</span> </span><span class='ecrm-1095'>(2014): “The
+</span><span class='ecrm-1095'>Wealthy Hand-to-Mouth,” </span><span class='ecti-1095'>Brookings Papers on Economic Activity</span><span class='ecrm-1095'>, Spring, 77–138.</span>
+</p>
+</div>
+ 
+</body> 
+</html>

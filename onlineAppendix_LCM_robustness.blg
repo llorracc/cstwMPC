@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: onlineAppendix_LCM_robustness.aux
+The style file: econtex.bst
+Database file #1: economics.bib
+Database file #2: cstwMPC.bib
+Database file #3: cstwMPC-Add.bib
+Database file #4: onlineAppendix_LCM_robustness.bib
+Repeated entry---line 25 of file onlineAppendix_LCM_robustness.bib
+ : @article{Cagetti
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 46 of file onlineAppendix_LCM_robustness.bib
+ : @incollection{BrownLiebmanPollet
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 59 of file onlineAppendix_LCM_robustness.bib
+ : @article{kaplanViolanteWeidner_wealthyH2M
+ :                                          ,
+I'm skipping whatever remains of this entry
+Done.
+You've used 7 entries,
+            2309 wiz_defined-function locations,
+            565 strings with 4845 characters,
+and the built_in function-call counts, 3482 in all, are:
+= -- 355
+> -- 170
+< -- 1
++ -- 59
+- -- 51
+* -- 295
+:= -- 659
+add.period$ -- 9
+call.type$ -- 7
+change.case$ -- 40
+chr.to.int$ -- 7
+cite$ -- 7
+duplicate$ -- 132
+empty$ -- 229
+format.name$ -- 55
+if$ -- 681
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 6
+newline$ -- 28
+num.names$ -- 44
+pop$ -- 37
+preamble$ -- 2
+purify$ -- 40
+quote$ -- 0
+skip$ -- 114
+stack$ -- 0
+substring$ -- 212
+swap$ -- 29
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 77
+warning$ -- 0
+while$ -- 43
+width$ -- 0
+write$ -- 90
+(There were 3 error messages)

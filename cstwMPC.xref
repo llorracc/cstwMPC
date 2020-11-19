@@ -1,0 +1,597 @@
+\:CrossWord{)F1F-}{cstwMPC.html}{1}%
+\:CrossWord{TITLE+}{The Distribution of Wealth and \\ the Marginal Propensity to Consume \\ \vspace  \medskipamount {\abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \add@extra@listi {sml}{\it  As published in \href  {http://onlinelibrary.wiley.com/doi/10.3982/QE694/}{Quantitative Economics (2017)}}} }{1}%
+\:CrossWord{)M1x0}{;}{1}%
+\:CrossWord{fn0x0}{}{2}%
+\:CrossWord{)Qx1-10001}{1}{4}%
+\:CrossWord{fn2x0}{}{4}%
+\:CrossWord{)Qx1-1001f2}{1}{4}%
+\:CrossWord{)BcstwMPC2.html(L }{cstwMPC.html}{4}%
+\:CrossWord{)F2F-}{cstwMPC2.html}{4}%
+\:CrossWord{cstwMPC2.html(L }{cstwMPC2.html}{4}%
+\:CrossWord{)Qfn2x0}{2}{4}%
+\:CrossWord{fn3x0}{}{4}%
+\:CrossWord{)Qx1-1002f3}{1}{4}%
+\:CrossWord{)BcstwMPC3.html(L }{cstwMPC.html}{4}%
+\:CrossWord{)F3F-}{cstwMPC3.html}{4}%
+\:CrossWord{cstwMPC3.html(L }{cstwMPC3.html}{4}%
+\:CrossWord{)Qfn3x0}{3}{4}%
+\:CrossWord{fn4x0}{}{4}%
+\:CrossWord{)Qx1-1003f4}{1}{4}%
+\:CrossWord{)BcstwMPC4.html(L }{cstwMPC.html}{4}%
+\:CrossWord{)F4F-}{cstwMPC4.html}{4}%
+\:CrossWord{cstwMPC4.html(L }{cstwMPC4.html}{4}%
+\:CrossWord{)Qfn4x0}{4}{4}%
+\:CrossWord{fn5x0}{}{5}%
+\:CrossWord{)Qx1-1004f5}{1}{5}%
+\:CrossWord{)BcstwMPC5.html(L }{cstwMPC.html}{5}%
+\:CrossWord{)F5F-}{cstwMPC5.html}{5}%
+\:CrossWord{cstwMPC5.html(L }{cstwMPC5.html}{5}%
+\:CrossWord{)Qfn5x0}{5}{5}%
+\:CrossWord{fn6x0}{}{6}%
+\:CrossWord{)Qx1-1005f6}{1}{6}%
+\:CrossWord{)BcstwMPC6.html(L }{cstwMPC.html}{6}%
+\:CrossWord{)F6F-}{cstwMPC6.html}{6}%
+\:CrossWord{cstwMPC6.html(L }{cstwMPC6.html}{6}%
+\:CrossWord{)Qfn6x0}{6}{6}%
+\:CrossWord{fn7x0}{}{6}%
+\:CrossWord{)Qx1-1006f7}{1}{6}%
+\:CrossWord{)BcstwMPC7.html(L }{cstwMPC.html}{6}%
+\:CrossWord{)F7F-}{cstwMPC7.html}{6}%
+\:CrossWord{cstwMPC7.html(L }{cstwMPC7.html}{6}%
+\:CrossWord{)Qfn7x0}{7}{6}%
+\:CrossWord{)Qx1-20002}{1}{7}%
+\:CrossWord{)Qx1-30002.1}{1}{7}%
+\:CrossWord{fn8x0}{}{8}%
+\:CrossWord{)Qx1-3001f8}{1}{8}%
+\:CrossWord{)BcstwMPC8.html(L }{cstwMPC.html}{8}%
+\:CrossWord{)F8F-}{cstwMPC8.html}{8}%
+\:CrossWord{cstwMPC8.html(L }{cstwMPC8.html}{8}%
+\:CrossWord{)Qfn8x0}{8}{8}%
+\:CrossWord{fn9x0}{}{9}%
+\:CrossWord{)Qx1-3002f9}{1}{9}%
+\:CrossWord{)BcstwMPC9.html(L }{cstwMPC.html}{9}%
+\:CrossWord{)F9F-}{cstwMPC9.html}{9}%
+\:CrossWord{cstwMPC9.html(L }{cstwMPC9.html}{9}%
+\:CrossWord{)Qfn9x0}{9}{9}%
+\:CrossWord{)Qx1-40002.2}{1}{9}%
+\:CrossWord{)Qx1-40011}{1}{10}%
+\:CrossWord{1cAp0}{x1-40011}{11}%
+\:CrossWord{)M2x4}{1.2;1.2;1.2-;2.2;2.2;3.2-;3.3-;3.4-;7.4-;8.4-;9.4-;10.2-;10.4-;11.2-;12.2-;13.2-;15.2-;15.4-;16.4-;17.4-;18.2-;18.3-;18.4-;19.2-;;}{11}%
+\:CrossWord{fn10x0}{}{12}%
+\:CrossWord{)Qx1-4002f10}{1}{12}%
+\:CrossWord{)BcstwMPC10.html(L }{cstwMPC.html}{12}%
+\:CrossWord{)F10F-}{cstwMPC10.html}{12}%
+\:CrossWord{cstwMPC10.html(L }{cstwMPC10.html}{12}%
+\:CrossWord{)Qfn10x0}{10}{12}%
+\:CrossWord{fn11x0}{}{12}%
+\:CrossWord{)Qx1-4003f11}{1}{12}%
+\:CrossWord{)BcstwMPC11.html(L }{cstwMPC.html}{12}%
+\:CrossWord{)F11F-}{cstwMPC11.html}{12}%
+\:CrossWord{cstwMPC11.html(L }{cstwMPC11.html}{12}%
+\:CrossWord{)Qfn11x0}{11}{12}%
+\:CrossWord{fn12x0}{}{12}%
+\:CrossWord{)Qx1-4004f12}{1}{12}%
+\:CrossWord{)BcstwMPC12.html(L }{cstwMPC.html}{12}%
+\:CrossWord{)F12F-}{cstwMPC12.html}{12}%
+\:CrossWord{cstwMPC12.html(L }{cstwMPC12.html}{12}%
+\:CrossWord{)Qfn12x0}{12}{12}%
+\:CrossWord{)Qx1-50003}{1}{13}%
+\:CrossWord{fn13x0}{}{13}%
+\:CrossWord{)Qx1-5001f13}{1}{13}%
+\:CrossWord{)BcstwMPC13.html(L }{cstwMPC.html}{13}%
+\:CrossWord{)F13F-}{cstwMPC13.html}{13}%
+\:CrossWord{cstwMPC13.html(L }{cstwMPC13.html}{13}%
+\:CrossWord{)Qfn13x0}{13}{13}%
+\:CrossWord{fn14x0}{}{14}%
+\:CrossWord{)Qx1-5002f14}{1}{14}%
+\:CrossWord{)BcstwMPC14.html(L }{cstwMPC.html}{14}%
+\:CrossWord{)F14F-}{cstwMPC14.html}{14}%
+\:CrossWord{cstwMPC14.html(L }{cstwMPC14.html}{14}%
+\:CrossWord{)Qfn14x0}{14}{14}%
+\:CrossWord{fn15x0}{}{14}%
+\:CrossWord{)Qx1-5003f15}{1}{14}%
+\:CrossWord{)BcstwMPC15.html(L }{cstwMPC.html}{14}%
+\:CrossWord{)F15F-}{cstwMPC15.html}{14}%
+\:CrossWord{cstwMPC15.html(L }{cstwMPC15.html}{14}%
+\:CrossWord{)Qfn15x0}{15}{14}%
+\:CrossWord{)Qx1-60003.1}{1}{14}%
+\:CrossWord{fn16x0}{}{14}%
+\:CrossWord{)Qx1-6001f16}{1}{14}%
+\:CrossWord{)BcstwMPC16.html(L }{cstwMPC.html}{14}%
+\:CrossWord{)F16F-}{cstwMPC16.html}{14}%
+\:CrossWord{cstwMPC16.html(L }{cstwMPC16.html}{14}%
+\:CrossWord{)Qfn16x0}{16}{14}%
+\:CrossWord{)Qx1-6002r1}{1}{14}%
+\:CrossWord{)Qx1-6003r1}{1}{15}%
+\:CrossWord{)Qx1-6004r2}{1}{15}%
+\:CrossWord{)Qx1-6004r3}{1}{15}%
+\:CrossWord{)Qx1-6005r4}{1}{15}%
+\:CrossWord{)Qx1-6006r5}{1}{16}%
+\:CrossWord{)Qx1-6006r6}{1}{16}%
+\:CrossWord{fn17x0}{}{16}%
+\:CrossWord{)Qx1-6007f17}{1}{16}%
+\:CrossWord{)BcstwMPC17.html(L }{cstwMPC.html}{16}%
+\:CrossWord{)F17F-}{cstwMPC17.html}{16}%
+\:CrossWord{cstwMPC17.html(L }{cstwMPC17.html}{16}%
+\:CrossWord{)Qfn17x0}{17}{16}%
+\:CrossWord{fn18x0}{}{16}%
+\:CrossWord{)Qx1-6008f18}{1}{16}%
+\:CrossWord{)BcstwMPC18.html(L }{cstwMPC.html}{16}%
+\:CrossWord{)F18F-}{cstwMPC18.html}{16}%
+\:CrossWord{cstwMPC18.html(L }{cstwMPC18.html}{16}%
+\:CrossWord{)Qfn18x0}{18}{16}%
+\:CrossWord{fn19x0}{}{16}%
+\:CrossWord{)Qx1-6009f19}{1}{16}%
+\:CrossWord{)BcstwMPC19.html(L }{cstwMPC.html}{16}%
+\:CrossWord{)F19F-}{cstwMPC19.html}{16}%
+\:CrossWord{cstwMPC19.html(L }{cstwMPC19.html}{16}%
+\:CrossWord{)Qfn19x0}{19}{16}%
+\:CrossWord{fn20x0}{}{17}%
+\:CrossWord{)Qx1-6010f20}{1}{17}%
+\:CrossWord{)BcstwMPC20.html(L }{cstwMPC.html}{17}%
+\:CrossWord{)F20F-}{cstwMPC20.html}{17}%
+\:CrossWord{cstwMPC20.html(L }{cstwMPC20.html}{17}%
+\:CrossWord{)Qfn20x0}{20}{17}%
+\:CrossWord{)Qx1-70003.2}{1}{17}%
+\:CrossWord{fn21x0}{}{17}%
+\:CrossWord{)Qx1-7001f21}{1}{17}%
+\:CrossWord{)BcstwMPC21.html(L }{cstwMPC.html}{17}%
+\:CrossWord{)F21F-}{cstwMPC21.html}{17}%
+\:CrossWord{cstwMPC21.html(L }{cstwMPC21.html}{17}%
+\:CrossWord{)Qfn21x0}{21}{17}%
+\:CrossWord{)Qx1-7002r7}{1}{18}%
+\:CrossWord{)Qx1-7002r8}{1}{18}%
+\:CrossWord{)Qx1-7002r9}{1}{18}%
+\:CrossWord{)Qx1-7002r10}{1}{18}%
+\:CrossWord{)Qx1-7002r11}{1}{18}%
+\:CrossWord{fn22x0}{}{18}%
+\:CrossWord{)Qx1-7003f22}{1}{18}%
+\:CrossWord{)BcstwMPC22.html(L }{cstwMPC.html}{18}%
+\:CrossWord{)F22F-}{cstwMPC22.html}{18}%
+\:CrossWord{cstwMPC22.html(L }{cstwMPC22.html}{18}%
+\:CrossWord{)Qfn22x0}{22}{18}%
+\:CrossWord{)Qx1-7004r12}{1}{18}%
+\:CrossWord{)Qx1-7006x1}{1}{19}%
+\:CrossWord{)Qx1-7008x2}{1}{19}%
+\:CrossWord{)Qx1-7010x3}{1}{20}%
+\:CrossWord{)Qx1-7012r13}{1}{20}%
+\:CrossWord{)Qx1-80003.3}{1}{20}%
+\:CrossWord{)Qx1-80012}{1}{21}%
+\:CrossWord{2cAp0}{x1-80012}{22}%
+\:CrossWord{)M3x9}{1.3-;2.1;2.1;2.1;2.4<;7.3-;8.1;8.1;8.1;8.4<;12.1;12.1;12.1;12.4<;15.1;15.1;15.1;15.4<;16.3-;18.3-;24.1;24.1;24.1;24.4<;28.1;28.1<;;}{22}%
+\:CrossWord{fn23x0}{}{23}%
+\:CrossWord{)Qx1-8002f23}{1}{23}%
+\:CrossWord{)BcstwMPC23.html(L }{cstwMPC.html}{23}%
+\:CrossWord{)F23F-}{cstwMPC23.html}{23}%
+\:CrossWord{cstwMPC23.html(L }{cstwMPC23.html}{23}%
+\:CrossWord{)Qfn23x0}{23}{23}%
+\:CrossWord{fn24x0}{}{23}%
+\:CrossWord{)Qx1-8003f24}{1}{23}%
+\:CrossWord{)BcstwMPC24.html(L }{cstwMPC.html}{23}%
+\:CrossWord{)F24F-}{cstwMPC24.html}{23}%
+\:CrossWord{cstwMPC24.html(L }{cstwMPC24.html}{23}%
+\:CrossWord{)Qfn24x0}{24}{23}%
+\:CrossWord{fn25x0}{}{23}%
+\:CrossWord{)Qx1-8004f25}{1}{23}%
+\:CrossWord{)BcstwMPC25.html(L }{cstwMPC.html}{23}%
+\:CrossWord{)F25F-}{cstwMPC25.html}{23}%
+\:CrossWord{cstwMPC25.html(L }{cstwMPC25.html}{23}%
+\:CrossWord{)Qfn25x0}{25}{23}%
+\:CrossWord{fn26x0}{}{23}%
+\:CrossWord{)Qx1-8005f26}{1}{23}%
+\:CrossWord{)BcstwMPC26.html(L }{cstwMPC.html}{23}%
+\:CrossWord{)F26F-}{cstwMPC26.html}{23}%
+\:CrossWord{cstwMPC26.html(L }{cstwMPC26.html}{23}%
+\:CrossWord{)Qfn26x0}{26}{23}%
+\:CrossWord{fn27x0}{}{23}%
+\:CrossWord{)Qx1-8006f27}{1}{23}%
+\:CrossWord{)BcstwMPC27.html(L }{cstwMPC.html}{23}%
+\:CrossWord{)F27F-}{cstwMPC27.html}{23}%
+\:CrossWord{cstwMPC27.html(L }{cstwMPC27.html}{23}%
+\:CrossWord{)Qfn27x0}{27}{23}%
+\:CrossWord{fn28x0}{}{24}%
+\:CrossWord{)Qx1-8008f28}{1}{24}%
+\:CrossWord{)BcstwMPC28.html(L }{cstwMPC.html}{24}%
+\:CrossWord{)F28F-}{cstwMPC28.html}{24}%
+\:CrossWord{cstwMPC28.html(L }{cstwMPC28.html}{24}%
+\:CrossWord{)Qfn28x0}{28}{24}%
+\:CrossWord{)Qx1-90003.4}{1}{24}%
+\:CrossWord{fn29x0}{}{24}%
+\:CrossWord{)Qx1-9001f29}{1}{24}%
+\:CrossWord{)BcstwMPC29.html(L }{cstwMPC.html}{24}%
+\:CrossWord{)F29F-}{cstwMPC29.html}{24}%
+\:CrossWord{cstwMPC29.html(L }{cstwMPC29.html}{24}%
+\:CrossWord{)Qfn29x0}{29}{24}%
+\:CrossWord{fn30x0}{}{25}%
+\:CrossWord{)Qx1-9002f30}{1}{25}%
+\:CrossWord{)BcstwMPC30.html(L }{cstwMPC.html}{25}%
+\:CrossWord{)F30F-}{cstwMPC30.html}{25}%
+\:CrossWord{cstwMPC30.html(L }{cstwMPC30.html}{25}%
+\:CrossWord{)Qfn30x0}{30}{25}%
+\:CrossWord{fn31x0}{}{25}%
+\:CrossWord{)Qx1-9003f31}{1}{25}%
+\:CrossWord{)BcstwMPC31.html(L }{cstwMPC.html}{25}%
+\:CrossWord{)F31F-}{cstwMPC31.html}{25}%
+\:CrossWord{cstwMPC31.html(L }{cstwMPC31.html}{25}%
+\:CrossWord{)Qfn31x0}{31}{25}%
+\:CrossWord{fn32x0}{}{25}%
+\:CrossWord{)Qx1-9004f32}{1}{25}%
+\:CrossWord{)BcstwMPC32.html(L }{cstwMPC.html}{25}%
+\:CrossWord{)F32F-}{cstwMPC32.html}{25}%
+\:CrossWord{cstwMPC32.html(L }{cstwMPC32.html}{25}%
+\:CrossWord{)Qfn32x0}{32}{25}%
+\:CrossWord{)Qx1-90051}{1}{26}%
+\:CrossWord{3cAp0}{x1-90051}{27}%
+\:CrossWord{)Qx1-100003.5}{1}{28}%
+\:CrossWord{fn33x0}{}{28}%
+\:CrossWord{)Qx1-10001f33}{1}{28}%
+\:CrossWord{)BcstwMPC33.html(L }{cstwMPC.html}{28}%
+\:CrossWord{)F33F-}{cstwMPC33.html}{28}%
+\:CrossWord{cstwMPC33.html(L }{cstwMPC33.html}{28}%
+\:CrossWord{)Qfn33x0}{33}{28}%
+\:CrossWord{)Qx1-10002r14}{1}{29}%
+\:CrossWord{fn34x0}{}{29}%
+\:CrossWord{)Qx1-10003f34}{1}{29}%
+\:CrossWord{)BcstwMPC34.html(L }{cstwMPC.html}{29}%
+\:CrossWord{)F34F-}{cstwMPC34.html}{29}%
+\:CrossWord{cstwMPC34.html(L }{cstwMPC34.html}{29}%
+\:CrossWord{)Qfn34x0}{34}{29}%
+\:CrossWord{)Qx1-10004r15}{1}{30}%
+\:CrossWord{fn35x0}{}{30}%
+\:CrossWord{)Qx1-10005f35}{1}{30}%
+\:CrossWord{)BcstwMPC35.html(L }{cstwMPC.html}{30}%
+\:CrossWord{)F35F-}{cstwMPC35.html}{30}%
+\:CrossWord{cstwMPC35.html(L }{cstwMPC35.html}{30}%
+\:CrossWord{)Qfn35x0}{35}{30}%
+\:CrossWord{fn36x0}{}{30}%
+\:CrossWord{)Qx1-10006f36}{1}{30}%
+\:CrossWord{)BcstwMPC36.html(L }{cstwMPC.html}{30}%
+\:CrossWord{)F36F-}{cstwMPC36.html}{30}%
+\:CrossWord{cstwMPC36.html(L }{cstwMPC36.html}{30}%
+\:CrossWord{)Qfn36x0}{36}{30}%
+\:CrossWord{fn37x0}{}{30}%
+\:CrossWord{)Qx1-10007f37}{1}{30}%
+\:CrossWord{)BcstwMPC37.html(L }{cstwMPC.html}{30}%
+\:CrossWord{)F37F-}{cstwMPC37.html}{30}%
+\:CrossWord{cstwMPC37.html(L }{cstwMPC37.html}{30}%
+\:CrossWord{)Qfn37x0}{37}{30}%
+\:CrossWord{fn38x0}{}{30}%
+\:CrossWord{)Qx1-10008f38}{1}{30}%
+\:CrossWord{)BcstwMPC38.html(L }{cstwMPC.html}{30}%
+\:CrossWord{)F38F-}{cstwMPC38.html}{30}%
+\:CrossWord{cstwMPC38.html(L }{cstwMPC38.html}{30}%
+\:CrossWord{)Qfn38x0}{38}{30}%
+\:CrossWord{fn39x0}{}{31}%
+\:CrossWord{)Qx1-10009f39}{1}{31}%
+\:CrossWord{)BcstwMPC39.html(L }{cstwMPC.html}{31}%
+\:CrossWord{)F39F-}{cstwMPC39.html}{31}%
+\:CrossWord{cstwMPC39.html(L }{cstwMPC39.html}{31}%
+\:CrossWord{)Qfn39x0}{39}{31}%
+\:CrossWord{fn40x0}{}{31}%
+\:CrossWord{)Qx1-10010f40}{1}{31}%
+\:CrossWord{)BcstwMPC40.html(L }{cstwMPC.html}{31}%
+\:CrossWord{)F40F-}{cstwMPC40.html}{31}%
+\:CrossWord{cstwMPC40.html(L }{cstwMPC40.html}{31}%
+\:CrossWord{)Qfn40x0}{40}{31}%
+\:CrossWord{fn41x0}{}{31}%
+\:CrossWord{)Qx1-10011f41}{1}{31}%
+\:CrossWord{)BcstwMPC41.html(L }{cstwMPC.html}{31}%
+\:CrossWord{)F41F-}{cstwMPC41.html}{31}%
+\:CrossWord{cstwMPC41.html(L }{cstwMPC41.html}{31}%
+\:CrossWord{)Qfn41x0}{41}{31}%
+\:CrossWord{)Qx1-110004}{1}{31}%
+\:CrossWord{fn42x0}{}{32}%
+\:CrossWord{)Qx1-11001f42}{1}{32}%
+\:CrossWord{)BcstwMPC42.html(L }{cstwMPC.html}{32}%
+\:CrossWord{)F42F-}{cstwMPC42.html}{32}%
+\:CrossWord{cstwMPC42.html(L }{cstwMPC42.html}{32}%
+\:CrossWord{)Qfn42x0}{42}{32}%
+\:CrossWord{)Qx1-120004.1}{1}{32}%
+\:CrossWord{)Qx1-120012}{1}{33}%
+\:CrossWord{4cAp0}{x1-120012}{34}%
+\:CrossWord{fn43x0}{}{35}%
+\:CrossWord{)Qx1-12002f43}{1}{35}%
+\:CrossWord{)BcstwMPC43.html(L }{cstwMPC.html}{35}%
+\:CrossWord{)F43F-}{cstwMPC43.html}{35}%
+\:CrossWord{cstwMPC43.html(L }{cstwMPC43.html}{35}%
+\:CrossWord{)Qfn43x0}{43}{35}%
+\:CrossWord{fn44x0}{}{35}%
+\:CrossWord{)Qx1-12003f44}{1}{35}%
+\:CrossWord{)BcstwMPC44.html(L }{cstwMPC.html}{35}%
+\:CrossWord{)F44F-}{cstwMPC44.html}{35}%
+\:CrossWord{cstwMPC44.html(L }{cstwMPC44.html}{35}%
+\:CrossWord{)Qfn44x0}{44}{35}%
+\:CrossWord{)Qx1-120043}{1}{36}%
+\:CrossWord{5cAp0}{x1-120043}{37}%
+\:CrossWord{fn45x0}{}{38}%
+\:CrossWord{)Qx1-12005f45}{1}{38}%
+\:CrossWord{)BcstwMPC45.html(L }{cstwMPC.html}{38}%
+\:CrossWord{)F45F-}{cstwMPC45.html}{38}%
+\:CrossWord{cstwMPC45.html(L }{cstwMPC45.html}{38}%
+\:CrossWord{)Qfn45x0}{45}{38}%
+\:CrossWord{)Qx1-120063}{1}{39}%
+\:CrossWord{6cAp0}{x1-120063}{40}%
+\:CrossWord{)M4x15}{1.2;1.2;1.2;1.5;1.6-;1.7;1.7-;1.9;1.9;1.9-;2.2;2.2;2.2;2.5;2.6-;2.7;2.7-;3.2;3.2;3.2;3.5;4.1;4.1;4.1;4.4;4.5;4.7;5.1;5.1;5.1;5.4;5.5;5.5;5.5;5.9;5.9;6.2-;6.3-;6.4-;6.5-;6.6-;6.7-;6.8-;6.9-;6.10-;6.11-;7.2-;7.3-;8.4-;8.5-;8.6-;8.7-;8.8-;8.9-;8.10-;8.11-;9.4-;9.5-;9.6-;9.7-;9.8-;9.9-;9.10-;9.11-;10.1<;11.1;11.1;11.1;11.4;11.5;11.5;11.5;11.8;11.9;11.9;11.9<;12.1<;13.1<;14.1<;15.1<;16.1<;17.1<;18.1<;19.1;19.1;19.1;19.4;19.5;19.5;19.5;19.8;19.9;19.9;19.9<;20.1<;21.1<;22.1<;23.1<;24.1<;25.1<;26.1<;27.1;27.1;27.1;27.4;27.5;27.5;27.5;27.8;27.9;27.9;27.9<;28.1<;29.1<;30.1;30.1;30.1;30.4;30.5;30.5;30.5;30.8;30.9;30.9;30.9<;31.1<;32.1<;33.1<;;}{40}%
+\:CrossWord{fn46x0}{}{41}%
+\:CrossWord{)Qx1-12007f46}{1}{41}%
+\:CrossWord{)BcstwMPC46.html(L }{cstwMPC.html}{41}%
+\:CrossWord{)F46F-}{cstwMPC46.html}{41}%
+\:CrossWord{cstwMPC46.html(L }{cstwMPC46.html}{41}%
+\:CrossWord{)Qfn46x0}{46}{41}%
+\:CrossWord{fn47x0}{}{41}%
+\:CrossWord{)Qx1-12008f47}{1}{41}%
+\:CrossWord{)BcstwMPC47.html(L }{cstwMPC.html}{41}%
+\:CrossWord{)F47F-}{cstwMPC47.html}{41}%
+\:CrossWord{cstwMPC47.html(L }{cstwMPC47.html}{41}%
+\:CrossWord{)Qfn47x0}{47}{41}%
+\:CrossWord{fn48x0}{}{42}%
+\:CrossWord{)Qx1-12009f48}{1}{42}%
+\:CrossWord{)BcstwMPC48.html(L }{cstwMPC.html}{42}%
+\:CrossWord{)F48F-}{cstwMPC48.html}{42}%
+\:CrossWord{cstwMPC48.html(L }{cstwMPC48.html}{42}%
+\:CrossWord{)Qfn48x0}{48}{42}%
+\:CrossWord{)Qx1-130004.2}{1}{42}%
+\:CrossWord{fn49x0}{}{42}%
+\:CrossWord{)Qx1-13001f49}{1}{42}%
+\:CrossWord{)BcstwMPC49.html(L }{cstwMPC.html}{42}%
+\:CrossWord{)F49F-}{cstwMPC49.html}{42}%
+\:CrossWord{cstwMPC49.html(L }{cstwMPC49.html}{42}%
+\:CrossWord{)Qfn49x0}{49}{42}%
+\:CrossWord{)Qx1-130024}{1}{43}%
+\:CrossWord{7cAp0}{x1-130024}{44}%
+\:CrossWord{fn50x0}{}{45}%
+\:CrossWord{)Qx1-13003f50}{1}{45}%
+\:CrossWord{)BcstwMPC50.html(L }{cstwMPC.html}{45}%
+\:CrossWord{)F50F-}{cstwMPC50.html}{45}%
+\:CrossWord{cstwMPC50.html(L }{cstwMPC50.html}{45}%
+\:CrossWord{)Qfn50x0}{50}{45}%
+\:CrossWord{fn51x0}{}{45}%
+\:CrossWord{)Qx1-13004f51}{1}{45}%
+\:CrossWord{)BcstwMPC51.html(L }{cstwMPC.html}{45}%
+\:CrossWord{)F51F-}{cstwMPC51.html}{45}%
+\:CrossWord{cstwMPC51.html(L }{cstwMPC51.html}{45}%
+\:CrossWord{)Qfn51x0}{51}{45}%
+\:CrossWord{fn52x0}{}{45}%
+\:CrossWord{)Qx1-13005f52}{1}{45}%
+\:CrossWord{)BcstwMPC52.html(L }{cstwMPC.html}{45}%
+\:CrossWord{)F52F-}{cstwMPC52.html}{45}%
+\:CrossWord{cstwMPC52.html(L }{cstwMPC52.html}{45}%
+\:CrossWord{)Qfn52x0}{52}{45}%
+\:CrossWord{fn53x0}{}{45}%
+\:CrossWord{)Qx1-13006f53}{1}{45}%
+\:CrossWord{)BcstwMPC53.html(L }{cstwMPC.html}{45}%
+\:CrossWord{)F53F-}{cstwMPC53.html}{45}%
+\:CrossWord{cstwMPC53.html(L }{cstwMPC53.html}{45}%
+\:CrossWord{)Qfn53x0}{53}{45}%
+\:CrossWord{)Qx1-130075}{1}{46}%
+\:CrossWord{8cAp0}{x1-130075}{47}%
+\:CrossWord{fn54x0}{}{48}%
+\:CrossWord{)Qx1-13008f54}{1}{48}%
+\:CrossWord{)BcstwMPC54.html(L }{cstwMPC.html}{48}%
+\:CrossWord{)F54F-}{cstwMPC54.html}{48}%
+\:CrossWord{cstwMPC54.html(L }{cstwMPC54.html}{48}%
+\:CrossWord{)Qfn54x0}{54}{48}%
+\:CrossWord{fn55x0}{}{48}%
+\:CrossWord{)Qx1-13009f55}{1}{48}%
+\:CrossWord{)BcstwMPC55.html(L }{cstwMPC.html}{48}%
+\:CrossWord{)F55F-}{cstwMPC55.html}{48}%
+\:CrossWord{cstwMPC55.html(L }{cstwMPC55.html}{48}%
+\:CrossWord{)Qfn55x0}{55}{48}%
+\:CrossWord{)Qx1-140004.3}{1}{48}%
+\:CrossWord{)Qx1-14002x1}{1}{48}%
+\:CrossWord{)Qx1-14004x2}{1}{48}%
+\:CrossWord{)Qx1-14006x1}{1}{49}%
+\:CrossWord{)Qx1-14008x2}{1}{49}%
+\:CrossWord{)Qx1-140094}{1}{50}%
+\:CrossWord{9cAp0}{x1-140094}{51}%
+\:CrossWord{)M5x22}{1.2;1.2;1.2;1.5-;1.6;1.6;1.6-;2.2;2.2;2.2;3.1;3.1;3.1;3.4;3.6;3.6;4.5-;4.7-;4.8-;5.2-;5.3-;5.4-;5.5-;5.6-;5.7-;5.8-;6.1<;7.1;7.1;7.1<;8.1<;9.1<;10.1<;11.1<;12.1<;13.1<;14.1<;15.1<;16.1<;17.1<;18.1<;19.1<;20.1<;21.1<;22.1<;23.1<;24.1<;25.1<;;}{51}%
+\:CrossWord{fn56x0}{}{52}%
+\:CrossWord{)Qx1-14010f56}{1}{52}%
+\:CrossWord{)BcstwMPC56.html(L }{cstwMPC.html}{52}%
+\:CrossWord{)F56F-}{cstwMPC56.html}{52}%
+\:CrossWord{cstwMPC56.html(L }{cstwMPC56.html}{52}%
+\:CrossWord{)Qfn56x0}{56}{52}%
+\:CrossWord{fn57x0}{}{52}%
+\:CrossWord{)Qx1-14011f57}{1}{52}%
+\:CrossWord{)BcstwMPC57.html(L }{cstwMPC.html}{52}%
+\:CrossWord{)F57F-}{cstwMPC57.html}{52}%
+\:CrossWord{cstwMPC57.html(L }{cstwMPC57.html}{52}%
+\:CrossWord{)Qfn57x0}{57}{52}%
+\:CrossWord{)Qx1-150004.4}{1}{53}%
+\:CrossWord{)Qx1-150016}{1}{54}%
+\:CrossWord{10cAp0}{x1-150016}{55}%
+\:CrossWord{)Qx1-150027}{1}{57}%
+\:CrossWord{11cAp0}{x1-150027}{58}%
+\:CrossWord{)Qx1-150038}{1}{60}%
+\:CrossWord{12cAp0}{x1-150038}{61}%
+\:CrossWord{)Qx1-150049}{1}{63}%
+\:CrossWord{13cAp0}{x1-150049}{64}%
+\:CrossWord{fn58x0}{}{65}%
+\:CrossWord{)Qx1-15005f58}{1}{65}%
+\:CrossWord{)BcstwMPC58.html(L }{cstwMPC.html}{65}%
+\:CrossWord{)F58F-}{cstwMPC58.html}{65}%
+\:CrossWord{cstwMPC58.html(L }{cstwMPC58.html}{65}%
+\:CrossWord{)Qfn58x0}{58}{65}%
+\:CrossWord{fn59x0}{}{65}%
+\:CrossWord{)Qx1-15006f59}{1}{65}%
+\:CrossWord{)BcstwMPC59.html(L }{cstwMPC.html}{65}%
+\:CrossWord{)F59F-}{cstwMPC59.html}{65}%
+\:CrossWord{cstwMPC59.html(L }{cstwMPC59.html}{65}%
+\:CrossWord{)Qfn59x0}{59}{65}%
+\:CrossWord{fn60x0}{}{66}%
+\:CrossWord{)Qx1-15007f60}{1}{66}%
+\:CrossWord{)BcstwMPC60.html(L }{cstwMPC.html}{66}%
+\:CrossWord{)F60F-}{cstwMPC60.html}{66}%
+\:CrossWord{cstwMPC60.html(L }{cstwMPC60.html}{66}%
+\:CrossWord{)Qfn60x0}{60}{66}%
+\:CrossWord{)Qx1-160005}{1}{66}%
+\:CrossWord{)Qx1-170005.1}{1}{66}%
+\:CrossWord{fn61x0}{}{67}%
+\:CrossWord{)Qx1-17002f61}{1}{67}%
+\:CrossWord{)BcstwMPC61.html(L }{cstwMPC.html}{67}%
+\:CrossWord{)F61F-}{cstwMPC61.html}{67}%
+\:CrossWord{cstwMPC61.html(L }{cstwMPC61.html}{67}%
+\:CrossWord{)Qfn61x0}{61}{67}%
+\:CrossWord{)Qx1-17003r16}{1}{68}%
+\:CrossWord{)Qx1-17003r17}{1}{68}%
+\:CrossWord{)Qx1-17003r18}{1}{68}%
+\:CrossWord{)Qx1-17003r19}{1}{68}%
+\:CrossWord{)Qx1-17004r20}{1}{68}%
+\:CrossWord{)Qx1-17005r21}{1}{69}%
+\:CrossWord{)Qx1-17006r22}{1}{69}%
+\:CrossWord{fn62x0}{}{69}%
+\:CrossWord{)Qx1-17007f62}{1}{69}%
+\:CrossWord{)BcstwMPC62.html(L }{cstwMPC.html}{69}%
+\:CrossWord{)F62F-}{cstwMPC62.html}{69}%
+\:CrossWord{cstwMPC62.html(L }{cstwMPC62.html}{69}%
+\:CrossWord{)Qfn62x0}{62}{69}%
+\:CrossWord{)Qx1-180005.2}{1}{69}%
+\:CrossWord{fn63x0}{}{70}%
+\:CrossWord{)Qx1-18001f63}{1}{70}%
+\:CrossWord{)BcstwMPC63.html(L }{cstwMPC.html}{70}%
+\:CrossWord{)F63F-}{cstwMPC63.html}{70}%
+\:CrossWord{cstwMPC63.html(L }{cstwMPC63.html}{70}%
+\:CrossWord{)Qfn63x0}{63}{70}%
+\:CrossWord{)Qx1-190005.3}{1}{71}%
+\:CrossWord{fn64x0}{}{71}%
+\:CrossWord{)Qx1-19001f64}{1}{71}%
+\:CrossWord{)BcstwMPC64.html(L }{cstwMPC.html}{71}%
+\:CrossWord{)F64F-}{cstwMPC64.html}{71}%
+\:CrossWord{cstwMPC64.html(L }{cstwMPC64.html}{71}%
+\:CrossWord{)Qfn64x0}{64}{71}%
+\:CrossWord{fn65x0}{}{71}%
+\:CrossWord{)Qx1-19002f65}{1}{71}%
+\:CrossWord{)BcstwMPC65.html(L }{cstwMPC.html}{71}%
+\:CrossWord{)F65F-}{cstwMPC65.html}{71}%
+\:CrossWord{cstwMPC65.html(L }{cstwMPC65.html}{71}%
+\:CrossWord{)Qfn65x0}{65}{71}%
+\:CrossWord{fn66x0}{}{71}%
+\:CrossWord{)Qx1-19003f66}{1}{71}%
+\:CrossWord{)BcstwMPC66.html(L }{cstwMPC.html}{71}%
+\:CrossWord{)F66F-}{cstwMPC66.html}{71}%
+\:CrossWord{cstwMPC66.html(L }{cstwMPC66.html}{71}%
+\:CrossWord{)Qfn66x0}{66}{71}%
+\:CrossWord{fn67x0}{}{71}%
+\:CrossWord{)Qx1-19004f67}{1}{71}%
+\:CrossWord{)BcstwMPC67.html(L }{cstwMPC.html}{71}%
+\:CrossWord{)F67F-}{cstwMPC67.html}{71}%
+\:CrossWord{cstwMPC67.html(L }{cstwMPC67.html}{71}%
+\:CrossWord{)Qfn67x0}{67}{71}%
+\:CrossWord{)Qx1-190055}{1}{73}%
+\:CrossWord{14cAp0}{x1-190055}{74}%
+\:CrossWord{)M6x32}{;}{74}%
+\:CrossWord{)Qx1-200005.4}{1}{75}%
+\:CrossWord{fn68x0}{}{75}%
+\:CrossWord{)Qx1-20001f68}{1}{75}%
+\:CrossWord{)BcstwMPC68.html(L }{cstwMPC.html}{75}%
+\:CrossWord{)F68F-}{cstwMPC68.html}{75}%
+\:CrossWord{cstwMPC68.html(L }{cstwMPC68.html}{75}%
+\:CrossWord{)Qfn68x0}{68}{75}%
+\:CrossWord{fn69x0}{}{75}%
+\:CrossWord{)Qx1-20002f69}{1}{75}%
+\:CrossWord{)BcstwMPC69.html(L }{cstwMPC.html}{75}%
+\:CrossWord{)F69F-}{cstwMPC69.html}{75}%
+\:CrossWord{cstwMPC69.html(L }{cstwMPC69.html}{75}%
+\:CrossWord{)Qfn69x0}{69}{75}%
+\:CrossWord{)Qx1-2000310}{1}{76}%
+\:CrossWord{15cAp0}{x1-2000310}{77}%
+\:CrossWord{fn70x0}{}{78}%
+\:CrossWord{)Qx1-20004f70}{1}{78}%
+\:CrossWord{)BcstwMPC70.html(L }{cstwMPC.html}{78}%
+\:CrossWord{)F70F-}{cstwMPC70.html}{78}%
+\:CrossWord{cstwMPC70.html(L }{cstwMPC70.html}{78}%
+\:CrossWord{)Qfn70x0}{70}{78}%
+\:CrossWord{fn71x0}{}{78}%
+\:CrossWord{)Qx1-20005f71}{1}{78}%
+\:CrossWord{)BcstwMPC71.html(L }{cstwMPC.html}{78}%
+\:CrossWord{)F71F-}{cstwMPC71.html}{78}%
+\:CrossWord{cstwMPC71.html(L }{cstwMPC71.html}{78}%
+\:CrossWord{)Qfn71x0}{71}{78}%
+\:CrossWord{)Qx1-2000611}{1}{79}%
+\:CrossWord{16cAp0}{x1-2000611}{80}%
+\:CrossWord{fn72x0}{}{81}%
+\:CrossWord{)Qx1-20007f72}{1}{81}%
+\:CrossWord{)BcstwMPC72.html(L }{cstwMPC.html}{81}%
+\:CrossWord{)F72F-}{cstwMPC72.html}{81}%
+\:CrossWord{cstwMPC72.html(L }{cstwMPC72.html}{81}%
+\:CrossWord{)Qfn72x0}{72}{81}%
+\:CrossWord{fn73x0}{}{81}%
+\:CrossWord{)Qx1-20008f73}{1}{81}%
+\:CrossWord{)BcstwMPC73.html(L }{cstwMPC.html}{81}%
+\:CrossWord{)F73F-}{cstwMPC73.html}{81}%
+\:CrossWord{cstwMPC73.html(L }{cstwMPC73.html}{81}%
+\:CrossWord{)Qfn73x0}{73}{81}%
+\:CrossWord{fn74x0}{}{81}%
+\:CrossWord{)Qx1-20009f74}{1}{81}%
+\:CrossWord{)BcstwMPC74.html(L }{cstwMPC.html}{81}%
+\:CrossWord{)F74F-}{cstwMPC74.html}{81}%
+\:CrossWord{cstwMPC74.html(L }{cstwMPC74.html}{81}%
+\:CrossWord{)Qfn74x0}{74}{81}%
+\:CrossWord{)Qx1-2001012}{1}{83}%
+\:CrossWord{17cAp0}{x1-2001012}{84}%
+\:CrossWord{)Qx1-210006}{1}{85}%
+\:CrossWord{)Qx1-220006}{1}{86}%
+\:CrossWord{)QXaslCredit}{1}{86}%
+\:CrossWord{)QXagarwalQuianSingaporeMPC}{1}{86}%
+\:CrossWord{)QXblanchardFinite}{1}{86}%
+\:CrossWord{)QXBlundell:2013tm}{1}{86}%
+\:CrossWord{)QXbppInequality}{1}{86}%
+\:CrossWord{)QXbps:familyLaborS}{1}{86}%
+\:CrossWord{)QXbcfHabits}{1}{86}%
+\:CrossWord{)QXbrickerEtAl:topWealth}{1}{86}%
+\:CrossWord{)QXbrickerEtAl:SCF2010}{1}{87}%
+\:CrossWord{)QXbrodaParker:stimulus2008}{1}{87}%
+\:CrossWord{)QXBrownLiebmanPollet}{1}{87}%
+\:CrossWord{)QXbrowningCollado:AntIncChanges}{1}{87}%
+\:CrossWord{)QXCagetti}{1}{87}%
+\:CrossWord{)QXcarroll:brookings}{1}{87}%
+\:CrossWord{)QXcarrollEGM}{1}{87}%
+\:CrossWord{)QXBufferStockTheory}{1}{87}%
+\:CrossWord{)QXcstMPCxc}{1}{88}%
+\:CrossWord{)QXcstKS}{1}{88}%
+\:CrossWord{)QXcastaneda}{1}{88}%
+\:CrossWord{)QXckmCritique}{1}{88}%
+\:CrossWord{)QXcoronadoEtAl}{1}{88}%
+\:CrossWord{)QXcozzi2012}{1}{88}%
+\:CrossWord{)QXdeNardi2015}{1}{88}%
+\:CrossWord{)QXdeatonLiqConstr}{1}{88}%
+\:CrossWord{)QXdeatonUnderstandingC}{1}{89}%
+\:CrossWord{)QXdhprvInequality}{1}{89}%
+\:CrossWord{)QXfjFutureGrowth}{1}{89}%
+\:CrossWord{)QXfrederickLoewensteinODonogue:discountReview}{1}{89}%
+\:CrossWord{)QXfriedmanATheory}{1}{89}%
+\:CrossWord{)QXgordonFutureGrowth}{1}{89}%
+\:CrossWord{)QXgosCyclical}{1}{89}%
+\:CrossWord{)QXhausmanVeteransBonus}{1}{89}%
+\:CrossWord{)QXheathcote_fiscalPolicy}{1}{89}%
+\:CrossWord{)QXhsieh:alaska}{1}{89}%
+\:CrossWord{)QXjpCResponse}{1}{90}%
+\:CrossWord{)QXjappelliPistaferri_FPMPC}{1}{90}%
+\:CrossWord{)QXjermannProduction}{1}{90}%
+\:CrossWord{)QXjpsTax}{1}{90}%
+\:CrossWord{)QXjohnsonEtAl:2003childTaxCredit}{1}{90}%
+\:CrossWord{)QXjedc_ksVolume}{1}{90}%
+\:CrossWord{)QXkeynes:generaltheory}{1}{90}%
+\:CrossWord{)QXleth-petersen:liquidity}{1}{90}%
+\:CrossWord{)QXkruegerMitmanPerri:handbookMacro}{1}{90}%
+\:CrossWord{)QXksHeteroPort}{1}{91}%
+\:CrossWord{)QXksHetero}{1}{91}%
+\:CrossWord{)QXlaibson:goldeneggs}{1}{91}%
+\:CrossWord{)QXlucasBusinessCycles}{1}{91}%
+\:CrossWord{)QXlusardi}{1}{91}%
+\:CrossWord{)QXmcKayPapp:wageRiskOverBC}{1}{91}%
+\:CrossWord{)QXmisraSurico:heteroResponses}{1}{91}%
+\:CrossWord{)QXmgCovariance}{1}{91}%
+\:CrossWord{)QXparkerSocSec}{1}{91}%
+\:CrossWord{)QXpseIncDistributionAndC}{1}{92}%
+\:CrossWord{)QXszWIneq}{1}{92}%
+\:CrossWord{)QXSahmetal:2008TaxRebates}{1}{92}%
+\:CrossWord{)QXshapiroSlemrod:AER03}{1}{92}%
+\:CrossWord{)QXssBang}{1}{92}%
+\:CrossWord{)QXsouleles:taxrefunds}{1}{92}%
+\:CrossWord{)QXsouleles:responseToReaganCuts}{1}{92}%
+\:CrossWord{)QXstock:Handbook}{1}{92}%
+\:CrossWord{)QXsty:consumption}{1}{92}%
+\:CrossWord{)QXtopelSeniority}{1}{93}%
+\:CrossWord{)QXkaplanViolanteWeidner_wealthyH2M}{1}{93}%
+\:CrossWord{)QXzeldesStochastic}{1}{93}%

@@ -1,0 +1,358 @@
+\providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+\ifx\undefined\BySame
+\newcommand{\BySame}{\leavevmode\rule[.5ex]{3em}{.5pt}\ }
+\fi
+\begin{thebibliography}{}
+
+\harvarditem[Agarwal, Liu, and Souleles]{Agarwal, Liu, and
+  Souleles}{2007}{aslCredit}
+\textsc{Agarwal, Sumit, Chunlin Liu,  {and} Nicholas~S. Souleles}  (2007):
+  ``The Reaction of Consumer Spending and Debt to Tax Rebates--Evidence from
+  Consumer Credit Data,'' \emph{Journal of Political Economy}, 115(6),
+  986--1019.
+
+\harvarditem[Agarwal and Qian]{Agarwal and
+  Qian}{2014}{agarwalQuianSingaporeMPC}
+\textsc{Agarwal, Sumit,  {and} Wenlan Qian}  (2014): ``Consumption and Debt
+  Response to Unanticipated Income Shocks: Evidence from a Natural Experiment
+  in Singapore,'' \emph{American Economic Review}, 104(12), 4205--4230.
+
+\harvarditem[Blanchard]{Blanchard}{1985}{blanchardFinite}
+\textsc{Blanchard, Olivier~J.}  (1985): ``Debt, Deficits, and Finite
+  Horizons,'' \emph{Journal of Political Economy}, 93(2), 223--247.
+
+\harvarditem[Blundell, Low, and Preston]{Blundell, Low, and
+  Preston}{2013}{Blundell:2013tm}
+\textsc{Blundell, Richard, Hamish Low,  {and} Ian Preston}  (2013):
+  ``{Decomposing changes in income risk using consumption data},''
+  \emph{Quantitative Economics}, 4(1), 1--37.
+
+\harvarditem[Blundell, Pistaferri, and Preston]{Blundell, Pistaferri, and
+  Preston}{2008}{bppInequality}
+\textsc{Blundell, Richard, Luigi Pistaferri,  {and} Ian Preston}  (2008):
+  ``Consumption Inequality and Partial Insurance,'' \emph{American Economic
+  Review}, 98(5), 1887--1921.
+
+\harvarditem[Blundell, Pistaferri, and Saporta-Eksten]{Blundell, Pistaferri,
+  and Saporta-Eksten}{2016}{bps:familyLaborS}
+\textsc{Blundell, Richard, Luigi Pistaferri,  {and} Itay Saporta-Eksten}
+  (2016): ``Consumption Inequality and Family Labor Supply,'' \emph{American
+  Economic Review}, 106(2), 387--435.
+
+\harvarditem[Boldrin, Christiano, and Fisher]{Boldrin, Christiano, and
+  Fisher}{2001}{bcfHabits}
+\textsc{Boldrin, Michele, Lawrence~J. Christiano,  {and} Jonas~D. Fisher}
+  (2001): ``Habit Persistence, Asset Returns and the Business Cycle,''
+  \emph{American Economic Review}, 91(1), 149--66.
+
+\harvarditem[Bricker, Henriques, Krimmel, and Sabelhaus]{Bricker, Henriques,
+  Krimmel, and Sabelhaus}{2016}{brickerEtAl:topWealth}
+\textsc{Bricker, Jesse, Alice~M. Henriques, Jacob Krimmel,  {and} John
+  Sabelhaus}  (2016): ``Measuring Income and Wealth at the Top Using
+  Administrative and Survey Data,'' \emph{Brookings Papers on Economic
+  Activity}, Spring, 261--321.
+
+\harvarditem[Bricker, Kennickell, Moore, and Sabelhaus]{Bricker, Kennickell,
+  Moore, and Sabelhaus}{2012}{brickerEtAl:SCF2010}
+\textsc{Bricker, Jesse, Arthur~B. Kennickell, Kevin~B. Moore,  {and} John
+  Sabelhaus}  (2012): ``Changes in U.S. Family Finances from 2007 to 2010:
+  Evidence from the Survey of Consumer Finances,'' \emph{Federal Reserve
+  Bulletin}, 98(2), 1--80.
+
+\harvarditem[Broda and Parker]{Broda and
+  Parker}{2014}{brodaParker:stimulus2008}
+\textsc{Broda, Christian,  {and} Jonathan~A. Parker}  (2014): ``The Economic
+  Stimulus Payments of 2008 and the Aggregate Demand for Consumption,''
+  \emph{Journal of Monetary Economics}, 68(S), 20--36.
+
+\harvarditem[Brown, Liebman, and Pollett]{Brown, Liebman, and
+  Pollett}{2002}{BrownLiebmanPollet}
+\textsc{Brown, Jeffrey, Jeffrey~B. Liebman,  {and} Joshua Pollett}  (2002):
+  ``Estimating Life Tables That Reflect Socioeconomic Differences in
+  Mortality,'' in \emph{The Distributional Aspects of Social Security and
+  Social Security Reform}, ed. by Martin Feldstein,  {and} Jeffrey~B. Liebman,
+  pp. 447--457. University of Chicago Press.
+
+\harvarditem[Browning and Collado]{Browning and
+  Collado}{2001}{browningCollado:AntIncChanges}
+\textsc{Browning, Martin,  {and} M.~Dolores Collado}  (2001): ``The Response of
+  Expenditures to Anticipated Income Changes: Panel Data Estimates,''
+  \emph{American Economic Review}, 91(3), 681--692.
+
+\harvarditem[Cagetti]{Cagetti}{2003}{Cagetti}
+\textsc{Cagetti, Marco}  (2003): ``Wealth Accumulation Over the Life Cycle and
+  Precautionary Savings,'' \emph{Journal of Business and Economic Statistics},
+  21(3), 339--353.
+
+\harvarditem[Carroll]{Carroll}{1992}{carroll:brookings}
+\textsc{Carroll, Christopher~D.}  (1992): ``The Buffer-Stock Theory of Saving:
+  Some Macroeconomic Evidence,'' \emph{Brookings Papers on Economic Activity},
+  1992(2), 61--156,
+  \url{http://econ.jhu.edu/people/ccarroll/BufferStockBPEA.pdf}.
+
+\harvarditem[Carroll]{Carroll}{2006}{carrollEGM}
+\textsc{\BySame{}}  (2006): ``The {M}ethod of {E}ndogenous {G}ridpoints for
+  {S}olving {D}ynamic {S}tochastic {O}ptimization {P}roblems,'' \emph{Economics
+  Letters}, 91(3), 312--320,
+  \url{http://econ.jhu.edu/people/ccarroll/EndogenousGridpoints.pdf}.
+
+\harvarditem[Carroll]{Carroll}{2019}{BufferStockTheory}
+\textsc{\BySame{}}  (2019): ``Theoretical Foundations of Buffer Stock Saving,''
+  manuscript, Department of Economics, Johns Hopkins University, Available at
+  \url{http://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory}.
+
+\harvarditem[Carroll, Slacalek, and Tokuoka]{Carroll, Slacalek, and
+  Tokuoka}{2014}{cstMPCxc}
+\textsc{Carroll, Christopher~D., Jiri Slacalek,  {and} Kiichi Tokuoka}  (2014):
+  ``The Distribution of Wealth and the MPC: Implications of New European
+  Data,'' \emph{The American Economic Review}, 104(5), 107--111, At
+  \href{http://econ.jhu.edu/people/ccarroll/papers/cstMPCxc}{\texttt{http://econ.jhu.edu/people/ccarroll/papers/cstMPCxc}}.
+
+\harvarditem[Carroll, Slacalek, and Tokuoka]{Carroll, Slacalek, and
+  Tokuoka}{2015}{cstKS}
+\textsc{Carroll, Christopher~D, Jiri Slacalek,  {and} Kiichi Tokuoka}  (2015):
+  ``Buffer-Stock Saving in a Krusell--Smith World,'' \emph{Economics Letters},
+  132, 97--100, At \url{http://econ.jhu.edu/people/ccarroll/papers/cstKS/};
+  extended version available as ECB Working Paper number 1633,
+  \url{https://www.ecb.europa.eu/pub/pdf/scpwps/ecbwp1633.pdf}.
+
+\harvarditem[Castaneda, Diaz-Gimenez, and Rios-Rull]{Castaneda, Diaz-Gimenez,
+  and Rios-Rull}{2003}{castaneda}
+\textsc{Castaneda, Ana, Javier Diaz-Gimenez,  {and} Jose-Victor Rios-Rull}
+  (2003): ``Accounting for the U.S.\ Earnings and Wealth Inequality,''
+  \emph{Journal of Political Economy}, 111(4), 818--857.
+
+\harvarditem[Chari, Kehoe, and McGrattan]{Chari, Kehoe, and
+  McGrattan}{2005}{ckmCritique}
+\textsc{Chari, V.~V., Patrick~J. Kehoe,  {and} Ellen~R. McGrattan}  (2005): ``A
+  Critique of Structural VARs Using Real Business Cycle Theory,'' working paper
+  631, Federal Reserve Bank of Minneapolis.
+
+\harvarditem[Coronado, Lupton, and Sheiner]{Coronado, Lupton, and
+  Sheiner}{2005}{coronadoEtAl}
+\textsc{Coronado, Julia~Lynn, Joseph~P. Lupton,  {and} Louise~M. Sheiner}
+  (2005): ``The Household Spending Response to the 2003 Tax Cut: Evidence from
+  Survey Data,'' FEDS discussion paper~32, Federal Reserve Board.
+
+\harvarditem[Cozzi]{Cozzi}{2012}{cozzi2012}
+\textsc{Cozzi, Marco}  (2012): ``Risk Aversion Heterogeneity, Risky Jobs and
+  Wealth Inequality,'' Working papers, Queen's University, Department of
+  Economics.
+
+\harvarditem[{De Nardi}]{{De Nardi}}{2015}{deNardi2015}
+\textsc{{De Nardi}, Mariacristina}  (2015): ``Quantitative Models of Wealth
+  Inequality: A Survey,'' working paper 21106, National Bureau of Economic
+  Research.
+
+\harvarditem[Deaton]{Deaton}{1991}{deatonLiqConstr}
+\textsc{Deaton, Angus~S.}  (1991): ``Saving and Liquidity Constraints,''
+  \emph{Econometrica}, 59, 1221--1248,
+  \url{http://www.jstor.org/stable/2938366}.
+
+\harvarditem[Deaton]{Deaton}{1992}{deatonUnderstandingC}
+\textsc{\BySame{}}  (1992): \emph{{U}nderstanding {C}onsumption}. Oxford
+  University Press, New York.
+
+\harvarditem[DeBacker, Heim, Panousi, Ramnath, and Vidangos]{DeBacker, Heim,
+  Panousi, Ramnath, and Vidangos}{2013}{dhprvInequality}
+\textsc{DeBacker, Jason, Bradley Heim, Vasia Panousi, Shanthi Ramnath,  {and}
+  Ivan Vidangos}  (2013): ``Rising Inequality: Transitory or Persistent? New
+  Evidence from a Panel of U.S. Tax Returns,'' \emph{Brookings Papers on
+  Economic Activity}, Spring, 67--122.
+
+\harvarditem[Fernald and Jones]{Fernald and Jones}{2014}{fjFutureGrowth}
+\textsc{Fernald, John~G.,  {and} Charles~I. Jones}  (2014): ``The Future of US
+  Economic Growth,'' \emph{American Economic Review}, 104(5), 44--49.
+
+\harvarditem[Frederick, Loewenstein, and {O'Donogue}]{Frederick, Loewenstein,
+  and {O'Donogue}}{2002}{frederickLoewensteinODonogue:discountReview}
+\textsc{Frederick, Shane, George Loewenstein,  {and} Ted {O'Donogue}}  (2002):
+  ``Time Discounting and Time Preference: A Critical Review,'' \emph{Journal of
+  Economic Literature}, XL(2), 351--401.
+
+\harvarditem[Friedman]{Friedman}{1957}{friedmanATheory}
+\textsc{Friedman, Milton~A.}  (1957): \emph{A Theory of the Consumption
+  Function}. Princeton University Press.
+
+\harvarditem[Gordon]{Gordon}{2012}{gordonFutureGrowth}
+\textsc{Gordon, Robert~J.}  (2012): ``Is U.S. Economic Growth Over? Faltering
+  Innovation Confronts the Six Headwinds,'' Working Paper 18315, National
+  Bureau of Economic Research.
+
+\harvarditem[Guvenen, Ozkan, and Song]{Guvenen, Ozkan, and
+  Song}{2014}{gosCyclical}
+\textsc{Guvenen, Fatih, Serdar Ozkan,  {and} Jae Song}  (2014): ``{The Nature
+  of Countercyclical Income Risk},'' \emph{Journal of Political Economy},
+  122(3), 621--660.
+
+\harvarditem[Hausman]{Hausman}{2012}{hausmanVeteransBonus}
+\textsc{Hausman, Joshua~K.}  (2012): ``Fiscal Policy and Economic Recovery: The
+  Case of the 1936 Veterans' Bonus,'' mimeo, University of California,
+  Berkeley.
+
+\harvarditem[Heathcote]{Heathcote}{2005}{heathcote_fiscalPolicy}
+\textsc{Heathcote, Jonathan}  (2005): ``Fiscal Policy with Heterogeneous Agents
+  and Incomplete Markets,'' \emph{Review of Economic Studies}, 72(1), 161--188.
+
+\harvarditem[Hsieh]{Hsieh}{2003}{hsieh:alaska}
+\textsc{Hsieh, Chang-Tai}  (2003): ``Do Consumers React to Anticipated Income
+  Changes? Evidence from the Alaska Permanent Fund,'' \emph{American Economic
+  Review}, 99, 397--405.
+
+\harvarditem[Jappelli and Pistaferri]{Jappelli and
+  Pistaferri}{2010}{jpCResponse}
+\textsc{Jappelli, Tullio,  {and} Luigi Pistaferri}  (2010): ``The Consumption
+  Response to Income Changes,'' \emph{The Annual Review of Economics}, 2(1),
+  479--506.
+
+\harvarditem[Jappelli and Pistaferri]{Jappelli and
+  Pistaferri}{2014}{jappelliPistaferri_FPMPC}
+\textsc{\BySame{}}  (2014): ``Fiscal Policy and MPC Heterogeneity,'' \emph{AEJ:
+  Marcoeconomics}, 6(4), 107--36.
+
+\harvarditem[Jermann]{Jermann}{1998}{jermannProduction}
+\textsc{Jermann, Urban~J.}  (1998): ``Asset Pricing in Production Economies,''
+  \emph{Journal of Monetary Economics}, 42(2), 257--75.
+
+\harvarditem[Johnson, Parker, and Souleles]{Johnson, Parker, and
+  Souleles}{2006}{jpsTax}
+\textsc{Johnson, David~S., Jonathan~A. Parker,  {and} Nicholas~S. Souleles}
+  (2006): ``Household Expenditure and the Income Tax Rebates of 2001,''
+  \emph{American Economic Review}, 96(5), 1589--1610.
+
+\harvarditem[Johnson, Parker, and Souleles]{Johnson, Parker, and
+  Souleles}{2009}{johnsonEtAl:2003childTaxCredit}
+\textsc{\BySame{}}  (2009): ``The Response of Consumer Spending to Rebates
+  During an Expansion: Evidence from the 2003 Child Tax Credit,'' working
+  paper, The Wharton School.
+
+\harvarditem[{Journal of Economic Dynamics and Control}]{{Journal of Economic
+  Dynamics and Control}}{2010}{jedc_ksVolume}
+\textsc{{Journal of Economic Dynamics and Control}}  (2010): ``Computational
+  Suite of Models with Heterogeneous Agents: Incomplete Markets and Aggregate
+  Uncertainty,'' \emph{edited by Wouter J. Den Haan, Kenneth L. Judd, Michel
+  Juillard}, 34(1), 1--100.
+
+\harvarditem[Keynes]{Keynes}{1936}{keynes:generaltheory}
+\textsc{Keynes, John~Maynard}  (1936): \emph{The General Theory of Employment,
+  Interest, and Money}. Harcourt, Brace.
+
+\harvarditem[Kreiner, Lassen, and Leth-Petersen]{Kreiner, Lassen, and
+  Leth-Petersen}{2012}{leth-petersen:liquidity}
+\textsc{Kreiner, Claus~Thustrup, David~Dreyer Lassen,  {and} {S\o ren}
+  Leth-Petersen}  (2012): ``Heterogeneous Responses and Aggregate Impact of the
+  2001 Income Tax Rebates,'' discussion paper 9161, CEPR.
+
+\harvarditem[Krueger, Mitman, and Perri]{Krueger, Mitman, and
+  Perri}{forthcoming}{kruegerMitmanPerri:handbookMacro}
+\textsc{Krueger, Dirk, Kurt Mitman,  {and} Fabrizio Perri}  (forthcoming):
+  ``Macroeconomics and Heterogeneity, Including Inequality,'' in \emph{Handbook
+  of Macroeconomics}, ed. by John Taylor,  {and} Harald Uhlig. North Holland.
+
+\harvarditem[Krusell and Smith]{Krusell and Smith}{1997}{ksHeteroPort}
+\textsc{Krusell, Per,  {and} Anthony~A. Smith}  (1997): ``Income and Wealth
+  Heterogeneity, Portfolio Choice and Equilibrium Asset Returns,''
+  \emph{Macroeconomic Dynamics}, 1(2), 387--422.
+
+\harvarditem[Krusell and Smith]{Krusell and Smith}{1998}{ksHetero}
+\textsc{\BySame{}}  (1998): ``Income and Wealth Heterogeneity in the
+  Macroeconomy,'' \emph{Journal of Political Economy}, 106(5), 867--896.
+
+\harvarditem[Laibson]{Laibson}{1997}{laibson:goldeneggs}
+\textsc{Laibson, David}  (1997): ``Golden Eggs and Hyperbolic Discounting,''
+  \emph{Quarterly Journal of Economics}, CXII(2), 443--477.
+
+\harvarditem[Lucas]{Lucas}{1985}{lucasBusinessCycles}
+\textsc{Lucas, Robert~E.}  (1985): \emph{Models of Business Cycles, Yrjo
+  Jahnsson Lectures}. Basil Blackwell, Oxford.
+
+\harvarditem[Lusardi]{Lusardi}{1996}{lusardi}
+\textsc{Lusardi, Annamaria}  (1996): ``Permanent Income, Current Income, and
+  Consumption: Evidence from Two Panel Data Sets,'' \emph{Journal of Business
+  and Economic Statistics}, 14(1), 81--90.
+
+\harvarditem[McKay and Papp]{McKay and Papp}{2011}{mcKayPapp:wageRiskOverBC}
+\textsc{McKay, Alisdair,  {and} Tamas Papp}  (2011): ``Accounting for
+  Idiosyncratic Wage Risk Over the Business Cycle,'' working paper~28, Boston
+  University.
+
+\harvarditem[Misra and Surico]{Misra and
+  Surico}{2011}{misraSurico:heteroResponses}
+\textsc{Misra, Kanisha,  {and} Paolo Surico}  (2011): ``Heterogeneous Responses
+  and Aggregate Impact of the 2001 Income Tax Rebates,'' discussion paper 8306,
+  CEPR.
+
+\harvarditem[Moffitt and Gottschalk]{Moffitt and
+  Gottschalk}{2011}{mgCovariance}
+\textsc{Moffitt, Robert,  {and} Peter Gottschalk}  (2011): ``Trends in the
+  Covariance Structure of Earnings in the U.S.: 1969--1987,'' \emph{Journal of
+  Economic Inequality}, 9, 439--459, doi: 10.1007/s10888-010-9154-z.
+
+\harvarditem[Parker]{Parker}{1999}{parkerSocSec}
+\textsc{Parker, Jonathan~A.}  (1999): ``The Reaction of Household Consumption
+  to Predictable Changes in Social Security Taxes,'' \emph{American Economic
+  Review}, 89(4), 959--973.
+
+\harvarditem[Pistaferri and Saporta-Eksten]{Pistaferri and
+  Saporta-Eksten}{2012}{pseIncDistributionAndC}
+\textsc{Pistaferri, Luigi,  {and} Itay Saporta-Eksten}  (2012): ``Changes in
+  the Income Distribution and Aggregate Consumption,'' working paper~11,
+  Ministry of Economy and Finance, Italy.
+
+\harvarditem[Saez and Zucman]{Saez and Zucman}{2016}{szWIneq}
+\textsc{Saez, Emmanuel,  {and} Gabriel Zucman}  (2016): ``Wealth Inequality in
+  the United States Since 1913: Evidence from Capitalized Income Tax Data,''
+  \emph{Quarterly Journal of Economics}.
+
+\harvarditem[Sahm, Shapiro, and Slemrod]{Sahm, Shapiro, and
+  Slemrod}{2010}{Sahmetal:2008TaxRebates}
+\textsc{Sahm, Claudia~R., Matthew~D. Shapiro,  {and} Joel~B. Slemrod}  (2010):
+  ``Household Response to the 2008 Tax Rebate: Survey Evidence and Aggregate
+  Implications,'' \emph{Tax Policy and the Economy}, 24, 69--110.
+
+\harvarditem[Shapiro and Slemrod]{Shapiro and
+  Slemrod}{2003}{shapiroSlemrod:AER03}
+\textsc{Shapiro, Matthew~D.,  {and} Joel Slemrod}  (2003): ``Consumer Response
+  to Tax Rebates,'' \emph{American Economic Review}, 93(1), 381--396.
+
+\harvarditem[Shapiro and Slemrod]{Shapiro and Slemrod}{2009}{ssBang}
+\textsc{\BySame{}}  (2009): ``Did the 2008 Tax Rebates Stimulate Spending?,''
+  \emph{American Economic Review}, 99(2), 374--79.
+
+\harvarditem[Souleles]{Souleles}{1999}{souleles:taxrefunds}
+\textsc{Souleles, Nicholas~S.}  (1999): ``The Response of Household Consumption
+  to Income Tax Refunds,'' \emph{American Economic Review}, 89(4), 947--958.
+
+\harvarditem[Souleles]{Souleles}{2002}{souleles:responseToReaganCuts}
+\textsc{\BySame{}}  (2002): ``Consumer Response to the Reagan Tax Cuts,''
+  \emph{Journal of Public Economics}, 85, 99--120.
+
+\harvarditem[Stock]{Stock}{1986}{stock:Handbook}
+\textsc{Stock, James~H.}  (1986): ``Unit roots, structural breaks and trends,''
+  in \emph{Handbook of Econometrics}, ed. by R.~F. Engle,  {and} D.~McFadden,
+  vol.~4 of \emph{Handbook of Econometrics}, chap.~46, pp. 2739--2841.
+  Elsevier.
+
+\harvarditem[Storesletten, Telmer, and Yaron]{Storesletten, Telmer, and
+  Yaron}{2004}{sty:consumption}
+\textsc{Storesletten, Kjetil, Chris~I. Telmer,  {and} Amir Yaron}  (2004):
+  ``Consumption and Risk Sharing Over the Life Cycle,'' \emph{Journal of
+  Monetary Economics}, 51(3), 609--633.
+
+\harvarditem[Topel]{Topel}{1991}{topelSeniority}
+\textsc{Topel, Robert~H.}  (1991): ``Specific Capital, Mobility and Wages:
+  Wages Rise with Job Seniority,'' \emph{Journal of Political Economy}, 99,
+  145--176.
+
+\harvarditem[Violante, Kaplan, and Weidner]{Violante, Kaplan, and
+  Weidner}{2014}{kaplanViolanteWeidner_wealthyH2M}
+\textsc{Violante, Gianluca, Greg Kaplan,  {and} Justin Weidner}  (2014): ``The
+  Wealthy Hand-to-Mouth,'' \emph{Brookings Papers on Economic Activity},
+  Spring, 77--138.
+
+\harvarditem[Zeldes]{Zeldes}{1989}{zeldesStochastic}
+\textsc{Zeldes, Stephen~P.}  (1989): ``Optimal Consumption with Stochastic
+  Income: {D}eviations from Certainty Equivalence,'' \emph{Quarterly Journal of
+  Economics}, 104(2), 275--298.
+
+\end{thebibliography}

@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: cstwMPC.aux
+The style file: econtex.bst
+Database file #1: economics.bib
+Database file #2: cstwMPC.bib
+Database file #3: cstwMPC-Add.bib
+Warning--I didn't find a database entry for "kaplanInequality"
+Warning--I didn't find a database entry for "kvStim"
+Warning--I didn't find a database entry for "psjmStim"
+Warning--I didn't find a database entry for "lmpWageRisk"
+Warning--I didn't find a database entry for "otsukaIlliquid"
+Warning--I didn't find a database entry for "SabelhausSong"
+Done.
+You've used 64 entries,
+            2309 wiz_defined-function locations,
+            942 strings with 14485 characters,
+and the built_in function-call counts, 31872 in all, are:
+= -- 3177
+> -- 1773
+< -- 12
++ -- 606
+- -- 517
+* -- 2938
+:= -- 6172
+add.period$ -- 71
+call.type$ -- 64
+change.case$ -- 389
+chr.to.int$ -- 64
+cite$ -- 64
+duplicate$ -- 1093
+empty$ -- 1942
+format.name$ -- 631
+if$ -- 6122
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 56
+newline$ -- 199
+num.names$ -- 387
+pop$ -- 297
+preamble$ -- 2
+purify$ -- 385
+quote$ -- 0
+skip$ -- 981
+stack$ -- 0
+substring$ -- 1855
+swap$ -- 207
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 692
+warning$ -- 0
+while$ -- 381
+width$ -- 0
+write$ -- 781
+(There were 6 warnings)
