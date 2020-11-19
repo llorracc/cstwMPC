@@ -9,11 +9,11 @@ htfcss: cmssi  font-family: sans-serif; font-style: oblique;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: cmss   font-family: sans-serif;
 htfcss: cmssbx  font-family: sans-serif; font-weight: bold;
 htfcss: cmssbxo  font-family: sans-serif; font-style: oblique; font-weight: bold;
@@ -22,118 +22,118 @@ htfcss: cmssi  font-family: sans-serif; font-style: oblique;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: wasyb font-weight: bold;
 htfcss: cmmi font-style: italic;
 htfcss: cmmib font-style: italic; font-weight: bold;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 htfcss: ecbx  font-weight: bold;
 htfcss: ecsx  font-weight: bold;
 htfcss: ecbi  font-weight: bold;   font-style: italic;
-htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecit  font-style: italic; font-family: monospace;
 htfcss: ecss  font-family: sans-serif;
 htfcss: ecff  font-family: fantasy;
 htfcss: ecti  font-style: italic;
-htfcss: ectt  font-family: monospace,monospace;
+htfcss: ectt  font-family: monospace;
 File: cstwMPC.html
 File: cstwMPC.css
 File: cstwMPC.tmp
@@ -211,11 +211,10 @@ File: cstwMPC72.html
 File: cstwMPC73.html
 File: cstwMPC74.html
 Font_Class(4,"4"): <span  class="small-caps"></span>
-Css: p{margin-top:0;margin-bottom:0}
-Css: p.indent{text-indent:0;}
-Css: p + p{margin-top:1em;}
-Css: p + div, p + pre {margin-top:1em;}
-Css: div + p, pre + p {margin-top:1em;}
+Css: p.noindent { text-indent: 0em }
+Css: td p.noindent { text-indent: 0em; margin-top:0em; }
+Css: p.nopar { text-indent: 0em; }
+Css: p.indent{ text-indent: 1.5em }
 Css: @media print {div.crosslinks {visibility:hidden;}}
 Css: a img { border-top: 0; border-left: 0; border-right: 0; }
 Font_Css("4"): .small-caps{font-variant: small-caps; }
@@ -244,7 +243,7 @@ Css: .overline img{ border-top: 1px solid black; }
 Css: td.displaylines {text-align:center; white-space:nowrap;}
 Css: .centerline {text-align:center;}
 Css: .rightline {text-align:right;}
-Css: div.verbatim {font-family: monospace,monospace; white-space: nowrap; text-align:left; clear:both; }
+Css: div.verbatim {font-family: monospace; white-space: nowrap; text-align:left; clear:both; }
 Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
 Css: div.fbox {display:table}
 Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
@@ -277,16 +276,18 @@ Css: td.td01{ padding-left:0pt; padding-right:5pt; }
 Css: td.td10{ padding-left:5pt; padding-right:0pt; }
 Css: td.td11{ padding-left:5pt; padding-right:5pt; }
 Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
-Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
-Css: .hline td, .cline td{ padding: 0; }
-Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline hr, .cline hr{ height : 1px; margin:0px; }
 Css: .tabbing-right {text-align:right;}
+Css: span.TEX {letter-spacing: -0.125em; }
+Css: span.TEX span.E{ position:relative;top:0.5ex;left:-0.0417em;}
+Css: a span.TEX span.E {text-decoration: none; }
+Css: span.LATEX span.A{ position:relative; top:-0.5ex; left:-0.4em; font-size:85%;}
+Css: span.LATEX span.TEX{ position:relative; left: -0.4em; }
 Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
 Css: div.float img {text-align:center;}
 Css: div.figure img {text-align:center;}
-Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
-Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
-Css: .reversemarginpar{float:left;}
+Css: .marginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
 Css: table.equation {width:100%;}
 Css: .equation td{text-align:center; }
 Css: td.equation { margin-top:1em; margin-bottom:1em; } 
@@ -325,20 +326,8 @@ Font_Size: 12
 Css: .quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
 Css: .abstract p {margin-left:5%; margin-right:5%;}
 Css: div.abstract {width:100%;}
-Css: figure.float, div.figure {margin-left: auto; margin-right: auto;}
-Css: figure.float img {text-align:center;}
-Css: figure.figure img {text-align:center;}
-Css: figure.figure > p {text-align:center;}
-Css: figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
-Css: figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
 Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
-Css: figure.float, div.figure {margin-left: auto; margin-right: auto;}
-Css: figure.float img {text-align:center;}
-Css: figure.figure img {text-align:center;}
-Css: figure.figure > p {text-align:center;}
-Css: figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
-Css: figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
-Css: div.verbatiminput {font-family: monospace,monospace; white-space: nowrap; }
+Css: div.verbatiminput {font-family: monospace; white-space: nowrap; }
 Css: .equation td{text-align:center; }
 Css: .equation-star td{text-align:center; }
 Css: table.equation-star { width:100%; }
@@ -367,9 +356,7 @@ Css: td.td01{ padding-left:0pt; padding-right:5pt; }
 Css: td.td10{ padding-left:5pt; padding-right:0pt; }
 Css: td.td11{ padding-left:5pt; padding-right:5pt; }
 Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
-Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
-Css: .hline td, .cline td{ padding: 0; }
-Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline hr, .cline hr{ height : 1px; margin:0px; }
 Css: div.array {text-align:center;}
 Css: table.boxedverbatim {width:100%;}
 Css:  pre.boxedverbatim{border:solid 1px; padding-right:1em;} 
@@ -386,7 +373,7 @@ Css: .underline-d{ border-bottom: 3px double black; margin-bottom:1pt; }
 Css: .rotatebox{display: inline-block;}
 Css: .figure img.graphics {margin-left:10%;}
 Css: tr#TBL-2-1- td{border-top:0.13156em solid} 
-Css: td#TBL-2-2-2{border-bottom:0.04933em solid}
+Css: tr#TBL-2-2- td{border-bottom:0.04933em solid}
 Css: tr#TBL-2-3- td{border-bottom:0.08223em solid}
 Css: tr#TBL-2-20- td{border-bottom:0.13156em solid}
 --- needs --- cstwMPC.idv[2] ==> cstwMPC0x.svg ---
@@ -426,9 +413,9 @@ File: ../Figures/CumWLevSCFCastanedaAndDistSevenNoAggShockLRPlot.png
 File: ./Figures/CFuncDistSevenPointPermAndHistNetWorthPlotFedQuarterly.png
 File: ./Figures/CFuncKSHeteroAndDistSevenAndHistDataKSHeteroPlot.png
 Css: tr#TBL-4-1- td{border-top:0.13156em solid} 
-Css: td#TBL-4-3-6{border-bottom:0.04933em solid}
-Css: td#TBL-4-4-7{border-bottom:0.04933em solid}
-Css: td#TBL-4-5-9{border-bottom:0.04933em solid}
+Css: tr#TBL-4-3- td{border-bottom:0.04933em solid}
+Css: tr#TBL-4-4- td{border-bottom:0.04933em solid}
+Css: tr#TBL-4-5- td{border-bottom:0.04933em solid}
 Css: tr#TBL-4-9- td{border-bottom:0.08223em solid}
 Css: tr#TBL-4-10- td{border-bottom:0.08223em solid}
 Css: tr#TBL-4-29- td{border-bottom:0.08223em solid}
@@ -443,8 +430,8 @@ File: ./Figures/CFuncDistSevenAndHistNetWorthLiqFinPlsRetPlot.png
 --- needs --- cstwMPC.idv[50] ==> cstwMPC32x.svg ---
 File: ./Figures/DistributionsMPCsDistSevenAndKSKSAggShocksPlot.png
 Css: tr#TBL-5-1- td{border-top:0.13156em solid} 
-Css: td#TBL-5-2-5{border-bottom:0.04933em solid}
-Css: td#TBL-5-3-6{border-bottom:0.04933em solid}
+Css: tr#TBL-5-2- td{border-bottom:0.04933em solid}
+Css: tr#TBL-5-3- td{border-bottom:0.04933em solid}
 Css: tr#TBL-5-5- td{border-bottom:0.08223em solid}
 Css: tr#TBL-5-25- td{border-bottom:0.13156em solid}
 File: ./Figures/KappaSensitivity.png
