@@ -1,9 +1,8 @@
 # [DistributionOfWealthMPC](https://github.com/econ-ark/DistributionOfWealthMPC) Mostly Supercedes This Repo
 
-The repo here aims to replicate all the results of the original [cstwMPC](http://econ.jhu.edu/people/ccarroll/papers/cstwMPC) paper, with minimal updates to the original code to make it work in updated versions of HARK.  
+The [cstwMPC Repo](https://github.com/llorracc/cstwMPC) aims to replicate all the results of the original [cstwMPC](http://econ.jhu.edu/people/ccarroll/papers/cstwMPC) paper, with minimal updates to the original code to make it work in updated versions of HARK.  
 
 [DistributionOfWealthMPC](https://github.com/econ-ark/DistributionOfWealthMPC) is a much more thoroughgoing rewrite that brings everything up to date with the many improvements to HARK that have been made since the cstwMPC paper was published.
-
 
 [DistributionOfWealthMPC](https://github.com/econ-ark/DistributionOfWealthMPC) should therefore be the starting point for most projects that aim to build on cstwMPC.
 
