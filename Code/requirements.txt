@@ -4,5 +4,5 @@ scipy
 dill
 joblib
 future
-econ-ark
+econ-ark==0.10.7
 
